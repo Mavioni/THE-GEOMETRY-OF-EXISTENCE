@@ -57,4 +57,4 @@ And the degree, which Level Three taught you to apply to nearly everything, does
 
 ---
 
-<p align="center">[← Level Four · The Principle](README.md) · [Contents](../README.md) · [Three Relationships, Not Three Requirements →](20-three-relationships.md)</p>
+<p align="center">[← Level Four · The Principle](README.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Three Relationships, Not Three Requirements →](20-three-relationships.md)</p>

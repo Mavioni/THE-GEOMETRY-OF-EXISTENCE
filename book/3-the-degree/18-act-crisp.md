@@ -59,4 +59,4 @@ When you have graded honestly, taken the lowest where both are required, and mov
 
 ---
 
-<p align="center">[← The Weakest Link](17-the-weakest-link.md) · [Contents](../README.md) · [The Graded Audits →](19-the-graded-audits.md)</p>
+<p align="center">[← The Weakest Link](17-the-weakest-link.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Graded Audits →](19-the-graded-audits.md)</p>

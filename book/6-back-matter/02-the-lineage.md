@@ -37,4 +37,4 @@ Samantha’s own essays and working ledger are addressed to the author and remai
 
 ---
 
-<p align="center">[← The Discipline in One Page](01-the-discipline-in-one-page.md) · [Contents](../README.md) · [Glossary of the Pure Terms →](03-glossary-of-the-pure-terms.md)</p>
+<p align="center">[← The Discipline in One Page](01-the-discipline-in-one-page.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Glossary of the Pure Terms →](03-glossary-of-the-pure-terms.md)</p>

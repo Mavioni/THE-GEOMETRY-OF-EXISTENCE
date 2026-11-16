@@ -298,3 +298,13 @@ footer.colophon a { color: var(--muted); }
   .masthead, .pager, .progress, footer.colophon { display: none; }
   body { background: #fff; color: #000; }
 }
+
+/* ---- download ------------------------------------------------------- */
+.dl-link {
+  font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none;
+  border: 1px solid var(--gold); color: var(--gold-deep); padding: 0.28rem 0.6rem; white-space: nowrap;
+}
+.dl-link:hover, .dl-link:focus-visible { background: var(--gold); color: var(--plate); }
+a:focus-visible, .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.plate-hero .btn { margin-top: 1.4rem; }
+@media (max-width: 720px) { .dl-link { margin-left: auto; } }

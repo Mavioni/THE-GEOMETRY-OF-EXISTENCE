@@ -19,4 +19,4 @@
 
 ---
 
-<p align="center">[← The First Principle](01-the-first-principle.md) · [Contents](../README.md) · [In Plain Words →](03-in-plain-words.md)</p>
+<p align="center">[← The First Principle](01-the-first-principle.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [In Plain Words →](03-in-plain-words.md)</p>

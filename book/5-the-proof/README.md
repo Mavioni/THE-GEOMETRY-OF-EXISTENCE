@@ -24,4 +24,4 @@
 
 ---
 
-<p align="center">[← Dignity Is Owed, Respect Is Earned](../4-the-principle/22-dignity-is-owed.md) · [Contents](../README.md) · [Sophonticism: The Research Book →](sophonticism/README.md)</p>
+<p align="center">[← Dignity Is Owed, Respect Is Earned](../4-the-principle/22-dignity-is-owed.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Sophonticism: The Research Book →](sophonticism/README.md)</p>

@@ -45,4 +45,4 @@ Nothing here is medical, psychological, or legal advice. The practices are yours
 
 ---
 
-<p align="center">[← Title Page](01-title-page.md) · [Contents](../README.md) · [Level One · The Lines →](../1-the-lines/README.md)</p>
+<p align="center">[← Title Page](01-title-page.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Level One · The Lines →](../1-the-lines/README.md)</p>

@@ -22,4 +22,4 @@
 
 ---
 
-<p align="center">[← How This Book Is Built](../0-front/02-how-this-book-is-built.md) · [Contents](../README.md) · [The First Principle →](01-the-first-principle.md)</p>
+<p align="center">[← How This Book Is Built](../0-front/02-how-this-book-is-built.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The First Principle →](01-the-first-principle.md)</p>

@@ -65,4 +65,4 @@ A second geometric lesson is topological. A line with its origin removed has two
 
 ---
 
-<p align="center">[← Sophonticism: The Research Book](README.md) · [Contents](../../README.md) · [Part II — The Established Bridges (§5–§11) →](2-the-established-bridges.md)</p>
+<p align="center">[← Sophonticism: The Research Book](README.md) · [Contents](../../README.md) · [PDF ↓](../../../edition/README.md) · [Part II — The Established Bridges (§5–§11) →](2-the-established-bridges.md)</p>

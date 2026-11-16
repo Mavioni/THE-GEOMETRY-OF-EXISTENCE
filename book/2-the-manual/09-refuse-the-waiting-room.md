@@ -63,4 +63,4 @@ Refuse the waiting room. Not all at once. One door at a time, starting with the 
 
 ---
 
-<p align="center">[← Keep the Middle](08-keep-the-middle.md) · [Contents](../README.md) · [Part III · The Weight →](part-3-the-weight.md)</p>
+<p align="center">[← Keep the Middle](08-keep-the-middle.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Part III · The Weight →](part-3-the-weight.md)</p>

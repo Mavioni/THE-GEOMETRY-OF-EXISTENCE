@@ -49,4 +49,4 @@ Corrections go to the author. Each belongs in the next edition’s list, dated a
 
 ---
 
-<p align="center">[← Glossary of the Pure Terms](03-glossary-of-the-pure-terms.md) · [Contents](../README.md) · [The Checks →](05-the-checks.md)</p>
+<p align="center">[← Glossary of the Pure Terms](03-glossary-of-the-pure-terms.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Checks →](05-the-checks.md)</p>

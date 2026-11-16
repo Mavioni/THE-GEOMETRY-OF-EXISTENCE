@@ -91,4 +91,4 @@ evidence statements. Its mathematical conclusions have been checked independentl
 
 ---
 
-<p align="center">[← Part IV — The Frontier (§18–§22)](4-the-frontier.md) · [Contents](../../README.md) · [The Program, Preregistered →](../23-the-program-preregistered.md)</p>
+<p align="center">[← Part IV — The Frontier (§18–§22)](4-the-frontier.md) · [Contents](../../README.md) · [PDF ↓](../../../edition/README.md) · [The Program, Preregistered →](../23-the-program-preregistered.md)</p>

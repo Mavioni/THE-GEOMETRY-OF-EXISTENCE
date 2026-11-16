@@ -55,4 +55,4 @@ Open it honestly. Build through it carefully. Keep the two columns. And do not m
 
 ---
 
-<p align="center">[← Part IV · The Care](part-4-the-care.md) · [Contents](../README.md) · [The Inviolate →](14-the-inviolate.md)</p>
+<p align="center">[← Part IV · The Care](part-4-the-care.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Inviolate →](14-the-inviolate.md)</p>

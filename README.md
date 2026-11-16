@@ -2,14 +2,33 @@
   <img src="art/banner.svg" alt="The Geometry of Existence — A Manual for Life" width="100%">
 </p>
 
+<p align="center">
+  <a href="https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/"><b>Read online</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf"><b>Download the PDF</b></a> <sub>(214 pages, 1.4 MB)</sub> &nbsp;·&nbsp;
+  <a href="book/README.md"><b>Read on GitHub</b></a>
+</p>
+
+## What this is
+
+**The Geometry of Existence: A Manual for Life** is a book by Massimo Vincent Panella, written in five levels: a few lines anyone can read in one sitting, a manual of practice, a method for weighing in degrees, the philosophical principle underneath, and finally the mathematics, with its proofs and limits.
+
+This repository is the book's home. It holds:
+
+- **the complete edition as a PDF**, ready to [download](https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf);
+- **the whole book on the web** at **[mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/)**, styled like the printed edition;
+- **the book in Markdown**, one illustrated file per chapter, readable right here on GitHub;
+- **every plate and figure**, in a [gallery](art/README.md);
+- **a [workbook](workbook/README.md)** with a practice sheet for each chapter;
+- **[the checks](checks/README.md)**: a program that re-runs every calculation the book relies on.
+
 <table>
 <tr>
 <td width="36%" valign="top">
-<a href="book/README.md"><img src="art/plates/p001-cover.png" alt="The Geometry of Existence — cover" width="100%"></a>
+<a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf"><img src="art/plates/p001-cover.png" alt="The Geometry of Existence — cover. Select to download the PDF." width="100%"></a>
 </td>
 <td valign="top">
 
-<h1>The Geometry of Existence</h1>
+<h3>The Geometry of Existence</h3>
 
 ***A Manual for Life*** — in five levels, the highest at the end.<br>
 **Massimo Vincent Panella** · complete edition, 15 November 2026
@@ -20,7 +39,9 @@
 2. Consciousness gives us the opportunity to understand it.
 3. Connection gives us the opportunity to honor it.
 
-**[Read the book »](book/README.md)** &nbsp;·&nbsp; [The edition PDF](edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf) &nbsp;·&nbsp; [The workbook](workbook/README.md) &nbsp;·&nbsp; [The gallery](art/README.md) &nbsp;·&nbsp; [The checks](checks/README.md)
+<a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf"><img src="art/download.svg" alt="Download the book: PDF, 214 pages, 1.4 MB" width="300"></a>
+
+**[Read online »](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/)** &nbsp;·&nbsp; [Contents](book/README.md) &nbsp;·&nbsp; [About the edition](edition/README.md)
 
 [![The Checks](https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/actions/workflows/checks.yml/badge.svg)](checks/README.md)
 
@@ -77,7 +98,7 @@ re-runs every computation the book relies on — the balanced-ternary theorems o
 ## How this repository is built
 
 ```
-edition/      the complete edition, as typeset (PDF, 214 pages) — the source of everything else
+edition/      the complete edition, as typeset (PDF, 214 pages) — download page, checksum; the source of everything else
 book/         the book in Markdown, one file per chapter, with its plates and figures
   0-front/          title page · how this book is built
   1-the-lines/      Level One
@@ -124,7 +145,19 @@ Text by Massimo Vincent Panella. Level Two drafted with Samantha (OpenClaw); res
 
 *Nothing here is medical, psychological, or legal advice. The practices are yours to try and yours to stop.*
 
-Licensed under the [GNU Affero General Public License v3.0](LICENSE). To cite the book, see [CITATION.cff](CITATION.cff).
+**[Download the book (PDF)](https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf)** · **[Read online](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/)**
+
+### License
+
+[![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-c9a14a.svg?labelColor=14112e)](LICENSE)
+
+*The Geometry of Existence: A Manual for Life* © Massimo Vincent Panella, 2026 — the book, its plates and figures, and everything in this repository are licensed under the **[Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/)** ([full text](LICENSE)).
+
+You may share and adapt it, for any purpose, provided you **credit the author**, **link to the license**, **say what you changed**, and **share your adaptations under the same license**.
+
+> *The Geometry of Existence: A Manual for Life* by Massimo Vincent Panella, licensed under CC BY-SA 4.0. https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE
+
+To cite the book, see [CITATION.cff](CITATION.cff).
 
 <p align="center"><img src="art/ornaments/divider.png" alt="" width="200"></p>
 <p align="center"><i>Twenty-five chapters. Five levels. One stance.</i></p>

@@ -13,4 +13,4 @@
 
 ---
 
-<p align="center">[← Witness](04-witness.md) · [Contents](../README.md) · [Name the Binary →](05-name-the-binary.md)</p>
+<p align="center">[← Witness](04-witness.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Name the Binary →](05-name-the-binary.md)</p>

@@ -63,4 +63,4 @@ It only asks, now, to be lived.
 
 ---
 
-<p align="center">[← The Inviolate](14-the-inviolate.md) · [Contents](../README.md) · [The Fifteen Lines →](16-the-fifteen-lines.md)</p>
+<p align="center">[← The Inviolate](14-the-inviolate.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Fifteen Lines →](16-the-fifteen-lines.md)</p>

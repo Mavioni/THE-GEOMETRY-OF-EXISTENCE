@@ -59,4 +59,4 @@ The claim that cannot lose cannot win. The self that cannot lose cannot grow. Na
 
 ---
 
-<p align="center">[← Continuity](11-continuity.md) · [Contents](../README.md) · [Part IV · The Care →](part-4-the-care.md)</p>
+<p align="center">[← Continuity](11-continuity.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Part IV · The Care →](part-4-the-care.md)</p>

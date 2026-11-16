@@ -41,4 +41,4 @@ Rating lines like these are adapted from techniques used in cognitive and soluti
 
 ---
 
-<p align="center">[← Act Crisp](18-act-crisp.md) · [Contents](../README.md) · [Level Four · The Principle →](../4-the-principle/README.md)</p>
+<p align="center">[← Act Crisp](18-act-crisp.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Level Four · The Principle →](../4-the-principle/README.md)</p>

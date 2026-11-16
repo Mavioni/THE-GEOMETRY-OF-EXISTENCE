@@ -22,4 +22,4 @@
 
 ---
 
-<p align="center">[← The Fifteen Lines](../2-the-manual/16-the-fifteen-lines.md) · [Contents](../README.md) · [The Degree →](16-the-degree.md)</p>
+<p align="center">[← The Fifteen Lines](../2-the-manual/16-the-fifteen-lines.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Degree →](16-the-degree.md)</p>

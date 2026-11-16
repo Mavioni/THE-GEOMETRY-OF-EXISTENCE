@@ -63,4 +63,4 @@ That is worth one hour of your life per week, forever. It is the cheapest levera
 
 ---
 
-<p align="center">[← Part II · The Practice](part-2-the-practice.md) · [Contents](../README.md) · [Construct the Third →](06-construct-the-third.md)</p>
+<p align="center">[← Part II · The Practice](part-2-the-practice.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Construct the Third →](06-construct-the-third.md)</p>

@@ -73,4 +73,4 @@ And when you catch your attention in a hook — you will, today, probably within
 
 ---
 
-<p align="center">[← The Given](02-the-given.md) · [Contents](../README.md) · [Witness →](04-witness.md)</p>
+<p align="center">[← The Given](02-the-given.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Witness →](04-witness.md)</p>

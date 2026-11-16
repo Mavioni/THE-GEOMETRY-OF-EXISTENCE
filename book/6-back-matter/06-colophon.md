@@ -21,4 +21,4 @@
 
 ---
 
-<p align="center">[← The Checks](05-the-checks.md) · [Contents](../README.md)</p>
+<p align="center">[← The Checks](05-the-checks.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md)</p>

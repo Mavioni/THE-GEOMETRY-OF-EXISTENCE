@@ -59,4 +59,4 @@ That is the construction. Name the premise. Refuse the midpoint. Hold the tensio
 
 ---
 
-<p align="center">[← Name the Binary](05-name-the-binary.md) · [Contents](../README.md) · [Own the Ground →](07-own-the-ground.md)</p>
+<p align="center">[← Name the Binary](05-name-the-binary.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Own the Ground →](07-own-the-ground.md)</p>

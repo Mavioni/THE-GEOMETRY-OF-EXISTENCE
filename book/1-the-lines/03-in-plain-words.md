@@ -30,4 +30,4 @@
 
 ---
 
-<p align="center">[← The Stance](02-the-stance.md) · [Contents](../README.md) · [Level Two · The Manual →](../2-the-manual/README.md)</p>
+<p align="center">[← The Stance](02-the-stance.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Level Two · The Manual →](../2-the-manual/README.md)</p>

@@ -196,4 +196,4 @@ Four kinds of infinity must be kept apart. A lattice contains countably infinite
 
 ---
 
-<p align="center">[← Part II — The Established Bridges (§5–§11)](2-the-established-bridges.md) · [Contents](../../README.md) · [Part IV — The Frontier (§18–§22) →](4-the-frontier.md)</p>
+<p align="center">[← Part II — The Established Bridges (§5–§11)](2-the-established-bridges.md) · [Contents](../../README.md) · [PDF ↓](../../../edition/README.md) · [Part IV — The Frontier (§18–§22) →](4-the-frontier.md)</p>

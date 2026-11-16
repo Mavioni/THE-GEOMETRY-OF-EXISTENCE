@@ -61,4 +61,4 @@ That is the price of being this kind of animal. It is worth it. It is, in the en
 
 ---
 
-<p align="center">[← Attention](03-attention.md) · [Contents](../README.md) · [Part II · The Practice →](part-2-the-practice.md)</p>
+<p align="center">[← Attention](03-attention.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Part II · The Practice →](part-2-the-practice.md)</p>

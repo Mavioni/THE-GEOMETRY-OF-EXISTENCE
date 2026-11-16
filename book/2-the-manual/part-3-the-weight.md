@@ -13,4 +13,4 @@
 
 ---
 
-<p align="center">[← Refuse the Waiting Room](09-refuse-the-waiting-room.md) · [Contents](../README.md) · [The Asymmetry →](10-the-asymmetry.md)</p>
+<p align="center">[← Refuse the Waiting Room](09-refuse-the-waiting-room.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Asymmetry →](10-the-asymmetry.md)</p>

@@ -75,4 +75,4 @@ Each line below is a computation that was run again while this edition was being
 
 ---
 
-<p align="center">[← Corrections and Open Accounts](04-corrections-and-open-accounts.md) · [Contents](../README.md) · [Colophon →](06-colophon.md)</p>
+<p align="center">[← Corrections and Open Accounts](04-corrections-and-open-accounts.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Colophon →](06-colophon.md)</p>

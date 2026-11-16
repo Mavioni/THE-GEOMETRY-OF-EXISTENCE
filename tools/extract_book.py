@@ -1012,6 +1012,7 @@ def write_unit(doc, unit, prev_unit, next_unit, figures_index, plates_index):
     if prev_unit:
         nav.append(f"[← {prev_unit[4]}]({rel(md_path, os.path.join(BOOK, prev_unit[3]))})")
     nav.append(f"[Contents]({rel(md_path, os.path.join(BOOK, 'README.md'))})")
+    nav.append(f"[PDF ↓]({rel(md_path, os.path.join(ROOT, 'edition', 'README.md'))})")
     if next_unit:
         nav.append(f"[{next_unit[4]} →]({rel(md_path, os.path.join(BOOK, next_unit[3]))})")
     lvl = LEVELS[level]

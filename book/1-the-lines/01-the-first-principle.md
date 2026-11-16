@@ -25,4 +25,4 @@ Existence requires no justification. Understanding is an opportunity. Connection
 
 ---
 
-<p align="center">[← Level One · The Lines](README.md) · [Contents](../README.md) · [The Stance →](02-the-stance.md)</p>
+<p align="center">[← Level One · The Lines](README.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Stance →](02-the-stance.md)</p>
