@@ -124,6 +124,16 @@ def dress_html(h: str) -> str:
     h = re.sub(r'href="([^"#:]*?)README\.md(#[^"]*)?"', lambda m: f'href="{m.group(1)}index.html{m.group(2) or ""}"', h)
     h = re.sub(r'href="([^"#:]+?)\.md(#[^"]*)?"', lambda m: f'href="{m.group(1)}.html{m.group(2) or ""}"', h)
     h = h.replace(' align="center"', ' class="center"')
+
+    def eq(m):
+        inner = m.group(1)
+        plain = html.unescape(re.sub(r"<[^>]+>", "", inner)).strip()
+        words = re.findall(r"[A-Za-z]{5,}", plain)
+        if len(plain) < 120 and re.search(r"[=<>≤≥≈∝]", plain) and not words \
+                and not inner.startswith("<span class=\"mark"):
+            return f'<p class="eq">{inner}</p>'
+        return m.group(0)
+    h = re.sub(r"<p>(.*?)</p>", eq, h)
     return h
 
 
@@ -137,9 +147,14 @@ def render_md(md: str) -> str:
 # ---------------------------------------------------------------------------
 
 
+THEME_ICON = ('<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">'
+              '<circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.4"/>'
+              '<path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>')
+
+
 def shell(out_rel, title, body, *, description="", accent="#c9a14a", prev=None, nxt=None,
-          current=""):
-    r = lambda p: rel(out_rel, p)  # noqa: E731
+          current="", image="art/plates/p001-cover.png", base=None):
+    r = (lambda p: p) if base else (lambda p: rel(out_rel, p))  # noqa: E731
     nav_items = [("Contents", "book/index.html"), ("Lines", "book/1-the-lines/index.html"),
                  ("Manual", "book/2-the-manual/index.html"), ("Degree", "book/3-the-degree/index.html"),
                  ("Principle", "book/4-the-principle/index.html"), ("Proof", "book/5-the-proof/index.html"),
@@ -173,7 +188,12 @@ def shell(out_rel, title, body, *, description="", accent="#c9a14a", prev=None, 
 <meta name="description" content="{html.escape(description or 'The Geometry of Existence: A Manual for Life, in five levels, the highest at the end.')}">
 <meta property="og:title" content="{t}">
 <meta property="og:url" content="{SITE_URL}{out_rel}">
-<meta property="og:image" content="{r('art/plates/p001-cover.png')}">
+<meta property="og:image" content="{SITE_URL}{image}">
+<meta property="og:type" content="book">
+<meta property="og:site_name" content="The Geometry of Existence">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="{SITE_URL}{'' if out_rel == 'index.html' else out_rel}">
+{f'<base href="{base}">' if base else ''}
 <meta name="theme-color" content="#14112e">
 <link rel="icon" href="{r('assets/favicon.svg')}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,14 +205,15 @@ def shell(out_rel, title, body, *, description="", accent="#c9a14a", prev=None, 
 <script src="{r('assets/script.js')}" defer></script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to the text</a>
 <div class="progress" aria-hidden="true"></div>
 <header class="masthead">
   <a class="brand" href="{r('index.html')}">The Geometry <span class="dot">·</span> of Existence</a>
   <nav aria-label="Book">{nav}</nav>
   <a class="dl-link" href="{r(PDF_REL)}" download="{PDF_SAVE_AS}" aria-label="Download the book ({pdf_label()})">PDF ↓</a>
-  <button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button>
+  <button class="theme-toggle" type="button" aria-label="Switch between light and dark">{THEME_ICON}</button>
 </header>
-<main>
+<main id="main">
 {body}
 {pager}
 </main>
@@ -215,15 +236,44 @@ def shell(out_rel, title, body, *, description="", accent="#c9a14a", prev=None, 
 # ---------------------------------------------------------------------------
 
 
-def plate_hero(out_rel, u, kicker_override=None):
+def plate_hero(out_rel, u, meta="", extra="", begin=True):
     if not u["plates"]:
         return ""
     img = rel(out_rel, "art/" + u["plates"][0])
-    kicker = kicker_override or u["kicker"]
+    kicker = u["kicker"]
     title = u["title"].split(" · ")[-1] if u["kind"] in ("level", "part") else u["title"]
     epi = f'<blockquote class="epigraph"><p>{html.escape(u["epigraph"])}</p></blockquote>' if u["epigraph"] else ""
-    return (f'<section class="plate-hero"><img src="{img}" alt="{html.escape(kicker)} — {html.escape(title)}">'
-            f'<p class="kicker">{html.escape(kicker)}</p><h1>{html.escape(title)}</h1>{epi}</section>')
+    meta_html = f'<p class="meta">{meta}</p>' if meta else ""
+    begin_html = '<a class="begin" href="#text">Begin reading <span aria-hidden="true">↓</span></a>' if begin else ""
+    return (f'<section class="plate-hero"><div class="plate-hero-inner">'
+            f'<figure class="plate"><img src="{img}" alt="The plate for {html.escape(kicker)}: {html.escape(title)}" width="396" height="612"></figure>'
+            f'<div class="plate-text"><p class="kicker">{html.escape(kicker)}</p><h1>{html.escape(title)}</h1>'
+            f'{epi}{meta_html}{extra}{begin_html}</div></div></section>')
+
+
+def reading_time(md: str) -> str:
+    text = re.sub(r"<[^>]+>|[#>*`_|\\-]", " ", md)
+    words = len(re.findall(r"[A-Za-z\u00C0-\u024F]+", text))
+    if words < 120:
+        return ""
+    return f"{max(1, round(words / 230))} min read"
+
+
+def add_section_nav(body: str) -> str:
+    """Give h3 headings ids; on long pages, list them at the top."""
+    heads = []
+
+    def anchor(m):
+        inner = m.group(1)
+        plain = re.sub(r"<[^>]+>", "", inner)
+        slug = re.sub(r"[^a-z0-9]+", "-", html.unescape(plain).lower()).strip("-")[:60] or "s"
+        heads.append((slug, plain))
+        return f'<h3 id="{slug}">{inner}</h3>'
+    body = re.sub(r"<h3>(.*?)</h3>", anchor, body)
+    if len(heads) < 3:
+        return body
+    items = "".join(f'<li><a href="#{s}">{t}</a></li>' for s, t in heads)
+    return f'<nav class="on-this-page" aria-label="On this page"><p>On this page</p><ol>{items}</ol></nav>' + body
 
 
 def build_units(m):
@@ -240,8 +290,23 @@ def build_units(m):
         lv = levels[u["level"]]
         crumb_bits = [lv["kicker"]] + ([lv["name"]] if u["level"] not in (0, 6) else [])
         pages = f"page {u['first']}" if u["first"] == u["last"] else f"pages {u['first']}–{u['last']}"
-        crumb = f'<p class="crumb">{" · ".join(crumb_bits)} · {pages}</p>'
-        hero = plate_hero(out_rel, u)
+        rt = reading_time(body_md)
+        bits = crumb_bits + [pages] + ([rt] if rt else [])
+        crumb = '<p class="crumb">' + " · ".join(f"<span>{html.escape(b)}</span>" for b in bits) + "</p>"
+        body = add_section_nav(body)
+        part_list = ""
+        if u["kind"] == "part":
+            j = i + 1
+            items = []
+            while j < len(units) and units[j]["kind"] == "chapter":
+                x = units[j]
+                href = rel(out_rel, out_path_for(os.path.join("book", x["path"])))
+                items.append(f'<li><a href="{href}"><span class="num">{x["number"]}</span>{html.escape(x["title"])}</a></li>')
+                j += 1
+            part_list = f'<ol class="part-chapters">{"".join(items)}</ol>' if items else ""
+        meta = " · ".join(x for x in (lv["kicker"] if u["kind"] != "level" else "", pages.capitalize(), rt) if x)
+        has_text = len(re.sub(r"<[^>]+>|\s", "", body)) > 0
+        hero = plate_hero(out_rel, u, meta=meta, extra=part_list, begin=has_text)
         extra = ""
         if u["kind"] == "level":
             members = [x for x in units if x["level"] == u["level"] and x is not u]
@@ -251,11 +316,11 @@ def build_units(m):
                 if x["plates"]:
                     im = f'<img src="{rel(out_rel, "art/" + x["plates"][0].replace("plates/", "plates/thumbs/"))}" alt="">'
                 else:
-                    im = ""
+                    im = f'<span class="tile"><span>{html.escape(x["title"])}</span></span>'
                 lab = f"{x['number']} · {x['title']}" if x["number"] else x["title"]
                 cards.append(f'<a href="{href}">{im}{html.escape(lab)}</a>')
             extra = '<h2>In this level</h2><div class="gallery">' + "".join(cards) + "</div>"
-        content = (hero + '<article class="text">' + (crumb if not hero else "") + body + "</article>"
+        content = (hero + '<article class="text" id="text">' + (crumb if not hero else "") + body + "</article>"
                    + (f'<div class="wide">{extra}</div>' if extra else ""))
 
         def link(x):
@@ -267,7 +332,8 @@ def build_units(m):
         nxt = link(units[i + 1]) if i + 1 < len(units) else None
         current = {1: "Lines", 2: "Manual", 3: "Degree", 4: "Principle", 5: "Proof"}.get(u["level"], "")
         page = shell(out_rel, u["title"], content, description=u["epigraph"], accent=lv["accent"],
-                     prev=prev, nxt=nxt, current=current)
+                     prev=prev, nxt=nxt, current=current,
+                     image="art/" + u["plates"][0] if u["plates"] else "art/plates/p001-cover.png")
         write(out_rel, page)
 
 
@@ -295,7 +361,8 @@ def build_contents(m):
                 items.append(f'<li class="part"><a href="{href}">{html.escape(u["title"])}</a></li>')
                 continue
             num = f'<span class="num">{u["number"]}</span>' if u["number"] else ""
-            items.append(f'<li class="{u["kind"]}"><a href="{href}">{num}{html.escape(u["title"])}</a>'
+            sub = " sub" if "sophonticism/" in u["path"] and not u["path"].endswith("README.md") else ""
+            items.append(f'<li class="{u["kind"]}{sub}"><a href="{href}">{num}{html.escape(u["title"])}</a>'
                          f'<span class="pg">{u["first"]}</span></li>')
         parts.append(f'<section class="level"><div>{img}</div><div><p class="kicker" style="text-align:left">{lv["kicker"]}</p>'
                      f'<h3>{html.escape(lv["name"])}</h3><p class="subtitle" style="text-align:left">{html.escape(lv["sub"])}</p>'
@@ -411,6 +478,20 @@ def build_download(m):
                          description="Download The Geometry of Existence: A Manual for Life as a PDF."))
 
 
+def build_404():
+    body = """
+<section class="home-hero" style="padding-bottom:3rem">
+  <p class="first-principle">This page is not in the book.</p>
+  <p class="attr">404</p>
+  <div class="actions">
+    <a class="btn primary" href="book/index.html">Contents</a>
+    <a class="btn" href="index.html">Home</a>
+  </div>
+</section>"""
+    path = "/" + SITE_URL.split("/", 3)[3]
+    write("404.html", shell("404.html", "Not in the book", body, base=path))
+
+
 def build_markdown_folder(folder, title, current):
     src = os.path.join(ROOT, folder)
     files = sorted(f for f in os.listdir(src) if f.endswith(".md"))
@@ -467,6 +548,7 @@ def main():
     build_units(m)
     build_gallery(m)
     build_download(m)
+    build_404()
     build_markdown_folder("workbook", "The Workbook", "Workbook")
     build_markdown_folder("checks", "The Checks", "Checks")
     n = sum(len(fs) for _, _, fs in os.walk(OUT))

@@ -580,7 +580,7 @@ def is_blocking(ln: Line) -> bool:
              "epigraph", "subtitle", "bullet"):
         return True
     if k == "numeral":
-        return False
+        return True                                    # list numbers belong to the text
     t = ln.text.strip()
     if ln.size >= 9.5:
         if len(t) <= 3 and abs(ln.size - 10.6) > 0.3:
