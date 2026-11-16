@@ -6,11 +6,9 @@
 
 > *Nothing gives legitimacy to existence except existence itself.*
 
-<p align="center">
-  <img src="../../art/figures/p009-1.png" alt="Figure, page 9" width="326">
-</p>
+<p align="center"><img src="../../art/ornaments/divider.png" alt="" width="200"></p>
 
-Existence itself is sufficient.
+1. Existence itself is sufficient.
 
 2. Consciousness gives us the opportunity to understand it.
 
