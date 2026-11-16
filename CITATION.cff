@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you cite this book, please cite the complete edition."
+type: book
+title: "The Geometry of Existence: A Manual for Life"
+abstract: >-
+  One book in five levels, the highest at the end: The Lines, The Manual,
+  The Degree, The Principle, and The Proof and Its Limits. It gathers the Field
+  Manual, Sophonticism, the Opus Enchiridion, the Critical Completion, and the
+  workshop.
+authors:
+  - given-names: Massimo Vincent
+    family-names: Panella
+version: "Complete edition"
+date-released: "2026-11-15"
+repository-code: "https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE"
+license: AGPL-3.0
+keywords:
+  - philosophy
+  - metaphysics
+  - practice
+  - balanced ternary
+  - statistical mechanics
