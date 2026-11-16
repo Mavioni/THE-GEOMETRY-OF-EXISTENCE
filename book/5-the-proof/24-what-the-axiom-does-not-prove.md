@@ -59,4 +59,4 @@ Logic gives the principle back nothing but itself. Nothing was smuggled. Whoever
 
 ---
 
-<p align="center">[← The Program, Preregistered](23-the-program-preregistered.md) · [Contents](../README.md) · [Beyond Logic →](25-beyond-logic.md)</p>
+<p align="center">[← The Program, Preregistered](23-the-program-preregistered.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Beyond Logic →](25-beyond-logic.md)</p>

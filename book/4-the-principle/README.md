@@ -22,4 +22,4 @@
 
 ---
 
-<p align="center">[← The Graded Audits](../3-the-degree/19-the-graded-audits.md) · [Contents](../README.md) · [Existence Is Sufficient →](19-existence-is-sufficient.md)</p>
+<p align="center">[← The Graded Audits](../3-the-degree/19-the-graded-audits.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Existence Is Sufficient →](19-existence-is-sufficient.md)</p>

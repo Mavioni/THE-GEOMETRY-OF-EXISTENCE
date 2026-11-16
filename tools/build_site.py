@@ -24,6 +24,14 @@ import markdown
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BOOK = os.path.join(ROOT, "book")
 OUT = os.path.join(ROOT, "_site")
+SITE_URL = "https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/"
+PDF_REL = "edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf"
+PDF_SAVE_AS = "The-Geometry-of-Existence.pdf"
+
+
+def pdf_label():
+    size = os.path.getsize(os.path.join(ROOT, PDF_REL)) / 1e6
+    return f"PDF, 214 pages, {size:.1f} MB"
 
 MARK_HELP = {
     "lived": "Lived — a stance or a practice. Tested only by doing it.",
@@ -164,6 +172,7 @@ def shell(out_rel, title, body, *, description="", accent="#c9a14a", prev=None, 
 <title>{t} · The Geometry of Existence</title>
 <meta name="description" content="{html.escape(description or 'The Geometry of Existence: A Manual for Life, in five levels, the highest at the end.')}">
 <meta property="og:title" content="{t}">
+<meta property="og:url" content="{SITE_URL}{out_rel}">
 <meta property="og:image" content="{r('art/plates/p001-cover.png')}">
 <meta name="theme-color" content="#14112e">
 <link rel="icon" href="{r('assets/favicon.svg')}" type="image/svg+xml">
@@ -180,6 +189,7 @@ def shell(out_rel, title, body, *, description="", accent="#c9a14a", prev=None, 
 <header class="masthead">
   <a class="brand" href="{r('index.html')}">The Geometry <span class="dot">·</span> of Existence</a>
   <nav aria-label="Book">{nav}</nav>
+  <a class="dl-link" href="{r(PDF_REL)}" download="{PDF_SAVE_AS}" aria-label="Download the book ({pdf_label()})">PDF ↓</a>
   <button class="theme-toggle" type="button" aria-label="Switch light or dark">◐</button>
 </header>
 <main>
@@ -188,7 +198,8 @@ def shell(out_rel, title, body, *, description="", accent="#c9a14a", prev=None, 
 </main>
 <footer class="colophon">
   <p>The Geometry of Existence: A Manual for Life · Massimo Vincent Panella · complete edition, 15 November 2026</p>
-  <p><a href="{r('edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf')}">The edition PDF</a> ·
+  <p><a href="{r(PDF_REL)}" download="{PDF_SAVE_AS}">Download the book ({pdf_label()})</a> ·
+     <a href="{r('download.html')}">About the edition</a> ·
      <a href="{r('book/6-back-matter/04-corrections-and-open-accounts.html')}">Corrections and open accounts</a> ·
      <a href="{r('checks/index.html')}">The checks</a></p>
   <p>Nothing here is medical, psychological, or legal advice. The practices are yours to try and yours to stop.</p>
@@ -315,7 +326,7 @@ def build_home(m):
   <div class="actions">
     <a class="btn primary" href="book/1-the-lines/index.html">Begin with the Lines</a>
     <a class="btn" href="book/index.html">Contents</a>
-    <a class="btn" href="edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf">The PDF</a>
+    <a class="btn" href="{PDF_REL}" download="{PDF_SAVE_AS}" aria-label="Download the book ({pdf_label()})">Download the PDF ↓</a>
   </div>
 </section>
 <div class="three">
@@ -367,6 +378,38 @@ def build_gallery(m):
     write(out_rel, shell(out_rel, "The Gallery", body, current="Gallery"))
 
 
+def build_download(m):
+    out_rel = "download.html"
+    import hashlib
+    data = open(os.path.join(ROOT, PDF_REL), "rb").read()
+    sha = hashlib.sha256(data).hexdigest()
+    body = f"""
+<section class="plate-hero">
+  <a href="{PDF_REL}" download="{PDF_SAVE_AS}"><img src="art/plates/p001-cover.png" alt="The Geometry of Existence — cover. Select to download the PDF."></a>
+  <p class="kicker">The complete edition · 15 November 2026</p>
+  <h1>Download the Book</h1>
+  <p><a class="btn primary" href="{PDF_REL}" download="{PDF_SAVE_AS}">Download the PDF ↓</a></p>
+  <p class="small-center" style="color:#d6cdb6">{pdf_label()} · 5.5 × 8.5 in · fonts embedded</p>
+</section>
+<article class="text">
+  <h2>Other ways to read it</h2>
+  <p>The PDF is the edition of record, laid out for print. It is not a tagged PDF, so screen readers and
+  reflowing readers handle it poorly. The same text, with every plate and figure described, is here:</p>
+  <ul>
+    <li><a href="book/index.html"><b>Read online</b></a> — this website: it reflows to any screen, follows light or dark mode,
+    works with screen readers and browser zoom, and prints page by page.</li>
+    <li><a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/tree/main/book"><b>The book in Markdown</b></a> — one file per chapter, on GitHub.</li>
+  </ul>
+  <h2>Check your copy</h2>
+  <p>SHA-256 of the file:</p>
+  <p><code style="word-break:break-all">{sha}</code></p>
+  <p class="small-center">Run <code>sha256sum {os.path.basename(PDF_REL)}</code> (on macOS <code>shasum -a 256</code>) and compare.</p>
+</article>
+"""
+    write(out_rel, shell(out_rel, "Download the Book", body,
+                         description="Download The Geometry of Existence: A Manual for Life as a PDF."))
+
+
 def build_markdown_folder(folder, title, current):
     src = os.path.join(ROOT, folder)
     files = sorted(f for f in os.listdir(src) if f.endswith(".md"))
@@ -409,7 +452,8 @@ def main():
     os.makedirs(OUT)
     shutil.copytree(os.path.join(ROOT, "art"), os.path.join(OUT, "art"),
                     ignore=shutil.ignore_patterns("README.md"))
-    shutil.copytree(os.path.join(ROOT, "edition"), os.path.join(OUT, "edition"))
+    shutil.copytree(os.path.join(ROOT, "edition"), os.path.join(OUT, "edition"),
+                    ignore=shutil.ignore_patterns("README.md"))
     os.makedirs(os.path.join(OUT, "assets"))
     for f in ("style.css", "script.js"):
         shutil.copy(os.path.join(ROOT, "site", f), os.path.join(OUT, "assets", f))
@@ -421,6 +465,7 @@ def main():
     build_contents(m)
     build_units(m)
     build_gallery(m)
+    build_download(m)
     build_markdown_folder("workbook", "The Workbook", "Workbook")
     build_markdown_folder("checks", "The Checks", "Checks")
     n = sum(len(fs) for _, _, fs in os.walk(OUT))

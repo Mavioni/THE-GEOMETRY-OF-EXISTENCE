@@ -67,4 +67,4 @@ It only asks, now, to be lived.
 
 ---
 
-<p align="center">[← What the Axiom Does Not Prove](24-what-the-axiom-does-not-prove.md) · [Contents](../README.md) · [The Discipline in One Page →](../6-back-matter/01-the-discipline-in-one-page.md)</p>
+<p align="center">[← What the Axiom Does Not Prove](24-what-the-axiom-does-not-prove.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Discipline in One Page →](../6-back-matter/01-the-discipline-in-one-page.md)</p>

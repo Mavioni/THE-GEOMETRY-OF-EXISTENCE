@@ -55,4 +55,4 @@ Know the channel. Permit the water. Refuse the dam. That is continuity — not a
 
 ---
 
-<p align="center">[← The Asymmetry](10-the-asymmetry.md) · [Contents](../README.md) · [The Losable Claim →](12-the-losable-claim.md)</p>
+<p align="center">[← The Asymmetry](10-the-asymmetry.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Losable Claim →](12-the-losable-claim.md)</p>

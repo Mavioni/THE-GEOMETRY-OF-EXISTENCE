@@ -59,4 +59,4 @@ Then the rest of the creed, read through the manual. *Peace* is the kept middle 
 
 ---
 
-<p align="center">[← Change Without Erasure](21-change-without-erasure.md) · [Contents](../README.md) · [Level Five · The Proof and Its Limits →](../5-the-proof/README.md)</p>
+<p align="center">[← Change Without Erasure](21-change-without-erasure.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Level Five · The Proof and Its Limits →](../5-the-proof/README.md)</p>

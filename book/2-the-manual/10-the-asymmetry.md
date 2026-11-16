@@ -61,4 +61,4 @@ If, knowing the price, you still choose to build — then the choice itself beco
 
 ---
 
-<p align="center">[← Part III · The Weight](part-3-the-weight.md) · [Contents](../README.md) · [Continuity →](11-continuity.md)</p>
+<p align="center">[← Part III · The Weight](part-3-the-weight.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Continuity →](11-continuity.md)</p>

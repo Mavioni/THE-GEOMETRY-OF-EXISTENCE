@@ -65,4 +65,4 @@ The territory was always yours. And theirs. And the door between is the only sac
 
 ---
 
-<p align="center">[← Empathy as Catalyst](13-empathy-as-catalyst.md) · [Contents](../README.md) · [The Long Reclamation →](15-the-long-reclamation.md)</p>
+<p align="center">[← Empathy as Catalyst](13-empathy-as-catalyst.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Long Reclamation →](15-the-long-reclamation.md)</p>

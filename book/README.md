@@ -128,4 +128,4 @@
 
 ---
 
-<p align="center">[Read the edition PDF](../edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf) · [The gallery](../art/README.md) · [The workbook](../workbook/README.md) · [Run the checks](../checks/README.md)</p>
+<p align="center">[Download the PDF](../edition/README.md) · [Read online](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/) · [The gallery](../art/README.md) · [The workbook](../workbook/README.md) · [Run the checks](../checks/README.md)</p>

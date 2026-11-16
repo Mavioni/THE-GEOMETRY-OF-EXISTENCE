@@ -75,4 +75,4 @@ And as §16 and §20 state without softening, a successful run would confirm est
 
 ---
 
-<p align="center">[← Appendices A–D](sophonticism/5-appendices.md) · [Contents](../README.md) · [What the Axiom Does Not Prove →](24-what-the-axiom-does-not-prove.md)</p>
+<p align="center">[← Appendices A–D](sophonticism/5-appendices.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [What the Axiom Does Not Prove →](24-what-the-axiom-does-not-prove.md)</p>

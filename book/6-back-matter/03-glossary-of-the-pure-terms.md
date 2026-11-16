@@ -59,4 +59,4 @@
 
 ---
 
-<p align="center">[← The Lineage](02-the-lineage.md) · [Contents](../README.md) · [Corrections and Open Accounts →](04-corrections-and-open-accounts.md)</p>
+<p align="center">[← The Lineage](02-the-lineage.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Corrections and Open Accounts →](04-corrections-and-open-accounts.md)</p>

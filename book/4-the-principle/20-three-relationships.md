@@ -71,4 +71,4 @@ One word about this book’s own shape, because it is built in levels and levels
 
 ---
 
-<p align="center">[← Existence Is Sufficient](19-existence-is-sufficient.md) · [Contents](../README.md) · [Change Without Erasure →](21-change-without-erasure.md)</p>
+<p align="center">[← Existence Is Sufficient](19-existence-is-sufficient.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Change Without Erasure →](21-change-without-erasure.md)</p>

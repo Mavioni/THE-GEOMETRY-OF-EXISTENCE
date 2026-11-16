@@ -101,4 +101,4 @@ The geometric temptation is to identify every observed power law with a fundamen
 
 ---
 
-<p align="center">[← Part I — Ground (§1–§4)](1-ground.md) · [Contents](../../README.md) · [Part III — The Third State and Consequence (§12–§17) →](3-the-third-state-and-consequence.md)</p>
+<p align="center">[← Part I — Ground (§1–§4)](1-ground.md) · [Contents](../../README.md) · [PDF ↓](../../../edition/README.md) · [Part III — The Third State and Consequence (§12–§17) →](3-the-third-state-and-consequence.md)</p>

@@ -65,4 +65,4 @@ One more thing the lower-of-two rule shows, and it is strange enough to state ca
 
 ---
 
-<p align="center">[← The Degree](16-the-degree.md) · [Contents](../README.md) · [Act Crisp →](18-act-crisp.md)</p>
+<p align="center">[← The Degree](16-the-degree.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Act Crisp →](18-act-crisp.md)</p>

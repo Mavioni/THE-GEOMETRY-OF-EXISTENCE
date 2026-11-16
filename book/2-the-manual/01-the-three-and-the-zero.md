@@ -67,4 +67,4 @@ The zero is where the building happens. It is the only ground that holds. Everyt
 
 ---
 
-<p align="center">[← Part I · The Ground](part-1-the-ground.md) · [Contents](../README.md) · [The Given →](02-the-given.md)</p>
+<p align="center">[← Part I · The Ground](part-1-the-ground.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Given →](02-the-given.md)</p>

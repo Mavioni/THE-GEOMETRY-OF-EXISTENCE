@@ -15,11 +15,16 @@ indexes; nothing is typed in by hand except the layout.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO = "https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE"
+SITE = "https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/"
+PDF_NAME = "The_Geometry_of_Existence_A_Manual_for_Life.pdf"
+PDF_DOWNLOAD = f"{REPO}/raw/main/edition/{PDF_NAME}"
 BOOK = os.path.join(ROOT, "book")
 ART = os.path.join(ROOT, "art")
 WORKBOOK = os.path.join(ROOT, "workbook")
@@ -150,7 +155,8 @@ def write_book_index(m):
         out.append("\n".join(lines))
         out.append('<br clear="left">')
     out.append("---\n\n<p align=\"center\">"
-               "[Read the edition PDF](../edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf) · "
+               "[Download the PDF](../edition/README.md) · "
+               f"[Read online]({SITE}) · "
                "[The gallery](../art/README.md) · [The workbook](../workbook/README.md) · "
                "[Run the checks](../checks/README.md)</p>")
     with open(path, "w", encoding="utf-8") as fh:
@@ -343,8 +349,72 @@ def write_workbook(m):
     return len(index)
 
 
+def pdf_facts(m):
+    path = os.path.join(ROOT, "edition", PDF_NAME)
+    data = open(path, "rb").read()
+    pages = max(u["last"] for u in m["units"])
+    return dict(pages=pages, mb=f"{len(data) / 1e6:.1f} MB", sha=hashlib.sha256(data).hexdigest())
+
+
+def download_svg(label, sub):
+    w = 340
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="58" viewBox="0 0 {w} 58" role="img" aria-label="{label} — {sub}">
+  <rect x="0.5" y="0.5" width="{w - 1}" height="57" rx="3" fill="{NAVY}" stroke="{GOLD}" stroke-width="1"/>
+  <g transform="translate(30 29)" fill="none" stroke="{GOLD}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle r="15" stroke-opacity="0.5"/><path d="M0 -8 V7 M-6 1 L0 7 L6 1"/><path d="M-8 11 H8"/>
+  </g>
+  <text x="58" y="26" font-family="Cormorant Garamond, Garamond, Georgia, serif" font-size="17" letter-spacing="3" fill="#efe6d0">{label}</text>
+  <text x="58" y="44" font-family="EB Garamond, Garamond, Georgia, serif" font-size="11.5" letter-spacing="1.2" fill="{GOLD}">{sub}</text>
+</svg>
+'''
+
+
+def write_edition_page(m):
+    f = pdf_facts(m)
+    sub = f"PDF · {f['pages']} PAGES · {f['mb']}"
+    with open(os.path.join(ART, "download.svg"), "w", encoding="utf-8") as fh:
+        fh.write(download_svg("DOWNLOAD THE BOOK", sub))
+    text = f'''<p align="center"><a href="{PDF_DOWNLOAD}"><img src="../art/plates/p001-cover.png" alt="The Geometry of Existence — cover. Select to download the PDF." width="260"></a></p>
+
+<h1 align="center">The Edition</h1>
+
+<p align="center"><i>The Geometry of Existence: A Manual for Life</i> · complete edition, 15 November 2026</p>
+
+<p align="center"><a href="{PDF_DOWNLOAD}"><img src="../art/download.svg" alt="Download the book: PDF, {f['pages']} pages, {f['mb']}" width="340"></a></p>
+
+## Download
+
+| | |
+|---|---|
+| **Download** | **[{PDF_NAME}]({PDF_DOWNLOAD})** — PDF, {f['pages']} pages, {f['mb']} |
+| **View in the browser** | [Open on GitHub]({PDF_NAME}) |
+| **Page size** | 5.5 × 8.5 in (digest), the plates printed full-bleed in navy and gold |
+| **Typefaces** | EB Garamond and Cormorant Garamond, embedded |
+| **SHA-256** | `{f['sha']}` |
+
+To check your copy: `sha256sum {PDF_NAME}` (macOS: `shasum -a 256 {PDF_NAME}`) should print the line above.
+
+## Other ways to read it
+
+The PDF is the edition of record. It is laid out for print and is **not a tagged PDF**, so screen readers and reflowing readers handle it poorly. The same text, with every plate and figure and with image descriptions, is available in two accessible forms:
+
+- **[The reading edition]({SITE})** — the website: reflows to any screen, follows light or dark mode, works with screen readers and browser zoom, and can be printed page by page.
+- **[The book in Markdown](../book/README.md)** — one file per chapter, readable on GitHub or in any text editor.
+
+Both are cut from this PDF by the tools in this repository, and a check confirms every printed word reaches them.
+
+---
+
+<p align="center"><a href="../README.md">Home</a> · <a href="../book/README.md">Contents</a> · <a href="{SITE}">Website</a></p>
+'''
+    with open(os.path.join(ROOT, "edition", "README.md"), "w", encoding="utf-8") as fh:
+        fh.write(text)
+    return f
+
+
 def main():
     m = load()
+    write_edition_page(m)
     write_marks()
     write_book_index(m)
     append_level_strips(m)

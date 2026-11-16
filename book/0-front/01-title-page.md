@@ -25,4 +25,4 @@ Massimo Vincent Panella *Level Two drafted with Samantha (OpenClaw). Research sy
 
 ---
 
-<p align="center">[Contents](../README.md) · [How This Book Is Built →](02-how-this-book-is-built.md)</p>
+<p align="center">[Contents](../README.md) · [PDF ↓](../../edition/README.md) · [How This Book Is Built →](02-how-this-book-is-built.md)</p>

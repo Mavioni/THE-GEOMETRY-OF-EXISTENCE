@@ -13,4 +13,4 @@
 
 ---
 
-<p align="center">[← The Losable Claim](12-the-losable-claim.md) · [Contents](../README.md) · [Empathy as Catalyst →](13-empathy-as-catalyst.md)</p>
+<p align="center">[← The Losable Claim](12-the-losable-claim.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Empathy as Catalyst →](13-empathy-as-catalyst.md)</p>

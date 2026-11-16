@@ -49,4 +49,4 @@ And the honest other half. `ARGUED` A finite life cannot carry everything forwar
 
 ---
 
-<p align="center">[← Three Relationships, Not Three Requirements](20-three-relationships.md) · [Contents](../README.md) · [Dignity Is Owed, Respect Is Earned →](22-dignity-is-owed.md)</p>
+<p align="center">[← Three Relationships, Not Three Requirements](20-three-relationships.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Dignity Is Owed, Respect Is Earned →](22-dignity-is-owed.md)</p>

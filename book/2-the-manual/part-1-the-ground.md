@@ -13,4 +13,4 @@
 
 ---
 
-<p align="center">[← Level Two · The Manual](README.md) · [Contents](../README.md) · [The Three and the Zero →](01-the-three-and-the-zero.md)</p>
+<p align="center">[← Level Two · The Manual](README.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Three and the Zero →](01-the-three-and-the-zero.md)</p>

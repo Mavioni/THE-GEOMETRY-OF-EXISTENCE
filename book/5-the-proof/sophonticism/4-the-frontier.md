@@ -75,4 +75,4 @@ Consequence, understood as the effect of recorded outcomes on future transitions
 
 ---
 
-<p align="center">[← Part III — The Third State and Consequence (§12–§17)](3-the-third-state-and-consequence.md) · [Contents](../../README.md) · [Appendices A–D →](5-appendices.md)</p>
+<p align="center">[← Part III — The Third State and Consequence (§12–§17)](3-the-third-state-and-consequence.md) · [Contents](../../README.md) · [PDF ↓](../../../edition/README.md) · [Appendices A–D →](5-appendices.md)</p>

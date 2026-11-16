@@ -23,4 +23,4 @@ A calculation is not an observation. A representation is not the thing represent
 
 ---
 
-<p align="center">[← Level Five · The Proof and Its Limits](../README.md) · [Contents](../../README.md) · [Part I — Ground (§1–§4) →](1-ground.md)</p>
+<p align="center">[← Level Five · The Proof and Its Limits](../README.md) · [Contents](../../README.md) · [PDF ↓](../../../edition/README.md) · [Part I — Ground (§1–§4) →](1-ground.md)</p>

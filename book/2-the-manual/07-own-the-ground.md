@@ -61,4 +61,4 @@ Hold it.
 
 ---
 
-<p align="center">[← Construct the Third](06-construct-the-third.md) · [Contents](../README.md) · [Keep the Middle →](08-keep-the-middle.md)</p>
+<p align="center">[← Construct the Third](06-construct-the-third.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Keep the Middle →](08-keep-the-middle.md)</p>

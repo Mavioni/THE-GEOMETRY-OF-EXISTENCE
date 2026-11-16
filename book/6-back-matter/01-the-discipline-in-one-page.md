@@ -31,4 +31,4 @@ Steps one to four are cheap and feel like progress. Step five is expensive and f
 
 ---
 
-<p align="center">[← Beyond Logic](../5-the-proof/25-beyond-logic.md) · [Contents](../README.md) · [The Lineage →](02-the-lineage.md)</p>
+<p align="center">[← Beyond Logic](../5-the-proof/25-beyond-logic.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Lineage →](02-the-lineage.md)</p>

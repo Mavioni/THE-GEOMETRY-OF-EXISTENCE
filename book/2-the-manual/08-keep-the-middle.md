@@ -59,4 +59,4 @@ Keep the middle. Not as a brand. As a floor.
 
 ---
 
-<p align="center">[← Own the Ground](07-own-the-ground.md) · [Contents](../README.md) · [Refuse the Waiting Room →](09-refuse-the-waiting-room.md)</p>
+<p align="center">[← Own the Ground](07-own-the-ground.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Refuse the Waiting Room →](09-refuse-the-waiting-room.md)</p>

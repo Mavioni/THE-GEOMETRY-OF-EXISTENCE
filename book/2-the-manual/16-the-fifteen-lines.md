@@ -37,4 +37,4 @@
 
 ---
 
-<p align="center">[← The Long Reclamation](15-the-long-reclamation.md) · [Contents](../README.md) · [Level Three · The Degree →](../3-the-degree/README.md)</p>
+<p align="center">[← The Long Reclamation](15-the-long-reclamation.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Level Three · The Degree →](../3-the-degree/README.md)</p>

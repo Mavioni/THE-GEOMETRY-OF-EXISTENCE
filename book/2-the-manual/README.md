@@ -40,4 +40,4 @@ Read one chapter. Do its practice. Then read the next.
 
 ---
 
-<p align="center">[← In Plain Words](../1-the-lines/03-in-plain-words.md) · [Contents](../README.md) · [Part I · The Ground →](part-1-the-ground.md)</p>
+<p align="center">[← In Plain Words](../1-the-lines/03-in-plain-words.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Part I · The Ground →](part-1-the-ground.md)</p>

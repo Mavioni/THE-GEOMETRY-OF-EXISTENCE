@@ -77,4 +77,4 @@ The second: “it’s about a five, it’s complicated” is the waiting room wi
 
 ---
 
-<p align="center">[← Level Three · The Degree](README.md) · [Contents](../README.md) · [The Weakest Link →](17-the-weakest-link.md)</p>
+<p align="center">[← Level Three · The Degree](README.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [The Weakest Link →](17-the-weakest-link.md)</p>

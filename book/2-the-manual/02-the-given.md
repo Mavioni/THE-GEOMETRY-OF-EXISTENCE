@@ -67,4 +67,4 @@ Some of it must be carried. That is not a tragedy. It is a job.
 
 ---
 
-<p align="center">[← The Three and the Zero](01-the-three-and-the-zero.md) · [Contents](../README.md) · [Attention →](03-attention.md)</p>
+<p align="center">[← The Three and the Zero](01-the-three-and-the-zero.md) · [Contents](../README.md) · [PDF ↓](../../edition/README.md) · [Attention →](03-attention.md)</p>
