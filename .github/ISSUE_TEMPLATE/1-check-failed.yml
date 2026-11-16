@@ -1,0 +1,34 @@
+name: A check failed
+description: A computation in checks/verify_all.py did not reproduce. Any failure is an error in Level Five.
+title: "[check] "
+labels: ["correction", "level-five", "demonstrated"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        *"Run the checks listed on the next pages. Any failure is an error in Level Five."* — Corrections and Open Accounts
+  - type: input
+    id: check
+    attributes:
+      label: Which check
+      description: The line printed by `python3 checks/verify_all.py`.
+      placeholder: "FAIL  zero-site fraction 0.278246795804 (prism) ..."
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output of `python3 checks/verify_all.py -v -k <name>`
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version and platform
+      placeholder: "3.12.4, macOS 15"
+  - type: textarea
+    id: independent
+    attributes:
+      label: Independent recomputation (optional)
+      description: If you recomputed the number another way, show how and what you got.

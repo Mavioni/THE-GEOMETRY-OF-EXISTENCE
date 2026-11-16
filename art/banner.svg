@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="The Geometry of Existence — A Manual for Life">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="50%" r="70%">
+      <stop offset="0" stop-color="#241e52"/>
+      <stop offset="1" stop-color="#14112e"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#g)"/>
+  <rect x="14" y="14" width="1172" height="272" fill="none" stroke="#c9a14a" stroke-opacity="0.6" stroke-width="0.8"/>
+    <circle cx="600" cy="150" r="18" fill="none" stroke="#c9a14a" stroke-opacity="0.550" stroke-width="0.8"/>
+    <circle cx="600" cy="150" r="40" fill="none" stroke="#c9a14a" stroke-opacity="0.505" stroke-width="0.8"/>
+    <circle cx="600" cy="150" r="62" fill="none" stroke="#c9a14a" stroke-opacity="0.460" stroke-width="0.8"/>
+    <circle cx="600" cy="150" r="84" fill="none" stroke="#c9a14a" stroke-opacity="0.415" stroke-width="0.8"/>
+    <circle cx="600" cy="150" r="106" fill="none" stroke="#c9a14a" stroke-opacity="0.370" stroke-width="0.8"/>
+    <circle cx="600" cy="150" r="128" fill="none" stroke="#c9a14a" stroke-opacity="0.325" stroke-width="0.8"/>
+    <circle cx="600" cy="150" r="150" fill="none" stroke="#c9a14a" stroke-opacity="0.280" stroke-width="0.8"/>
+    <circle cx="600" cy="150" r="172" fill="none" stroke="#c9a14a" stroke-opacity="0.235" stroke-width="0.8"/>
+    <circle cx="600" cy="150" r="194" fill="none" stroke="#c9a14a" stroke-opacity="0.190" stroke-width="0.8"/>
+    <circle cx="600" cy="150" r="216" fill="none" stroke="#c9a14a" stroke-opacity="0.145" stroke-width="0.8"/>
+    <circle cx="600" cy="150" r="238" fill="none" stroke="#c9a14a" stroke-opacity="0.100" stroke-width="0.8"/>
+    <circle cx="600" cy="150" r="6" fill="none" stroke="#efe6d0" stroke-width="1.2"/>
+    <circle cx="600" cy="150" r="1.6" fill="#efe6d0"/>
+  <text x="600" y="72" text-anchor="middle" font-family="Cormorant Garamond, Garamond, Georgia, serif" font-size="34" font-weight="300" letter-spacing="9" fill="#efe6d0">THE GEOMETRY OF EXISTENCE</text>
+  <text x="600" y="252" text-anchor="middle" font-family="EB Garamond, Garamond, Georgia, serif" font-size="13" letter-spacing="6" fill="#c9a14a">A MANUAL FOR LIFE · IN FIVE LEVELS, THE HIGHEST AT THE END</text>
+</svg>

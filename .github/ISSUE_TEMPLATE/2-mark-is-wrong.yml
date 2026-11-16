@@ -1,0 +1,46 @@
+name: A mark is wrong
+description: A sentence carries the wrong mark — an argument printed as a demonstration, a model value printed as a measurement.
+title: "[mark] "
+labels: ["correction", "mark"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every claim in this book is one of five kinds, and the book tries never to let one kind pass for another.
+        **Lived** · **Argued** · **Demonstrated** · **Measured** · **On record**
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: Chapter or section, and page in the edition PDF (or a link to the line in book/).
+      placeholder: "§15.3, p.165"
+    validations:
+      required: true
+  - type: textarea
+    id: sentence
+    attributes:
+      label: The sentence, quoted exactly
+      render: text
+    validations:
+      required: true
+  - type: dropdown
+    id: printed
+    attributes:
+      label: Mark as printed
+      options: [Lived, Argued, Demonstrated, Measured, On record, No mark]
+    validations:
+      required: true
+  - type: dropdown
+    id: should
+    attributes:
+      label: Mark it should carry
+      options: [Lived, Argued, Demonstrated, Measured, On record]
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: What the claim actually rests on.
+    validations:
+      required: true

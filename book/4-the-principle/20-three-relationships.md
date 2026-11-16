@@ -10,13 +10,9 @@
 
 > *Existence is unconditional. Consciousness is an opportunity. Connection is a choice.*
 
-<p align="center"><i>E</i></p>
-
-<p align="center"><i>C</i></p>
-
-<p align="center"><i>R</i></p>
-
-<p align="center"><img src="../../art/ornaments/divider.png" alt="" width="200"></p>
+<p align="center">
+  <img src="../../art/figures/p127-1.png" alt="Figure, page 127" width="170">
+</p>
 
 The First Principle names three things: existence, consciousness, connection. It is easy to read them as a ladder, each rung more real than the last. They are not a ladder.
 

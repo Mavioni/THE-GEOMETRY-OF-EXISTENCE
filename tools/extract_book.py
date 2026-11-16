@@ -219,8 +219,14 @@ def merge_split_lines(lines: list) -> list:
     for ln in lines:
         if out:
             prev = out[-1]
-            if abs(baseline(prev) - baseline(ln)) < 1.0 and -2 <= ln.x0 - prev.x1 < 3 and \
-                    abs(max(s.size for s in prev.spans) - max(s.size for s in ln.spans)) < 1.0:
+            gap = ln.x0 - prev.x1
+            big = min(max(s.size for s in prev.spans), max(s.size for s in ln.spans))
+            if abs(baseline(prev) - baseline(ln)) < 1.0 and \
+                    abs(max(s.size for s in prev.spans) - max(s.size for s in ln.spans)) < 1.0 and \
+                    (-2 <= gap < 3 or (big >= 9.5 and 0 <= gap < 25)):
+                if gap >= 1.5 and not prev.text.endswith(" "):
+                    sp = prev.spans[-1]
+                    prev.spans.append(Span(" ", sp.font, sp.size, sp.color, sp.bbox, sp.origin))
                 prev.spans.extend(ln.spans)
                 prev.chars.extend(ln.chars)
                 prev.bbox = _union(prev.bbox, ln.bbox)
@@ -568,6 +574,8 @@ def render_clip(page, box, path, zoom=4.0):
 def is_blocking(ln: Line) -> bool:
     """Lines that belong to the running text and therefore bound a figure."""
     k = classify(ln)
+    if ln.size < 6.0 and k not in ("practice", "audit", "check"):
+        return False                                   # labels drawn inside a figure
     if k in ("practice", "audit", "check", "caption", "h2", "h3", "h4", "kicker",
              "epigraph", "subtitle", "bullet"):
         return True
@@ -993,7 +1001,8 @@ def write_unit(doc, unit, prev_unit, next_unit, figures_index, plates_index):
         # end of page: keep the paragraph open so it can continue
 
     body = w.text()
-    body = re.sub(r"(?m)^(- \[x\] .*)\n(?!- |\n|<|>|#)(.+)$", r"\1 \2", body)
+    for _ in range(3):
+        body = re.sub(r"(?m)^(- \[x\] .*)\n\n?(?!- |\n|<|>|#|\|)([^\n]{1,220})$", r"\1 \2", body)
     # callout blocks were written as separate paragraphs: join them
     body = re.sub(r"(> \*\*[▲◆] [A-Za-z]+\*\*\n>)\n\n> ", r"\1\n> ", body)
     body = re.sub(r"\n\n> (?!\*\*[▲◆]|\*)", "\n>\n> ", body)

@@ -34,21 +34,7 @@ There is a genuine partial bridge: general relativity can be treated as an effec
 
 Δp₀ = ⟨(1/6)Σ<sub>i</sub> 1[s<sub>i</sub>=0]⟩<sub>p</sub>rism − ⟨(1/6)Σ<sub>i</sub> 1[s<sub>i</sub>=0]⟩<sub>K</sub>₃,₃.
 
-At
-
-Δ/J=3/4
-
-and
-
-βJ=3,
-
-the
-
-equilibrium
-
-model
-
-predicts Δp₀≈0.276990454809. A physical result inconsistent beyond preregistered uncertainty would challenge the assumed implementation of the canonical model. The observable is a finite-system prediction, so system preparation, readout errors, non-equilibrium transitions, boundary constraints and temperature drift must be controlled.
+At Δ/J=3/4 and βJ=3, the equilibrium model predicts Δp₀≈0.276990454809. A physical result inconsistent beyond preregistered uncertainty would challenge the assumed implementation of the canonical model. The observable is a finite-system prediction, so system preparation, readout errors, non-equilibrium transitions, boundary constraints and temperature drift must be controlled.
 
 The stronger, genuinely novel test would require an independently specified extra term δH<sub>sophontic</sub>, with a parameter whose value is predicted without fitting to this dataset, and a difference between its outcome and conventional spin models larger than the instrument’s calibrated uncertainty. **No such term is presently derived.** Calling the absence by its name is more useful than claiming the answer has been found.
 

@@ -4,43 +4,15 @@
 
 `DEMONSTRATED` Write H(s|a,b)=Ds²−Js(a+b)+Ks²ab, where a,b∈{−1,+1}, s∈{−1,0,+1}. The three energies are E<sub>0</sub>=0 and E<sub>±</sub>=D+Kab∓J(a+b). Their Boltzmann weights are 1 and exp[−β(D+Kab)]exp[±βJ(a+b)]. Summing gives Z=1+2 exp[−β(D+Kab)]cosh[βJ(a+b)]. Since the zero weight is 1, P<sub>0</sub>=1/Z.
 
-For aligned boundaries, a+b=2 and ab=1. Therefore Z<sub>align</sub>=1+2 exp[−β(D+K)]cosh(2βJ). For opposing boundaries, a+b=0 and ab=−1. Therefore Z<sub>opp</sub>=1+2 exp[−β(D−K)]. We have P<sub>align</sub>>P<sub>opp</sub> exactly when Z<sub>align</sub>&lt;Z<sub>opp</sub>,
+For aligned boundaries, a+b=2 and ab=1. Therefore Z<sub>align</sub>=1+2 exp[−β(D+K)]cosh(2βJ). For opposing boundaries, a+b=0 and ab=−1. Therefore Z<sub>opp</sub>=1+2 exp[−β(D−K)]. We have P<sub>align</sub>>P<sub>opp</sub> exactly when Z<sub>align</sub>&lt;Z<sub>opp</sub>, equivalently exp(−βK)cosh(2βJ)&lt;exp(βK), or 2βK>ln cosh(2βJ). This yields the threshold in §14. A dimensional audit confirms that βJ, βD and βK are dimensionless.
 
-equivalently
-
-exp(−βK)cosh(2βJ)&lt;exp(βK),
-
-or
-
-2βK>ln cosh(2βJ). This yields the threshold in §14. A dimensional audit confirms that βJ, βD and βK are dimensionless.
-
-Insert
-
-βJ=ln2,
-
-βD=ln2,
-
-βK=2ln2.
-
-Since
-
-cosh(ln4)=17/8, Z<sub>align</sub>=1+2(1/8)(17/8)=49/32 and P<sub>align</sub>=32/49. Since exp[−β(D−K)]=2, Z<sub>opp</sub>=5 and P<sub>opp</sub>=1/5. The difference is (160−49)/245=111/245. At K=0, Z<sub>align</sub>=1+(17/8)=25/8 giving P<sub>align</sub>=8/25, while Z<sub>opp</sub>=2 giving P<sub>opp</sub>=1/2.
+Insert βJ=ln2, βD=ln2, βK=2ln2. Since cosh(ln4)=17/8, Z<sub>align</sub>=1+2(1/8)(17/8)=49/32 and P<sub>align</sub>=32/49. Since exp[−β(D−K)]=2, Z<sub>opp</sub>=5 and P<sub>opp</sub>=1/5. The difference is (160−49)/245=111/245. At K=0, Z<sub>align</sub>=1+(17/8)=25/8 giving P<sub>align</sub>=8/25, while Z<sub>opp</sub>=2 giving P<sub>opp</sub>=1/2.
 
 **Strongest objection.** The model assumes equilibrium, fixed boundaries and the specified coupling; any laboratory system may violate those assumptions. The algebra remains true of the stipulated Hamiltonian, not automatically of the device.
 
 <p align="center"><i>A2. Exact consequence-memory probability and bounds</i></p>
 
-`DEMONSTRATED` Define n₀(s)=1−s² and Ht(s)=Ds²−Js(a+b)+Ks²ab−χ Ct n₀(s). At fixed C<sub>t</sub>=C, the energies are E₀=−χC and E<sub>±</sub>=D+Kab∓J(a+b). The
-
-conditional
-
-partition
-
-function
-
-is
-
-Z(C)=exp(βχC)+2 exp[−β(D+Kab)]cosh[βJ(a+b)]. Consequently P₀(C)=exp(βχC)/Z(C). Dividing numerator and denominator by exp(βχC) gives the formula in §15. The odds satisfy P₀(C)/(1−P₀(C))=exp[β(D+Kab+χC)]/{2cosh[βJ(a+b)]}. Taking logarithms yields Δlog-odds=βχΔC at fixed a,b,J,D,K,T. With J=D=K=0 and βχ=ln2, a reset record C=0 produces P₀=1/3, while a record C=1 yields P₀=2/(2+1+1)=1/2. The shift is exactly 1/6. No test data were used.
+`DEMONSTRATED` Define n₀(s)=1−s² and Ht(s)=Ds²−Js(a+b)+Ks²ab−χ Ct n₀(s). At fixed C<sub>t</sub>=C, the energies are E₀=−χC and E<sub>±</sub>=D+Kab∓J(a+b). The conditional partition function is Z(C)=exp(βχC)+2 exp[−β(D+Kab)]cosh[βJ(a+b)]. Consequently P₀(C)=exp(βχC)/Z(C). Dividing numerator and denominator by exp(βχC) gives the formula in §15. The odds satisfy P₀(C)/(1−P₀(C))=exp[β(D+Kab+χC)]/{2cosh[βJ(a+b)]}. Taking logarithms yields Δlog-odds=βχΔC at fixed a,b,J,D,K,T. With J=D=K=0 and βχ=ln2, a reset record C=0 produces P₀=1/3, while a record C=1 yields P₀=2/(2+1+1)=1/2. The shift is exactly 1/6. No test data were used.
 
 Iteration of C<sub>t+1</sub>=ρC<sub>t</sub>+n₀(s<sub>t</sub>) gives C<sub>t</sub>=ρ<sup>t</sup> C₀+Σ<sub>k=0</sub><sup>t−1</sup>ρ<sup>t−1−k</sup>n₀(s<sub>k</sub>). Because every n₀ belongs to {0,1}, 0≤C<sub>t</sub>≤ρ<sup>t</sup> C₀+(1−ρ<sup>t</sup>)/(1−ρ) for C₀≥0 and 0≤ρ&lt;1. For χ>0 the feedback favors zero occupancy but does not generate new allowed spin states or spatial dimensions. For χ=0 the memory is decoupled and its conditional observable effect vanishes.
 
@@ -50,19 +22,7 @@ Iteration of C<sub>t+1</sub>=ρC<sub>t</sub>+n₀(s<sub>t</sub>) gives C<sub>t</
 
 `DEMONSTRATED — REPRODUCIBLE COMPUTATION` The companion Python source enumerates every spin assignment for both graphs: 3⁶=729 states. It asserts the graphs’ equal degrees and edge counts, computes ground-state energy exactly using fractions, normalizes Boltzmann weights by subtracting the minimum energy for numerical stability, computes zero occupancy, and enumerates all 15 two-site frozen masks on the prism. Source code is supplied as a separate plain-text Python file with the book, and the results in §16 can be regenerated without external packages.
 
-The
-
-graphs
-
-are
-
-defined
-
-explicitly.
-
-Prism
-
-edges: (0,1),(1,2),(2,0),(3,4),(4,5),(5,3),(0,3),(1,4),(2,5). Bipartite edges: every pair (i,j) with i∈{0,1,2} and j∈{3,4,5}. Energy: JΣ<sub>i,j</sub> s<sub>i</sub> s<sub>j</sub>+(3J/4)Σ<sub>i</sub> s<sub>i</sub>². βJ=3. These definitions suffice for an independent implementation in any language.
+The graphs are defined explicitly. Prism edges: (0,1),(1,2),(2,0),(3,4),(4,5),(5,3),(0,3),(1,4),(2,5). Bipartite edges: every pair (i,j) with i∈{0,1,2} and j∈{3,4,5}. Energy: JΣ<sub>i,j</sub> s<sub>i</sub> s<sub>j</sub>+(3J/4)Σ<sub>i</sub> s<sub>i</sub>². βJ=3. These definitions suffice for an independent implementation in any language.
 
 The minimum for K₃,₃ is −9J+6(3J/4)=−9J/2, attained by the two staggered ±1 configurations. The prism has unavoidable odd-cycle frustration; complete enumeration confirms a minimum of −J with six ground configurations. The computed finite-temperature occupancies are not inferred from a continuum limit and involve no statistical sampling error. Numerical transcendental function evaluation contributes only ordinary floating-point rounding at the displayed precision.
 

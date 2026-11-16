@@ -6,15 +6,15 @@
 
 This is one book in five levels. Each level says the same thing at a greater depth, and each is complete in itself. You may stop at any level and have the whole of that level.
 
-- **Level One · The Lines.** The stance on a few pages, for anyone.
+**Level One · The Lines.** The stance on a few pages, for anyone.
 
-- **Level Two · The Manual.** Fifteen chapters of practice. Each ends in something to do today and a question that can find the chapter wrong.
+**Level Two · The Manual.** Fifteen chapters of practice. Each ends in something to do today and a question that can find the chapter wrong.
 
-- **Level Three · The Degree.** How to grade instead of round: what a degree is, how degrees combine, and how to act once you have weighed.
+**Level Three · The Degree.** How to grade instead of round: what a degree is, how degrees combine, and how to act once you have weighed.
 
-- **Level Four · The Principle.** Why the ground holds: existence is sufficient; consciousness and connection are opportunities; change without erasure; dignity owed and respect earned.
+**Level Four · The Principle.** Why the ground holds: existence is sufficient; consciousness and connection are opportunities; change without erasure; dignity owed and respect earned.
 
-- **Level Five · The Proof and Its Limits.** The mathematics, recomputed. The research program and its frozen tests. The strongest case against it. And, last, what no proof reaches.
+**Level Five · The Proof and Its Limits.** The mathematics, recomputed. The research program and its frozen tests. The strongest case against it. And, last, what no proof reaches.
 
 The levels are levels of understanding, not of worth. A reader who lives Level One has not done less than a reader who checks Level Five.
 
@@ -22,15 +22,15 @@ The levels are levels of understanding, not of worth. A reader who lives Level O
 
 Every claim in this book is one of five kinds, and the book tries never to let one kind pass for another.
 
-- **Lived.** A stance or a practice. It is tested only by doing it. Level Two is written in this mark throughout and so carries no tags on the page: where it speaks of how attention, memory, or people work, it speaks from experience and argument, not from measurement.
+**Lived.** A stance or a practice. It is tested only by doing it. Level Two is written in this mark throughout and so carries no tags on the page: where it speaks of how attention, memory, or people work, it speaks from experience and argument, not from measurement.
 
-- **Argued.** Reasons are given. No one is compelled.
+**Argued.** Reasons are given. No one is compelled.
 
-- **Demonstrated.** It follows from stated definitions, or is established science within a stated domain. Every number of this kind was recomputed for this edition.
+**Demonstrated.** It follows from stated definitions, or is established science within a stated domain. Every number of this kind was recomputed for this edition.
 
-- **Measured.** An observation, with its source. This book reports none of its own; where it quotes another’s figures it marks them *source-reported*.
+**Measured.** An observation, with its source. This book reports none of its own; where it quotes another’s figures it marks them *source-reported*.
 
-- **On record.** A matter of published history: a date, a name, a paper.
+**On record.** A matter of published history: a date, a name, a paper.
 
 ### One promise
 

@@ -19,7 +19,7 @@ LEVELS = [
     dict(n=2, dir="2-the-manual", name="The Manual", kicker="Level Two",
          sub="for the one who will practise", accent="#c9a14a"),
     dict(n=3, dir="3-the-degree", name="The Degree", kicker="Level Three",
-         sub="for the one who weighs", accent="#d9774a"),
+         sub="for the one who has stopped rounding", accent="#d9774a"),
     dict(n=4, dir="4-the-principle", name="The Principle", kicker="Level Four",
          sub="for the one who asks why", accent="#8f7fd0"),
     dict(n=5, dir="5-the-proof", name="The Proof and Its Limits", kicker="Level Five",

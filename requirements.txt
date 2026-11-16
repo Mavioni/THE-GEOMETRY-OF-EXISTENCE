@@ -1,0 +1,3 @@
+# Only the tools need these. checks/verify_all.py needs nothing but Python.
+pymupdf>=1.24      # tools/extract_book.py, tools/check_coverage.py — reading the edition PDF
+markdown>=3.5      # tools/build_site.py — the reading edition

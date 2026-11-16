@@ -24,25 +24,25 @@
 
 **What this edition did not verify.**
 
-- The learning-study figures in §13. They are transcribed from a source manuscript. No network was trained.
+The learning-study figures in §13. They are transcribed from a source manuscript. No network was trained.
 
-- The external references of Appendix D. They are printed as the research text gives them and were not re-fetched.
+The external references of Appendix D. They are printed as the research text gives them and were not re-fetched.
 
-- The platform survey behind Chapter Twenty-Three.
+The platform survey behind Chapter Twenty-Three.
 
-- An independent fact-check of the statements marked *on record* was begun for this edition and did not finish. Those statements are given from standard sources and should be treated as correctable.
+An independent fact-check of the statements marked *on record* was begun for this edition and did not finish. Those statements are given from standard sources and should be treated as correctable.
 
-- Everything Level Two says about how attention, memory, and people work. It is lived and argued. It is not offered as measured science, and nothing in this book is medical or psychological treatment.
+Everything Level Two says about how attention, memory, and people work. It is lived and argued. It is not offered as measured science, and nothing in this book is medical or psychological treatment.
 
 **How to break this book.**
 
-- Run the checks listed on the next pages. Any failure is an error in Level Five.
+Run the checks listed on the next pages. Any failure is an error in Level Five.
 
-- Find a sentence whose mark is wrong: an argument printed as a demonstration, a model value printed as a measurement.
+Find a sentence whose mark is wrong: an argument printed as a demonstration, a model value printed as a measurement.
 
-- Build the six-site system of §16 on a calibrated device and measure the difference in zero-site occupancy. The prediction is 0.276990454809.
+Build the six-site system of §16 on a calibrated device and measure the difference in zero-site occupancy. The prediction is 0.276990454809.
 
-- Do a Practice exactly as written, with your falsifier written first. If nothing you can observe changes, the practice failed for you. That is a result, and it counts.
+Do a Practice exactly as written, with your falsifier written first. If nothing you can observe changes, the practice failed for you. That is a result, and it counts.
 
 Corrections go to the author. Each belongs in the next edition’s list, dated and attributed, beside the ones above.
 

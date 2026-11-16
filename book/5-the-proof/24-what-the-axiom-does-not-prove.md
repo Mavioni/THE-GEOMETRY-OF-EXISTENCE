@@ -10,12 +10,6 @@
 
 > *Existence legitimizes. It does not calculate.*
 
-<p align="center"><i>E</i></p>
-
-<p align="center"><i>L C</i></p>
-
-<p align="center"><i>M</i></p>
-
 <p align="center">
   <img src="../../art/figures/p195-1.png" alt="Figure, page 195" width="170">
 </p>

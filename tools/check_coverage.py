@@ -6,7 +6,7 @@
 For each unit, the words on its text pages (running heads and folios
 excluded) are compared with the words in its Markdown file. Words inside
 figures are carried by the figure images, so they are reported separately.
-Exits non-zero if any unit loses more than a handful of words.
+Exits non-zero if a unit loses more than 25 words and more than 2 % of its text.
 """
 import os
 import re
@@ -48,9 +48,11 @@ def main():
         missing = pdf_words - md_words
         n = sum(missing.values())
         total_missing += n
-        if n > 25:
+        # figure labels live in the images: allow a few, never more than 2 %
+        lost = n > 25 and n > 0.02 * sum(pdf_words.values())
+        if lost:
             bad += 1
-        flag = "!!" if n > 25 else "ok"
+        flag = "!!" if lost else "ok"
         print(f"{flag} {path:62s} pdf={sum(pdf_words.values()):5d} missing={n:3d} "
               + " ".join(list(missing)[:12]))
     print("total words not carried as text (most are figure labels):", total_missing)

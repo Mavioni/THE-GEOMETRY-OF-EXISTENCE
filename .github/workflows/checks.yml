@@ -1,0 +1,42 @@
+name: The Checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Re-run every computation the book relies on
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: verify_all.py (standard library only)
+        run: python3 checks/verify_all.py -v
+
+  book:
+    name: The Markdown book matches the edition
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Every printed word reaches the Markdown
+        run: python3 tools/check_coverage.py
+      - name: Re-cut the book from the PDF and compare the text
+        run: |
+          python3 tools/extract_book.py
+          python3 tools/build_indexes.py
+          git diff --stat -- '*.md'
+          git diff --exit-code -- '*.md' || {
+            echo "::warning::The Markdown differs from a fresh cut of the PDF. If the PDF changed, run 'make book' and commit."
+            exit 1
+          }
