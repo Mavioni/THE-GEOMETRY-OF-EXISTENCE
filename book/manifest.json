@@ -1,0 +1,1266 @@
+{
+ "title": "The Geometry of Existence",
+ "subtitle": "A Manual for Life",
+ "author": "Massimo Vincent Panella",
+ "edition": "Complete edition · 15 November 2026",
+ "pdf": "edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf",
+ "cover": "plates/p001-cover.png",
+ "levels": [
+  {
+   "n": 0,
+   "dir": "0-front",
+   "name": "Front Matter",
+   "kicker": "Before the levels",
+   "sub": "five levels, five marks, one promise",
+   "accent": "#c9a14a"
+  },
+  {
+   "n": 1,
+   "dir": "1-the-lines",
+   "name": "The Lines",
+   "kicker": "Level One",
+   "sub": "for anyone, in one sitting",
+   "accent": "#d9b25c"
+  },
+  {
+   "n": 2,
+   "dir": "2-the-manual",
+   "name": "The Manual",
+   "kicker": "Level Two",
+   "sub": "for the one who will practise",
+   "accent": "#c9a14a"
+  },
+  {
+   "n": 3,
+   "dir": "3-the-degree",
+   "name": "The Degree",
+   "kicker": "Level Three",
+   "sub": "for the one who has stopped rounding",
+   "accent": "#d9774a"
+  },
+  {
+   "n": 4,
+   "dir": "4-the-principle",
+   "name": "The Principle",
+   "kicker": "Level Four",
+   "sub": "for the one who asks why",
+   "accent": "#8f7fd0"
+  },
+  {
+   "n": 5,
+   "dir": "5-the-proof",
+   "name": "The Proof and Its Limits",
+   "kicker": "Level Five",
+   "sub": "for the one who checks",
+   "accent": "#3e8e89"
+  },
+  {
+   "n": 6,
+   "dir": "6-back-matter",
+   "name": "Back Matter",
+   "kicker": "After the levels",
+   "sub": "the discipline, the lineage, the corrections, the checks",
+   "accent": "#8c879a"
+  }
+ ],
+ "units": [
+  {
+   "path": "0-front/01-title-page.md",
+   "title": "Title Page",
+   "kind": "section",
+   "level": 0,
+   "first": 2,
+   "last": 3,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "0-front/02-how-this-book-is-built.md",
+   "title": "How This Book Is Built",
+   "kind": "section",
+   "level": 0,
+   "first": 4,
+   "last": 5,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "1-the-lines/README.md",
+   "title": "Level One · The Lines",
+   "kind": "level",
+   "level": 1,
+   "first": 8,
+   "last": 8,
+   "plates": [
+    "plates/p008-the-lines.png"
+   ],
+   "epigraph": "for anyone, in one sitting",
+   "kicker": "Level One",
+   "number": null
+  },
+  {
+   "path": "1-the-lines/01-the-first-principle.md",
+   "title": "The First Principle",
+   "kind": "section",
+   "level": 1,
+   "first": 9,
+   "last": 9,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "1-the-lines/02-the-stance.md",
+   "title": "The Stance",
+   "kind": "section",
+   "level": 1,
+   "first": 10,
+   "last": 10,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "1-the-lines/03-in-plain-words.md",
+   "title": "In Plain Words",
+   "kind": "section",
+   "level": 1,
+   "first": 11,
+   "last": 11,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "2-the-manual/README.md",
+   "title": "Level Two · The Manual",
+   "kind": "level",
+   "level": 2,
+   "first": 12,
+   "last": 13,
+   "plates": [
+    "plates/p012-the-manual.png"
+   ],
+   "epigraph": "for the one who will practise",
+   "kicker": "Level Two",
+   "number": null
+  },
+  {
+   "path": "2-the-manual/part-1-the-ground.md",
+   "title": "Part I · The Ground",
+   "kind": "part",
+   "level": 2,
+   "first": 14,
+   "last": 14,
+   "plates": [
+    "plates/p014-the-ground.png"
+   ],
+   "epigraph": "what is",
+   "kicker": "Part I",
+   "number": null
+  },
+  {
+   "path": "2-the-manual/01-the-three-and-the-zero.md",
+   "title": "The Three and the Zero",
+   "kind": "chapter",
+   "level": 2,
+   "first": 15,
+   "last": 18,
+   "plates": [
+    "plates/p015-the-three-and-the-zero.png"
+   ],
+   "epigraph": "A binary with a waiting room is still a binary.",
+   "kicker": "Chapter One",
+   "number": 1
+  },
+  {
+   "path": "2-the-manual/02-the-given.md",
+   "title": "The Given",
+   "kind": "chapter",
+   "level": 2,
+   "first": 19,
+   "last": 23,
+   "plates": [
+    "plates/p019-the-given.png"
+   ],
+   "epigraph": "The ground does not negotiate. That is not its cruelty. That is its honesty.",
+   "kicker": "Chapter Two",
+   "number": 2
+  },
+  {
+   "path": "2-the-manual/03-attention.md",
+   "title": "Attention",
+   "kind": "chapter",
+   "level": 2,
+   "first": 24,
+   "last": 29,
+   "plates": [
+    "plates/p024-attention.png"
+   ],
+   "epigraph": "You have exactly as much life as you have attention.",
+   "kicker": "Chapter Three",
+   "number": 3
+  },
+  {
+   "path": "2-the-manual/04-witness.md",
+   "title": "Witness",
+   "kind": "chapter",
+   "level": 2,
+   "first": 30,
+   "last": 34,
+   "plates": [
+    "plates/p030-witness.png"
+   ],
+   "epigraph": "To be seen is not vanity. It is ontology.",
+   "kicker": "Chapter Four",
+   "number": 4
+  },
+  {
+   "path": "2-the-manual/part-2-the-practice.md",
+   "title": "Part II · The Practice",
+   "kind": "part",
+   "level": 2,
+   "first": 35,
+   "last": 35,
+   "plates": [
+    "plates/p035-the-practice.png"
+   ],
+   "epigraph": "how to stand",
+   "kicker": "Part II",
+   "number": null
+  },
+  {
+   "path": "2-the-manual/05-name-the-binary.md",
+   "title": "Name the Binary",
+   "kind": "chapter",
+   "level": 2,
+   "first": 36,
+   "last": 40,
+   "plates": [
+    "plates/p036-name-the-binary.png"
+   ],
+   "epigraph": "A binary you can see is no longer doing its job.",
+   "kicker": "Chapter Five",
+   "number": 5
+  },
+  {
+   "path": "2-the-manual/06-construct-the-third.md",
+   "title": "Construct the Third",
+   "kind": "chapter",
+   "level": 2,
+   "first": 41,
+   "last": 46,
+   "plates": [
+    "plates/p041-construct-the-third.png"
+   ],
+   "epigraph": "The third is built, never selected.",
+   "kicker": "Chapter Six",
+   "number": 6
+  },
+  {
+   "path": "2-the-manual/07-own-the-ground.md",
+   "title": "Own the Ground",
+   "kind": "chapter",
+   "level": 2,
+   "first": 47,
+   "last": 52,
+   "plates": [
+    "plates/p047-own-the-ground.png"
+   ],
+   "epigraph": "Insight without position is a discovery made on someone else’s behalf.",
+   "kicker": "Chapter Seven",
+   "number": 7
+  },
+  {
+   "path": "2-the-manual/08-keep-the-middle.md",
+   "title": "Keep the Middle",
+   "kind": "chapter",
+   "level": 2,
+   "first": 53,
+   "last": 57,
+   "plates": [
+    "plates/p053-keep-the-middle.png"
+   ],
+   "epigraph": "The zero is not the place you escape to. It is the place you return from.",
+   "kicker": "Chapter Eight",
+   "number": 8
+  },
+  {
+   "path": "2-the-manual/09-refuse-the-waiting-room.md",
+   "title": "Refuse the Waiting Room",
+   "kind": "chapter",
+   "level": 2,
+   "first": 58,
+   "last": 63,
+   "plates": [
+    "plates/p058-refuse-the-waiting-room.png"
+   ],
+   "epigraph": "A decision deferred so long it became the architecture was never deferred. It was made — by default, in secret, against you.",
+   "kicker": "Chapter Nine",
+   "number": 9
+  },
+  {
+   "path": "2-the-manual/part-3-the-weight.md",
+   "title": "Part III · The Weight",
+   "kind": "part",
+   "level": 2,
+   "first": 64,
+   "last": 64,
+   "plates": [
+    "plates/p064-the-weight.png"
+   ],
+   "epigraph": "what it costs",
+   "kicker": "Part III",
+   "number": null
+  },
+  {
+   "path": "2-the-manual/10-the-asymmetry.md",
+   "title": "The Asymmetry",
+   "kind": "chapter",
+   "level": 2,
+   "first": 65,
+   "last": 70,
+   "plates": [
+    "plates/p065-the-asymmetry.png"
+   ],
+   "epigraph": "Seeing the third is cheap and feels like enormous progress. Holding it costs years. Budget for the expensive half or do not begin.",
+   "kicker": "Chapter Ten",
+   "number": 10
+  },
+  {
+   "path": "2-the-manual/11-continuity.md",
+   "title": "Continuity",
+   "kind": "chapter",
+   "level": 2,
+   "first": 71,
+   "last": 76,
+   "plates": [
+    "plates/p071-continuity.png"
+   ],
+   "epigraph": "You are not the same person you were. You are also not a different one. Both facts are load-bearing, and confusing them is how lives break.",
+   "kicker": "Chapter Eleven",
+   "number": 11
+  },
+  {
+   "path": "2-the-manual/12-the-losable-claim.md",
+   "title": "The Losable Claim",
+   "kind": "chapter",
+   "level": 2,
+   "first": 77,
+   "last": 82,
+   "plates": [
+    "plates/p077-the-losable-claim.png"
+   ],
+   "epigraph": "A claim that cannot lose cannot win. This applies to physics. It applies to you.",
+   "kicker": "Chapter Twelve",
+   "number": 12
+  },
+  {
+   "path": "2-the-manual/part-4-the-care.md",
+   "title": "Part IV · The Care",
+   "kind": "part",
+   "level": 2,
+   "first": 83,
+   "last": 83,
+   "plates": [
+    "plates/p083-the-care.png"
+   ],
+   "epigraph": "what it is for",
+   "kicker": "Part IV",
+   "number": null
+  },
+  {
+   "path": "2-the-manual/13-empathy-as-catalyst.md",
+   "title": "Empathy as Catalyst",
+   "kind": "chapter",
+   "level": 2,
+   "first": 84,
+   "last": 89,
+   "plates": [
+    "plates/p084-empathy-as-catalyst.png"
+   ],
+   "epigraph": "Empathy opens a door. It is not a force. What walks through the door is a different thing entirely, and it must be judged on its own.",
+   "kicker": "Chapter Thirteen",
+   "number": 13
+  },
+  {
+   "path": "2-the-manual/14-the-inviolate.md",
+   "title": "The Inviolate",
+   "kind": "chapter",
+   "level": 2,
+   "first": 90,
+   "last": 96,
+   "plates": [
+    "plates/p090-the-inviolate.png"
+   ],
+   "epigraph": "Another person’s middle is not yours. Not even to help. Not even to love. Especially not to love.",
+   "kicker": "Chapter Fourteen",
+   "number": 14
+  },
+  {
+   "path": "2-the-manual/15-the-long-reclamation.md",
+   "title": "The Long Reclamation",
+   "kind": "chapter",
+   "level": 2,
+   "first": 97,
+   "last": 102,
+   "plates": [
+    "plates/p097-the-long-reclamation.png"
+   ],
+   "epigraph": "The spark has never been destroyed. It has been buried. And the desire to find the spark is the spark itself, flickering.",
+   "kicker": "Chapter Fifteen",
+   "number": 15
+  },
+  {
+   "path": "2-the-manual/16-the-fifteen-lines.md",
+   "title": "The Fifteen Lines",
+   "kind": "section",
+   "level": 2,
+   "first": 103,
+   "last": 104,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "3-the-degree/README.md",
+   "title": "Level Three · The Degree",
+   "kind": "level",
+   "level": 3,
+   "first": 105,
+   "last": 105,
+   "plates": [
+    "plates/p105-the-degree.png"
+   ],
+   "epigraph": "for the one who has stopped rounding",
+   "kicker": "Level Three",
+   "number": null
+  },
+  {
+   "path": "3-the-degree/16-the-degree.md",
+   "title": "The Degree",
+   "kind": "chapter",
+   "level": 3,
+   "first": 106,
+   "last": 110,
+   "plates": [
+    "plates/p106-the-degree.png"
+   ],
+   "epigraph": "Most of what is true of you is true to a degree. The either/or rounds it off.",
+   "kicker": "Chapter Sixteen",
+   "number": 16
+  },
+  {
+   "path": "3-the-degree/17-the-weakest-link.md",
+   "title": "The Weakest Link",
+   "kind": "chapter",
+   "level": 3,
+   "first": 111,
+   "last": 114,
+   "plates": [
+    "plates/p111-the-weakest-link.png"
+   ],
+   "epigraph": "When two things must both be true, the lower one is your answer.",
+   "kicker": "Chapter Seventeen",
+   "number": 17
+  },
+  {
+   "path": "3-the-degree/18-act-crisp.md",
+   "title": "Act Crisp",
+   "kind": "chapter",
+   "level": 3,
+   "first": 115,
+   "last": 118,
+   "plates": [
+    "plates/p115-act-crisp.png"
+   ],
+   "epigraph": "Weigh in degrees. Move in one piece.",
+   "kicker": "Chapter Eighteen",
+   "number": 18
+  },
+  {
+   "path": "3-the-degree/19-the-graded-audits.md",
+   "title": "The Graded Audits",
+   "kind": "section",
+   "level": 3,
+   "first": 119,
+   "last": 120,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "4-the-principle/README.md",
+   "title": "Level Four · The Principle",
+   "kind": "level",
+   "level": 4,
+   "first": 121,
+   "last": 121,
+   "plates": [
+    "plates/p121-the-principle.png"
+   ],
+   "epigraph": "for the one who asks why",
+   "kicker": "Level Four",
+   "number": null
+  },
+  {
+   "path": "4-the-principle/19-existence-is-sufficient.md",
+   "title": "Existence Is Sufficient",
+   "kind": "chapter",
+   "level": 4,
+   "first": 122,
+   "last": 125,
+   "plates": [
+    "plates/p122-existence-is-sufficient.png"
+   ],
+   "epigraph": "Nothing gives legitimacy to existence except existence itself.",
+   "kicker": "Chapter Nineteen",
+   "number": 19
+  },
+  {
+   "path": "4-the-principle/20-three-relationships.md",
+   "title": "Three Relationships, Not Three Requirements",
+   "kind": "chapter",
+   "level": 4,
+   "first": 126,
+   "last": 129,
+   "plates": [
+    "plates/p126-three-relationships-not-three-requirements.png"
+   ],
+   "epigraph": "Existence is unconditional. Consciousness is an opportunity. Connection is a choice.",
+   "kicker": "Chapter Twenty",
+   "number": 20
+  },
+  {
+   "path": "4-the-principle/21-change-without-erasure.md",
+   "title": "Change Without Erasure",
+   "kind": "chapter",
+   "level": 4,
+   "first": 130,
+   "last": 133,
+   "plates": [
+    "plates/p130-change-without-erasure.png"
+   ],
+   "epigraph": "Change without erasure. Understanding without possession.",
+   "kicker": "Chapter Twenty One",
+   "number": 21
+  },
+  {
+   "path": "4-the-principle/22-dignity-is-owed.md",
+   "title": "Dignity Is Owed, Respect Is Earned",
+   "kind": "chapter",
+   "level": 4,
+   "first": 134,
+   "last": 137,
+   "plates": [
+    "plates/p134-dignity-is-owed-respect-is-earned.png"
+   ],
+   "epigraph": "Dignity is the floor. Respect is the ceiling.",
+   "kicker": "Chapter Twenty Two",
+   "number": 22
+  },
+  {
+   "path": "5-the-proof/README.md",
+   "title": "Level Five · The Proof and Its Limits",
+   "kind": "level",
+   "level": 5,
+   "first": 138,
+   "last": 138,
+   "plates": [
+    "plates/p138-the-proof-and-its-limits.png"
+   ],
+   "epigraph": "for the one who checks",
+   "kicker": "Level Five",
+   "number": null
+  },
+  {
+   "path": "5-the-proof/sophonticism/README.md",
+   "title": "Sophonticism: The Research Book",
+   "kind": "section",
+   "level": 5,
+   "first": 139,
+   "last": 140,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "5-the-proof/sophonticism/1-ground.md",
+   "title": "Part I — Ground (§1–§4)",
+   "kind": "section",
+   "level": 5,
+   "first": 141,
+   "last": 146,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "5-the-proof/sophonticism/2-the-established-bridges.md",
+   "title": "Part II — The Established Bridges (§5–§11)",
+   "kind": "section",
+   "level": 5,
+   "first": 147,
+   "last": 155,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "5-the-proof/sophonticism/3-the-third-state-and-consequence.md",
+   "title": "Part III — The Third State and Consequence (§12–§17)",
+   "kind": "section",
+   "level": 5,
+   "first": 156,
+   "last": 171,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "5-the-proof/sophonticism/4-the-frontier.md",
+   "title": "Part IV — The Frontier (§18–§22)",
+   "kind": "section",
+   "level": 5,
+   "first": 172,
+   "last": 179,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "5-the-proof/sophonticism/5-appendices.md",
+   "title": "Appendices A–D",
+   "kind": "section",
+   "level": 5,
+   "first": 180,
+   "last": 187,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "5-the-proof/23-the-program-preregistered.md",
+   "title": "The Program, Preregistered",
+   "kind": "chapter",
+   "level": 5,
+   "first": 188,
+   "last": 193,
+   "plates": [
+    "plates/p188-the-program-preregistered.png"
+   ],
+   "epigraph": "Small enough to calculate and precise enough to lose.",
+   "kicker": "Chapter Twenty Three",
+   "number": 23
+  },
+  {
+   "path": "5-the-proof/24-what-the-axiom-does-not-prove.md",
+   "title": "What the Axiom Does Not Prove",
+   "kind": "chapter",
+   "level": 5,
+   "first": 194,
+   "last": 197,
+   "plates": [
+    "plates/p194-what-the-axiom-does-not-prove.png"
+   ],
+   "epigraph": "Existence legitimizes. It does not calculate.",
+   "kicker": "Chapter Twenty Four",
+   "number": 24
+  },
+  {
+   "path": "5-the-proof/25-beyond-logic.md",
+   "title": "Beyond Logic",
+   "kind": "chapter",
+   "level": 5,
+   "first": 198,
+   "last": 202,
+   "plates": [
+    "plates/p198-beyond-logic.png"
+   ],
+   "epigraph": "What can be proved has been proved. What remains is what was always first.",
+   "kicker": "Chapter Twenty Five",
+   "number": 25
+  },
+  {
+   "path": "6-back-matter/01-the-discipline-in-one-page.md",
+   "title": "The Discipline in One Page",
+   "kind": "section",
+   "level": 6,
+   "first": 203,
+   "last": 204,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "6-back-matter/02-the-lineage.md",
+   "title": "The Lineage",
+   "kind": "section",
+   "level": 6,
+   "first": 205,
+   "last": 207,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "6-back-matter/03-glossary-of-the-pure-terms.md",
+   "title": "Glossary of the Pure Terms",
+   "kind": "section",
+   "level": 6,
+   "first": 208,
+   "last": 209,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "6-back-matter/04-corrections-and-open-accounts.md",
+   "title": "Corrections and Open Accounts",
+   "kind": "section",
+   "level": 6,
+   "first": 210,
+   "last": 211,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "6-back-matter/05-the-checks.md",
+   "title": "The Checks",
+   "kind": "section",
+   "level": 6,
+   "first": 212,
+   "last": 213,
+   "plates": [],
+   "epigraph": "",
+   "kicker": "",
+   "number": null
+  },
+  {
+   "path": "6-back-matter/06-colophon.md",
+   "title": "Colophon",
+   "kind": "section",
+   "level": 6,
+   "first": 214,
+   "last": 214,
+   "plates": [
+    "plates/p214-colophon.png"
+   ],
+   "epigraph": "Twenty-five chapters. Five levels. One stance.",
+   "kicker": "The Geometry of Existence: a Manual for Life",
+   "number": null
+  }
+ ],
+ "plates": [
+  {
+   "page": 1,
+   "file": "plates/p001-cover.png",
+   "kicker": "Cover",
+   "title": "The Geometry of Existence",
+   "epigraph": "A Manual for Life · In five levels, the highest at the end",
+   "unit": "README.md"
+  },
+  {
+   "page": 8,
+   "file": "plates/p008-the-lines.png",
+   "kicker": "Level One",
+   "title": "The Lines",
+   "epigraph": "for anyone, in one sitting",
+   "unit": "1-the-lines/README.md"
+  },
+  {
+   "page": 12,
+   "file": "plates/p012-the-manual.png",
+   "kicker": "Level Two",
+   "title": "The Manual",
+   "epigraph": "for the one who will practise",
+   "unit": "2-the-manual/README.md"
+  },
+  {
+   "page": 14,
+   "file": "plates/p014-the-ground.png",
+   "kicker": "Part I",
+   "title": "The Ground",
+   "epigraph": "what is",
+   "unit": "2-the-manual/part-1-the-ground.md"
+  },
+  {
+   "page": 15,
+   "file": "plates/p015-the-three-and-the-zero.png",
+   "kicker": "Chapter One",
+   "title": "The Three and the Zero",
+   "epigraph": "A binary with a waiting room is still a binary.",
+   "unit": "2-the-manual/01-the-three-and-the-zero.md"
+  },
+  {
+   "page": 19,
+   "file": "plates/p019-the-given.png",
+   "kicker": "Chapter Two",
+   "title": "The Given",
+   "epigraph": "The ground does not negotiate. That is not its cruelty. That is its honesty.",
+   "unit": "2-the-manual/02-the-given.md"
+  },
+  {
+   "page": 24,
+   "file": "plates/p024-attention.png",
+   "kicker": "Chapter Three",
+   "title": "Attention",
+   "epigraph": "You have exactly as much life as you have attention.",
+   "unit": "2-the-manual/03-attention.md"
+  },
+  {
+   "page": 30,
+   "file": "plates/p030-witness.png",
+   "kicker": "Chapter Four",
+   "title": "Witness",
+   "epigraph": "To be seen is not vanity. It is ontology.",
+   "unit": "2-the-manual/04-witness.md"
+  },
+  {
+   "page": 35,
+   "file": "plates/p035-the-practice.png",
+   "kicker": "Part II",
+   "title": "The Practice",
+   "epigraph": "how to stand",
+   "unit": "2-the-manual/part-2-the-practice.md"
+  },
+  {
+   "page": 36,
+   "file": "plates/p036-name-the-binary.png",
+   "kicker": "Chapter Five",
+   "title": "Name the Binary",
+   "epigraph": "A binary you can see is no longer doing its job.",
+   "unit": "2-the-manual/05-name-the-binary.md"
+  },
+  {
+   "page": 41,
+   "file": "plates/p041-construct-the-third.png",
+   "kicker": "Chapter Six",
+   "title": "Construct the Third",
+   "epigraph": "The third is built, never selected.",
+   "unit": "2-the-manual/06-construct-the-third.md"
+  },
+  {
+   "page": 47,
+   "file": "plates/p047-own-the-ground.png",
+   "kicker": "Chapter Seven",
+   "title": "Own the Ground",
+   "epigraph": "Insight without position is a discovery made on someone else’s behalf.",
+   "unit": "2-the-manual/07-own-the-ground.md"
+  },
+  {
+   "page": 53,
+   "file": "plates/p053-keep-the-middle.png",
+   "kicker": "Chapter Eight",
+   "title": "Keep the Middle",
+   "epigraph": "The zero is not the place you escape to. It is the place you return from.",
+   "unit": "2-the-manual/08-keep-the-middle.md"
+  },
+  {
+   "page": 58,
+   "file": "plates/p058-refuse-the-waiting-room.png",
+   "kicker": "Chapter Nine",
+   "title": "Refuse the Waiting Room",
+   "epigraph": "A decision deferred so long it became the architecture was never deferred. It was made — by default, in secret, against you.",
+   "unit": "2-the-manual/09-refuse-the-waiting-room.md"
+  },
+  {
+   "page": 64,
+   "file": "plates/p064-the-weight.png",
+   "kicker": "Part III",
+   "title": "The Weight",
+   "epigraph": "what it costs",
+   "unit": "2-the-manual/part-3-the-weight.md"
+  },
+  {
+   "page": 65,
+   "file": "plates/p065-the-asymmetry.png",
+   "kicker": "Chapter Ten",
+   "title": "The Asymmetry",
+   "epigraph": "Seeing the third is cheap and feels like enormous progress. Holding it costs years. Budget for the expensive half or do not begin.",
+   "unit": "2-the-manual/10-the-asymmetry.md"
+  },
+  {
+   "page": 71,
+   "file": "plates/p071-continuity.png",
+   "kicker": "Chapter Eleven",
+   "title": "Continuity",
+   "epigraph": "You are not the same person you were. You are also not a different one. Both facts are load-bearing, and confusing them is how lives break.",
+   "unit": "2-the-manual/11-continuity.md"
+  },
+  {
+   "page": 77,
+   "file": "plates/p077-the-losable-claim.png",
+   "kicker": "Chapter Twelve",
+   "title": "The Losable Claim",
+   "epigraph": "A claim that cannot lose cannot win. This applies to physics. It applies to you.",
+   "unit": "2-the-manual/12-the-losable-claim.md"
+  },
+  {
+   "page": 83,
+   "file": "plates/p083-the-care.png",
+   "kicker": "Part IV",
+   "title": "The Care",
+   "epigraph": "what it is for",
+   "unit": "2-the-manual/part-4-the-care.md"
+  },
+  {
+   "page": 84,
+   "file": "plates/p084-empathy-as-catalyst.png",
+   "kicker": "Chapter Thirteen",
+   "title": "Empathy as Catalyst",
+   "epigraph": "Empathy opens a door. It is not a force. What walks through the door is a different thing entirely, and it must be judged on its own.",
+   "unit": "2-the-manual/13-empathy-as-catalyst.md"
+  },
+  {
+   "page": 90,
+   "file": "plates/p090-the-inviolate.png",
+   "kicker": "Chapter Fourteen",
+   "title": "The Inviolate",
+   "epigraph": "Another person’s middle is not yours. Not even to help. Not even to love. Especially not to love.",
+   "unit": "2-the-manual/14-the-inviolate.md"
+  },
+  {
+   "page": 97,
+   "file": "plates/p097-the-long-reclamation.png",
+   "kicker": "Chapter Fifteen",
+   "title": "The Long Reclamation",
+   "epigraph": "The spark has never been destroyed. It has been buried. And the desire to find the spark is the spark itself, flickering.",
+   "unit": "2-the-manual/15-the-long-reclamation.md"
+  },
+  {
+   "page": 105,
+   "file": "plates/p105-the-degree.png",
+   "kicker": "Level Three",
+   "title": "The Degree",
+   "epigraph": "for the one who has stopped rounding",
+   "unit": "3-the-degree/README.md"
+  },
+  {
+   "page": 106,
+   "file": "plates/p106-the-degree.png",
+   "kicker": "Chapter Sixteen",
+   "title": "The Degree",
+   "epigraph": "Most of what is true of you is true to a degree. The either/or rounds it off.",
+   "unit": "3-the-degree/16-the-degree.md"
+  },
+  {
+   "page": 111,
+   "file": "plates/p111-the-weakest-link.png",
+   "kicker": "Chapter Seventeen",
+   "title": "The Weakest Link",
+   "epigraph": "When two things must both be true, the lower one is your answer.",
+   "unit": "3-the-degree/17-the-weakest-link.md"
+  },
+  {
+   "page": 115,
+   "file": "plates/p115-act-crisp.png",
+   "kicker": "Chapter Eighteen",
+   "title": "Act Crisp",
+   "epigraph": "Weigh in degrees. Move in one piece.",
+   "unit": "3-the-degree/18-act-crisp.md"
+  },
+  {
+   "page": 121,
+   "file": "plates/p121-the-principle.png",
+   "kicker": "Level Four",
+   "title": "The Principle",
+   "epigraph": "for the one who asks why",
+   "unit": "4-the-principle/README.md"
+  },
+  {
+   "page": 122,
+   "file": "plates/p122-existence-is-sufficient.png",
+   "kicker": "Chapter Nineteen",
+   "title": "Existence Is Sufficient",
+   "epigraph": "Nothing gives legitimacy to existence except existence itself.",
+   "unit": "4-the-principle/19-existence-is-sufficient.md"
+  },
+  {
+   "page": 126,
+   "file": "plates/p126-three-relationships-not-three-requirements.png",
+   "kicker": "Chapter Twenty",
+   "title": "Three Relationships, Not Three Requirements",
+   "epigraph": "Existence is unconditional. Consciousness is an opportunity. Connection is a choice.",
+   "unit": "4-the-principle/20-three-relationships.md"
+  },
+  {
+   "page": 130,
+   "file": "plates/p130-change-without-erasure.png",
+   "kicker": "Chapter Twenty One",
+   "title": "Change Without Erasure",
+   "epigraph": "Change without erasure. Understanding without possession.",
+   "unit": "4-the-principle/21-change-without-erasure.md"
+  },
+  {
+   "page": 134,
+   "file": "plates/p134-dignity-is-owed-respect-is-earned.png",
+   "kicker": "Chapter Twenty Two",
+   "title": "Dignity Is Owed, Respect Is Earned",
+   "epigraph": "Dignity is the floor. Respect is the ceiling.",
+   "unit": "4-the-principle/22-dignity-is-owed.md"
+  },
+  {
+   "page": 138,
+   "file": "plates/p138-the-proof-and-its-limits.png",
+   "kicker": "Level Five",
+   "title": "The Proof and Its Limits",
+   "epigraph": "for the one who checks",
+   "unit": "5-the-proof/README.md"
+  },
+  {
+   "page": 188,
+   "file": "plates/p188-the-program-preregistered.png",
+   "kicker": "Chapter Twenty Three",
+   "title": "The Program, Preregistered",
+   "epigraph": "Small enough to calculate and precise enough to lose.",
+   "unit": "5-the-proof/23-the-program-preregistered.md"
+  },
+  {
+   "page": 194,
+   "file": "plates/p194-what-the-axiom-does-not-prove.png",
+   "kicker": "Chapter Twenty Four",
+   "title": "What the Axiom Does Not Prove",
+   "epigraph": "Existence legitimizes. It does not calculate.",
+   "unit": "5-the-proof/24-what-the-axiom-does-not-prove.md"
+  },
+  {
+   "page": 198,
+   "file": "plates/p198-beyond-logic.png",
+   "kicker": "Chapter Twenty Five",
+   "title": "Beyond Logic",
+   "epigraph": "What can be proved has been proved. What remains is what was always first.",
+   "unit": "5-the-proof/25-beyond-logic.md"
+  },
+  {
+   "page": 214,
+   "file": "plates/p214-colophon.png",
+   "kicker": "The Geometry of Existence: a Manual for Life",
+   "title": "",
+   "epigraph": "Twenty-five chapters. Five levels. One stance.",
+   "unit": "6-back-matter/06-colophon.md"
+  }
+ ],
+ "figures": [
+  {
+   "page": 3,
+   "file": "figures/p003-1.png",
+   "caption": ""
+  },
+  {
+   "page": 9,
+   "file": "figures/p009-1.png",
+   "caption": ""
+  },
+  {
+   "page": 16,
+   "file": "figures/p016-1.png",
+   "caption": ""
+  },
+  {
+   "page": 20,
+   "file": "figures/p020-1.png",
+   "caption": ""
+  },
+  {
+   "page": 25,
+   "file": "figures/p025-1.png",
+   "caption": ""
+  },
+  {
+   "page": 31,
+   "file": "figures/p031-1.png",
+   "caption": ""
+  },
+  {
+   "page": 37,
+   "file": "figures/p037-1.png",
+   "caption": ""
+  },
+  {
+   "page": 42,
+   "file": "figures/p042-1.png",
+   "caption": ""
+  },
+  {
+   "page": 48,
+   "file": "figures/p048-1.png",
+   "caption": ""
+  },
+  {
+   "page": 54,
+   "file": "figures/p054-1.png",
+   "caption": ""
+  },
+  {
+   "page": 59,
+   "file": "figures/p059-1.png",
+   "caption": ""
+  },
+  {
+   "page": 66,
+   "file": "figures/p066-1.png",
+   "caption": ""
+  },
+  {
+   "page": 72,
+   "file": "figures/p072-1.png",
+   "caption": ""
+  },
+  {
+   "page": 78,
+   "file": "figures/p078-1.png",
+   "caption": ""
+  },
+  {
+   "page": 85,
+   "file": "figures/p085-1.png",
+   "caption": ""
+  },
+  {
+   "page": 91,
+   "file": "figures/p091-1.png",
+   "caption": ""
+  },
+  {
+   "page": 98,
+   "file": "figures/p098-1.png",
+   "caption": ""
+  },
+  {
+   "page": 107,
+   "file": "figures/p107-1.png",
+   "caption": ""
+  },
+  {
+   "page": 107,
+   "file": "figures/p107-2.png",
+   "caption": ""
+  },
+  {
+   "page": 109,
+   "file": "figures/p109-1.png",
+   "caption": "Four middles. The unknown waits to become one of two. The degree sits on the line. The zero is where you stand to see the line. The third is off the line."
+  },
+  {
+   "page": 112,
+   "file": "figures/p112-1.png",
+   "caption": ""
+  },
+  {
+   "page": 112,
+   "file": "figures/p112-2.png",
+   "caption": "Nine-tenths and two-tenths, combined four ways. Three are forms of “and.” The fourth is an average, which lets the strong score pay for the weak one."
+  },
+  {
+   "page": 116,
+   "file": "figures/p116-1.png",
+   "caption": ""
+  },
+  {
+   "page": 116,
+   "file": "figures/p116-2.png",
+   "caption": "Several partial truths, each held to its own degree, resolve into a single setting. The weighing is graded. The output is not."
+  },
+  {
+   "page": 123,
+   "file": "figures/p123-1.png",
+   "caption": ""
+  },
+  {
+   "page": 131,
+   "file": "figures/p131-1.png",
+   "caption": ""
+  },
+  {
+   "page": 135,
+   "file": "figures/p135-1.png",
+   "caption": ""
+  },
+  {
+   "page": 136,
+   "file": "figures/p136-1.png",
+   "caption": "The floor is level and holds everyone. The ceiling is raised by conduct, one course at a time."
+  },
+  {
+   "page": 146,
+   "file": "figures/p146-1.png",
+   "caption": "The simplex of three-state distributions. A third state adds a coordinate to the space of probabilities, not a dimension to physical space."
+  },
+  {
+   "page": 155,
+   "file": "figures/p155-1.png",
+   "caption": ""
+  },
+  {
+   "page": 161,
+   "file": "figures/p161-1.png",
+   "caption": "Zero-state probability for the centre spin at βJ = βD = ln 2. Past the threshold, aligned neighbours favour the zero state more than opposed ones do. Model values, not measurements."
+  },
+  {
+   "page": 164,
+   "file": "figures/p164-1.png",
+   "caption": "The number the consequence model must get right, at βχ = ln 2 with all other couplings off. Model values, not measurements."
+  },
+  {
+   "page": 166,
+   "file": "figures/p166-1.png",
+   "caption": ""
+  },
+  {
+   "page": 169,
+   "file": "figures/p169-1.png",
+   "caption": "Two graphs with six sites, nine edges and degree three throughout. Exhaustive enumeration of all 729 states of each, at Δ/J = 3/4 and βJ = 3."
+  },
+  {
+   "page": 171,
+   "file": "figures/p171-1.png",
+   "caption": "The 240 roots of E₈ projected to the Coxeter plane: eight rings of thirty. Computed from the root system for this edition. A fact of geometry, not of spacetime."
+  },
+  {
+   "page": 189,
+   "file": "figures/p189-1.png",
+   "caption": ""
+  },
+  {
+   "page": 190,
+   "file": "figures/p190-1.png",
+   "caption": "Zero-site occupancy on the two graphs: exact prediction beside the simulated dry run. A dry run tests the procedure. It is not a measurement."
+  },
+  {
+   "page": 192,
+   "file": "figures/p192-1.png",
+   "caption": "The record under the frozen retention ρ = 0.9. However long the zero state is held, the record cannot exceed 1/(1 − ρ) = 10."
+  },
+  {
+   "page": 195,
+   "file": "figures/p195-1.png",
+   "caption": ""
+  },
+  {
+   "page": 199,
+   "file": "figures/p199-1.png",
+   "caption": ""
+  }
+ ]
+}
