@@ -15,6 +15,7 @@
 | **Page size** | 5.5 × 8.5 in (digest), the plates printed full-bleed in navy and gold |
 | **Typefaces** | EB Garamond and Cormorant Garamond, embedded |
 | **SHA-256** | `f8c6def69ba691ad68eb59949f490fd8da6a277b775818f9e9d54d73f3356275` |
+| **License** | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — share and adapt with credit, under the same license |
 
 To check your copy: `sha256sum The_Geometry_of_Existence_A_Manual_for_Life.pdf` (macOS: `shasum -a 256 The_Geometry_of_Existence_A_Manual_for_Life.pdf`) should print the line above.
 

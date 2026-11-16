@@ -203,6 +203,7 @@ def shell(out_rel, title, body, *, description="", accent="#c9a14a", prev=None, 
      <a href="{r('book/6-back-matter/04-corrections-and-open-accounts.html')}">Corrections and open accounts</a> ·
      <a href="{r('checks/index.html')}">The checks</a></p>
   <p>Nothing here is medical, psychological, or legal advice. The practices are yours to try and yours to stop.</p>
+  <p>© Massimo Vincent Panella · licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 </footer>
 </body>
 </html>

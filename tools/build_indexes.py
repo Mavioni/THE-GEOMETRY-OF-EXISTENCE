@@ -391,6 +391,7 @@ def write_edition_page(m):
 | **Page size** | 5.5 × 8.5 in (digest), the plates printed full-bleed in navy and gold |
 | **Typefaces** | EB Garamond and Cormorant Garamond, embedded |
 | **SHA-256** | `{f['sha']}` |
+| **License** | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — share and adapt with credit, under the same license |
 
 To check your copy: `sha256sum {PDF_NAME}` (macOS: `shasum -a 256 {PDF_NAME}`) should print the line above.
 

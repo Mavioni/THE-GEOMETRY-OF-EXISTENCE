@@ -44,3 +44,7 @@ When you write about a claim — in an issue, a review, a commit — say which k
 - **On record** — a matter of published history.
 
 No claim larger than its evidence.
+
+## License of contributions
+
+The book and this repository are licensed under [CC BY-SA 4.0](LICENSE). By contributing you agree that your contribution is licensed the same way, and that a correction you report may be listed, dated and attributed, in the next edition.

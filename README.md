@@ -147,7 +147,17 @@ Text by Massimo Vincent Panella. Level Two drafted with Samantha (OpenClaw); res
 
 **[Download the book (PDF)](https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf)** · **[Read online](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/)**
 
-Licensed under the [GNU Affero General Public License v3.0](LICENSE). To cite the book, see [CITATION.cff](CITATION.cff).
+### License
+
+[![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-c9a14a.svg?labelColor=14112e)](LICENSE)
+
+*The Geometry of Existence: A Manual for Life* © Massimo Vincent Panella, 2026 — the book, its plates and figures, and everything in this repository are licensed under the **[Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/)** ([full text](LICENSE)).
+
+You may share and adapt it, for any purpose, provided you **credit the author**, **link to the license**, **say what you changed**, and **share your adaptations under the same license**.
+
+> *The Geometry of Existence: A Manual for Life* by Massimo Vincent Panella, licensed under CC BY-SA 4.0. https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE
+
+To cite the book, see [CITATION.cff](CITATION.cff).
 
 <p align="center"><img src="art/ornaments/divider.png" alt="" width="200"></p>
 <p align="center"><i>Twenty-five chapters. Five levels. One stance.</i></p>
