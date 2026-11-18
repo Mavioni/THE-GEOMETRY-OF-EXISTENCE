@@ -1,3 +1,5 @@
-# Only the tools need these. checks/verify_all.py needs nothing but Python.
-pymupdf>=1.24      # tools/extract_book.py, tools/check_coverage.py — reading the edition PDF
-markdown>=3.5      # tools/build_site.py — the reading edition
+# Needed only to rebuild the book or the website.
+# Reading the book needs nothing; checks/verify_all.py needs only Python.
+pymupdf>=1.24      # tools/extract.py and tools/check_coverage.py read the PDF
+pillow>=10         # tools/extract.py saves the plates and figures
+markdown>=3.5      # tools/build_site.py builds the website

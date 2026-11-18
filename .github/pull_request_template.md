@@ -1,13 +1,10 @@
 ## What changed
 
-<!-- One line per change, as it would appear in the next edition's list of corrections. -->
-
-## Mark
-
-<!-- Which of the five marks the changed claim carries: Lived, Argued, Demonstrated, Measured, On record. -->
+<!-- One line per change. If the book's text changed, write it the way an errata list would:
+     Chapter 7, Where Attention Goes, p. 64: "…" now reads "…". -->
 
 ## Checks
 
 - [ ] `python3 checks/verify_all.py` passes
-- [ ] If the book text changed: `make book` was re-run and the diff in `book/` is only the intended change
-- [ ] Nothing was changed silently: the change is listed above
+- [ ] If the PDF or the tools changed: `make book` was run, and `python3 tools/check_coverage.py` reports 0 missing
+- [ ] Nothing in `book/`, `art/` or `workbook/` was edited by hand (those folders are generated)

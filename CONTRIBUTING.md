@@ -1,50 +1,42 @@
 # Contributing
 
-*"A book built that way is not ruined by an error. It is improved by one."*
+*"A book that cannot be corrected is not a lamp but a tombstone."* (How to Carry This Book)
 
-This repository holds one book. Contributions are corrections, checks and results, made the way the book asks to be corrected: openly, with the kind of claim stated, and never silently.
+This repository holds one book. The most useful contributions are the ones the book itself asks for: corrections, tests and results.
 
-## The rule of the edition
+## Without writing any code
 
-**Nothing is changed silently.** Every change to the book's text belongs in the next edition's list of corrections, dated and attributed. A pull request that changes what the book says must say what changed in its description, one line per change, in the form the book uses:
+You need a free GitHub account. Go to **[Issues → New issue](https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/issues/new/choose)** and pick the form that fits:
 
-> Field Manual, Chapter Seven: "someone's else's" now reads "someone else's."
-
-## What goes where
-
-| You found… | Do this |
+| You found… | Use the form |
 |---|---|
-| A failing check | Open *A check failed* with the output of `python3 checks/verify_all.py -v`. |
-| A claim with the wrong mark | Open *A mark is wrong*. Quote the sentence exactly. |
-| An error in the book itself | Open *A correction to the text*. The PDF in `edition/` is the edition of record; it is not edited in place. |
-| A difference between the Markdown and the PDF | That is a conversion error. Fix `tools/extract_book.py`, run `make book`, and check that the diff in `book/` is only the fix. |
-| A result from running a protocol | Open *A test result*, whichever way it came out. |
-| A result from doing a practice | Open *A practice result*, or keep it in your own fork of the [workbook](workbook/README.md). |
+| an error of fact, a wrong date or source, a misquotation, a typing error | **A correction to the text** |
+| a claim carrying the wrong mark (◆ commitment, ● evidence, ◇ analogy) | **A mark is wrong** |
+| a check in `checks/verify_all.py` that fails | **A check failed** |
+| evidence for or against one of the twelve predictions | **A prediction tested** |
+| the result of running the Ninety-Day Trial on your own life | **A Ninety-Day Trial result** |
 
-## Working on the repository
+The book's promise: *each edition will publish what changed and why. A claim that fails is removed, and the removal is recorded, never silently erased.* Corrections you report may be listed, with your name if you agree, in the next edition.
+
+## Changing the repository
+
+**The PDF is the source of everything.** The folders `book/`, `art/` and `workbook/` are generated from `edition/The-Geometry-of-Everything.pdf`, so they are never edited by hand: change the tools, or change the PDF, and regenerate. A correction to the book's text is made in the next edition of the PDF, not in the Markdown.
 
 ```sh
 pip install -r requirements.txt
-make book      # re-cut book/ and art/ from edition/ — never edit book/ by hand
-make check     # the computations
-make coverage  # every printed word reaches the Markdown
-make serve     # the reading edition at http://localhost:8000
+make book       # cut book/ and art/ from the PDF; write the contents, gallery and workbook
+make check      # recompute the mathematics (standard library only)
+make coverage   # confirm every printed word reaches book/
+make serve      # read the website at http://localhost:8000
 ```
 
-`book/`, `art/`, `workbook/` and the level contents are generated. Change the tools, not their output. `checks/verify_all.py` must keep to the Python standard library, as the book says it does.
+[`tools/README.md`](tools/README.md) explains each script. Two rules keep the repository honest:
 
-## Marks
+- `checks/verify_all.py` uses only the Python standard library, so anyone can run it.
+- After `make book`, `make coverage` must report **0 missing**. The automatic checks on GitHub also re-cut the PDF and fail if the committed Markdown differs.
 
-When you write about a claim — in an issue, a review, a commit — say which kind it is:
+When you open a pull request, list what changed, one line per change.
 
-- **Lived** — a stance or a practice, tested only by doing it.
-- **Argued** — reasons are given; no one is compelled.
-- **Demonstrated** — follows from stated definitions, or established science within a stated domain.
-- **Measured** — an observation, with its source.
-- **On record** — a matter of published history.
+## License
 
-No claim larger than its evidence.
-
-## License of contributions
-
-The book and this repository are licensed under [CC BY-SA 4.0](LICENSE). By contributing you agree that your contribution is licensed the same way, and that a correction you report may be listed, dated and attributed, in the next edition.
+The book and this repository are licensed under [CC BY-SA 4.0](LICENSE). By contributing you agree that your contribution is licensed the same way.

@@ -1,23 +1,22 @@
 #!/usr/bin/env python3
-"""verify_all.py — re-run every computation The Geometry of Existence relies on.
+"""verify_all.py: re-run every computation The Geometry of Everything relies on.
 
-    python3 checks/verify_all.py          # run everything
-    python3 checks/verify_all.py -v       # show each computed value
-    python3 checks/verify_all.py -k e8    # run the checks whose name contains "e8"
+    python3 checks/verify_all.py          run everything
+    python3 checks/verify_all.py -v       also show each computed value
+    python3 checks/verify_all.py -k kamea run only the checks whose name contains "kamea"
 
-"The Checks" (pages 212–213 of the complete edition) lists every computation
-the book relies on and says the first group is run by a program, verify_all.py,
-that "uses nothing outside the standard Python library". This file is that
-program, rebuilt for this repository from the definitions printed in the book:
-each check names the page or section it answers to, computes the value from the
-stated model, and compares it with the printed figure.
+The Summit of the book ("The Geometry of Everything", pages 185-193) says that
+every figure there "is computed, not sketched" and that "every sum has been
+checked". This program checks them again, from the definitions printed in the
+book, using nothing but the Python standard library.
 
-The second group on that page is the frozen workshop code (sixsite_mcmc.py,
-consequence_mcmc.py, sophonticism_consequence_test.py). That code is not part of
-this repository, so those lines are reported as NOT RUN here, never as passed.
+It also checks what the book says about itself: 240 teachings numbered
+straight through 26 chapters, nine movements in every chapter, the mark each
+movement carries, the monthly reading cycle and the Index of Situations. Those
+checks read the Markdown book in book/, so they test the text as printed.
 
-A failure is, in the book's own words, "an error in Level Five". Report it with
-the issue template "A check failed".
+Each check names the page it answers to. A failure is an error in the book or
+in this repository. Report it with the issue form "A check failed".
 """
 from __future__ import annotations
 
@@ -25,10 +24,13 @@ import argparse
 import cmath
 import itertools
 import math
-import random
+import os
+import re
 import sys
 from fractions import Fraction as F
 
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BOOK = os.path.join(ROOT, "book")
 CHECKS = []
 
 
@@ -39,12 +41,11 @@ def check(name, where):
     return deco
 
 
-class Report:
-    def __init__(self, verbose):
-        self.verbose = verbose
+class Notes:
+    def __init__(self):
         self.lines = []
 
-    def note(self, msg):
+    def __call__(self, msg):
         self.lines.append(msg)
 
 
@@ -53,283 +54,344 @@ def close(a, b, tol):
 
 
 # ---------------------------------------------------------------------------
-# §12  Balanced ternary, corrected
+# Reading the Markdown book
 # ---------------------------------------------------------------------------
 
-D3 = (-1, 0, 1)
+def read(rel):
+    with open(os.path.join(BOOK, rel), encoding="utf-8") as f:
+        return f.read()
 
 
-@check("balanced ternary: each of the nine digit sums has exactly one (result, carry)", "§12, p.157")
-def _(r):
-    for a, b in itertools.product(D3, D3):
-        sols = [(res, c) for res in D3 for c in D3 if a + b == res + 3 * c]
-        assert len(sols) == 1, (a, b, sols)
-        r.note(f"{a:+d} + {b:+d} = {sols[0][0]:+d} + 3·{sols[0][1]:+d}")
+def chapters():
+    """[(number, path, text)] for the twenty-six chapters, in order."""
+    out = []
+    for d in sorted(os.listdir(BOOK)):
+        if not re.match(r"[1-5]-", d):
+            continue
+        for f in sorted(os.listdir(os.path.join(BOOK, d))):
+            m = re.match(r"(\d\d)-", f)
+            if m:
+                out.append((int(m.group(1)), f"{d}/{f}", read(f"{d}/{f}")))
+    return sorted(out)
 
 
-@check("(+1) + (−1) = 0 with no carry; zero is the only digit fixed by negation", "§12, p.157")
-def _(r):
-    sols = [(res, c) for res in D3 for c in D3 if 1 + (-1) == res + 3 * c]
-    assert sols == [(0, 0)]
-    assert [d for d in D3 if -d == d] == [0]
+def section(text, heading_regex):
+    """The text from a heading matching the regex to the next heading of that level."""
+    m = re.search(r"^(#+) " + heading_regex + r".*$", text, re.M)
+    if not m:
+        raise AssertionError(f"no heading matching {heading_regex!r}")
+    level = len(m.group(1))
+    rest = text[m.end():]
+    n = re.search(r"^#{1,%d} " % level, rest, re.M)
+    return rest[: n.start()] if n else rest
 
 
-def balanced_digits(radix):
-    h = radix // 2
-    return tuple(range(-h, h + 1))
-
-
-def truncation_holds(radix, max_len):
-    """For every balanced word up to max_len digits and every cut k,
-    the discarded tail is strictly less than half the kept unit radix**k."""
-    digits = balanced_digits(radix)
-    for n in range(1, max_len + 1):
-        for word in itertools.product(digits, repeat=n):     # word[i] is digit of radix**i
-            for k in range(1, n + 1):
-                tail = sum(d * radix ** i for i, d in enumerate(word[:k]))
-                if not 2 * abs(tail) < radix ** k:
-                    return False
-                if not abs(tail) <= (radix ** k - 1) // 2:
-                    return False
-    return True
-
-
-@check("truncation: discarded tail < half the kept unit, every word up to length 7, radix 3", "§12, p.157")
-def _(r):
-    assert truncation_holds(3, 7)
-    r.note(f"{sum(3 ** n for n in range(1, 8))} words checked")
-
-
-@check("the same holds in balanced radix 5 and radix 7 (smallest such radix is 3, not the only one)", "§12, p.157")
-def _(r):
-    assert truncation_holds(5, 6)
-    assert truncation_holds(7, 5)
-    # radix 3 is the smallest odd radix > 1, and a balanced radix must be odd
-    assert min(b for b in range(2, 8) if b % 2 == 1) == 3
-    r.note("radix 5 to length 6, radix 7 to length 5")
-
-
-@check("nearest rounding is not error-free on average: V = 1 truncated at k = 1 errs by +1", "§12, p.157")
-def _(r):
-    # V = 1 has the single balanced-ternary word (1); keeping places >= 3**1 leaves 0
-    words = [w for n in range(1, 6) for w in itertools.product(D3, repeat=n)
-             if sum(d * 3 ** i for i, d in enumerate(w)) == 1]
-    errs = set()
-    for w in words:
-        kept = sum(d * 3 ** i for i, d in enumerate(w) if i >= 1)
-        errs.add(1 - kept)
-    assert errs == {1}, errs
-
-
-@check("signed binary {−1,0,+1} in radix 2: 1 is equally near 0 and 2, so nearest truncation is not unique", "§12, p.157")
-def _(r):
-    assert abs(1 - 0) == abs(1 - 2)
-    # two signed-binary spellings of 1 truncate at k = 1 to different multiples of 2
-    spellings = [w for w in itertools.product(D3, repeat=2) if w[0] + 2 * w[1] == 1]
-    kept = {2 * w[1] for w in spellings}
-    assert kept == {0, 2}, kept
+def table(text):
+    """Rows of the first Markdown table in the text, as lists of plain strings."""
+    rows = []
+    for line in text.splitlines():
+        if re.match(r"^\|(-+\|)+$", line):
+            continue
+        if line.startswith("|"):
+            cells = [c.strip() for c in re.split(r"(?<!\\)\|", line.strip())[1:-1]]
+            rows.append([re.sub(r"[*\\]|\[|\]\([^)]*\)", "", c).strip() for c in cells])
+        elif rows:
+            break
+    return rows
 
 
 # ---------------------------------------------------------------------------
-# §4  Geometry is constraint, not destiny
+# II. The Trit  (p. 185)
 # ---------------------------------------------------------------------------
 
-@check("simplex identities: p₀ = 1 − q and p± = (q ± m)/2", "§4, p.145")
-def _(r):
-    rng = random.Random(4)
-    for _ in range(500):
-        a, b = sorted(F(rng.randint(0, 1000), 1000) for _ in range(2))
-        pm, p0, pp = a, b - a, 1 - b
-        m = pp - pm                 # ⟨S⟩
-        q = pp + pm                 # ⟨S²⟩
-        assert p0 == 1 - q
-        assert pp == (q + m) / 2 and pm == (q - m) / 2
-        assert abs(m) <= q <= 1
+def to_balanced_ternary(n: int) -> str:
+    """Spell n with the digits T (−1), 0 and 1."""
+    if n == 0:
+        return "0"
+    digits = []
+    while n:
+        r = n % 3
+        if r == 2:
+            digits.append("T")
+            n = n // 3 + 1
+        else:
+            digits.append(str(r))
+            n //= 3
+    return "".join(reversed(digits))
 
 
-# ---------------------------------------------------------------------------
-# §14  Zero as a measurable physical occupation
-# ---------------------------------------------------------------------------
-
-@check("Blume–Capel conditional zero probability at β = 1, Δ = 0: 0.3333, 0.2447, 0.1173 for field 0, 1, 2", "§14 · The Checks, p.212")
-def _(r):
-    got = [1 / (1 + 2 * math.cosh(h)) for h in (0, 1, 2)]
-    for g, want in zip(got, (0.3333, 0.2447, 0.1173)):
-        assert close(g, want, 5e-5), (g, want)
-    r.note(", ".join(f"{g:.6f}" for g in got))
+def from_balanced_ternary(s: str) -> int:
+    v = 0
+    for ch in s:
+        v = 3 * v + {"T": -1, "0": 0, "1": 1}[ch]
+    return v
 
 
-def p_zero_exact(bJ_pow, bD_pow, bK_pow, a, b, bchi_pow=0, C=0):
-    """P(s=0|a,b) when βJ, βD, βK, βχ are integer multiples of ln 2.
-    Every Boltzmann factor is then a power of two, so the answer is exact."""
-    two = F(2)
-    w0 = two ** (bchi_pow * C)                                 # zero state: energy −χC
-    wpm = two ** (-(bD_pow + bK_pow * a * b))                  # e^{−β(D + Kab)}
-    cosh = (two ** (bJ_pow * (a + b)) + two ** (-bJ_pow * (a + b))) / 2
-    return w0 / (w0 + 2 * wpm * cosh)
+@check("balanced ternary: 37 = 1101, 111 = 11010, −5 = T11, as printed", "II. The Trit, p. 185")
+def _(note):
+    want = {37: "1101", 111: "11010", -5: "T11"}
+    for n, s in want.items():
+        assert to_balanced_ternary(n) == s, (n, to_balanced_ternary(n))
+        assert from_balanced_ternary(s) == n
+    # the table in the book, read from the Markdown
+    rows = table(section(read("6-the-summit/01-the-geometry-of-everything.md"), r"II\. The Trit"))
+    head, body = rows[0], rows[1:]
+    weights = [int(x) for x in head[1:]]
+    assert weights == [81, 27, 9, 3, 1], weights
+    for r in body:
+        n = int(r[0].replace("=", "").replace("−", "-"))
+        value = sum(w * {"T": -1, "0": 0, "1": 1, "": 0}[d] for w, d in zip(weights, r[1:]))
+        assert value == n, (r, value)
+    note("the printed table spells 37, 111 and −5 correctly")
+    # the identities named beside it
+    assert 27 + 9 + 1 == 37 and 81 + 27 + 3 == 111 and -9 + 3 + 1 == -5
 
 
-@check("three-spin model at βJ = βD = ln 2, βK = 2 ln 2: P(0) = 32/49 aligned and 1/5 opposed", "§14, p.159")
-def _(r):
-    assert p_zero_exact(1, 1, 2, +1, +1) == F(32, 49)
-    assert p_zero_exact(1, 1, 2, +1, -1) == F(1, 5)
-    assert F(32, 49) - F(1, 5) == F(111, 245)
+@check("every whole number has exactly one balanced-ternary spelling (all of −29 524 … 29 524)", "II. The Trit, p. 185")
+def _(note):
+    k = 10                                   # all spellings of up to ten digits
+    seen = {}
+    for digits in itertools.product((-1, 0, 1), repeat=k):
+        v = 0
+        for d in digits:
+            v = 3 * v + d
+        assert v not in seen, v
+        seen[v] = digits
+    half = (3 ** k - 1) // 2
+    assert sorted(seen) == list(range(-half, half + 1))
+    note(f"3^{k} = {3 ** k} spellings, each a different number, covering every number from −{half} to {half}")
 
 
-@check("with K = 0 the model gives 8/25 and 1/2 — the ordering reverses; threshold βK = ½ ln cosh 2βJ ≈ 0.3769", "§14, p.159")
-def _(r):
-    assert p_zero_exact(1, 1, 0, +1, +1) == F(8, 25)
-    assert p_zero_exact(1, 1, 0, +1, -1) == F(1, 2)
-    thr = 0.5 * math.log(math.cosh(2 * math.log(2)))
-    assert close(thr, 0.3769, 5e-5), thr
-    # just above / below the threshold the ordering flips
-    def p(bK, a, b):
-        bJ = bD = math.log(2)
-        return 1 / (1 + 2 * math.exp(-(bD + bK * a * b)) * math.cosh(bJ * (a + b)))
-    assert p(thr + 1e-6, 1, 1) > p(thr + 1e-6, 1, -1)
-    assert p(thr - 1e-6, 1, 1) < p(thr - 1e-6, 1, -1)
-    r.note(f"threshold {thr:.6f}")
-
-
-# ---------------------------------------------------------------------------
-# §15  Consequence — the third term in time
-# ---------------------------------------------------------------------------
-
-@check("consequence model at βχ = ln 2, other couplings off: 1/3 with no record, 1/2 with one; difference 1/6", "§15.2, p.164")
-def _(r):
-    p0 = p_zero_exact(0, 0, 0, 1, 1, bchi_pow=1, C=0)
-    p1 = p_zero_exact(0, 0, 0, 1, 1, bchi_pow=1, C=1)
-    assert (p0, p1, p1 - p0) == (F(1, 3), F(1, 2), F(1, 6))
-
-
-def p_zero_float(bJ, bD, bK, bchi, C, a, b):
-    return 1 / (1 + 2 * math.exp(-(bD + bK * a * b + bchi * C)) * math.cosh(bJ * (a + b)))
-
-
-def logit(p):
-    return math.log(p / (1 - p))
-
-
-@check("the log-odds shift equals βχ·ΔC for every tested J, D, K and boundary, and vanishes when χ = 0", "§15.1, p.162")
-def _(r):
-    grid = (-1.0, -0.3, 0.0, 0.7, 1.5)
-    n = 0
-    for bJ, bD, bK in itertools.product(grid, repeat=3):
-        for a, b in itertools.product((-1, 1), repeat=2):
-            for bchi in (0.0, 0.4, math.log(2), 2.0):
-                for C1, C2 in ((0, 1), (0.5, 3.0), (2, 0)):
-                    shift = logit(p_zero_float(bJ, bD, bK, bchi, C2, a, b)) - \
-                        logit(p_zero_float(bJ, bD, bK, bchi, C1, a, b))
-                    assert close(shift, bchi * (C2 - C1), 1e-9)
-                    n += 1
-    r.note(f"{n} cases")
-
-
-@check("the record stays bounded: 0 ≤ Cₜ ≤ ρᵗC₀ + (1 − ρᵗ)/(1 − ρ), on 200 random histories", "§15.3, p.165")
-def _(r):
-    rng = random.Random(15)
-    for _ in range(200):
-        rho = F(rng.randint(0, 99), 100)
-        C = C0 = F(rng.randint(0, 50), 10)
-        for t in range(1, 61):
-            s = rng.choice(D3)
-            C = rho * C + (1 - s * s)              # n₀(s) = 1 − s²
-            bound = rho ** t * C0 + (1 - rho ** t) / (1 - rho)
-            assert 0 <= C <= bound
-
-
-@check("frozen record C = 1 with K = 0 and βχ = 2 ln 2: P(0) = 32/49 aligned and 4/5 opposed", "Ch. 23, p.191")
-def _(r):
-    assert p_zero_exact(1, 1, 0, +1, +1, bchi_pow=2, C=1) == F(32, 49)
-    assert p_zero_exact(1, 1, 0, +1, -1, bchi_pow=2, C=1) == F(4, 5)
+@check("cost b / ln b: least at e; base 2 ≈ 2.885, base 3 ≈ 2.731, base 4 = base 2; three is a little over 5% cheaper", "II. The Trit, p. 186")
+def _(note):
+    def cost(b):
+        return b / math.log(b)
+    assert close(cost(2), 2.885, 5e-4) and close(cost(3), 2.731, 5e-4)
+    assert close(cost(4), cost(2), 1e-12)          # 4 / ln 4 = 2 / ln 2 exactly
+    # the minimum of b / ln b is at b = e: the derivative (ln b − 1) / ln² b is zero there
+    grid = [1.5 + i / 10000 for i in range(30000)]
+    b_min = min(grid, key=cost)
+    assert close(b_min, math.e, 1e-3), b_min
+    assert min((2, 3, 4, 5, 6), key=cost) == 3
+    saving = 1 - cost(3) / cost(2)
+    assert 0.05 < saving < 0.06, saving
+    note(f"saving of base 3 over base 2: {saving:.2%}; e = {math.e:.3f}")
 
 
 # ---------------------------------------------------------------------------
-# §16 / Appendix B  The geometry experiment
+# III. Degrees and the Third Axis  (p. 186)
 # ---------------------------------------------------------------------------
 
-PRISM = [(0, 1), (1, 2), (2, 0), (3, 4), (4, 5), (5, 3), (0, 3), (1, 4), (2, 5)]
-K33 = [(i, j) for i in (0, 1, 2) for j in (3, 4, 5)]
-DELTA = F(3, 4)          # Δ/J
-BETA_J = 3
+T_NORMS = {
+    "minimum (Zadeh)": lambda a, b: min(a, b),
+    "product": lambda a, b: a * b,
+    "Łukasiewicz": lambda a, b: max(F(0), a + b - 1),
+}
 
 
-def energy(edges, s):
-    return sum(s[i] * s[j] for i, j in edges) + DELTA * sum(x * x for x in s)
+@check("honesty 0.9 AND kindness 0.2: minimum 0.20, product 0.18, Łukasiewicz 0.10; the average 0.55", "III, p. 186; The Kept Middle, p. 18")
+def _(note):
+    a, b = F(9, 10), F(2, 10)
+    got = [f(a, b) for f in T_NORMS.values()]
+    assert got == [F(20, 100), F(18, 100), F(10, 100)], got
+    assert (a + b) / 2 == F(55, 100)
+    note("0.20, 0.18, 0.10 — and 0.55 for the average")
 
 
-def ensemble(edges):
-    states = list(itertools.product(D3, repeat=6))
-    E = [energy(edges, s) for s in states]
-    e0 = min(E)
-    w = [math.exp(-BETA_J * float(e - e0)) for e in E]
-    Z = sum(w)
-    zero_frac = sum(wi * s.count(0) / 6 for wi, s in zip(w, states)) / Z
-    any_zero = sum(wi for wi, s in zip(w, states) if 0 in s) / Z
-    return states, E, e0, zero_frac, any_zero
-
-
-@check("both six-site graphs have nine edges and degree three at every site", "§16, p.167")
-def _(r):
-    for g in (PRISM, K33):
-        assert len(g) == 9 and len(set(map(frozenset, g))) == 9
-        deg = [sum(v in e for e in g) for v in range(6)]
-        assert deg == [3] * 6
-
-
-@check("minimum energy −J with six ground states on the prism; −9J/2 with two on K₃,₃ (all 729 states)", "§16, p.167")
-def _(r):
-    for g, want_e, want_n in ((PRISM, F(-1), 6), (K33, F(-9, 2), 2)):
-        states, E, e0, *_ = ensemble(g)
-        assert len(states) == 729
-        assert e0 == want_e and E.count(e0) == want_n, (e0, E.count(e0))
-
-
-@check("zero-site fraction 0.278246795804 (prism), 0.001256340995 (K₃,₃); difference 0.276990454809", "§16, p.167")
-def _(r):
-    fp = ensemble(PRISM)[3]
-    fk = ensemble(K33)[3]
-    assert close(fp, 0.278246795804, 5e-13), fp
-    assert close(fk, 0.001256340995, 5e-13), fk
-    assert close(fp - fk, 0.276990454809, 5e-13), fp - fk
-    r.note(f"{fp:.12f} − {fk:.12f} = {fp - fk:.12f}")
-
-
-@check("probability of at least one zero site: 0.883127466845 and 0.007244882875", "§16, p.167")
-def _(r):
-    ap = ensemble(PRISM)[4]
-    ak = ensemble(K33)[4]
-    assert close(ap, 0.883127466845, 5e-13), ap
-    assert close(ak, 0.007244882875, 5e-13), ak
-
-
-@check("two zeros frozen in advance on the prism: 3 of 15 placements reach −J; mean best energy +J/5", "§16, p.168")
-def _(r):
-    best = []
-    for pair in itertools.combinations(range(6), 2):
-        free = [v for v in range(6) if v not in pair]
-        e = None
-        for spins in itertools.product((-1, 1), repeat=4):
-            s = [0] * 6
-            for v, x in zip(free, spins):
-                s[v] = x
-            ee = energy(PRISM, s)
-            e = ee if e is None else min(e, ee)
-        best.append(e)
-    assert len(best) == 15
-    assert sum(1 for e in best if e == -1) == 3
-    assert sum(best, F(0)) / 15 == F(1, 5)
-
-
-@check("dry-run arithmetic: (0.27485 − 0.001416667 − 0.276990454809) / 0.001500182 = −2.371", "Ch. 23, p.190")
-def _(r):
-    z = (0.27485 - 0.001416667 - 0.276990454809) / 0.001500182
-    assert close(z, -2.371, 5e-4), z
-    r.note(f"{z:.4f}")
+@check("every one of the three ANDs is at most the smaller input (checked on a 0.01 grid)", "III, p. 186")
+def _(note):
+    grid = [F(i, 100) for i in range(101)]
+    for f in T_NORMS.values():
+        for a in grid:
+            for b in grid:
+                v = f(a, b)
+                assert 0 <= v <= min(a, b), (a, b, v)
+                assert f(a, 1) == a                      # 1 is neutral
+                assert f(a, b) == f(b, a)                # order does not matter
+    note(f"{len(grid) ** 2 * 3} values checked")
 
 
 # ---------------------------------------------------------------------------
-# §17  E8, fractals
+# V. Why Earned Power Holds When the Game Repeats  (pp. 187-189)
+# ---------------------------------------------------------------------------
+
+T_, R_, P_, S_ = 5, 3, 1, 0          # temptation, reward, punishment, sucker
+
+
+def play(a, b, w, rounds=4000):
+    """Discounted payoff to strategy a against b; w is the chance of meeting again."""
+    hist_a, hist_b, total, weight = [], [], 0.0, 1.0
+    pay = {("C", "C"): R_, ("C", "D"): S_, ("D", "C"): T_, ("D", "D"): P_}
+    for _ in range(rounds):
+        x, y = a(hist_a, hist_b), b(hist_b, hist_a)
+        total += weight * pay[(x, y)]
+        hist_a.append(x)
+        hist_b.append(y)
+        weight *= w
+    return total
+
+
+def tit_for_tat(mine, theirs):
+    return theirs[-1] if theirs else "C"
+
+
+def always_defect(mine, theirs):
+    return "D"
+
+
+def alternator(mine, theirs):
+    return "D" if len(mine) % 2 == 0 else "C"
+
+
+@check("the classic payoffs make a prisoner's dilemma: 5 > 3 > 1 > 0 and 2·3 > 5 + 0", "V, p. 188")
+def _(note):
+    assert T_ > R_ > P_ > S_ and 2 * R_ > T_ + S_
+
+
+@check("tit-for-tat earns 3/(1−w); the defector 5 + w/(1−w); the alternator 5/(1−w²)", "V, p. 188")
+def _(note):
+    for w in (0.3, 0.5, 0.6, 2 / 3, 0.8, 0.9):
+        assert close(play(tit_for_tat, tit_for_tat, w), 3 / (1 - w), 1e-6)
+        assert close(play(always_defect, tit_for_tat, w), 5 + w / (1 - w), 1e-6)
+        assert close(play(alternator, tit_for_tat, w), 5 / (1 - w * w), 1e-6)
+    note("simulated games agree with the three formulas at w = 0.3 … 0.9")
+
+
+@check("the steady defector is held off exactly when w ≥ 1/2; the alternator exactly when w ≥ 2/3", "V, p. 188")
+def _(note):
+    assert F(T_ - R_, T_ - P_) == F(1, 2)
+    assert F(T_ - R_, R_ - S_) == F(2, 3)
+    for i in range(1, 1000):
+        w = F(i, 1000)
+        tft = F(3) / (1 - w)
+        defector = 5 + w / (1 - w)
+        alt = F(5) / (1 - w * w)
+        assert (tft >= defector) == (w >= F(1, 2)), w
+        assert (tft >= alt) == (w >= F(2, 3)), w
+    note("exact arithmetic on every w = 0.001 … 0.999")
+
+
+@check("a lone cooperator among defectors still loses", "V, p. 188")
+def _(note):
+    for w in (0.5, 0.9, 0.99):
+        assert play(tit_for_tat, always_defect, w) < play(always_defect, always_defect, w)
+
+
+# ---------------------------------------------------------------------------
+# VI. Isomorphism  (p. 189)
+# ---------------------------------------------------------------------------
+
+@check("the logarithm turns multiplication into addition, one-to-one", "VI, p. 189")
+def _(note):
+    xs = [F(1, 7), F(1, 2), 1, 2, 3, F(22, 7), 10, 1000]
+    for x in xs:
+        for y in xs:
+            assert close(math.log(x * y), math.log(x) + math.log(y), 1e-12)
+    logs = [math.log(x) for x in xs]
+    assert len(set(logs)) == len(xs)               # nothing is lost: no two collide
+    # the figure: 1, 2, 4, 8 under ×2 go to 0, 1, 2, 3 under +1 (log base 2)
+    assert [math.log2(x) for x in (1, 2, 4, 8)] == [0, 1, 2, 3]
+
+
+# ---------------------------------------------------------------------------
+# VII. The Kamea of the Sun  (pp. 189-190)
+# ---------------------------------------------------------------------------
+
+def kamea():
+    rows = table(section(read("6-the-summit/01-the-geometry-of-everything.md"), r"VII\. The Kamea"))
+    sq = [[int(x) for x in r] for r in rows if all(r)]
+    assert len(sq) == 6 and all(len(r) == 6 for r in sq), sq
+    return sq
+
+
+@check("the Kamea of the Sun: 1 to 36 once each; every row, column and diagonal 111; the whole 666", "VII, p. 190")
+def _(note):
+    sq = kamea()
+    flat = [x for r in sq for x in r]
+    assert sorted(flat) == list(range(1, 37))
+    lines = sq + [list(c) for c in zip(*sq)] + \
+        [[sq[i][i] for i in range(6)], [sq[i][5 - i] for i in range(6)]]
+    assert all(sum(line) == 111 for line in lines), [sum(line) for line in lines]
+    assert sum(flat) == 666
+    note(f"{len(lines)} lines, each 111")
+
+
+@check("its 18 pairs summing to 37: the 12 diagonal numbers face theirs across the centre, the other 24 across a midline", "VII, p. 190")
+def _(note):
+    sq = kamea()
+    pos = {sq[i][j]: (i, j) for i in range(6) for j in range(6)}
+    centre = mid_v = mid_h = 0
+    for a in range(1, 19):
+        (i, j), (k, l) = pos[a], pos[37 - a]
+        on_diag = i == j or i + j == 5
+        if (k, l) == (5 - i, 5 - j):
+            centre += 2
+            assert on_diag and (k == l or k + l == 5)
+        elif (k, l) == (i, 5 - j):
+            mid_v += 2
+            assert not on_diag
+        elif (k, l) == (5 - i, j):
+            mid_h += 2
+            assert not on_diag
+        else:
+            raise AssertionError(f"{a} and {37 - a} are not set symmetrically")
+    assert centre == 12 and mid_v + mid_h == 24, (centre, mid_v, mid_h)
+    note(f"across the centre {centre}, across the vertical midline {mid_v}, across the horizontal {mid_h}")
+
+
+# ---------------------------------------------------------------------------
+# VIII. The Rose and the Law of the Third  (pp. 190-191)
+# ---------------------------------------------------------------------------
+
+STEMS = list(range(1, 24, 2))               # the twelve odd orders 1, 3, … 23
+
+
+def rose_symmetry(k1, k2):
+    """The rotational order of the curve r = cos(k1·θ) + cos(k2·θ).
+
+    Turning the curve by α maps it onto itself when r(θ + α) = r(θ) for every θ,
+    or when r(θ + α + π) = −r(θ) for every θ (the same point, reached with a
+    negative radius). Returns the largest n ≤ 30 for which α = 2π/n works.
+    """
+    def r(t):
+        return math.cos(k1 * t) + math.cos(k2 * t)
+    ts = [i * 0.0137 for i in range(2000)]
+    best = 1
+    for n in range(2, 31):
+        a = 2 * math.pi / n
+        if all(abs(r(t + a) - r(t)) < 1e-9 for t in ts) or \
+                all(abs(r(t + a + math.pi) + r(t)) < 1e-9 for t in ts):
+            best = n
+    return best
+
+
+@check("twelve odd stems make 66 pairs; 58 share no factor; 8 share one: 3·9, 3·15, 3·21, 5·15, 7·21, 9·15, 9·21, 15·21", "VIII, p. 191")
+def _(note):
+    assert len(STEMS) == 12 and STEMS[-1] == 23
+    pairs = list(itertools.combinations(STEMS, 2))
+    assert len(pairs) == 66
+    sharing = [(a, b) for a, b in pairs if math.gcd(a, b) > 1]
+    assert sharing == [(3, 9), (3, 15), (3, 21), (5, 15), (7, 21), (9, 15), (9, 21), (15, 21)], sharing
+    assert len(pairs) - len(sharing) == 58
+
+
+@check("a rose cos(kθ) with odd k has k petals' symmetry; a compound's rotational order is the gcd of its orders", "VIII, p. 191")
+def _(note):
+    for k in (3, 5, 7):
+        assert rose_symmetry(k, k) == k
+    tested = [(3, 9), (3, 15), (5, 15), (9, 15), (3, 5), (5, 7), (7, 9), (1, 3)]
+    for a, b in tested:
+        assert rose_symmetry(a, b) == math.gcd(a, b), (a, b, rose_symmetry(a, b))
+    # and every compound keeps a mirror: r(−θ) = r(θ)
+    for a, b in tested:
+        for i in range(50):
+            t = i / 7
+            assert close(math.cos(a * t) + math.cos(b * t), math.cos(-a * t) + math.cos(-b * t), 1e-12)
+    note("rotations tested for " + ", ".join(f"{a}·{b}" for a, b in tested))
+
+
+# ---------------------------------------------------------------------------
+# IX. The Ground Ring  (pp. 191-192)
 # ---------------------------------------------------------------------------
 
 def e8_roots():
@@ -339,37 +401,10 @@ def e8_roots():
             v = [F(0)] * 8
             v[i], v[j] = F(si), F(sj)
             roots.append(tuple(v))
-    n_int = len(roots)
     for signs in itertools.product((-1, 1), repeat=8):
         if signs.count(-1) % 2 == 0:
             roots.append(tuple(F(s, 2) for s in signs))
-    return roots, n_int
-
-
-def dot(u, v):
-    return sum(a * b for a, b in zip(u, v))
-
-
-@check("E₈: 112 + 128 = 240 roots, each of squared length 2; every pair with inner product −1 sums to a root", "§17, p.169")
-def _(r):
-    roots, n_int = e8_roots()
-    assert (n_int, len(roots) - n_int, len(roots)) == (112, 128, 240)
-    rs = set(roots)
-    assert all(dot(v, v) == 2 for v in roots)
-    pairs = 0
-    for u, v in itertools.combinations(roots, 2):
-        if dot(u, v) == -1:
-            assert tuple(a + b for a, b in zip(u, v)) in rs
-            pairs += 1
-    r.note(f"{pairs} pairs with inner product −1")
-
-
-@check("Hausdorff dimension of the Cantor set: log 2 / log 3 = 0.630930", "§17, p.170")
-def _(r):
-    d = math.log(2) / math.log(3)
-    assert close(d, 0.630930, 5e-7), d
-    # self-similarity: two copies at scale 1/3 → 2·(1/3)^d = 1
-    assert close(2 * (1 / 3) ** d, 1.0, 1e-12)
+    return roots
 
 
 def _solve_null(M):
@@ -398,10 +433,8 @@ def _solve_null(M):
     return v
 
 
-@check("all 240 roots of E₈ project to eight rings of thirty in the Coxeter plane", "§17 figure, p.171")
-def _(r):
-    roots, _ = e8_roots()
-    # simple roots (Bourbaki convention in the even coordinate system)
+def coxeter_rings():
+    roots = e8_roots()
     simple = [
         (F(1, 2), F(-1, 2), F(-1, 2), F(-1, 2), F(-1, 2), F(-1, 2), F(-1, 2), F(1, 2)),
         (1, 1, 0, 0, 0, 0, 0, 0), (-1, 1, 0, 0, 0, 0, 0, 0), (0, -1, 1, 0, 0, 0, 0, 0),
@@ -420,24 +453,18 @@ def _(r):
     W = refl(simple[0])
     for s in simple[1:]:
         W = mul(W, refl(s))
-    # W has order 30 (the Coxeter number of E8)
-    P = W
-    for k in range(2, 31):
-        P = mul(P, W)
-        if all(P[i][j] == (1 if i == j else 0) for i in range(8) for j in range(8)):
-            break
-    assert k == 30, k
-    lam = cmath.exp(2j * math.pi / 30)
+    P, order = W, 1
+    while not all(P[i][j] == (1 if i == j else 0) for i in range(8) for j in range(8)):
+        P, order = mul(P, W), order + 1
+    lam = cmath.exp(2j * math.pi / order)
     M = [[complex(W[i][j]) - (lam if i == j else 0) for j in range(8)] for i in range(8)]
     v = _solve_null(M)
-    re = [x.real for x in v]
-    im = [x.imag for x in v]
-    # orthonormalise the plane
-    nr = math.sqrt(sum(x * x for x in re))
-    e1 = [x / nr for x in re]
-    im = [b - sum(p * q for p, q in zip(im, e1)) * a for a, b in zip(e1, im)]
-    ni = math.sqrt(sum(x * x for x in im))
-    e2 = [x / ni for x in im]
+    re_, im_ = [x.real for x in v], [x.imag for x in v]
+    nr = math.sqrt(sum(x * x for x in re_))
+    e1 = [x / nr for x in re_]
+    im_ = [b - sum(p * q for p, q in zip(im_, e1)) * a for a, b in zip(e1, im_)]
+    ni = math.sqrt(sum(x * x for x in im_))
+    e2 = [x / ni for x in im_]
     radii = sorted(math.hypot(sum(float(a) * b for a, b in zip(rt, e1)),
                               sum(float(a) * b for a, b in zip(rt, e2))) for rt in roots)
     rings = []
@@ -446,204 +473,154 @@ def _(r):
             rings[-1][1] += 1
         else:
             rings.append([x, 1])
+    return roots, order, rings
+
+
+@check("E8: 240 roots in eight dimensions, each of squared length 2", "IX, p. 191")
+def _(note):
+    roots = e8_roots()
+    assert len(roots) == len(set(roots)) == 240
+    assert all(sum(x * x for x in v) == 2 for v in roots)
+    assert all(len(v) == 8 for v in roots)
+
+
+@check("in the Coxeter plane the 240 roots fall into eight rings of thirty; one ring lies at 0.618 of the outermost", "IX, pp. 191-192")
+def _(note):
+    _, order, rings = coxeter_rings()
+    assert order == 30, order                                 # the Coxeter number of E8
     assert [n for _, n in rings] == [30] * 8, rings
-    r.note("ring radii " + ", ".join(f"{x:.4f}" for x, _ in rings))
+    outer = rings[-1][0]
+    ratios = [r / outer for r, _ in rings]
+    golden = (math.sqrt(5) - 1) / 2                            # 1/φ = 0.6180…
+    assert any(close(x, golden, 1e-9) for x in ratios), ratios
+    note("ring radii / outermost: " + ", ".join(f"{x:.4f}" for x in ratios))
 
 
 # ---------------------------------------------------------------------------
-# §13  The learning study (source-reported table)
+# What the book says about itself
 # ---------------------------------------------------------------------------
 
-TABLE = {   # H = 16, 64, 256 — transcribed from §13, source-reported
-    "float": (92.53, 94.73, 96.58),
-    "binary": (90.09, 93.18, 95.05),
-    "ternary": (91.13, 93.92, 95.83),
-    "mask": (87.39, 91.99, 93.87),
-    "wide": (91.43, 93.90, 95.62),
-}
+MOVEMENTS = [("I", "◆", "The Teaching"), ("II", "◇", "The Five Scales"), ("III", "", "The Witnesses"),
+             ("IV", "●", "The Tale"), ("V", "●", "The Energy"), ("VI", "", "The Reversal"),
+             ("VII", "◆", "The Practice"), ("VIII", "", "The Ledger"), ("IX", "", "The Song")]
 
 
-@check("learning-study arithmetic: ternary leads binary by 1.04, 0.74, 0.78 and the mask by 3.74, 1.93, 1.96", "§13, p.158")
-def _(r):
-    t, b, m = TABLE["ternary"], TABLE["binary"], TABLE["mask"]
-    assert [round(x - y, 2) for x, y in zip(t, b)] == [1.04, 0.74, 0.78]
-    assert [round(x - y, 2) for x, y in zip(t, m)] == [3.74, 1.93, 1.96]
+@check("26 chapters; 240 teachings numbered straight through, 1 to 240", "How to Carry This Book, p. 10; Colophon, p. 216")
+def _(note):
+    chs = chapters()
+    assert [n for n, _, _ in chs] == list(range(1, 27)), [n for n, _, _ in chs]
+    numbers = []
+    for n, path, text in chs:
+        teaching = section(text, r"I · ◆ The Teaching")
+        numbers += [int(x) for x in re.findall(r"^(\d+)\. ", teaching, re.M)]
+    assert numbers == list(range(1, 241)), numbers[:5]
+    note("240 teachings in order")
 
 
-@check("at width 16 the float gap is 1.40 and wider binary leads ternary by 0.30", "§13, p.158")
-def _(r):
-    assert round(TABLE["float"][0] - TABLE["ternary"][0], 2) == 1.40
-    assert round(TABLE["wide"][0] - TABLE["ternary"][0], 2) == 0.30
+@check("every chapter moves in the same nine steps, in the same order", "How to Carry This Book, p. 10; VI, p. 189")
+def _(note):
+    for n, path, text in chapters():
+        got = re.findall(r"^## (I|II|III|IV|V|VI|VII|VIII|IX) · (?:([◆●◇]) )?(.+)$", text, re.M)
+        want = [(r, "", name) for r, _, name in MOVEMENTS]
+        assert [(r, "", nm) for r, _, nm in got] == want, (path, got)
 
 
-# ---------------------------------------------------------------------------
-# Level Three  The Degree / The Weakest Link
-# ---------------------------------------------------------------------------
-
-AND_FORMS = {
-    "the smaller": lambda a, b: min(a, b),
-    "the product": lambda a, b: a * b,
-    "the strictest": lambda a, b: max(F(0), a + b - 1),
-}
+@check("in every chapter the Teaching and the Practice are commitments ◆, the Five Scales analogies ◇, the Tale and the Energy evidence ●", "How to Carry This Book, p. 9")
+def _(note):
+    for n, path, text in chapters():
+        got = re.findall(r"^## (I|II|III|IV|V|VI|VII|VIII|IX) · (?:([◆●◇]) )?(.+)$", text, re.M)
+        assert [(r, m, nm) for r, m, nm in got] == MOVEMENTS, (path, got)
 
 
-@check("graded “and” of 0.9 with 0.2: 0.2 (smaller), 0.18 (product), 0.1 (strictest); the average is 0.55", "Ch. 17, p.112")
-def _(r):
-    a, b = F(9, 10), F(2, 10)
-    got = [f(a, b) for f in AND_FORMS.values()]
-    assert got == [F(2, 10), F(18, 100), F(1, 10)], got
-    assert (a + b) / 2 == F(55, 100)
+@check("every chapter: five scales (cell to cosmos), a daily and a weekly practice, four ledger questions (peace, love, unity, respect)", "How to Carry This Book, p. 10")
+def _(note):
+    for n, path, text in chapters():
+        scales = [r[0] for r in table(section(text, r"II · ◇ The Five Scales")) if r[0]]
+        practice = [r[0] for r in table(section(text, r"VII · ◆ The Practice")) if r[0]]
+        ledger = [r[0] for r in table(section(text, r"VIII · The Ledger")) if r[0]]
+        assert scales == ["CELL", "SELF", "BOND", "COMMUNITY", "COSMOS"], (path, scales)
+        assert practice == ["DAILY", "WEEKLY"], (path, practice)
+        assert ledger == ["PEACE", "LOVE", "UNITY", "RESPECT"], (path, ledger)
 
 
-@check("each of the three forms of “and” is at most the smaller input, across a full grid", "Ch. 17, p.112")
-def _(r):
-    grid = [F(i, 20) for i in range(21)]
-    for a, b in itertools.product(grid, grid):
-        for f in AND_FORMS.values():
-            assert f(a, b) <= min(a, b)
+@check("the monthly reading cycle: 31 days, every chapter on its own day", "The Monthly Reading Cycle, p. 207")
+def _(note):
+    text = read("7-at-the-back/02-the-monthly-reading-cycle.md")
+    days = re.findall(r"^(\d+)\. (.+)$", text, re.M)
+    assert [int(d) for d, _ in days] == list(range(1, 32))
+    chapter_days = {}
+    for d, line in days:
+        m = re.match(r"(\d+) · ", line)
+        if m:
+            chapter_days[int(m.group(1))] = int(d)
+    assert chapter_days == {c: c + 3 for c in range(1, 27)}, chapter_days
 
 
-@check("standard operators: “A and not-A” is never more than half true, exactly half only at one half", "Ch. 16 · The Checks, p.213")
-def _(r):
-    grid = [F(i, 1000) for i in range(1001)]
-    vals = [(a, min(a, 1 - a)) for a in grid]
-    assert all(v <= F(1, 2) for _, v in vals)
-    assert [a for a, v in vals if v == F(1, 2)] == [F(1, 2)]
+@check("the Index of Situations points only at chapters that exist, and its links reach them", "Index of Situations, pp. 211-212")
+def _(note):
+    text = read("7-at-the-back/04-index-of-situations.md")
+    links = re.findall(r"\[(\d+)\]\(([^)]+)\)", text)
+    assert len(links) > 50
+    for n, target in links:
+        assert 1 <= int(n) <= 26
+        path = os.path.normpath(os.path.join(BOOK, "7-at-the-back", target))
+        assert os.path.exists(path) and os.path.basename(path).startswith(f"{int(n):02d}-"), (n, target)
+    note(f"{len(links)} references")
 
 
-@check("Łukasiewicz operators: “A and not-A” is 0 and “A or not-A” is 1 at every degree", "Ch. 16, p.108 · The Checks, p.213")
-def _(r):
-    for i in range(1001):
-        a = F(i, 1000)
-        assert max(F(0), a + (1 - a) - 1) == 0
-        assert min(F(1), a + (1 - a)) == 1
+@check("the Ninety-Day Trial's stages cover days 1 to 90 without a gap, with one pause week of seven days", "The Ninety-Day Trial, pp. 205-206")
+def _(note):
+    text = read("7-at-the-back/01-the-ninety-day-trial.md")
+    spans = [(int(a), int(b)) for a, b in re.findall(r"DAYS (\d+)–(\d+)", text)]
+    assert spans == [(1, 30), (31, 37), (38, 90)], spans
+    assert spans[1][1] - spans[1][0] + 1 == 7
+    grid = [int(x) for x in re.findall(r"\| (\d+) (?=\|)", section(text, r"Ninety Days, Marked"))]
+    assert grid == list(range(1, 91)), grid[:12]
 
 
-# ---------------------------------------------------------------------------
-# Chapter 24  What the Axiom Does Not Prove
-# ---------------------------------------------------------------------------
+@check("twelve predictions, numbered 1 to 12", "How This Book Could Be Wrong, pp. 200-201")
+def _(note):
+    text = section(read("6-the-summit/02-how-this-book-could-be-wrong.md"), r"Twelve predictions")
+    assert [int(x) for x in re.findall(r"^(\d+)\. ", text, re.M)] == list(range(1, 13))
 
-def satisfies_S0(model):
-    """S₀: for every x, if E(x) then L(x)."""
-    return all((not model["E"][x]) or model["L"][x] for x in model["dom"])
-
-
-@check("axiom S₀ by model checking: Theorems 1, 2 and 4 of Chapter Twenty-Four", "Ch. 24, p.196")
-def _(r):
-    # Theorem 1: something exists and is not conscious
-    m1 = dict(dom=["a"], E={"a": True}, L={"a": True}, C={"a": False})
-    assert satisfies_S0(m1) and not all(m1["C"][x] for x in m1["dom"] if m1["E"][x])
-    # Theorem 2: two existing things differ in a further property M
-    m2 = dict(dom=["a", "b"], E={"a": True, "b": True}, L={"a": True, "b": True},
-              M={"a": True, "b": False})
-    assert satisfies_S0(m2) and m2["M"]["a"] != m2["M"]["b"]
-    # Theorem 4: all eight settings of E, C, R on one thing are consistent,
-    # with L following E alone
-    n = 0
-    for e, c, rel in itertools.product((False, True), repeat=3):
-        m = dict(dom=["a"], E={"a": e}, L={"a": e}, C={"a": c}, R={("a", "a"): rel})
-        assert satisfies_S0(m)
-        n += 1
-    assert n == 8
-    # with L defined from E alone, flipping C or R never changes L
-    legit = lambda m: m["E"]["a"]                      # noqa: E731
-    for e, c, rel in itertools.product((False, True), repeat=3):
-        base = dict(E={"a": e}, C={"a": c}, R={("a", "a"): rel})
-        flipped_c = dict(base, C={"a": not c})
-        flipped_r = dict(base, R={("a", "a"): not rel})
-        assert legit(base) == legit(flipped_c) == legit(flipped_r)
-
-
-# ---------------------------------------------------------------------------
-# Chapter 21  Change Without Erasure
-# ---------------------------------------------------------------------------
-
-def matmul(A, B):
-    return [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))]
-            for i in range(len(A))]
-
-
-def inverse(A):
-    n = len(A)
-    M = [row[:] + [F(int(i == j)) for j in range(n)] for i, row in enumerate(A)]
-    for c in range(n):
-        p = next(i for i in range(c, n) if M[i][c] != 0)
-        M[c], M[p] = M[p], M[c]
-        pv = M[c][c]
-        M[c] = [x / pv for x in M[c]]
-        for i in range(n):
-            if i != c and M[i][c] != 0:
-                f = M[i][c]
-                M[i] = [x - f * y for x, y in zip(M[i], M[c])]
-    return [row[n:] for row in M]
-
-
-@check("protected part: if P² = P and a change is confined to the complement, the protected part is unchanged", "Ch. 21, p.132")
-def _(r):
-    rng = random.Random(21)
-    done = 0
-    while done < 100:
-        n = rng.randint(2, 5)
-        A = [[F(rng.randint(-4, 4)) for _ in range(n)] for _ in range(n)]
-        try:
-            Ai = inverse(A)
-        except StopIteration:
-            continue                                   # singular: draw again
-        rank = rng.randint(1, n - 1)
-        Dg = [[F(int(i == j and i < rank)) for j in range(n)] for i in range(n)]
-        P = matmul(matmul(A, Dg), Ai)                  # an (oblique) projection
-        assert matmul(P, P) == P
-        x = [[F(rng.randint(-9, 9))] for _ in range(n)]
-        d = [[F(rng.randint(-9, 9))] for _ in range(n)]
-        I_P = [[F(int(i == j)) - P[i][j] for j in range(n)] for i in range(n)]
-        change = matmul(I_P, d)                        # confined to the complement
-        x2 = [[a[0] + b[0]] for a, b in zip(x, change)]
-        assert matmul(P, x2) == matmul(P, x)
-        done += 1
-    r.note("100 random cases, exact rational arithmetic")
-
-
-# ---------------------------------------------------------------------------
-# second group: frozen workshop code (not in this repository)
-# ---------------------------------------------------------------------------
 
 NOT_RUN = [
-    ("workshop: sophonticism_consequence_test.py — analytic identities and zero-coupling controls",
-     "The Checks, p.213"),
-    ("workshop: sixsite_mcmc.py v1.1, seed 20261112 — dry run reproduced digit for digit",
-     "The Checks, p.213"),
-    ("workshop: consequence_mcmc.py — Parts A, B and C reproduced digit for digit",
-     "The Checks, p.213"),
+    ("no six-by-six magic square can place every pair directly across the centre",
+     "VII, p. 190",
+     "a theorem (no associative magic square of singly even order exists), cited, not searched"),
+    ("the habit curve: median 66 days, range 18 to 254, among 39 participants",
+     "X, p. 192",
+     "a measurement reported by Lally et al. (2010); there is nothing to recompute"),
 ]
 
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    ap.add_argument("-v", "--verbose", action="store_true", help="print computed values")
-    ap.add_argument("-k", dest="pattern", default="", help="run checks whose name contains this")
+    ap.add_argument("-v", "--verbose", action="store_true", help="show each computed value")
+    ap.add_argument("-k", dest="pattern", default="", help="run only the checks whose name contains this")
     args = ap.parse_args(argv)
 
     passed = failed = 0
     for name, where, fn in CHECKS:
         if args.pattern and args.pattern.lower() not in name.lower():
             continue
-        rep = Report(args.verbose)
+        note = Notes()
         try:
-            fn(rep)
-        except AssertionError as exc:
+            fn(note)
+        except (AssertionError, FileNotFoundError) as exc:
             failed += 1
             print(f"  FAIL  {name}   [{where}]")
             if exc.args:
-                print(f"        {exc.args}")
+                print(f"        {str(exc.args)[:400]}")
             continue
         passed += 1
         print(f"  pass  {name}   [{where}]")
         if args.verbose:
-            for line in rep.lines:
+            for line in note.lines:
                 print(f"        {line}")
     if not args.pattern:
-        for name, where in NOT_RUN:
-            print(f"  ----  {name}   [{where}]  NOT RUN: frozen code not in this repository")
+        for name, where, why in NOT_RUN:
+            print(f"  ----  {name}   [{where}]\n        not run: {why}")
     print()
     print(f"{passed} passed, {failed} failed" + ("" if args.pattern else f", {len(NOT_RUN)} not run"))
     return 1 if failed else 0

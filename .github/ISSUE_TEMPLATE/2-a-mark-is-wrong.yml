@@ -1,0 +1,41 @@
+name: A mark is wrong
+description: A claim carries the wrong mark, such as evidence set down as a commitment, or an analogy presented as proof.
+title: "[mark] "
+labels: ["mark"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every claim in this book is one of three kinds, and the book tells you which:
+        **◆ Commitment**, a stance chosen and defended by argument; **● Evidence**, a claim about how the world works, open to being proved wrong; **◇ Analogy**, a picture to think with, which shows a pattern and never proves one.
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: Chapter or section, and page number if you have the PDF.
+      placeholder: "Chapter 8, The Open Door, p. 70"
+    validations:
+      required: true
+  - type: textarea
+    id: quote
+    attributes:
+      label: The sentence, quoted exactly
+    validations:
+      required: true
+  - type: dropdown
+    id: marks
+    attributes:
+      label: The mark it should carry
+      options:
+        - ◆ Commitment
+        - ● Evidence
+        - ◇ Analogy
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: Your reasons, with sources where the claim is about evidence.
+    validations:
+      required: true

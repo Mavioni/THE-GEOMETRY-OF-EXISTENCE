@@ -1,23 +1,26 @@
 cff-version: 1.2.0
-message: "If you cite this book, please cite the complete edition."
+message: "If you cite this book, please cite it as below."
 type: book
-title: "The Geometry of Existence: A Manual for Life"
+title: "The Geometry of Everything: Earn Your Reality · A Manual for Life"
 abstract: >-
-  One book in five levels, the highest at the end: The Lines, The Manual,
-  The Degree, The Principle, and The Proof and Its Limits. It gathers the Field
-  Manual, Sophonticism, the Opus Enchiridion, the Critical Completion, and the
-  workshop.
+  Two hundred and forty teachings in twenty-six chapters, five Books and a
+  Summit: the Ground of existence, the Light of consciousness, the Bond of
+  relation, the Work by which you earn, and the Becoming by which you change,
+  with the mathematics beneath them and an account of how the book could be
+  wrong. Every claim is marked as a commitment, evidence or an analogy.
 authors:
   - given-names: Massimo Vincent
     family-names: Panella
-version: "Complete edition"
-date-released: "2026-11-15"
+version: "Edition of November 2026"
+date-released: "2026-11-18"
 url: "https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/"
 repository-code: "https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE"
 license: CC-BY-SA-4.0
 keywords:
   - philosophy
-  - metaphysics
-  - practice
+  - ethics
+  - practical wisdom
+  - self-help
+  - dignity and respect
   - balanced ternary
-  - statistical mechanics
+  - game theory

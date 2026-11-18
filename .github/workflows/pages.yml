@@ -1,4 +1,4 @@
-name: Publish the reading edition
+name: Publish the website
 
 on:
   push:
@@ -23,7 +23,6 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install markdown
-      - run: python3 checks/verify_all.py
       - run: python3 tools/build_site.py
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

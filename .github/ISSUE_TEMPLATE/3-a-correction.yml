@@ -1,0 +1,35 @@
+name: A correction to the text
+description: A factual error, a wrong date or source, a misquotation, or a typing error.
+title: "[correction] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        *"Each edition of this book will publish what changed and why. A claim that fails is removed, and the removal is recorded, never silently erased."* (The errata promise, p. 201)
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: Chapter or section, and page number if you have the PDF.
+    validations:
+      required: true
+  - type: textarea
+    id: now
+    attributes:
+      label: What the book says now, quoted exactly
+    validations:
+      required: true
+  - type: textarea
+    id: should
+    attributes:
+      label: What it should say, and why
+      description: Give your source if the correction is a matter of fact.
+    validations:
+      required: true
+  - type: checkboxes
+    id: credit
+    attributes:
+      label: Credit
+      options:
+        - label: You may name me in the next edition's list of corrections.

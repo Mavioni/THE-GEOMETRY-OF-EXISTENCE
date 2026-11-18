@@ -1,48 +1,39 @@
-<p align="center"><img src="../art/plates/thumbs/p138-the-proof-and-its-limits.png" width="140" alt="Level Five — The Proof and Its Limits"></p>
+# The Checks
 
-<h1 align="center">The Checks</h1>
+*“Every figure here is computed, not sketched.”* (The Summit, p. 184)
 
-<p align="center"><i>every computation this book relies on, re-run</i></p>
+The book's Summit rests on a small amount of real mathematics: balanced ternary, the arithmetic of “both must pass”, the game theory of repeated meetings, the Kamea of the Sun, rose curves, and the 240 roots of E8. This folder holds one program, [`verify_all.py`](verify_all.py), that computes all of it again from the definitions the book prints, and compares the results with the printed numbers.
 
-The back of the complete edition lists [every computation the book relies on](../book/6-back-matter/05-the-checks.md) and says that the program running the first group "accompanies the book as `verify_all.py`; it uses nothing outside the standard Python library." This folder holds that program, rebuilt from the definitions printed in the book.
+It also checks what the book says about itself: that there are 240 teachings numbered straight through 26 chapters, that every chapter moves through the same nine steps in the same order, that each step carries the mark the book says it does, and that the reading cycle, the Index of Situations and the Ninety-Day Trial add up.
+
+## Run it yourself
+
+You need [Python 3](https://www.python.org/downloads/) and nothing else: the program uses only Python's standard library.
 
 ```sh
-python3 checks/verify_all.py        # all checks, one line each
-python3 checks/verify_all.py -v     # with the computed values
-python3 checks/verify_all.py -k e8  # only the checks whose name contains "e8"
+python3 checks/verify_all.py        # run every check
+python3 checks/verify_all.py -v     # also show the computed values
+python3 checks/verify_all.py -k e8  # run only the checks whose name contains "e8"
 ```
 
-Python 3.9 or newer. No packages. It takes under a second.
+The same checks run automatically on GitHub every time the repository changes; the badge on the front page shows the latest result. The [website](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/checks/) shows the output of the last run.
 
-## What it checks
+## What is checked
 
-| Where in the book | What is recomputed |
-|---|---|
-| §12 Balanced ternary, corrected | the nine digit sums; negation's fixed digit; truncation in balanced radix 3 (all words to length 7), 5 and 7; the counterexamples for nearest rounding and signed binary |
-| §4 Geometry is constraint, not destiny | the simplex identities p₀ = 1 − q, p± = (q ± m)/2, in exact arithmetic |
-| §14 Zero as a measurable physical occupation | Blume–Capel zero probabilities; the three-spin model's 32/49 and 1/5, the reversal to 8/25 and 1/2 at K = 0, and the threshold ½ ln cosh 2βJ |
-| §15 Consequence | 1/3 → 1/2 and the exact 1/6; the log-odds shift βχ·ΔC over a 6,000-case grid; the bounded record on 200 random histories |
-| §16 and Appendix B | both six-site graphs, all 729 states each: ground energies and their counts, zero-site fractions to twelve places, at-least-one-zero probabilities, the fifteen frozen masks |
-| Chapter 23 | the frozen-record probabilities 32/49 and 4/5; the dry-run z-score −2.371 |
-| §17 | the 240 roots of E₈, their lengths and sums; the eight rings of thirty in the Coxeter plane; the Cantor set's dimension |
-| §13 | the arithmetic of the source-reported learning table |
-| Chapters 16–17 | the three graded "and"s of 0.9 and 0.2; the bound on each; standard and Łukasiewicz "A and not-A" |
-| Chapter 21 | the protected part: P² = P and a change confined to the complement leaves P·x exactly unchanged (100 random cases, exact) |
-| Chapter 24 | the countermodels and the eight models of axiom S₀ |
+| The book says | Where | Checked how |
+|---|---|---|
+| 37 = 1101, 111 = 11010, −5 = T11 in balanced ternary, and every whole number has exactly one such spelling | II. The Trit, p. 185 | converts each number both ways; enumerates all 59,049 ten-digit spellings |
+| base 3 is the most economical whole-number base, a little over five percent cheaper than base 2 | II, p. 186 | computes b / ln b and its minimum |
+| with honesty 0.9 and kindness 0.2, the three ANDs give 0.20, 0.18 and 0.10, the average 0.55, and no AND exceeds its weakest input | III, p. 186; The Kept Middle, p. 18 | exact fractions, and a full 0.01 grid |
+| tit-for-tat holds off the steady defector when w ≥ 1/2 and the alternator when w ≥ 2/3 | V, p. 188 | simulates the repeated game and checks the thresholds exactly |
+| the logarithm turns multiplication into addition and loses nothing | VI, p. 189 | |
+| the Kamea of the Sun: rows, columns and diagonals of 111, a total of 666, and the symmetry of its 18 complementary pairs | VII, pp. 189–190 | reads the square from the Markdown book and checks every line and pair |
+| of the 66 pairs of the twelve odd stems, 58 share no factor and 8 generate a new order | VIII, p. 191 | enumerates the pairs; rotates the compound curves |
+| the 240 roots of E8 fall into eight rings of thirty in the Coxeter plane, one ring at 0.618 of the outermost | IX, pp. 191–192 | builds the roots and the Coxeter element, projects, and measures the rings |
+| 240 teachings in 26 chapters, nine movements each, with their marks | How to Carry This Book, pp. 9–10 | reads every chapter of the Markdown book |
 
-The second group on the book's page — the frozen workshop code `sophonticism_consequence_test.py`, `sixsite_mcmc.py` and `consequence_mcmc.py` — is not in this repository. The program prints those lines as **NOT RUN**. It never reports them as passed.
+Two statements are reported as **not run**, never as passed: that no six-by-six magic square can set every pair across its centre (a known theorem, cited rather than searched), and the habit-formation figures (measurements reported by their authors, with nothing to recompute).
 
-## How to break this book
+## If a check fails
 
-From *Corrections and Open Accounts*:
-
-- Run the checks. **Any failure is an error in Level Five.** Open an issue with the *A check failed* template.
-- Find a sentence whose mark is wrong: an argument printed as a demonstration, a model value printed as a measurement. Use *A mark is wrong*.
-- Build the six-site system of §16 on a calibrated device and measure the difference in zero-site occupancy. The prediction is **0.276990454809**. Use *A test result*.
-- Do a Practice exactly as written, with your falsifier written first. If nothing you can observe changes, the practice failed for you. That is a result, and it counts.
-
-Corrections go to the author. Each belongs in the next edition's list, dated and attributed.
-
----
-
-<p align="center"><a href="../book/6-back-matter/05-the-checks.md">The Checks, in the book</a> · <a href="../README.md">Home</a></p>
+That is an error in the book or in this repository, and the book asks to be told. Open an issue with the form **A check failed** and paste the output of `python3 checks/verify_all.py -v`.

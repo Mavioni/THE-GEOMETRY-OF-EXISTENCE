@@ -1,0 +1,29 @@
+name: A check failed
+description: A computation in checks/verify_all.py did not come out as the book prints it.
+title: "[check] "
+labels: ["check"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        *"Every figure here is computed, not sketched."* (The Summit, p. 184) If a check fails, the book or this repository has an error. Thank you for finding it.
+  - type: input
+    id: check
+    attributes:
+      label: Which check
+      description: The line that says FAIL when you run `python3 checks/verify_all.py`.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: The full output
+      description: Paste what `python3 checks/verify_all.py -v` printed.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Your Python version and computer
+      placeholder: "Python 3.12, Windows 11"

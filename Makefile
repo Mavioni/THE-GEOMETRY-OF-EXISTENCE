@@ -1,28 +1,28 @@
-# The Geometry of Existence — repository tasks
+# The Geometry of Everything: repository tasks.  Run `make help` to list them.
 PY ?= python3
 
-.PHONY: all book indexes site serve check coverage clean
+.PHONY: help all book site serve check coverage clean
 
-all: book site check
+help:            ## list the tasks
+	@grep -E '^[a-z]+:.*##' Makefile | sed 's/:.*##/\t/'
 
-book:            ## re-cut book/ and art/ from the edition PDF, then rebuild the indexes
-	$(PY) tools/extract_book.py
-	$(PY) tools/build_indexes.py
+all: book check coverage site   ## rebuild everything and test it
 
-indexes:         ## rebuild book/README.md, level strips, art/README.md, workbook/
-	$(PY) tools/build_indexes.py
+book:            ## cut book/ and art/ from the PDF, then write the contents, gallery and workbook
+	$(PY) tools/extract.py
+	$(PY) tools/build_pages.py
 
-site:            ## build the reading edition into _site/
-	$(PY) tools/build_site.py
-
-serve: site      ## read it at http://localhost:8000
-	$(PY) -m http.server -d _site 8000
-
-check:           ## re-run every computation the book relies on
+check:           ## recompute every number the book relies on
 	$(PY) checks/verify_all.py
 
-coverage:        ## confirm every printed word reaches the Markdown
+coverage:        ## confirm every printed word of the PDF reaches book/
 	$(PY) tools/check_coverage.py
 
-clean:
+site:            ## build the website into _site/
+	$(PY) tools/build_site.py
+
+serve: site      ## read the website at http://localhost:8000
+	$(PY) -m http.server -d _site 8000
+
+clean:           ## remove the built website
 	rm -rf _site

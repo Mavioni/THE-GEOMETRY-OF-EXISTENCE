@@ -1,5 +1,8 @@
-blank_issues_enabled: false
+blank_issues_enabled: true
 contact_links:
-  - name: How to break this book
-    url: https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/blob/main/checks/README.md#how-to-break-this-book
-    about: The four ways the book invites you to prove it wrong.
+  - name: How This Book Could Be Wrong
+    url: https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/blob/main/book/6-the-summit/02-how-this-book-could-be-wrong.md
+    about: Where each claim could fail, the rivals' best arguments, and the twelve predictions.
+  - name: Read the book online
+    url: https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/
+    about: The whole book as a website, free to read.

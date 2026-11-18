@@ -1,21 +1,55 @@
-<p align="center"><img src="../art/plates/thumbs/p012-the-manual.png" width="140" alt="Level Two — The Manual"></p>
+# The Workbook
 
-<h1 align="center">The Workbook</h1>
+The book asks to be practised, not only read: *“Run the Ninety-Day Trial and judge the book by your own life.”* These sheets hold the practical parts of every chapter in one place, with room to write.
 
-<p align="center"><i>Read one chapter. Do its practice. Then read the next.</i></p>
+**How to use them.** Open a sheet and print it (in your browser: *File → Print*), or copy it into your own notes. If you have a GitHub account you can also make your own copy of this whole repository (the **Fork** button at the top of the page) and fill the sheets in there.
 
-Every chapter of Levels Two to Four ends in a **Practice** — something done today — and an **Audit** — a question that can find the chapter wrong. This folder turns each of them into a sheet you can copy, fill and keep: the falsifier first, the practice as written, the audit, and for the fifteen chapters of the Manual the graded line from Level Three, to mark now and again in a month.
+## For the whole book
 
-**How to use it.** Copy a sheet into your own notes (or fork this repository and fill it in your fork — your answers are yours, so keep them in a private fork). Write the falsifier before you begin. Record what happened, including nothing.
+- [The Ninety-Day Trial](the-ninety-day-trial.md): your prediction, the ninety days, the verdict
+- [The Respect Ledger](the-respect-ledger.md): given, earned and spent, week by week
 
-<table>
-<tr><td align="center" valign="top" width="20%"><a href="01-the-three-and-the-zero.md"><img src="../art/plates/thumbs/p015-the-three-and-the-zero.png" width="90" alt=""></a><br><sub><b>1</b> · The Three and the Zero</sub></td><td align="center" valign="top" width="20%"><a href="02-the-given.md"><img src="../art/plates/thumbs/p019-the-given.png" width="90" alt=""></a><br><sub><b>2</b> · The Given</sub></td><td align="center" valign="top" width="20%"><a href="03-attention.md"><img src="../art/plates/thumbs/p024-attention.png" width="90" alt=""></a><br><sub><b>3</b> · Attention</sub></td><td align="center" valign="top" width="20%"><a href="04-witness.md"><img src="../art/plates/thumbs/p030-witness.png" width="90" alt=""></a><br><sub><b>4</b> · Witness</sub></td><td align="center" valign="top" width="20%"><a href="05-name-the-binary.md"><img src="../art/plates/thumbs/p036-name-the-binary.png" width="90" alt=""></a><br><sub><b>5</b> · Name the Binary</sub></td></tr>
-<tr><td align="center" valign="top" width="20%"><a href="06-construct-the-third.md"><img src="../art/plates/thumbs/p041-construct-the-third.png" width="90" alt=""></a><br><sub><b>6</b> · Construct the Third</sub></td><td align="center" valign="top" width="20%"><a href="07-own-the-ground.md"><img src="../art/plates/thumbs/p047-own-the-ground.png" width="90" alt=""></a><br><sub><b>7</b> · Own the Ground</sub></td><td align="center" valign="top" width="20%"><a href="08-keep-the-middle.md"><img src="../art/plates/thumbs/p053-keep-the-middle.png" width="90" alt=""></a><br><sub><b>8</b> · Keep the Middle</sub></td><td align="center" valign="top" width="20%"><a href="09-refuse-the-waiting-room.md"><img src="../art/plates/thumbs/p058-refuse-the-waiting-room.png" width="90" alt=""></a><br><sub><b>9</b> · Refuse the Waiting Room</sub></td><td align="center" valign="top" width="20%"><a href="10-the-asymmetry.md"><img src="../art/plates/thumbs/p065-the-asymmetry.png" width="90" alt=""></a><br><sub><b>10</b> · The Asymmetry</sub></td></tr>
-<tr><td align="center" valign="top" width="20%"><a href="11-continuity.md"><img src="../art/plates/thumbs/p071-continuity.png" width="90" alt=""></a><br><sub><b>11</b> · Continuity</sub></td><td align="center" valign="top" width="20%"><a href="12-the-losable-claim.md"><img src="../art/plates/thumbs/p077-the-losable-claim.png" width="90" alt=""></a><br><sub><b>12</b> · The Losable Claim</sub></td><td align="center" valign="top" width="20%"><a href="13-empathy-as-catalyst.md"><img src="../art/plates/thumbs/p084-empathy-as-catalyst.png" width="90" alt=""></a><br><sub><b>13</b> · Empathy as Catalyst</sub></td><td align="center" valign="top" width="20%"><a href="14-the-inviolate.md"><img src="../art/plates/thumbs/p090-the-inviolate.png" width="90" alt=""></a><br><sub><b>14</b> · The Inviolate</sub></td><td align="center" valign="top" width="20%"><a href="15-the-long-reclamation.md"><img src="../art/plates/thumbs/p097-the-long-reclamation.png" width="90" alt=""></a><br><sub><b>15</b> · The Long Reclamation</sub></td></tr>
-<tr><td align="center" valign="top" width="20%"><a href="16-the-degree.md"><img src="../art/plates/thumbs/p106-the-degree.png" width="90" alt=""></a><br><sub><b>16</b> · The Degree</sub></td><td align="center" valign="top" width="20%"><a href="17-the-weakest-link.md"><img src="../art/plates/thumbs/p111-the-weakest-link.png" width="90" alt=""></a><br><sub><b>17</b> · The Weakest Link</sub></td><td align="center" valign="top" width="20%"><a href="18-act-crisp.md"><img src="../art/plates/thumbs/p115-act-crisp.png" width="90" alt=""></a><br><sub><b>18</b> · Act Crisp</sub></td><td align="center" valign="top" width="20%"><a href="19-existence-is-sufficient.md"><img src="../art/plates/thumbs/p122-existence-is-sufficient.png" width="90" alt=""></a><br><sub><b>19</b> · Existence Is Sufficient</sub></td><td align="center" valign="top" width="20%"><a href="20-three-relationships.md"><img src="../art/plates/thumbs/p126-three-relationships-not-three-requirements.png" width="90" alt=""></a><br><sub><b>20</b> · Three Relationships, Not Three Requirements</sub></td></tr>
-<tr><td align="center" valign="top" width="20%"><a href="21-change-without-erasure.md"><img src="../art/plates/thumbs/p130-change-without-erasure.png" width="90" alt=""></a><br><sub><b>21</b> · Change Without Erasure</sub></td><td align="center" valign="top" width="20%"><a href="22-dignity-is-owed.md"><img src="../art/plates/thumbs/p134-dignity-is-owed-respect-is-earned.png" width="90" alt=""></a><br><sub><b>22</b> · Dignity Is Owed, Respect Is Earned</sub></td><td align="center" valign="top" width="20%"><a href="25-beyond-logic.md"><img src="../art/plates/thumbs/p198-beyond-logic.png" width="90" alt=""></a><br><sub><b>25</b> · Beyond Logic</sub></td></tr>
-</table>
+## Book One · The Ground
 
-See also: [The Graded Audits](../book/3-the-degree/19-the-graded-audits.md) · [The Fifteen Lines](../book/2-the-manual/16-the-fifteen-lines.md) · [The Discipline in One Page](../book/6-back-matter/01-the-discipline-in-one-page.md)
+1. [Existence Needs No Permission](01-existence-needs-no-permission.md) <sub>Respect</sub>
+2. [The Vessel](02-the-vessel.md) <sub>Peace</sub>
+3. [The Appointment](03-the-appointment.md) <sub>Love</sub>
+4. [Starry Heavens](04-starry-heavens.md) <sub>Unity</sub>
 
-<p align="center"><sub>Nothing here is medical, psychological, or legal advice. The practices are yours to try and yours to stop.</sub></p>
+## Book Two · The Light
+
+5. [Know the One Who Knows](05-know-the-one-who-knows.md) <sub>Respect</sub>
+6. [The Instrument](06-the-instrument.md) <sub>Peace</sub>
+7. [Where Attention Goes](07-where-attention-goes.md) <sub>Peace</sub>
+8. [The Open Door](08-the-open-door.md) <sub>Respect</sub>
+9. [The Dark Half, with the Lights On](09-the-dark-half-with-the-lights-on.md) <sub>Respect</sub>
+10. [The Lifelong Student](10-the-lifelong-student.md) <sub>Unity</sub>
+11. [The Last Freedom](11-the-last-freedom.md) <sub>Respect</sub>
+
+## Book Three · The Bond
+
+12. [Peace: The Unsent Letter](12-peace-the-unsent-letter.md) <sub>Peace</sub>
+13. [Love: Another Self](13-love-another-self.md) <sub>Love</sub>
+14. [The Root](14-the-root.md) <sub>Respect</sub>
+15. [The Living Word](15-the-living-word.md) <sub>Love</sub>
+16. [Unity: Through Other Persons](16-unity-through-other-persons.md) <sub>Unity</sub>
+17. [Respect: The Floor and the Ceiling](17-respect-the-floor-and-the-ceiling.md) <sub>Respect</sub>
+18. [Repair](18-repair.md) <sub>Love</sub>
+
+## Book Four · The Work
+
+19. [The Blade That Stays Sharp](19-the-blade-that-stays-sharp.md) <sub>Respect</sub>
+20. [Enough](20-enough.md) <sub>Peace</sub>
+21. [The Headland](21-the-headland.md) <sub>Peace</sub>
+22. [The Book of Earned Power](22-the-book-of-earned-power.md) <sub>Respect</sub>
+
+## Book Five · The Becoming
+
+23. [Becoming Without Erasing](23-becoming-without-erasing.md) <sub>Unity</sub>
+24. [The Wheel](24-the-wheel.md) <sub>Unity</sub>
+25. [The Author](25-the-author.md) <sub>Love</sub>
+26. [The Daily Rite](26-the-daily-rite.md) <sub>All Four</sub>
+
+---
+
+<p align="center"><a href="../README.md">Home</a> &nbsp;·&nbsp; <a href="../book/README.md">Contents</a></p>

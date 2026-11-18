@@ -1,0 +1,293 @@
+/* The Geometry of Everything: the reading edition.
+   Colours and type are the edition's own: cream pages and night plates,
+   EB Garamond for text and Cormorant Garamond for display, and the colours
+   of the balanced three (vermilion, ochre, ultramarine) with verdigris and
+   violet for the Work and the Becoming. */
+
+:root {
+  --page: #fbf6ed;
+  --page-2: #f3ecdd;
+  --card: #fffdf8;
+  --ink: #231f1a;
+  --ink-soft: #4a4237;
+  --muted: #6d6252;
+  --faint: #8a7d68;
+  --rule: #ddd2bd;
+  --night: #100e19;
+  --night-ink: #f2e6cc;
+  --ochre: #a8792b;
+  --ultramarine: #2f4f95;
+  --vermilion: #ad3f2a;
+  --verdigris: #2c6b62;
+  --violet: #674a87;
+  --accent: var(--ochre);
+  --measure: 35rem;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #14121c;
+    --page-2: #1b1825;
+    --card: #1f1c2a;
+    --ink: #ece4d2;
+    --ink-soft: #d3c9b4;
+    --muted: #b0a48d;
+    --faint: #8f8572;
+    --rule: #3a3446;
+    --ochre: #d6a85a;
+    --ultramarine: #8fa8e8;
+    --vermilion: #e2836c;
+    --verdigris: #6fb8aa;
+    --violet: #b59bd8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --page: #14121c;
+  --page-2: #1b1825;
+  --card: #1f1c2a;
+  --ink: #ece4d2;
+  --ink-soft: #d3c9b4;
+  --muted: #b0a48d;
+  --faint: #8f8572;
+  --rule: #3a3446;
+  --ochre: #d6a85a;
+  --ultramarine: #8fa8e8;
+  --vermilion: #e2836c;
+  --verdigris: #6fb8aa;
+  --violet: #b59bd8;
+  color-scheme: dark;
+}
+
+.part-1, .part-0, .part-6, .part-7 { --accent: var(--ochre); }
+.part-2 { --accent: var(--ultramarine); }
+.part-3 { --accent: var(--vermilion); }
+.part-4 { --accent: var(--verdigris); }
+.part-5 { --accent: var(--violet); }
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 4rem; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: "EB Garamond", Garamond, "Times New Roman", serif;
+  font-size: 1.18rem;
+  line-height: 1.62;
+  font-variant-numeric: oldstyle-nums;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+img { max-width: 100%; height: auto; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 1rem; top: 1rem; z-index: 10; background: var(--card); padding: .5rem 1rem; }
+
+/* --- the bar across the top ------------------------------------------- */
+.top {
+  position: sticky; top: 0; z-index: 5;
+  display: flex; align-items: center; gap: 1rem;
+  padding: .55rem 1rem;
+  background: color-mix(in srgb, var(--page) 92%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--rule);
+  font-family: "Cormorant Garamond", serif;
+}
+.top .brand {
+  color: var(--ink); text-decoration: none; white-space: nowrap;
+  letter-spacing: .18em; text-transform: uppercase; font-size: .9rem; font-weight: 600;
+}
+.top nav { display: flex; gap: .2rem 1rem; flex-wrap: wrap; flex: 1; font-size: 1.02rem; }
+.top nav a { color: var(--ink-soft); text-decoration: none; }
+.top nav a:hover, .top nav a[aria-current] { color: var(--accent); }
+.theme-toggle {
+  border: 1px solid var(--rule); background: transparent; color: var(--ink-soft);
+  border-radius: 999px; width: 2rem; height: 2rem; cursor: pointer; display: grid; place-items: center;
+}
+.progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 6;
+  background: var(--accent); transform-origin: 0 0; transform: scaleX(0);
+}
+@media (max-width: 720px) {
+  .top { flex-wrap: wrap; gap: .3rem .8rem; }
+  .top nav { order: 3; flex-basis: 100%; font-size: .98rem; }
+}
+
+/* --- the page ---------------------------------------------------------- */
+main { max-width: var(--measure); margin: 0 auto; padding: 2.5rem 1.15rem 4rem; }
+main.wide { max-width: 62rem; }
+
+h1, h2, h3 { font-family: "Cormorant Garamond", serif; font-weight: 500; line-height: 1.15; }
+h1 { font-size: clamp(2.2rem, 6vw, 3rem); text-align: center; margin: .3rem 0 .4rem; }
+h2 { font-size: 1.75rem; margin: 2.6rem 0 .8rem; }
+h3 { font-size: 1.35rem; margin: 2rem 0 .5rem; }
+p { margin: 0 0 .9rem; hyphens: auto; }
+strong { font-weight: 600; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem auto; width: 40%; }
+
+.kicker {
+  text-align: center; color: var(--accent);
+  font-family: "Cormorant Garamond", serif; letter-spacing: .32em; text-transform: uppercase;
+  font-size: .86rem; margin: 0;
+}
+.kicker sub { vertical-align: baseline; font-size: inherit; }
+.subtitle { text-align: center; font-style: italic; color: var(--muted); margin-top: 0; }
+.center { text-align: center; }
+p.center sub, p.small-center { font-size: .92rem; color: var(--muted); }
+p.small-center { text-align: center; }
+
+/* chapter movements: "IV · ● The Tale" */
+h2.movement { display: flex; align-items: baseline; gap: .7rem; border-top: 1px solid var(--rule); padding-top: 1.6rem; }
+h2.movement .roman {
+  color: var(--accent); font-size: .85rem; letter-spacing: .25em; min-width: 2.6rem;
+}
+h2.movement .mark { color: var(--accent); font-size: .8rem; }
+
+.mark { color: var(--accent); cursor: help; font-family: "DejaVu Sans", "Segoe UI Symbol", system-ui, sans-serif; font-size: .8em; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* figures and plates */
+figure, p.center:has(> img) { margin: 1.8rem auto; text-align: center; }
+p.center img, figure img { border-radius: 6px; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) p.center img:not(.painting) { box-shadow: 0 0 0 1px var(--rule); }
+}
+
+/* quotations and epigraphs */
+blockquote {
+  margin: 1.4rem 0; padding: .2rem 0 .2rem 1.1rem;
+  border-left: 2px solid var(--accent); color: var(--ink-soft);
+}
+blockquote.epigraph { border: 0; text-align: center; padding: 0; font-size: 1.12em; }
+blockquote.epigraph p:last-child:not(:first-child) {
+  font-style: normal; font-family: "Cormorant Garamond", serif; color: var(--muted); font-size: .9em;
+}
+blockquote.creed {
+  border: 0; text-align: center; padding: .9rem 1rem; margin: 1.6rem auto;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); max-width: 28rem;
+}
+blockquote.creed strong { color: var(--accent); letter-spacing: .25em; font-weight: 500; font-size: .85em; }
+blockquote.reversal {
+  background: var(--page-2); border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0;
+  padding: .9rem 1.2rem; color: var(--ink);
+}
+
+/* lists: the teachings */
+ol, ul { padding-left: 1.6rem; }
+li { margin: .35rem 0; }
+ol.teachings { list-style: none; padding: 0; counter-reset: none; }
+ol.teachings li { position: relative; padding-left: 2.9rem; margin: .7rem 0; }
+ol.teachings li::before {
+  content: attr(data-n); color: var(--accent); font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem; position: absolute; left: 0; width: 2.2rem; text-align: right; top: .08rem;
+}
+ul.witnesses { list-style: none; padding: 0; }
+ul.witnesses li { margin: .9rem 0; }
+
+/* tables: five scales, practice, ledger, the claims */
+table { border-collapse: collapse; width: 100%; margin: 1.2rem 0 1.6rem; font-size: .98rem; }
+th, td { text-align: left; vertical-align: top; padding: .5rem .6rem; border-bottom: 1px solid var(--rule); }
+th { font-family: "Cormorant Garamond", serif; letter-spacing: .12em; font-weight: 600; font-size: .85rem; color: var(--muted); }
+thead tr:has(th:empty:only-child), thead:not(:has(th:not(:empty))) { display: none; }
+td:first-child:has(strong:only-child) strong, td.label {
+  font-family: "Cormorant Garamond", serif; letter-spacing: .2em; color: var(--accent);
+  font-weight: 600; font-size: .82rem; white-space: nowrap;
+}
+.table-wrap { overflow-x: auto; }
+table.grid td { text-align: center; font-variant-numeric: lining-nums tabular-nums; }
+
+/* verse */
+.verse { text-align: center; font-style: italic; margin: 1.2rem 0 2rem; }
+.verse p { margin-bottom: 1rem; }
+
+/* the pager at the foot of every page */
+.pager {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+  max-width: var(--measure); margin: 0 auto 3rem; padding: 0 1.15rem;
+}
+.pager a {
+  display: block; padding: .8rem 1rem; border: 1px solid var(--rule); border-radius: 8px;
+  text-decoration: none; color: var(--ink); background: var(--card);
+}
+.pager a:hover { border-color: var(--accent); }
+.pager small { display: block; color: var(--muted); font-size: .82rem; letter-spacing: .08em; }
+.pager .next { text-align: right; grid-column: 2; }
+
+footer {
+  border-top: 1px solid var(--rule); padding: 2rem 1rem 3rem; text-align: center;
+  color: var(--muted); font-size: .92rem;
+}
+footer a { color: var(--muted); }
+
+/* --- night bands: the cover and the Book openers ------------------------- */
+.night {
+  background: var(--night); color: var(--night-ink); text-align: center;
+  padding: 2.5rem 1rem 3rem;
+}
+.night img { max-height: 70vh; width: auto; border-radius: 4px; box-shadow: 0 10px 40px #0008; }
+.night .kicker { color: #cfb98b; }
+.night h1 { color: var(--night-ink); }
+.night .lede { max-width: 34rem; margin: 1rem auto 0; font-style: italic; color: #d8cdb4; }
+
+/* --- the home page --------------------------------------------------------- */
+.hero { display: grid; grid-template-columns: minmax(0, 20rem) minmax(0, 1fr); gap: 2.5rem; align-items: center;
+        max-width: 62rem; margin: 0 auto; text-align: left; }
+.hero img { max-height: none; width: 100%; }
+.hero h1 { text-align: left; font-size: clamp(2.4rem, 6vw, 3.6rem); letter-spacing: .04em; margin: .2rem 0; }
+.hero .sub { font-family: "Cormorant Garamond", serif; font-style: italic; color: #d8b56d; font-size: 1.35rem; margin: 0 0 1rem; }
+.hero .lines { font-size: 1.12rem; line-height: 1.7; margin: 1.2rem 0; color: #e9dfc8; }
+.hero .creed { color: #cfb98b; font-style: italic; }
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; text-align: center; }
+  .hero h1 { text-align: center; }
+  .hero img { max-width: 16rem; margin: 0 auto; }
+}
+
+.buttons { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 1.4rem; }
+.hero .buttons { justify-content: flex-start; }
+@media (max-width: 760px) { .hero .buttons { justify-content: center; } }
+.button {
+  display: inline-block; padding: .65rem 1.25rem; border-radius: 999px; text-decoration: none;
+  font-family: "Cormorant Garamond", serif; font-size: 1.1rem; font-weight: 600; letter-spacing: .04em;
+  border: 1px solid #d8b56d; color: #100e19; background: #d8b56d;
+}
+.button.ghost { background: transparent; color: #f2e6cc; }
+.button:hover { filter: brightness(1.08); }
+
+.books { display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); gap: 1.2rem; margin: 1.5rem 0 2rem; }
+.books a { display: block; text-decoration: none; color: var(--ink); text-align: center; }
+.books img { border-radius: 6px; aspect-ratio: 396 / 612; object-fit: cover; width: 100%; }
+.books small { display: block; color: var(--accent); letter-spacing: .22em; font-size: .72rem; margin-top: .5rem;
+               font-family: "Cormorant Garamond", serif; text-transform: uppercase; }
+.books span { font-family: "Cormorant Garamond", serif; font-size: 1.25rem; }
+.books em { display: block; color: var(--muted); font-size: .92rem; }
+
+.marks { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; margin: 1rem 0 2rem; }
+.marks div { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 1rem 1.1rem; }
+.marks b { font-family: "Cormorant Garamond", serif; font-size: 1.25rem; font-weight: 600; }
+.marks .g { color: var(--accent); margin-right: .3rem; }
+
+.contents-part { display: grid; grid-template-columns: 7rem 1fr; gap: 1.2rem; margin: 2rem 0; }
+.contents-part img { border-radius: 4px; }
+@media (max-width: 560px) { .contents-part { grid-template-columns: 4.5rem 1fr; } }
+
+/* gallery */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: 1.4rem; }
+.gallery figure { margin: 0; }
+.gallery figcaption { font-size: .9rem; color: var(--muted); }
+
+/* checks */
+pre.checks { background: var(--page-2); padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: .82rem; line-height: 1.5; }
+
+@media print {
+  .top, .pager, footer, .progress, .theme-toggle { display: none !important; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  main { max-width: none; padding: 0; }
+  a { color: inherit; text-decoration: none; }
+  table { page-break-inside: avoid; }
+}
