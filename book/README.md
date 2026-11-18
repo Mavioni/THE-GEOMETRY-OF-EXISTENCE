@@ -1,131 +1,113 @@
-<p align="center">
-  <img src="../art/plates/p001-cover.png" alt="The Geometry of Existence — cover" width="300">
-</p>
-
+<p align="center"><img src="../art/paintings/cover.jpg" alt="The cover of The Geometry of Everything" width="240"></p>
 <h1 align="center">Contents</h1>
+<p align="center"><i>The Geometry of Everything · Earn Your Reality · A Manual for Life</i><br>Massimo Vincent Panella · Edition of November 2026</p>
 
-<p align="center"><i>One book in five levels. Each level says the same thing at a greater depth,<br>and each is complete in itself. You may stop at any level and have the whole of that level.</i></p>
+> **New here?** Begin with [How to Carry This Book](0-opening/01-how-to-carry-this-book.md). Every page ends with a link to the next one, so you can read straight through. To look something up by what is happening in your life, use the [Index of Situations](7-at-the-back/04-index-of-situations.md).
 
-<p align="center"><img src="../art/ornaments/divider.png" alt="" width="200"></p>
+## The Opening
 
+- [Title and Dedication](0-opening/00-title-and-dedication.md) <sub>pp. 1–6</sub>
+- [How to Carry This Book](0-opening/01-how-to-carry-this-book.md) <sub>pp. 9–11</sub>
+- [The Rivers That Became This Book](0-opening/02-the-rivers-that-became-this-book.md) <sub>pp. 12–13</sub>
+- [The First Principle](0-opening/03-the-first-principle.md) <sub>pp. 14–16</sub>
+- [The Kept Middle](0-opening/04-the-kept-middle.md) <sub>pp. 17–18</sub>
+- [The Floor and the Ceiling](0-opening/05-the-floor-and-the-ceiling.md) <sub>pp. 19–20</sub>
+- [The Model of Change](0-opening/06-the-model-of-change.md) <sub>pp. 21–24</sub>
+- [The Architecture](0-opening/07-the-architecture.md) <sub>pp. 25–26</sub>
 
+## Book One · The Ground &nbsp;<sub>*Existence*</sub>
 
-### Before the levels · Front Matter
+<a href="1-the-ground/README.md"><img src="../art/paintings/1-the-ground.jpg" alt="Book One: The Ground" width="110" align="left"></a>
 
-*five levels, five marks, one promise*
+*Before you know anything, before you love anyone, before you earn a single thing, you are. This Book stands on that fact. It concerns what no one can give you and no one can take away: being itself, the body that carries it, the death that bounds it, and the wonder that surrounds it.*
 
-
-- [Title Page](0-front/01-title-page.md) <sub>pp. 2–3</sub>
-- [How This Book Is Built](0-front/02-how-this-book-is-built.md) <sub>pp. 4–5</sub>
-
-<br clear="left">
-
-<a href="1-the-lines/README.md"><img src="../art/plates/thumbs/p008-the-lines.png" alt="Level One — The Lines" width="120" align="left"></a>
-
-### Level One · The Lines
-
-*for anyone, in one sitting*
-
-
-- [The First Principle](1-the-lines/01-the-first-principle.md) <sub>p. 9</sub>
-- [The Stance](1-the-lines/02-the-stance.md) <sub>p. 10</sub>
-- [In Plain Words](1-the-lines/03-in-plain-words.md) <sub>p. 11</sub>
+1. [Existence Needs No Permission](1-the-ground/01-existence-needs-no-permission.md) · *Meaning* <sub>pp. 29–34</sub>
+2. [The Vessel](1-the-ground/02-the-vessel.md) · *The Body, Discipline and Rest* <sub>pp. 35–39</sub>
+3. [The Appointment](1-the-ground/03-the-appointment.md) · *Death and Mortality* <sub>pp. 40–44</sub>
+4. [Starry Heavens](1-the-ground/04-starry-heavens.md) · *The Sacred, Wonder and the Infinite* <sub>pp. 45–50</sub>
 
 <br clear="left">
 
-<a href="2-the-manual/README.md"><img src="../art/plates/thumbs/p012-the-manual.png" alt="Level Two — The Manual" width="120" align="left"></a>
+## Book Two · The Light &nbsp;<sub>*Consciousness*</sub>
 
-### Level Two · The Manual
+<a href="2-the-light/README.md"><img src="../art/paintings/2-the-light.jpg" alt="Book Two: The Light" width="110" align="left"></a>
 
-*for the one who will practise*
+*Consciousness is the opportunity existence hands you: the power to know that you are, to see what stands in front of you, to learn, and to choose. This Book concerns the light by which you see: who you are, how the mind builds the world, where your attention goes, how it can be led and misled, how you learn, and the freedom no one can take.*
 
-
-- **[Part I · The Ground](2-the-manual/part-1-the-ground.md)** — *what is*
-  - [1 · The Three and the Zero](2-the-manual/01-the-three-and-the-zero.md) <sub>pp. 15–18</sub> — *A binary with a waiting room is still a binary.*
-  - [2 · The Given](2-the-manual/02-the-given.md) <sub>pp. 19–23</sub> — *The ground does not negotiate. That is not its cruelty. That is its honesty.*
-  - [3 · Attention](2-the-manual/03-attention.md) <sub>pp. 24–29</sub> — *You have exactly as much life as you have attention.*
-  - [4 · Witness](2-the-manual/04-witness.md) <sub>pp. 30–34</sub> — *To be seen is not vanity. It is ontology.*
-- **[Part II · The Practice](2-the-manual/part-2-the-practice.md)** — *how to stand*
-  - [5 · Name the Binary](2-the-manual/05-name-the-binary.md) <sub>pp. 36–40</sub> — *A binary you can see is no longer doing its job.*
-  - [6 · Construct the Third](2-the-manual/06-construct-the-third.md) <sub>pp. 41–46</sub> — *The third is built, never selected.*
-  - [7 · Own the Ground](2-the-manual/07-own-the-ground.md) <sub>pp. 47–52</sub> — *Insight without position is a discovery made on someone else’s behalf.*
-  - [8 · Keep the Middle](2-the-manual/08-keep-the-middle.md) <sub>pp. 53–57</sub> — *The zero is not the place you escape to. It is the place you return from.*
-  - [9 · Refuse the Waiting Room](2-the-manual/09-refuse-the-waiting-room.md) <sub>pp. 58–63</sub> — *A decision deferred so long it became the architecture was never deferred. It was made — by default, in secret, against you.*
-- **[Part III · The Weight](2-the-manual/part-3-the-weight.md)** — *what it costs*
-  - [10 · The Asymmetry](2-the-manual/10-the-asymmetry.md) <sub>pp. 65–70</sub> — *Seeing the third is cheap and feels like enormous progress. Holding it costs years. Budget for the expensive half or do not begin.*
-  - [11 · Continuity](2-the-manual/11-continuity.md) <sub>pp. 71–76</sub> — *You are not the same person you were. You are also not a different one. Both facts are load-bearing, and confusing them is how lives break.*
-  - [12 · The Losable Claim](2-the-manual/12-the-losable-claim.md) <sub>pp. 77–82</sub> — *A claim that cannot lose cannot win. This applies to physics. It applies to you.*
-- **[Part IV · The Care](2-the-manual/part-4-the-care.md)** — *what it is for*
-  - [13 · Empathy as Catalyst](2-the-manual/13-empathy-as-catalyst.md) <sub>pp. 84–89</sub> — *Empathy opens a door. It is not a force. What walks through the door is a different thing entirely, and it must be judged on its own.*
-  - [14 · The Inviolate](2-the-manual/14-the-inviolate.md) <sub>pp. 90–96</sub> — *Another person’s middle is not yours. Not even to help. Not even to love. Especially not to love.*
-  - [15 · The Long Reclamation](2-the-manual/15-the-long-reclamation.md) <sub>pp. 97–102</sub> — *The spark has never been destroyed. It has been buried. And the desire to find the spark is the spark itself, flickering.*
-- [The Fifteen Lines](2-the-manual/16-the-fifteen-lines.md) <sub>pp. 103–104</sub>
+5. [Know the One Who Knows](2-the-light/05-know-the-one-who-knows.md) · *Self-Knowledge and Identity* <sub>pp. 53–57</sub>
+6. [The Instrument](2-the-light/06-the-instrument.md) · *The Brain and How It Builds Experience* <sub>pp. 58–62</sub>
+7. [Where Attention Goes](2-the-light/07-where-attention-goes.md) · *The Mind: Attention, Thought, Emotion* <sub>pp. 63–67</sub>
+8. [The Open Door](2-the-light/08-the-open-door.md) · *Suggestion, Expectation and Hypnosis* <sub>pp. 68–73</sub>
+9. [The Dark Half, with the Lights On](2-the-light/09-the-dark-half-with-the-lights-on.md) · *Mentalism, Manipulation and Defence* <sub>pp. 74–79</sub>
+10. [The Lifelong Student](2-the-light/10-the-lifelong-student.md) · *Learning and School* <sub>pp. 80–84</sub>
+11. [The Last Freedom](2-the-light/11-the-last-freedom.md) · *Freedom and Choice* <sub>pp. 85–90</sub>
 
 <br clear="left">
 
-<a href="3-the-degree/README.md"><img src="../art/plates/thumbs/p105-the-degree.png" alt="Level Three — The Degree" width="120" align="left"></a>
+## Book Three · The Bond &nbsp;<sub>*Relation*</sub>
 
-### Level Three · The Degree
+<a href="3-the-bond/README.md"><img src="../art/paintings/3-the-bond.jpg" alt="Book Three: The Bond" width="110" align="left"></a>
 
-*for the one who has stopped rounding*
+*Connection is the responsibility you may choose. No one lives alone, and no one becomes a self alone. This Book concerns the bonds through which your reality is woven: peace with others, love and friendship, family, the living word, community, respect, and the repair of what breaks. Here the four words of the creed come fully alive.*
 
-
-- [16 · The Degree](3-the-degree/16-the-degree.md) <sub>pp. 106–110</sub> — *Most of what is true of you is true to a degree. The either/or rounds it off.*
-- [17 · The Weakest Link](3-the-degree/17-the-weakest-link.md) <sub>pp. 111–114</sub> — *When two things must both be true, the lower one is your answer.*
-- [18 · Act Crisp](3-the-degree/18-act-crisp.md) <sub>pp. 115–118</sub> — *Weigh in degrees. Move in one piece.*
-- [The Graded Audits](3-the-degree/19-the-graded-audits.md) <sub>pp. 119–120</sub>
-
-<br clear="left">
-
-<a href="4-the-principle/README.md"><img src="../art/plates/thumbs/p121-the-principle.png" alt="Level Four — The Principle" width="120" align="left"></a>
-
-### Level Four · The Principle
-
-*for the one who asks why*
-
-
-- [19 · Existence Is Sufficient](4-the-principle/19-existence-is-sufficient.md) <sub>pp. 122–125</sub> — *Nothing gives legitimacy to existence except existence itself.*
-- [20 · Three Relationships, Not Three Requirements](4-the-principle/20-three-relationships.md) <sub>pp. 126–129</sub> — *Existence is unconditional. Consciousness is an opportunity. Connection is a choice.*
-- [21 · Change Without Erasure](4-the-principle/21-change-without-erasure.md) <sub>pp. 130–133</sub> — *Change without erasure. Understanding without possession.*
-- [22 · Dignity Is Owed, Respect Is Earned](4-the-principle/22-dignity-is-owed.md) <sub>pp. 134–137</sub> — *Dignity is the floor. Respect is the ceiling.*
+12. [Peace: The Unsent Letter](3-the-bond/12-peace-the-unsent-letter.md) · *Peace and the Mastery of Anger* <sub>pp. 93–98</sub>
+13. [Love: Another Self](3-the-bond/13-love-another-self.md) · *Love and Friendship* <sub>pp. 99–103</sub>
+14. [The Root](3-the-bond/14-the-root.md) · *Family* <sub>pp. 104–108</sub>
+15. [The Living Word](3-the-bond/15-the-living-word.md) · *Speech, Language and Energy* <sub>pp. 109–113</sub>
+16. [Unity: Through Other Persons](3-the-bond/16-unity-through-other-persons.md) · *Community* <sub>pp. 114–118</sub>
+17. [Respect: The Floor and the Ceiling](3-the-bond/17-respect-the-floor-and-the-ceiling.md) · *Respect, Dignity and Justice* <sub>pp. 119–124</sub>
+18. [Repair](3-the-bond/18-repair.md) · *Conflict, Repair and Forgiveness* <sub>pp. 125–130</sub>
 
 <br clear="left">
 
-<a href="5-the-proof/README.md"><img src="../art/plates/thumbs/p138-the-proof-and-its-limits.png" alt="Level Five — The Proof and Its Limits" width="120" align="left"></a>
+## Book Four · The Work &nbsp;<sub>*Earning*</sub>
 
-### Level Five · The Proof and Its Limits
+<a href="4-the-work/README.md"><img src="../art/paintings/4-the-work.jpg" alt="Book Four: The Work" width="110" align="left"></a>
 
-*for the one who checks*
+*Existence is given. Consciousness and connection are offered. Everything else is earned. This Book concerns the work by which a life is built: craft and mastery, money and desire, endurance through suffering, and the right use of power. It is where the creed meets Monday morning.*
 
-
-- [Sophonticism: The Research Book](5-the-proof/sophonticism/README.md) <sub>pp. 139–140</sub>
-- [Part I — Ground (§1–§4)](5-the-proof/sophonticism/1-ground.md) <sub>pp. 141–146</sub>
-- [Part II — The Established Bridges (§5–§11)](5-the-proof/sophonticism/2-the-established-bridges.md) <sub>pp. 147–155</sub>
-- [Part III — The Third State and Consequence (§12–§17)](5-the-proof/sophonticism/3-the-third-state-and-consequence.md) <sub>pp. 156–171</sub>
-- [Part IV — The Frontier (§18–§22)](5-the-proof/sophonticism/4-the-frontier.md) <sub>pp. 172–179</sub>
-- [Appendices A–D](5-the-proof/sophonticism/5-appendices.md) <sub>pp. 180–187</sub>
-- [23 · The Program, Preregistered](5-the-proof/23-the-program-preregistered.md) <sub>pp. 188–193</sub> — *Small enough to calculate and precise enough to lose.*
-- [24 · What the Axiom Does Not Prove](5-the-proof/24-what-the-axiom-does-not-prove.md) <sub>pp. 194–197</sub> — *Existence legitimizes. It does not calculate.*
-- [25 · Beyond Logic](5-the-proof/25-beyond-logic.md) <sub>pp. 198–202</sub> — *What can be proved has been proved. What remains is what was always first.*
+19. [The Blade That Stays Sharp](4-the-work/19-the-blade-that-stays-sharp.md) · *Work, Craft and Mastery* <sub>pp. 133–137</sub>
+20. [Enough](4-the-work/20-enough.md) · *Money, Desire and Enough* <sub>pp. 138–143</sub>
+21. [The Headland](4-the-work/21-the-headland.md) · *Suffering, Failure, Grief and Resilience* <sub>pp. 144–149</sub>
+22. [The Book of Earned Power](4-the-work/22-the-book-of-earned-power.md) · *Power and Responsibility* <sub>pp. 150–156</sub>
 
 <br clear="left">
 
+## Book Five · The Becoming &nbsp;<sub>*Transformation*</sub>
 
+<a href="5-the-becoming/README.md"><img src="../art/paintings/5-the-becoming.jpg" alt="Book Five: The Becoming" width="110" align="left"></a>
 
-### After the levels · Back Matter
+*Nothing living stays as it is. This last Book concerns how a person changes: not by erasing himself back to nothing, but by crossing, deliberately, into a new form while carrying the old one honestly. And it gives you the daily rite by which every teaching in this book becomes your own.*
 
-*the discipline, the lineage, the corrections, the checks*
-
-
-- [The Discipline in One Page](6-back-matter/01-the-discipline-in-one-page.md) <sub>pp. 203–204</sub>
-- [The Lineage](6-back-matter/02-the-lineage.md) <sub>pp. 205–207</sub>
-- [Glossary of the Pure Terms](6-back-matter/03-glossary-of-the-pure-terms.md) <sub>pp. 208–209</sub>
-- [Corrections and Open Accounts](6-back-matter/04-corrections-and-open-accounts.md) <sub>pp. 210–211</sub>
-- [The Checks](6-back-matter/05-the-checks.md) <sub>pp. 212–213</sub>
-- [Colophon](6-back-matter/06-colophon.md) <sub>p. 214</sub>
+23. [Becoming Without Erasing](5-the-becoming/23-becoming-without-erasing.md) · *Change, Transformation and Becoming* <sub>pp. 159–164</sub>
+24. [The Wheel](5-the-becoming/24-the-wheel.md) · *Ritual, Symbol and the Honest Magic* <sub>pp. 165–170</sub>
+25. [The Author](5-the-becoming/25-the-author.md) · *Story, Identity and Integration* <sub>pp. 171–176</sub>
+26. [The Daily Rite](5-the-becoming/26-the-daily-rite.md) · *Daily Practice and Ritual* <sub>pp. 177–182</sub>
 
 <br clear="left">
+
+## The Summit · The Geometry &nbsp;<sub>*Existence · Consciousness · Relation*</sub>
+
+<a href="6-the-summit/README.md"><img src="../art/paintings/6-the-summit.jpg" alt="The Summit: The Geometry" width="110" align="left"></a>
+
+*At the top of the mountain lies the mathematics beneath the book. Every figure here is computed, not sketched. And one rule governs all of it: mathematics can show structure; it cannot prove a moral truth. What it can do is keep us honest about which of our claims are pictures, which are models and which are proofs.*
+
+- [The Geometry of Everything](6-the-summit/01-the-geometry-of-everything.md) <sub>pp. 185–193</sub>
+- [How This Book Could Be Wrong](6-the-summit/02-how-this-book-could-be-wrong.md) <sub>pp. 194–201</sub>
+- [Epilogue: The Sophont](6-the-summit/03-epilogue-the-sophont.md) <sub>pp. 202–203</sub>
+- [The Law of the Sophont](6-the-summit/04-the-law-of-the-sophont.md) <sub>p. 204</sub>
+
+<br clear="left">
+
+## At the Back
+
+- [The Ninety-Day Trial](7-at-the-back/01-the-ninety-day-trial.md) <sub>pp. 205–206</sub>
+- [The Monthly Reading Cycle](7-at-the-back/02-the-monthly-reading-cycle.md) <sub>p. 207</sub>
+- [The Respect Ledger](7-at-the-back/03-the-respect-ledger.md) <sub>p. 208</sub>
+- [Index of Situations](7-at-the-back/04-index-of-situations.md) <sub>pp. 211–212</sub>
+- [Sources and Translations](7-at-the-back/05-sources-and-translations.md) <sub>pp. 213–215</sub>
+- [Colophon](7-at-the-back/06-colophon.md) <sub>pp. 216–217</sub>
 
 ---
 
-<p align="center">[Download the PDF](../edition/README.md) · [Read online](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/) · [The gallery](../art/README.md) · [The workbook](../workbook/README.md) · [Run the checks](../checks/README.md)</p>
+<p align="center"><a href="../README.md">Home</a> &nbsp;·&nbsp; <a href="../art/README.md">Gallery</a> &nbsp;·&nbsp; <a href="../workbook/README.md">Workbook</a> &nbsp;·&nbsp; <a href="../edition/The-Geometry-of-Everything.pdf">The PDF</a></p>

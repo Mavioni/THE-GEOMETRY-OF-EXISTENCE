@@ -1,163 +1,106 @@
 <p align="center">
-  <img src="art/banner.svg" alt="The Geometry of Existence — A Manual for Life" width="100%">
+  <a href="https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/"><img src="art/paintings/cover.jpg" alt="The cover of The Geometry of Everything: a wheel of light on a night sky" width="300"></a>
+</p>
+
+<h1 align="center">The Geometry of Everything</h1>
+
+<p align="center"><i>Earn Your Reality · A Manual for Life</i><br>
+by <b>Massimo Vincent Panella</b> · Edition of November 2026</p>
+
+<p align="center">
+  <a href="https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/"><b>📖 Read it online</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The-Geometry-of-Everything.pdf"><b>⬇ Download the PDF</b></a> <sub>(217 pages, 7.2 MB)</sub> &nbsp;·&nbsp;
+  <a href="book/README.md"><b>📑 Read it here, chapter by chapter</b></a>
 </p>
 
 <p align="center">
-  <a href="https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/"><b>Read online</b></a> &nbsp;·&nbsp;
-  <a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf"><b>Download the PDF</b></a> <sub>(214 pages, 1.4 MB)</sub> &nbsp;·&nbsp;
-  <a href="book/README.md"><b>Read on GitHub</b></a>
+  <a href="checks/README.md"><img src="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/actions/workflows/checks.yml/badge.svg" alt="Checks"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--SA%204.0-a8792b?labelColor=100e19" alt="License: CC BY-SA 4.0"></a>
 </p>
 
-## What this is
+> **Nothing gives legitimacy to existence except existence itself.**
+>
+> Existence needs no permission. Understanding is an opportunity. Connection is a responsibility you may choose.
+> *Peace, love and unity are what you bring. Respect is what you prove.*
 
-**The Geometry of Existence: A Manual for Life** is a book by Massimo Vincent Panella, written in five levels: a few lines anyone can read in one sitting, a manual of practice, a method for weighing in degrees, the philosophical principle underneath, and finally the mathematics, with its proofs and limits.
+---
 
-This repository is the book's home. It holds:
+## New to GitHub? Start here
 
-- **the complete edition as a PDF**, ready to [download](https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf);
-- **the whole book on the web** at **[mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/)**, styled like the printed edition;
-- **the book in Markdown**, one illustrated file per chapter, readable right here on GitHub;
-- **every plate and figure**, in a [gallery](art/README.md);
-- **a [workbook](workbook/README.md)** with a practice sheet for each chapter;
-- **[the checks](checks/README.md)**: a program that re-runs every calculation the book relies on.
+You do not need an account, and you do not need to install anything. This page is the home of a book, and there are three ways to read it:
 
-<table>
-<tr>
-<td width="36%" valign="top">
-<a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf"><img src="art/plates/p001-cover.png" alt="The Geometry of Existence — cover. Select to download the PDF." width="100%"></a>
-</td>
-<td valign="top">
+1. **On the website**, the easiest way: **[mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/)**. It works on any phone or computer, follows your light or dark setting, and the arrow keys turn the page.
+2. **As a PDF**, the printed edition exactly as typeset: **[download it here](https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The-Geometry-of-Everything.pdf)**. Keep it, print it, give it away.
+3. **Right here on GitHub**: open the **[Contents](book/README.md)** and select any chapter. Every chapter ends with a link to the next.
 
-<h3>The Geometry of Existence</h3>
+The folders you see at the top of this page are explained [further down](#whats-in-this-repository). You never need to open them to read the book.
 
-***A Manual for Life*** — in five levels, the highest at the end.<br>
-**Massimo Vincent Panella** · complete edition, 15 November 2026
+---
 
-> *Nothing gives legitimacy to existence except existence itself.*
+## What this book is
 
-1. Existence itself is sufficient.
-2. Consciousness gives us the opportunity to understand it.
-3. Connection gives us the opportunity to honor it.
-
-<a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf"><img src="art/download.svg" alt="Download the book: PDF, 214 pages, 1.4 MB" width="300"></a>
-
-**[Read online »](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/)** &nbsp;·&nbsp; [Contents](book/README.md) &nbsp;·&nbsp; [About the edition](edition/README.md)
-
-[![The Checks](https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/actions/workflows/checks.yml/badge.svg)](checks/README.md)
-
-</td>
-</tr>
-</table>
-
-## Five levels
-
-*This is one book in five levels. Each level says the same thing at a greater depth, and each is complete in itself. You may stop at any level and have the whole of that level.*
+*Here is a book to be carried in one hand.* It gathers what the wisest who ever lived found out, often apart, across thousands of miles and years, and tests it: **two hundred and forty teachings in twenty-six chapters, five Books and a Summit**. Every chapter moves in the same nine steps: the Teaching, the Five Scales, the Witnesses, the Tale, the Energy, the Reversal, the Practice, the Ledger and the Song.
 
 <table>
 <tr>
-<td align="center" valign="top" width="20%"><a href="book/1-the-lines/README.md"><img src="art/plates/thumbs/p008-the-lines.png" width="130" alt="Level One — The Lines"></a><br><sub>LEVEL ONE</sub><br><b>The Lines</b><br><sub><i>for anyone, in one sitting</i></sub></td>
-<td align="center" valign="top" width="20%"><a href="book/2-the-manual/README.md"><img src="art/plates/thumbs/p012-the-manual.png" width="130" alt="Level Two — The Manual"></a><br><sub>LEVEL TWO</sub><br><b>The Manual</b><br><sub><i>for the one who will practise</i></sub></td>
-<td align="center" valign="top" width="20%"><a href="book/3-the-degree/README.md"><img src="art/plates/thumbs/p105-the-degree.png" width="130" alt="Level Three — The Degree"></a><br><sub>LEVEL THREE</sub><br><b>The Degree</b><br><sub><i>for the one who has stopped rounding</i></sub></td>
-<td align="center" valign="top" width="20%"><a href="book/4-the-principle/README.md"><img src="art/plates/thumbs/p121-the-principle.png" width="130" alt="Level Four — The Principle"></a><br><sub>LEVEL FOUR</sub><br><b>The Principle</b><br><sub><i>for the one who asks why</i></sub></td>
-<td align="center" valign="top" width="20%"><a href="book/5-the-proof/README.md"><img src="art/plates/thumbs/p138-the-proof-and-its-limits.png" width="130" alt="Level Five — The Proof and Its Limits"></a><br><sub>LEVEL FIVE</sub><br><b>The Proof and Its Limits</b><br><sub><i>for the one who checks</i></sub></td>
+<td align="center" width="16%"><a href="book/1-the-ground/README.md"><img src="art/paintings/1-the-ground.jpg" alt="Book One: The Ground" width="110"></a><br><sub>BOOK ONE</sub><br><b>The Ground</b><br><sub><i>Existence</i></sub></td>
+<td align="center" width="16%"><a href="book/2-the-light/README.md"><img src="art/paintings/2-the-light.jpg" alt="Book Two: The Light" width="110"></a><br><sub>BOOK TWO</sub><br><b>The Light</b><br><sub><i>Consciousness</i></sub></td>
+<td align="center" width="16%"><a href="book/3-the-bond/README.md"><img src="art/paintings/3-the-bond.jpg" alt="Book Three: The Bond" width="110"></a><br><sub>BOOK THREE</sub><br><b>The Bond</b><br><sub><i>Relation</i></sub></td>
+<td align="center" width="16%"><a href="book/4-the-work/README.md"><img src="art/paintings/4-the-work.jpg" alt="Book Four: The Work" width="110"></a><br><sub>BOOK FOUR</sub><br><b>The Work</b><br><sub><i>Earning</i></sub></td>
+<td align="center" width="16%"><a href="book/5-the-becoming/README.md"><img src="art/paintings/5-the-becoming.jpg" alt="Book Five: The Becoming" width="110"></a><br><sub>BOOK FIVE</sub><br><b>The Becoming</b><br><sub><i>Transformation</i></sub></td>
+<td align="center" width="16%"><a href="book/6-the-summit/README.md"><img src="art/paintings/6-the-summit.jpg" alt="The Summit: The Geometry" width="110"></a><br><sub>THE SUMMIT</sub><br><b>The Geometry</b><br><sub><i>E · C · R</i></sub></td>
 </tr>
 </table>
 
-| | Level | What it holds |
+| | | |
 |---|---|---|
-| **1** | [The Lines](book/1-the-lines/README.md) | The stance on a few pages, for anyone. The First Principle, the Stance in four lines, and the same ground in plain words. |
-| **2** | [The Manual](book/2-the-manual/README.md) | Fifteen chapters of practice in four parts — *The Ground*, *The Practice*, *The Weight*, *The Care*. Each ends in something to do today and a question that can find the chapter wrong. |
-| **3** | [The Degree](book/3-the-degree/README.md) | How to grade instead of round: what a degree is, how degrees combine, and how to act once you have weighed. |
-| **4** | [The Principle](book/4-the-principle/README.md) | Why the ground holds: existence is sufficient; consciousness and connection are opportunities; change without erasure; dignity owed and respect earned. |
-| **5** | [The Proof and Its Limits](book/5-the-proof/README.md) | The mathematics, recomputed. *Sophonticism*, the research book. The program and its frozen tests. The strongest case against it. And, last, what no proof reaches. |
+| **Before the Books** | [The Opening](book/README.md#the-opening) | How to carry this book, the First Principle, the Kept Middle, the Floor and the Ceiling, the Model of Change |
+| **Book One** | [The Ground](book/1-the-ground/README.md) | being itself, the body, death, and wonder · chapters 1–4 |
+| **Book Two** | [The Light](book/2-the-light/README.md) | self-knowledge, the brain, attention, suggestion, manipulation, learning, freedom · chapters 5–11 |
+| **Book Three** | [The Bond](book/3-the-bond/README.md) | peace, love, family, speech, community, respect, repair · chapters 12–18 |
+| **Book Four** | [The Work](book/4-the-work/README.md) | craft, money, resilience, and earned power · chapters 19–22 |
+| **Book Five** | [The Becoming](book/5-the-becoming/README.md) | change without erasure, ritual, story, the daily rite · chapters 23–26 |
+| **The Summit** | [The Geometry](book/6-the-summit/README.md) | the mathematics beneath the book, how it could be wrong, the epilogue |
+| **At the back** | [Tools for living it](book/README.md#at-the-back) | the Ninety-Day Trial, the monthly reading cycle, the Respect Ledger, the Index of Situations, sources |
 
-*The levels are levels of understanding, not of worth. A reader who lives Level One has not done less than a reader who checks Level Five.*
+**Three marks.** Every claim in the book is one of three kinds, and the book tells you which: **◆ Commitment**, a stance you choose and defend by argument; **● Evidence**, a claim about how the world works, open to being proved wrong; **◇ Analogy**, a picture to think with, which shows a pattern and never proves one.
 
-## Five marks
+**Ways in.** Read one chapter a week and the book becomes a half-year's schooling. Keep it on the [monthly reading cycle](book/7-at-the-back/02-the-monthly-reading-cycle.md). Open the [Index of Situations](book/7-at-the-back/04-index-of-situations.md) when life demands it (*when I am furious*, *when someone I love has died*, *when money is tight*…). Or run the [Ninety-Day Trial](book/7-at-the-back/01-the-ninety-day-trial.md) and judge the book by your own life, using the [workbook](workbook/README.md).
 
-Every claim in this book is one of five kinds, and the book tries never to let one kind pass for another. In the Markdown they are set as `LIVED`, `ARGUED`, `DEMONSTRATED`, `MEASURED` and `ON RECORD`.
+---
 
-| | |
-|---|---|
-| <img src="art/marks/lived.svg" height="20" alt="Lived"> | A stance or a practice. It is tested only by doing it. Level Two is written in this mark throughout. |
-| <img src="art/marks/argued.svg" height="20" alt="Argued"> | Reasons are given. No one is compelled. |
-| <img src="art/marks/demonstrated.svg" height="20" alt="Demonstrated"> | It follows from stated definitions, or is established science within a stated domain. Every number of this kind was recomputed. |
-| <img src="art/marks/measured.svg" height="20" alt="Measured"> | An observation, with its source. The book reports none of its own; quoted figures are marked *source-reported*. |
-| <img src="art/marks/on-record.svg" height="20" alt="On record"> | A matter of published history: a date, a name, a paper. |
+## Test it
 
-## One promise
+*A book that claims to defeat every system is lying.* This one states how strong each claim is and how each could be shown wrong ([How This Book Could Be Wrong](book/6-the-summit/02-how-this-book-could-be-wrong.md)), and then asks you to test it.
 
-*This book does not promise to be free of error. No honest book can — a claim that cannot lose cannot win.* It promises three things instead: every claim says what kind of claim it is; no claim is larger than its evidence; and every computation was run again. This repository keeps that promise in the open:
+- **The mathematics** of the Summit is recomputed by a small program, [`checks/verify_all.py`](checks/README.md), every time this repository changes. The green badge above means every check passed.
+- **Found an error?** [Open an issue](https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/issues/new/choose) (free GitHub account needed) and pick the form that fits: *a check failed*, *a mark is wrong*, *a correction to the text*, *a prediction tested*, or *a Ninety-Day Trial result*. Each edition publishes what changed and why.
 
-```sh
-python3 checks/verify_all.py
-```
+---
 
-re-runs every computation the book relies on — the balanced-ternary theorems of §12, the spin models of §14–§15, the six-site enumeration of §16 to twelve decimal places, the 240 roots of E₈ — using nothing but the Python standard library. [More on the checks »](checks/README.md)
+## What's in this repository
 
-## How this repository is built
+| Folder | What is inside | Who it is for |
+|---|---|---|
+| [`book/`](book/README.md) | **The whole book**, one page per chapter, with every plate and figure | readers |
+| [`edition/`](edition/README.md) | **The PDF**, the edition of record | readers who want to download or print |
+| [`workbook/`](workbook/README.md) | practice sheets for every chapter, the Ninety-Day Trial and the Respect Ledger | readers who practise |
+| [`art/`](art/README.md) | the gallery: the eight paintings, the twenty-six chapter plates, the figures | anyone |
+| [`checks/`](checks/README.md) | the program that recomputes the book's mathematics | the curious and the sceptical |
+| [`tools/`](tools/README.md) | the scripts that turn the PDF into the pages and the website | maintainers |
 
-```
-edition/      the complete edition, as typeset (PDF, 214 pages) — download page, checksum; the source of everything else
-book/         the book in Markdown, one file per chapter, with its plates and figures
-  0-front/          title page · how this book is built
-  1-the-lines/      Level One
-  2-the-manual/     Level Two — four parts, fifteen chapters, the Fifteen Lines
-  3-the-degree/     Level Three — three chapters and the Graded Audits
-  4-the-principle/  Level Four — four chapters
-  5-the-proof/      Level Five — Sophonticism (§1–§22, Appendices A–D), Chapters 23–25
-  6-back-matter/    the Discipline in One Page · Lineage · Glossary · Corrections · Checks · Colophon
-art/          36 plates and 41 figures cut from the PDF; the marks; the banner — see the gallery
-workbook/     a practice sheet for every chapter: falsifier first, then the Practice, the Audit, the graded line
-checks/       verify_all.py — the computations of "The Checks", rebuilt and runnable
-site/         the stylesheet and script of the reading edition
-tools/        the scripts that cut the PDF into the book and build the site
-```
+Everything in `book/`, `art/` and `workbook/` is generated from the PDF by the tools, so the text here is the text of the edition, word for word. A check confirms it: all 36,085 printed words reach these pages. To rebuild it yourself, see [`tools/`](tools/README.md).
 
-The Markdown is not retyped. [`tools/extract_book.py`](tools/extract_book.py) reads the typesetting itself — fonts, sizes, colours and positions — to decide what is a heading, a mark, a Practice, an Audit, a table, a figure or a plate, and [`tools/check_coverage.py`](tools/check_coverage.py) confirms that every printed word reaches the Markdown (the only words not carried as text are the labels inside figures, which the images carry).
-
-```sh
-pip install -r requirements.txt
-make book       # re-cut book/ and art/ from the PDF, rebuild the indexes and the workbook
-make site       # build the reading edition into _site/
-make serve      # read it at http://localhost:8000
-make check      # run the checks
-```
-
-### The reading edition
-
-[`tools/build_site.py`](tools/build_site.py) turns the Markdown into a website dressed like the book: navy plates with gold line-work open every level, part and chapter; text pages are cream and set in EB Garamond, display in Cormorant Garamond; the marks are small capitals; each Practice and Audit is a ruled box. It follows the reader's light or dark setting, and ← → turn the page. The [Pages workflow](.github/workflows/pages.yml) publishes it on every push to `main` once **Settings → Pages → Source** is set to **GitHub Actions**.
-
-## How to break this book
-
-From [*Corrections and Open Accounts*](book/6-back-matter/04-corrections-and-open-accounts.md) — each has an issue template:
-
-1. **Run the checks.** Any failure is an error in Level Five. → *A check failed*
-2. **Find a sentence whose mark is wrong**: an argument printed as a demonstration, a model value printed as a measurement. → *A mark is wrong*
-3. **Build the six-site system of §16** on a calibrated device and measure the difference in zero-site occupancy. The prediction is **0.276990454809**. → *A test result*
-4. **Do a Practice exactly as written, with your falsifier written first.** If nothing you can observe changes, the practice failed for you. That is a result, and it counts. → *A practice result*, and the [workbook](workbook/README.md)
-
-Corrections go to the author. Each belongs in the next edition's list, dated and attributed. See [CONTRIBUTING](CONTRIBUTING.md).
+---
 
 ## Credits
 
-Text by Massimo Vincent Panella. Level Two drafted with Samantha (OpenClaw); research syntheses AI-assisted, as stated in each. New chapters, illustrations, typesetting and audit of the complete edition by Claude. *Every figure is computed from the book's own mathematics.* Set in EB Garamond and Cormorant Garamond.
+*The Geometry of Everything* gathers the work of **Massimo Vincent Panella** into one book: the philosophy, the creed, the laws, the mathematics and the myth. The edition was rewritten in the spirit of Rudyard Kipling and Friedrich Nietzsche, re-illustrated and audited by Claude for Massimo. Every claim of fact was checked against its source; every figure at the summit and every chapter plate was computed from the law it names. Set in EB Garamond and Cormorant Garamond.
 
-*Nothing here is medical, psychological, or legal advice. The practices are yours to try and yours to stop.*
+*Nothing here is medical, psychological or legal advice. The practices are yours to try and yours to stop.*
 
-**[Download the book (PDF)](https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf)** · **[Read online](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/)**
+## License
 
-### License
+*The Geometry of Everything* © Massimo Vincent Panella, 2026. The book, its paintings, plates and figures, and everything in this repository are licensed under the **[Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/)** ([full text](LICENSE)). You may share and adapt it for any purpose, if you credit the author, link to the license, say what you changed, and share your adaptations under the same license. To cite it, use [CITATION.cff](CITATION.cff) (or the **Cite this repository** button on the right of this page).
 
-[![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-c9a14a.svg?labelColor=14112e)](LICENSE)
-
-*The Geometry of Existence: A Manual for Life* © Massimo Vincent Panella, 2026 — the book, its plates and figures, and everything in this repository are licensed under the **[Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/)** ([full text](LICENSE)).
-
-You may share and adapt it, for any purpose, provided you **credit the author**, **link to the license**, **say what you changed**, and **share your adaptations under the same license**.
-
-> *The Geometry of Existence: A Manual for Life* by Massimo Vincent Panella, licensed under CC BY-SA 4.0. https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE
-
-To cite the book, see [CITATION.cff](CITATION.cff).
-
-<p align="center"><img src="art/ornaments/divider.png" alt="" width="200"></p>
-<p align="center"><i>Twenty-five chapters. Five levels. One stance.</i></p>
+<p align="center"><i>It is a gift, offered in the spirit of its creed: peace, love, unity and respect.</i><br><b>EARN YOUR REALITY.</b></p>

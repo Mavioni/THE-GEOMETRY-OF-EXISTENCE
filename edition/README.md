@@ -1,33 +1,30 @@
-<p align="center"><a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf"><img src="../art/plates/p001-cover.png" alt="The Geometry of Existence — cover. Select to download the PDF." width="260"></a></p>
+<p align="center"><a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The-Geometry-of-Everything.pdf"><img src="../art/paintings/cover.jpg" alt="The cover of The Geometry of Everything. Select to download the PDF." width="240"></a></p>
 
 <h1 align="center">The Edition</h1>
 
-<p align="center"><i>The Geometry of Existence: A Manual for Life</i> · complete edition, 15 November 2026</p>
+<p align="center"><i>The Geometry of Everything · Earn Your Reality · A Manual for Life</i><br>Massimo Vincent Panella · Edition of November 2026</p>
 
-<p align="center"><a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf"><img src="../art/download.svg" alt="Download the book: PDF, 214 pages, 1.4 MB" width="340"></a></p>
+<p align="center"><a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The-Geometry-of-Everything.pdf"><b>⬇ Download the PDF</b></a> <sub>(217 pages, 7.2 MB)</sub></p>
 
-## Download
+This folder holds the book exactly as typeset. It is the **edition of record**: every page in [`book/`](../book/README.md) and on the [website](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/) is cut from it.
 
 | | |
 |---|---|
-| **Download** | **[The_Geometry_of_Existence_A_Manual_for_Life.pdf](https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/raw/main/edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf)** — PDF, 214 pages, 1.4 MB |
-| **View in the browser** | [Open on GitHub](The_Geometry_of_Existence_A_Manual_for_Life.pdf) |
-| **Page size** | 5.5 × 8.5 in (digest), the plates printed full-bleed in navy and gold |
+| **File** | [The-Geometry-of-Everything.pdf](The-Geometry-of-Everything.pdf) |
+| **Pages** | 217 · 5.5 × 8.5 in, with the cover, the six Book paintings and the back cover printed full-bleed |
+| **Contents** | 240 teachings · 26 chapters · 5 Books · 1 Summit |
 | **Typefaces** | EB Garamond and Cormorant Garamond, embedded |
-| **SHA-256** | `f8c6def69ba691ad68eb59949f490fd8da6a277b775818f9e9d54d73f3356275` |
-| **License** | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — share and adapt with credit, under the same license |
+| **SHA-256** | `8ff62043cf6feffc9a6e2657d591bd9f636b78b79ee33551b68c33f21a30ad83` |
+| **License** | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/): share and adapt it, with credit, under the same license |
 
-To check your copy: `sha256sum The_Geometry_of_Existence_A_Manual_for_Life.pdf` (macOS: `shasum -a 256 The_Geometry_of_Existence_A_Manual_for_Life.pdf`) should print the line above.
+**How to download it.** Select the *Download the PDF* link above; your browser saves the file. If GitHub shows the PDF in the page instead, use the download button (⬇) at the top right of the preview.
 
-## Other ways to read it
+**Checking your copy** (optional). The SHA-256 line above is the file's fingerprint. On Windows run `certutil -hashfile The-Geometry-of-Everything.pdf SHA256`, on macOS `shasum -a 256 The-Geometry-of-Everything.pdf`, on Linux `sha256sum The-Geometry-of-Everything.pdf`. The result should match.
 
-The PDF is the edition of record. It is laid out for print and is **not a tagged PDF**, so screen readers and reflowing readers handle it poorly. The same text, with every plate and figure and with image descriptions, is available in two accessible forms:
+**Reading it with a screen reader.** The PDF is laid out for print and is not a tagged PDF, so screen readers and reflowing readers handle it poorly. The [website](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/) and the [chapter pages](../book/README.md) carry the same text, word for word, with descriptions for every picture.
 
-- **[The reading edition](https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/)** — the website: reflows to any screen, follows light or dark mode, works with screen readers and browser zoom, and can be printed page by page.
-- **[The book in Markdown](../book/README.md)** — one file per chapter, readable on GitHub or in any text editor.
-
-Both are cut from this PDF by the tools in this repository, and a check confirms every printed word reaches them.
+**Earlier editions.** The previous book in this repository, *The Geometry of Existence: A Manual for Life* (15 November 2026), is kept in the repository's history. *The Rivers That Became This Book* names it among the works gathered here.
 
 ---
 
-<p align="center"><a href="../README.md">Home</a> · <a href="../book/README.md">Contents</a> · <a href="https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/">Website</a></p>
+<p align="center"><a href="../README.md">Home</a> &nbsp;·&nbsp; <a href="../book/README.md">Contents</a> &nbsp;·&nbsp; <a href="https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/">Website</a></p>

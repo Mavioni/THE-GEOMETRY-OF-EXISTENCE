@@ -1,1266 +1,4230 @@
 {
- "title": "The Geometry of Existence",
- "subtitle": "A Manual for Life",
+ "title": "The Geometry of Everything",
+ "subtitle": "Earn Your Reality · A Manual for Life",
  "author": "Massimo Vincent Panella",
- "edition": "Complete edition · 15 November 2026",
- "pdf": "edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf",
- "cover": "plates/p001-cover.png",
- "levels": [
+ "edition": "Edition of November 2026",
+ "pdf": "edition/The-Geometry-of-Everything.pdf",
+ "pages": 217,
+ "paintings": {
+  "1": {
+   "path": "art/paintings/cover.jpg",
+   "words": "EXISTENCE · CONSCIOUSNESS · RELATION THE GEOMETRY OF EVERYTHING Earn Your Reality · A Manual for Life MASSIMO VINCENT PANELLA"
+  },
+  "27": {
+   "path": "art/paintings/1-the-ground.jpg",
+   "words": "BOOK ONE The Ground Existence"
+  },
+  "51": {
+   "path": "art/paintings/2-the-light.jpg",
+   "words": "BOOK TWO The Light Consciousness"
+  },
+  "91": {
+   "path": "art/paintings/3-the-bond.jpg",
+   "words": "BOOK THREE The Bond Relation"
+  },
+  "131": {
+   "path": "art/paintings/4-the-work.jpg",
+   "words": "BOOK FOUR The Work Earning"
+  },
+  "157": {
+   "path": "art/paintings/5-the-becoming.jpg",
+   "words": "BOOK FIVE The Becoming Transformation"
+  },
+  "183": {
+   "path": "art/paintings/6-the-summit.jpg",
+   "words": "THE SUMMIT The Geometry Existence · Consciousness · Relation"
+  },
+  "217": {
+   "path": "art/paintings/back-cover.jpg",
+   "words": "Existence needs no permission. Understanding is an opportunity. Connection is a responsibility you may choose. Peace, love and unity are what you bring. Respect is what you prove. EARN YOUR REALITY."
+  }
+ },
+ "parts": [
   {
    "n": 0,
-   "dir": "0-front",
-   "name": "Front Matter",
-   "kicker": "Before the levels",
-   "sub": "five levels, five marks, one promise",
-   "accent": "#c9a14a"
+   "dir": "0-opening",
+   "kicker": "Before the Books",
+   "name": "The Opening",
+   "plate": null,
+   "accent": "#a8792b"
   },
   {
    "n": 1,
-   "dir": "1-the-lines",
-   "name": "The Lines",
-   "kicker": "Level One",
-   "sub": "for anyone, in one sitting",
-   "accent": "#d9b25c"
+   "dir": "1-the-ground",
+   "kicker": "Book One",
+   "name": "The Ground",
+   "plate": 27,
+   "accent": "#a8792b"
   },
   {
    "n": 2,
-   "dir": "2-the-manual",
-   "name": "The Manual",
-   "kicker": "Level Two",
-   "sub": "for the one who will practise",
-   "accent": "#c9a14a"
+   "dir": "2-the-light",
+   "kicker": "Book Two",
+   "name": "The Light",
+   "plate": 51,
+   "accent": "#2f4f95"
   },
   {
    "n": 3,
-   "dir": "3-the-degree",
-   "name": "The Degree",
-   "kicker": "Level Three",
-   "sub": "for the one who has stopped rounding",
-   "accent": "#d9774a"
+   "dir": "3-the-bond",
+   "kicker": "Book Three",
+   "name": "The Bond",
+   "plate": 91,
+   "accent": "#ad3f2a"
   },
   {
    "n": 4,
-   "dir": "4-the-principle",
-   "name": "The Principle",
-   "kicker": "Level Four",
-   "sub": "for the one who asks why",
-   "accent": "#8f7fd0"
+   "dir": "4-the-work",
+   "kicker": "Book Four",
+   "name": "The Work",
+   "plate": 131,
+   "accent": "#2c6b62"
   },
   {
    "n": 5,
-   "dir": "5-the-proof",
-   "name": "The Proof and Its Limits",
-   "kicker": "Level Five",
-   "sub": "for the one who checks",
-   "accent": "#3e8e89"
+   "dir": "5-the-becoming",
+   "kicker": "Book Five",
+   "name": "The Becoming",
+   "plate": 157,
+   "accent": "#674a87"
   },
   {
    "n": 6,
-   "dir": "6-back-matter",
-   "name": "Back Matter",
-   "kicker": "After the levels",
-   "sub": "the discipline, the lineage, the corrections, the checks",
-   "accent": "#8c879a"
+   "dir": "6-the-summit",
+   "kicker": "The Summit",
+   "name": "The Geometry",
+   "plate": 183,
+   "accent": "#a8792b"
+  },
+  {
+   "n": 7,
+   "dir": "7-at-the-back",
+   "kicker": "After the Summit",
+   "name": "At the Back",
+   "plate": null,
+   "accent": "#a8792b"
   }
  ],
  "units": [
   {
-   "path": "0-front/01-title-page.md",
-   "title": "Title Page",
-   "kind": "section",
-   "level": 0,
-   "first": 2,
-   "last": 3,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
-  },
-  {
-   "path": "0-front/02-how-this-book-is-built.md",
-   "title": "How This Book Is Built",
-   "kind": "section",
-   "level": 0,
-   "first": 4,
-   "last": 5,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
-  },
-  {
-   "path": "1-the-lines/README.md",
-   "title": "Level One · The Lines",
-   "kind": "level",
-   "level": 1,
-   "first": 8,
-   "last": 8,
-   "plates": [
-    "plates/p008-the-lines.png"
+   "path": "book/0-opening/00-title-and-dedication.md",
+   "title": "Title and Dedication",
+   "kind": "front",
+   "part": 0,
+   "pages": [
+    1,
+    6
    ],
-   "epigraph": "for anyone, in one sitting",
-   "kicker": "Level One",
-   "number": null
+   "figures": [
+    {
+     "path": "art/figures/0-title-and-dedication.png",
+     "caption": ""
+    },
+    {
+     "path": "art/figures/0-title-and-dedication-2.png",
+     "caption": ""
+    }
+   ],
+   "kicker": "The Opening",
+   "words": 238
   },
   {
-   "path": "1-the-lines/01-the-first-principle.md",
+   "path": "book/0-opening/01-how-to-carry-this-book.md",
+   "title": "How to Carry This Book",
+   "kind": "section",
+   "part": 0,
+   "pages": [
+    9,
+    11
+   ],
+   "figures": [],
+   "kicker": "The Opening",
+   "words": 627
+  },
+  {
+   "path": "book/0-opening/02-the-rivers-that-became-this-book.md",
+   "title": "The Rivers That Became This Book",
+   "kind": "section",
+   "part": 0,
+   "pages": [
+    12,
+    13
+   ],
+   "figures": [],
+   "kicker": "The Opening",
+   "words": 369
+  },
+  {
+   "path": "book/0-opening/03-the-first-principle.md",
    "title": "The First Principle",
    "kind": "section",
-   "level": 1,
-   "first": 9,
-   "last": 9,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
+   "part": 0,
+   "pages": [
+    14,
+    16
+   ],
+   "figures": [
+    {
+     "path": "art/figures/0-the-first-principle.png",
+     "caption": "The three letters of the First Principle. Existence stands alone; consciousness and relation stand on it."
+    }
+   ],
+   "kicker": "The Opening",
+   "words": 703
   },
   {
-   "path": "1-the-lines/02-the-stance.md",
-   "title": "The Stance",
+   "path": "book/0-opening/04-the-kept-middle.md",
+   "title": "The Kept Middle",
    "kind": "section",
-   "level": 1,
-   "first": 10,
-   "last": 10,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
+   "part": 0,
+   "pages": [
+    17,
+    18
+   ],
+   "figures": [
+    {
+     "path": "art/figures/0-the-kept-middle.png",
+     "caption": "The three marks of balanced ternary, and the fourth direction that lies off their line."
+    }
+   ],
+   "kicker": "The Opening",
+   "words": 475
   },
   {
-   "path": "1-the-lines/03-in-plain-words.md",
-   "title": "In Plain Words",
+   "path": "book/0-opening/05-the-floor-and-the-ceiling.md",
+   "title": "The Floor and the Ceiling",
    "kind": "section",
-   "level": 1,
-   "first": 11,
-   "last": 11,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
-  },
-  {
-   "path": "2-the-manual/README.md",
-   "title": "Level Two · The Manual",
-   "kind": "level",
-   "level": 2,
-   "first": 12,
-   "last": 13,
-   "plates": [
-    "plates/p012-the-manual.png"
+   "part": 0,
+   "pages": [
+    19,
+    20
    ],
-   "epigraph": "for the one who will practise",
-   "kicker": "Level Two",
-   "number": null
-  },
-  {
-   "path": "2-the-manual/part-1-the-ground.md",
-   "title": "Part I · The Ground",
-   "kind": "part",
-   "level": 2,
-   "first": 14,
-   "last": 14,
-   "plates": [
-    "plates/p014-the-ground.png"
+   "figures": [
+    {
+     "path": "art/figures/0-the-floor-and-the-ceiling.png",
+     "caption": "One year of an honest ledger. Respect rises with conduct and falls with a breach; the floor of dignity never moves."
+    }
    ],
-   "epigraph": "what is",
-   "kicker": "Part I",
-   "number": null
+   "kicker": "The Opening",
+   "words": 544
   },
   {
-   "path": "2-the-manual/01-the-three-and-the-zero.md",
-   "title": "The Three and the Zero",
-   "kind": "chapter",
-   "level": 2,
-   "first": 15,
-   "last": 18,
-   "plates": [
-    "plates/p015-the-three-and-the-zero.png"
-   ],
-   "epigraph": "A binary with a waiting room is still a binary.",
-   "kicker": "Chapter One",
-   "number": 1
-  },
-  {
-   "path": "2-the-manual/02-the-given.md",
-   "title": "The Given",
-   "kind": "chapter",
-   "level": 2,
-   "first": 19,
-   "last": 23,
-   "plates": [
-    "plates/p019-the-given.png"
-   ],
-   "epigraph": "The ground does not negotiate. That is not its cruelty. That is its honesty.",
-   "kicker": "Chapter Two",
-   "number": 2
-  },
-  {
-   "path": "2-the-manual/03-attention.md",
-   "title": "Attention",
-   "kind": "chapter",
-   "level": 2,
-   "first": 24,
-   "last": 29,
-   "plates": [
-    "plates/p024-attention.png"
-   ],
-   "epigraph": "You have exactly as much life as you have attention.",
-   "kicker": "Chapter Three",
-   "number": 3
-  },
-  {
-   "path": "2-the-manual/04-witness.md",
-   "title": "Witness",
-   "kind": "chapter",
-   "level": 2,
-   "first": 30,
-   "last": 34,
-   "plates": [
-    "plates/p030-witness.png"
-   ],
-   "epigraph": "To be seen is not vanity. It is ontology.",
-   "kicker": "Chapter Four",
-   "number": 4
-  },
-  {
-   "path": "2-the-manual/part-2-the-practice.md",
-   "title": "Part II · The Practice",
-   "kind": "part",
-   "level": 2,
-   "first": 35,
-   "last": 35,
-   "plates": [
-    "plates/p035-the-practice.png"
-   ],
-   "epigraph": "how to stand",
-   "kicker": "Part II",
-   "number": null
-  },
-  {
-   "path": "2-the-manual/05-name-the-binary.md",
-   "title": "Name the Binary",
-   "kind": "chapter",
-   "level": 2,
-   "first": 36,
-   "last": 40,
-   "plates": [
-    "plates/p036-name-the-binary.png"
-   ],
-   "epigraph": "A binary you can see is no longer doing its job.",
-   "kicker": "Chapter Five",
-   "number": 5
-  },
-  {
-   "path": "2-the-manual/06-construct-the-third.md",
-   "title": "Construct the Third",
-   "kind": "chapter",
-   "level": 2,
-   "first": 41,
-   "last": 46,
-   "plates": [
-    "plates/p041-construct-the-third.png"
-   ],
-   "epigraph": "The third is built, never selected.",
-   "kicker": "Chapter Six",
-   "number": 6
-  },
-  {
-   "path": "2-the-manual/07-own-the-ground.md",
-   "title": "Own the Ground",
-   "kind": "chapter",
-   "level": 2,
-   "first": 47,
-   "last": 52,
-   "plates": [
-    "plates/p047-own-the-ground.png"
-   ],
-   "epigraph": "Insight without position is a discovery made on someone else’s behalf.",
-   "kicker": "Chapter Seven",
-   "number": 7
-  },
-  {
-   "path": "2-the-manual/08-keep-the-middle.md",
-   "title": "Keep the Middle",
-   "kind": "chapter",
-   "level": 2,
-   "first": 53,
-   "last": 57,
-   "plates": [
-    "plates/p053-keep-the-middle.png"
-   ],
-   "epigraph": "The zero is not the place you escape to. It is the place you return from.",
-   "kicker": "Chapter Eight",
-   "number": 8
-  },
-  {
-   "path": "2-the-manual/09-refuse-the-waiting-room.md",
-   "title": "Refuse the Waiting Room",
-   "kind": "chapter",
-   "level": 2,
-   "first": 58,
-   "last": 63,
-   "plates": [
-    "plates/p058-refuse-the-waiting-room.png"
-   ],
-   "epigraph": "A decision deferred so long it became the architecture was never deferred. It was made — by default, in secret, against you.",
-   "kicker": "Chapter Nine",
-   "number": 9
-  },
-  {
-   "path": "2-the-manual/part-3-the-weight.md",
-   "title": "Part III · The Weight",
-   "kind": "part",
-   "level": 2,
-   "first": 64,
-   "last": 64,
-   "plates": [
-    "plates/p064-the-weight.png"
-   ],
-   "epigraph": "what it costs",
-   "kicker": "Part III",
-   "number": null
-  },
-  {
-   "path": "2-the-manual/10-the-asymmetry.md",
-   "title": "The Asymmetry",
-   "kind": "chapter",
-   "level": 2,
-   "first": 65,
-   "last": 70,
-   "plates": [
-    "plates/p065-the-asymmetry.png"
-   ],
-   "epigraph": "Seeing the third is cheap and feels like enormous progress. Holding it costs years. Budget for the expensive half or do not begin.",
-   "kicker": "Chapter Ten",
-   "number": 10
-  },
-  {
-   "path": "2-the-manual/11-continuity.md",
-   "title": "Continuity",
-   "kind": "chapter",
-   "level": 2,
-   "first": 71,
-   "last": 76,
-   "plates": [
-    "plates/p071-continuity.png"
-   ],
-   "epigraph": "You are not the same person you were. You are also not a different one. Both facts are load-bearing, and confusing them is how lives break.",
-   "kicker": "Chapter Eleven",
-   "number": 11
-  },
-  {
-   "path": "2-the-manual/12-the-losable-claim.md",
-   "title": "The Losable Claim",
-   "kind": "chapter",
-   "level": 2,
-   "first": 77,
-   "last": 82,
-   "plates": [
-    "plates/p077-the-losable-claim.png"
-   ],
-   "epigraph": "A claim that cannot lose cannot win. This applies to physics. It applies to you.",
-   "kicker": "Chapter Twelve",
-   "number": 12
-  },
-  {
-   "path": "2-the-manual/part-4-the-care.md",
-   "title": "Part IV · The Care",
-   "kind": "part",
-   "level": 2,
-   "first": 83,
-   "last": 83,
-   "plates": [
-    "plates/p083-the-care.png"
-   ],
-   "epigraph": "what it is for",
-   "kicker": "Part IV",
-   "number": null
-  },
-  {
-   "path": "2-the-manual/13-empathy-as-catalyst.md",
-   "title": "Empathy as Catalyst",
-   "kind": "chapter",
-   "level": 2,
-   "first": 84,
-   "last": 89,
-   "plates": [
-    "plates/p084-empathy-as-catalyst.png"
-   ],
-   "epigraph": "Empathy opens a door. It is not a force. What walks through the door is a different thing entirely, and it must be judged on its own.",
-   "kicker": "Chapter Thirteen",
-   "number": 13
-  },
-  {
-   "path": "2-the-manual/14-the-inviolate.md",
-   "title": "The Inviolate",
-   "kind": "chapter",
-   "level": 2,
-   "first": 90,
-   "last": 96,
-   "plates": [
-    "plates/p090-the-inviolate.png"
-   ],
-   "epigraph": "Another person’s middle is not yours. Not even to help. Not even to love. Especially not to love.",
-   "kicker": "Chapter Fourteen",
-   "number": 14
-  },
-  {
-   "path": "2-the-manual/15-the-long-reclamation.md",
-   "title": "The Long Reclamation",
-   "kind": "chapter",
-   "level": 2,
-   "first": 97,
-   "last": 102,
-   "plates": [
-    "plates/p097-the-long-reclamation.png"
-   ],
-   "epigraph": "The spark has never been destroyed. It has been buried. And the desire to find the spark is the spark itself, flickering.",
-   "kicker": "Chapter Fifteen",
-   "number": 15
-  },
-  {
-   "path": "2-the-manual/16-the-fifteen-lines.md",
-   "title": "The Fifteen Lines",
+   "path": "book/0-opening/06-the-model-of-change.md",
+   "title": "The Model of Change",
    "kind": "section",
-   "level": 2,
-   "first": 103,
-   "last": 104,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
-  },
-  {
-   "path": "3-the-degree/README.md",
-   "title": "Level Three · The Degree",
-   "kind": "level",
-   "level": 3,
-   "first": 105,
-   "last": 105,
-   "plates": [
-    "plates/p105-the-degree.png"
+   "part": 0,
+   "pages": [
+    21,
+    24
    ],
-   "epigraph": "for the one who has stopped rounding",
-   "kicker": "Level Three",
-   "number": null
+   "figures": [
+    {
+     "path": "art/figures/0-the-model-of-change.png",
+     "caption": "Waddington’s landscape. The ball does not climb back to the summit; it crosses the ridge into the neighbouring valley."
+    }
+   ],
+   "kicker": "The Opening",
+   "words": 714
   },
   {
-   "path": "3-the-degree/16-the-degree.md",
-   "title": "The Degree",
+   "path": "book/0-opening/07-the-architecture.md",
+   "title": "The Architecture",
+   "kind": "section",
+   "part": 0,
+   "pages": [
+    25,
+    26
+   ],
+   "figures": [
+    {
+     "path": "art/figures/0-the-architecture.png",
+     "caption": "The five scales at which the book looks for its pattern: cell, self, bond, community, cosmos."
+    }
+   ],
+   "kicker": "The Opening",
+   "words": 549
+  },
+  {
+   "path": "book/1-the-ground/README.md",
+   "title": "The Ground",
+   "kind": "opener",
+   "part": 1,
+   "pages": [
+    28,
+    28
+   ],
+   "figures": [],
+   "intro": "Before you know anything, before you love anyone, before you earn a single thing, you are. This Book stands on that fact. It concerns what no one can give you and no one can take away: being itself, the body that carries it, the death that bounds it, and the wonder that surrounds it.",
+   "words": 141
+  },
+  {
+   "path": "book/1-the-ground/01-existence-needs-no-permission.md",
+   "title": "Existence Needs No Permission",
    "kind": "chapter",
-   "level": 3,
-   "first": 106,
-   "last": 110,
-   "plates": [
-    "plates/p106-the-degree.png"
+   "part": 1,
+   "pages": [
+    29,
+    34
    ],
-   "epigraph": "Most of what is true of you is true to a degree. The either/or rounds it off.",
-   "kicker": "Chapter Sixteen",
-   "number": 16
+   "number": 1,
+   "plate": "art/plates/01-existence-needs-no-permission.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER ONE",
+   "subtitle": "Meaning",
+   "plate_caption": "Seventy-two rays from one point. The centre asked no one’s leave to be there.",
+   "epigraph": {
+    "text": "The unexamined life is not worth living.",
+    "source": "Socrates, in Plato’s Apology 38a"
+   },
+   "creed": {
+    "word": "Respect",
+    "question": "Can I honour my own existence without asking anyone to justify it?"
+   },
+   "teachings": [
+    1,
+    9
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "A cell exists before it has any function. Its being comes first; its office comes later."
+    ],
+    [
+     "SELF",
+     "You exist before you have achieved anything. Your worth is the floor, not the prize."
+    ],
+    [
+     "BOND",
+     "Every person you meet also exists without permission, and can feel and choose as you do. That is why dignity is owed to all."
+    ],
+    [
+     "COMMUNITY",
+     "A people need not justify being a people. It needs only to decide what it will become."
+    ],
+    [
+     "COSMOS",
+     "The universe offers no reason for itself. Being is simply given, and given to you."
+    ]
+   ],
+   "tale": "The Psychiatrist in the Camps",
+   "reversal": "Making meaning can harden into denial. Not every loss carries a lesson, and not every suffering should be called a gift. Sometimes the honest answer to pain is grief, not interpretation. Let meaning come in its own time; do not force it onto a wound that is still open.",
+   "practice": [
+    [
+     "DAILY",
+     "Each morning, before you check anything, name one reason this day is worth living and one act that will serve it."
+    ],
+    [
+     "WEEKLY",
+     "Each week, write a single sentence: “This week my life meant ___ because I ___.”"
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I let the absence of answers rob me of calm today?"
+    ],
+    [
+     "LOVE",
+     "Whom did I give a reason to go on?"
+    ],
+    [
+     "UNITY",
+     "Did I treat anyone as if their existence needed my permission?"
+    ],
+    [
+     "RESPECT",
+     "Did I honour my own being, or did I wait for someone else to justify it?"
+    ]
+   ],
+   "song": [
+    "No warrant was writ for the rock or the rain,",
+    "No licence was asked of the sea;",
+    "The stars took their stations and never explained,",
+    "And neither, my child, need ye.",
+    "So stand where you stand, and build what you will,",
+    "And answer to Heaven for this:",
+    "Not whether you’re worthy of being at all,",
+    "But what you will make of what is."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/01-existence-needs-no-permission.png",
+     "caption": "Seventy-two rays from one point. The centre asked no one’s leave to be there."
+    }
+   ],
+   "words": 1088
   },
   {
-   "path": "3-the-degree/17-the-weakest-link.md",
-   "title": "The Weakest Link",
+   "path": "book/1-the-ground/02-the-vessel.md",
+   "title": "The Vessel",
    "kind": "chapter",
-   "level": 3,
-   "first": 111,
-   "last": 114,
-   "plates": [
-    "plates/p111-the-weakest-link.png"
+   "part": 1,
+   "pages": [
+    35,
+    39
    ],
-   "epigraph": "When two things must both be true, the lower one is your answer.",
-   "kicker": "Chapter Seventeen",
-   "number": 17
+   "number": 2,
+   "plate": "art/plates/02-the-vessel.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER TWO",
+   "subtitle": "The Body, Discipline and Rest",
+   "plate_caption": "A vessel turned on the wheel: thirty sections of one curve, the shape that holds.",
+   "epigraph": {
+    "text": "Remember the sabbath day, to keep it holy.",
+    "source": "Exodus 20:8 (KJV)"
+   },
+   "creed": {
+    "word": "Peace",
+    "question": "Is my body a place of peace, or a battlefield I neglect?"
+   },
+   "teachings": [
+    10,
+    18
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Every living cell keeps its order only by taking in energy and casting out waste. Stop the exchange and it falls apart."
+    ],
+    [
+     "SELF",
+     "Your body is the same: health is a steady traffic of food, movement and rest, never a finished state."
+    ],
+    [
+     "BOND",
+     "Bonds need rest too. People who never pause together end by performing for each other."
+    ],
+    [
+     "COMMUNITY",
+     "A people that never rests burns out its workers, its soil and its future."
+    ],
+    [
+     "COSMOS",
+     "Even stars live by balance: the inward pull of gravity matched by the outward push of their own fire."
+    ]
+   ],
+   "tale": "The Discipline of the Ice",
+   "reversal": "Discipline can become its own tyranny. A body driven past its signals, starved for the sake of control, or punished for its limits is not being cared for; it is being conquered. If your habits around food, exercise or rest begin to feel like punishment or compulsion, talk to someone you trust and to a professional. Care is the aim. Control is not.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, do one thing for the vessel: a walk, a real meal, an early night."
+    ],
+    [
+     "WEEKLY",
+     "Each week, take one stretch of true rest: a sabbath of a few hours in which you produce nothing."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I heed my body’s signals, or override them?"
+    ],
+    [
+     "LOVE",
+     "Did I care for myself as I would care for someone I love?"
+    ],
+    [
+     "UNITY",
+     "Did I rest with others, not only labour beside them?"
+    ],
+    [
+     "RESPECT",
+     "Did I keep the small promises I made to my own body?"
+    ]
+   ],
+   "song": [
+    "The ship may be lost and the stores may run low,",
+    "And the ice may close in at the door;",
+    "But the watch shall be kept and the meal shall be shared,",
+    "And the deck shall be swept as before.",
+    "For the body’s a vessel, and order’s its keel,",
+    "And the sea takes the ship that is slack:",
+    "So feed it and rest it and work it in measure,",
+    "And it will carry you back."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/02-the-vessel.png",
+     "caption": "A vessel turned on the wheel: thirty sections of one curve, the shape that holds."
+    }
+   ],
+   "words": 1086
   },
   {
-   "path": "3-the-degree/18-act-crisp.md",
-   "title": "Act Crisp",
+   "path": "book/1-the-ground/03-the-appointment.md",
+   "title": "The Appointment",
    "kind": "chapter",
-   "level": 3,
-   "first": 115,
-   "last": 118,
-   "plates": [
-    "plates/p115-act-crisp.png"
+   "part": 1,
+   "pages": [
+    40,
+    44
    ],
-   "epigraph": "Weigh in degrees. Move in one piece.",
-   "kicker": "Chapter Eighteen",
-   "number": 18
-  },
-  {
-   "path": "3-the-degree/19-the-graded-audits.md",
-   "title": "The Graded Audits",
-   "kind": "section",
-   "level": 3,
-   "first": 119,
-   "last": 120,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
-  },
-  {
-   "path": "4-the-principle/README.md",
-   "title": "Level Four · The Principle",
-   "kind": "level",
-   "level": 4,
-   "first": 121,
-   "last": 121,
-   "plates": [
-    "plates/p121-the-principle.png"
+   "number": 3,
+   "plate": "art/plates/03-the-appointment.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
    ],
-   "epigraph": "for the one who asks why",
-   "kicker": "Level Four",
-   "number": null
+   "kicker": "CHAPTER THREE",
+   "subtitle": "Death and Mortality",
+   "plate_caption": "An hourglass ruled from straight lines alone: a hyperboloid, whose narrow waist every falling grain must pass.",
+   "epigraph": {
+    "text": "So teach us to number our days, that we may apply our hearts unto wisdom.",
+    "source": "Psalm 90:12 (KJV)"
+   },
+   "creed": {
+    "word": "Love",
+    "question": "If this were my last week, whom would I call?"
+   },
+   "teachings": [
+    19,
+    27
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Cells in your body die by the billions each day, on purpose, by an orderly program, so that the body can live."
+    ],
+    [
+     "SELF",
+     "Your life is finite, and its finitude is what makes each choice real."
+    ],
+    [
+     "BOND",
+     "Every bond ends, by parting or by death. Love that knows this is more tender, not less."
+    ],
+    [
+     "COMMUNITY",
+     "Generations pass. A people endures only by handing on what it values."
+    ],
+    [
+     "COSMOS",
+     "Even stars die, and the heavy elements in your body were forged in stars that died before the sun was born."
+    ]
+   ],
+   "tale": "Two Endings",
+   "reversal": "Remembering death is meant to wake you up, not weigh you down. If thoughts of death become constant, frightening or inviting, they are no longer philosophy; they are pain asking for help. Speak to someone you trust, and to a professional, without delay. The aim of this chapter is to make your life more precious to you, never less.",
+   "practice": [
+    [
+     "DAILY",
+     "Each night ask: if this had been my last day, what would I wish I had said or done? Then do it tomorrow."
+    ],
+    [
+     "WEEKLY",
+     "Each week, say one thing to someone that you would regret leaving unsaid."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I spend today’s hours as though they were unlimited?"
+    ],
+    [
+     "LOVE",
+     "Did I say what matters to someone who matters?"
+    ],
+    [
+     "UNITY",
+     "Did I leave something that will outlast me, however small?"
+    ],
+    [
+     "RESPECT",
+     "Did I live today in a way I would want remembered?"
+    ]
+   ],
+   "song": [
+    "The sand runs down in the narrow glass,",
+    "And none may stay its fall;",
+    "The king and the clerk and the cabin-boy",
+    "Must keep one hour, and all.",
+    "Then say the word that you meant to say,",
+    "And mend what you meant to mend,",
+    "For the glass is turned but the once, my child,",
+    "And it does not wait for the end."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/03-the-appointment.png",
+     "caption": "An hourglass ruled from straight lines alone: a hyperboloid, whose narrow waist every falling grain must pass."
+    }
+   ],
+   "words": 1011
   },
   {
-   "path": "4-the-principle/19-existence-is-sufficient.md",
-   "title": "Existence Is Sufficient",
+   "path": "book/1-the-ground/04-starry-heavens.md",
+   "title": "Starry Heavens",
    "kind": "chapter",
-   "level": 4,
-   "first": 122,
-   "last": 125,
-   "plates": [
-    "plates/p122-existence-is-sufficient.png"
+   "part": 1,
+   "pages": [
+    45,
+    50
    ],
-   "epigraph": "Nothing gives legitimacy to existence except existence itself.",
-   "kicker": "Chapter Nineteen",
-   "number": 19
+   "number": 4,
+   "plate": "art/plates/04-starry-heavens.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER FOUR",
+   "subtitle": "The Sacred, Wonder and the Infinite",
+   "plate_caption": "The path of Venus as seen from Earth across eight years: five loops, drawn by two orbits and nothing else.",
+   "epigraph": {
+    "text": "To see a World in a Grain of Sand, And a Heaven in a Wild Flower.",
+    "source": "William Blake, “Auguries of Innocence”"
+   },
+   "creed": {
+    "word": "Unity",
+    "question": "When did I last feel part of something larger than myself?"
+   },
+   "teachings": [
+    28,
+    36
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "A single cell holds a thread of DNA about two metres long, folded with exquisite order into a space too small to see."
+    ],
+    [
+     "SELF",
+     "Your inner life is its own infinity: no one has ever reached the bottom of a human mind."
+    ],
+    [
+     "BOND",
+     "Every person you meet is a universe you will never fully explore."
+    ],
+    [
+     "COMMUNITY",
+     "A people is held together by what it holds sacred: the shared things it will not sell."
+    ],
+    [
+     "COSMOS",
+     "A universe of hundreds of billions of galaxies, and in it a creature able to wonder at it."
+    ]
+   ],
+   "tale": "The Pale Dot",
+   "reversal": "Wonder is not evidence. A feeling of cosmic connection proves no particular doctrine, and it can be exploited by those who sell certainty. Let awe make you humble and open, never gullible. The sacred is honoured by honesty, not by credulity.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, spend one minute looking at something vast: the sky, the sea, a tree, a sleeping face."
+    ],
+    [
+     "WEEKLY",
+     "Each week, spend an hour in silence somewhere larger than you: outdoors, at night, or in a place others hold sacred."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I let something vast quiet my small worries?"
+    ],
+    [
+     "LOVE",
+     "Did I see someone today as a universe, not an obstacle?"
+    ],
+    [
+     "UNITY",
+     "Did I remember that everyone I met lives on the same pale dot?"
+    ],
+    [
+     "RESPECT",
+     "Did I treat what others hold sacred with care, even where I do not share it?"
+    ]
+   ],
+   "song": [
+    "The Morning Star goes round her road",
+    "In five slow loops of light,",
+    "And every eight years comes again",
+    "To the place she stood tonight.",
+    "She asks no thanks; she keeps her time;",
+    "She does not need to know",
+    "That someone small upon a dot",
+    "Looked up, and loved her so."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/04-starry-heavens.png",
+     "caption": "The path of Venus as seen from Earth across eight years: five loops, drawn by two orbits and nothing else."
+    }
+   ],
+   "words": 964
   },
   {
-   "path": "4-the-principle/20-three-relationships.md",
-   "title": "Three Relationships, Not Three Requirements",
+   "path": "book/2-the-light/README.md",
+   "title": "The Light",
+   "kind": "opener",
+   "part": 2,
+   "pages": [
+    52,
+    52
+   ],
+   "figures": [],
+   "intro": "Consciousness is the opportunity existence hands you: the power to know that you are, to see what stands in front of you, to learn, and to choose. This Book concerns the light by which you see: who you are, how the mind builds the world, where your attention goes, how it can be led and misled, how you learn, and the freedom no one can take.",
+   "words": 197
+  },
+  {
+   "path": "book/2-the-light/05-know-the-one-who-knows.md",
+   "title": "Know the One Who Knows",
    "kind": "chapter",
-   "level": 4,
-   "first": 126,
-   "last": 129,
-   "plates": [
-    "plates/p126-three-relationships-not-three-requirements.png"
+   "part": 2,
+   "pages": [
+    53,
+    57
    ],
-   "epigraph": "Existence is unconditional. Consciousness is an opportunity. Connection is a choice.",
-   "kicker": "Chapter Twenty",
-   "number": 20
+   "number": 5,
+   "plate": "art/plates/05-know-the-one-who-knows.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER FIVE",
+   "subtitle": "Self-Knowledge and Identity",
+   "plate_caption": "Cut a square from a golden rectangle and what is left is the whole figure again, smaller: the golden spiral, a shape that contains itself.",
+   "epigraph": {
+    "text": "He who knows other men is discerning; he who knows himself is intelligent.",
+    "source": "Tao Te Ching 33 (Legge)"
+   },
+   "creed": {
+    "word": "Respect",
+    "question": "Do I respect the person I actually am, not only the one I perform?"
+   },
+   "teachings": [
+    37,
+    45
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "A cell’s identity is a stable pattern of active genes, held in place by the cell’s own regulation. It is a valley, not a cage."
+    ],
+    [
+     "SELF",
+     "Your identity is the same: a stable pattern of habits, loves and choices, deep enough to hold you, never fixed for ever."
+    ],
+    [
+     "BOND",
+     "In a true bond you discover who you are by being seen, and by seeing."
+    ],
+    [
+     "COMMUNITY",
+     "A people knows itself by the stories it tells of where it came from and what it refuses to become."
+    ],
+    [
+     "COSMOS",
+     "Through creatures like you, the universe has grown a way to know itself."
+    ]
+   ],
+   "tale": "The Emperor’s Notebook",
+   "reversal": "Self-examination can rot into self-absorption, an endless inward spiral that never acts. Know yourself in order to live better among others, not instead of living. And no one fully knows themselves alone: ask the people who love you what they see.",
+   "practice": [
+    [
+     "DAILY",
+     "Each evening, write one honest line: “Today I was ___.”"
+    ],
+    [
+     "WEEKLY",
+     "Each week, ask one trusted person, “What do you see in me that I might not see?” and listen without defending."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Was I at peace with who I actually was today?"
+    ],
+    [
+     "LOVE",
+     "Did I let someone see the real me?"
+    ],
+    [
+     "UNITY",
+     "Did I play a part so long that I forgot the person beneath it?"
+    ],
+    [
+     "RESPECT",
+     "Did my private conduct match my public face?"
+    ]
+   ],
+   "song": [
+    "There’s one who you are when the door is shut,",
+    "And one that the market knows,",
+    "And one that you meant to be, years ago,",
+    "When you set your face to the snows.",
+    "Now call them to council at close of day,",
+    "And set them a table for three;",
+    "And the one who is truest shall carve the bread,",
+    "And the others shall learn to agree."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/05-know-the-one-who-knows.png",
+     "caption": "Cut a square from a golden rectangle and what is left is the whole figure again, smaller: the golden spiral, a shape that contains itself."
+    }
+   ],
+   "words": 1032
   },
   {
-   "path": "4-the-principle/21-change-without-erasure.md",
-   "title": "Change Without Erasure",
+   "path": "book/2-the-light/06-the-instrument.md",
+   "title": "The Instrument",
    "kind": "chapter",
-   "level": 4,
-   "first": 130,
-   "last": 133,
-   "plates": [
-    "plates/p130-change-without-erasure.png"
+   "part": 2,
+   "pages": [
+    58,
+    62
    ],
-   "epigraph": "Change without erasure. Understanding without possession.",
-   "kicker": "Chapter Twenty One",
-   "number": 21
+   "number": 6,
+   "plate": "art/plates/06-the-instrument.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER SIX",
+   "subtitle": "The Brain and How It Builds Experience",
+   "plate_caption": "A neuron: thousands of inputs gathered on branching dendrites, one judgment sent down a single axon.",
+   "epigraph": {
+    "text": "The mind is its own place, and in itself Can make a Heav’n of Hell, a Hell of Heav’n.",
+    "source": "John Milton, Paradise Lost I.254–255"
+   },
+   "creed": {
+    "word": "Peace",
+    "question": "Where is my home base, and how quickly can I return to it?"
+   },
+   "teachings": [
+    46,
+    54
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "A single neuron sums thousands of inputs and decides whether to fire: the smallest act of judgment in your body."
+    ],
+    [
+     "SELF",
+     "Your brain is a prediction engine, and your sense of self is partly the prediction it makes about you."
+    ],
+    [
+     "BOND",
+     "In conversation, two brains predict each other’s next words. Good listening is updating your guess."
+    ],
+    [
+     "COMMUNITY",
+     "A culture is a shared set of expectations. Change the expectations and you change what people see."
+    ],
+    [
+     "COSMOS",
+     "Every instrument humans have built, from the telescope to the particle detector, extends the same act: predict, then correct against the world."
+    ]
+   ],
+   "tale": "The Gorilla in the Room",
+   "reversal": "Predictive processing is a leading scientific framework, not a finished theory; researchers still argue over how much it explains. And understanding how the mind works is not the same as being well. If your mind is in lasting distress, the right instrument is a qualified professional, not a book.",
+   "practice": [
+    [
+     "DAILY",
+     "Three times a day, return to home base for one minute: in for four, out for six, attention on the breath."
+    ],
+    [
+     "WEEKLY",
+     "Each week, notice one prediction you made that turned out wrong, and write down what it taught you."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "How often did I return to home base today?"
+    ],
+    [
+     "LOVE",
+     "Did I remember that others are living inside their own predictions?"
+    ],
+    [
+     "UNITY",
+     "Did I check a memory before using it as a weapon?"
+    ],
+    [
+     "RESPECT",
+     "Did I give my instrument the sleep and care it needs?"
+    ]
+   ],
+   "song": [
+    "The mind is a lamp that a sentry holds",
+    "At the edge of a darkened plain;",
+    "It shows him the road where he means to look,",
+    "And the rest is dark again.",
+    "So set it with care, and trim it with sleep,",
+    "And breathe when the shadows start;",
+    "For the world that you see is the world you light,",
+    "And the light is the work of your heart."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/06-the-instrument.png",
+     "caption": "A neuron: thousands of inputs gathered on branching dendrites, one judgment sent down a single axon."
+    }
+   ],
+   "words": 1079
   },
   {
-   "path": "4-the-principle/22-dignity-is-owed.md",
-   "title": "Dignity Is Owed, Respect Is Earned",
+   "path": "book/2-the-light/07-where-attention-goes.md",
+   "title": "Where Attention Goes",
    "kind": "chapter",
-   "level": 4,
-   "first": 134,
-   "last": 137,
-   "plates": [
-    "plates/p134-dignity-is-owed-respect-is-earned.png"
+   "part": 2,
+   "pages": [
+    63,
+    67
    ],
-   "epigraph": "Dignity is the floor. Respect is the ceiling.",
-   "kicker": "Chapter Twenty Two",
-   "number": 22
-  },
-  {
-   "path": "5-the-proof/README.md",
-   "title": "Level Five · The Proof and Its Limits",
-   "kind": "level",
-   "level": 5,
-   "first": 138,
-   "last": 138,
-   "plates": [
-    "plates/p138-the-proof-and-its-limits.png"
+   "number": 7,
+   "plate": "art/plates/07-where-attention-goes.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
    ],
-   "epigraph": "for the one who checks",
-   "kicker": "Level Five",
-   "number": null
+   "kicker": "CHAPTER SEVEN",
+   "subtitle": "The Mind: Attention, Thought, Emotion",
+   "plate_caption": "A lens takes parallel rays and brings them to one point. What the lens does not take in stays scattered.",
+   "epigraph": {
+    "text": "Men are disturbed not by the things which happen, but by the opinions about the things.",
+    "source": "Epictetus, Enchiridion 5 (Long)"
+   },
+   "creed": {
+    "word": "Peace",
+    "question": "Who is holding the reins of my attention right now?"
+   },
+   "teachings": [
+    55,
+    63
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "A cell answers only to the signals it has receptors for. What it can sense shapes what it becomes."
+    ],
+    [
+     "SELF",
+     "You become what you repeatedly attend to. Attention is the receptor of the soul."
+    ],
+    [
+     "BOND",
+     "To love someone is, in large part, to pay attention to them."
+    ],
+    [
+     "COMMUNITY",
+     "A people becomes what it collectively notices and ignores."
+    ],
+    [
+     "COSMOS",
+     "Astronomers see only what their instruments are pointed at. The universe a mind knows is the universe it attends to."
+    ]
+   ],
+   "tale": "The Last Hole",
+   "reversal": "The line between what is and is not up to you can be misused as an excuse for idleness: “it is not up to me,” said of things that partly are. Your vote, your voice and your effort are up to you even when the outcome is not. And some states of mind are not choices at all: depression, anxiety and trauma are not failures of attention, and they deserve real care, not slogans.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, before you react to anything that stings, ask: is this up to me? If not, let it pass. If so, act."
+    ],
+    [
+     "WEEKLY",
+     "Each week, take back one hour of attention from something that has been stealing it."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Where did my attention go today, and did I send it there?"
+    ],
+    [
+     "LOVE",
+     "To whom did I give my full attention?"
+    ],
+    [
+     "UNITY",
+     "Did I listen, or only wait to speak?"
+    ],
+    [
+     "RESPECT",
+     "Did I let an outcome I could not control steal my composure?"
+    ]
+   ],
+   "song": [
+    "Shoot for the tile and your hand is sure;",
+    "Shoot for the brass, and it shakes;",
+    "Shoot for the gold, and the target swims",
+    "In the haze that the hunger makes.",
+    "The bow is the same and the arm is the same,",
+    "And the arrow is still the same;",
+    "It’s only the weight that you hang on the shot",
+    "That loses or wins the game."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/07-where-attention-goes.png",
+     "caption": "A lens takes parallel rays and brings them to one point. What the lens does not take in stays scattered."
+    }
+   ],
+   "words": 1112
   },
   {
-   "path": "5-the-proof/sophonticism/README.md",
-   "title": "Sophonticism: The Research Book",
-   "kind": "section",
-   "level": 5,
-   "first": 139,
-   "last": 140,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
-  },
-  {
-   "path": "5-the-proof/sophonticism/1-ground.md",
-   "title": "Part I — Ground (§1–§4)",
-   "kind": "section",
-   "level": 5,
-   "first": 141,
-   "last": 146,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
-  },
-  {
-   "path": "5-the-proof/sophonticism/2-the-established-bridges.md",
-   "title": "Part II — The Established Bridges (§5–§11)",
-   "kind": "section",
-   "level": 5,
-   "first": 147,
-   "last": 155,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
-  },
-  {
-   "path": "5-the-proof/sophonticism/3-the-third-state-and-consequence.md",
-   "title": "Part III — The Third State and Consequence (§12–§17)",
-   "kind": "section",
-   "level": 5,
-   "first": 156,
-   "last": 171,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
-  },
-  {
-   "path": "5-the-proof/sophonticism/4-the-frontier.md",
-   "title": "Part IV — The Frontier (§18–§22)",
-   "kind": "section",
-   "level": 5,
-   "first": 172,
-   "last": 179,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
-  },
-  {
-   "path": "5-the-proof/sophonticism/5-appendices.md",
-   "title": "Appendices A–D",
-   "kind": "section",
-   "level": 5,
-   "first": 180,
-   "last": 187,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
-  },
-  {
-   "path": "5-the-proof/23-the-program-preregistered.md",
-   "title": "The Program, Preregistered",
+   "path": "book/2-the-light/08-the-open-door.md",
+   "title": "The Open Door",
    "kind": "chapter",
-   "level": 5,
-   "first": 188,
-   "last": 193,
-   "plates": [
-    "plates/p188-the-program-preregistered.png"
+   "part": 2,
+   "pages": [
+    68,
+    73
    ],
-   "epigraph": "Small enough to calculate and precise enough to lose.",
-   "kicker": "Chapter Twenty Three",
-   "number": 23
+   "number": 8,
+   "plate": "art/plates/08-the-open-door.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER EIGHT",
+   "subtitle": "Suggestion, Expectation and Hypnosis",
+   "plate_caption": "Arches receding to a lit doorway: a corridor of attention, narrowing toward one point of light.",
+   "epigraph": {
+    "text": "All that we are is the result of what we have thought.",
+    "source": "Dhammapada 1 (Müller)"
+   },
+   "creed": {
+    "word": "Respect",
+    "question": "Who has my consent to suggest what I should feel?"
+   },
+   "teachings": [
+    64,
+    72
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "A sugar pill believed to be medicine can partly draw on the body’s own pain-relieving chemistry. Expectation reaches all the way down."
+    ],
+    [
+     "SELF",
+     "Every expectation you hold is a quiet suggestion you give yourself."
+    ],
+    [
+     "BOND",
+     "Trust makes suggestion stronger. That is why trust must be handled with care."
+    ],
+    [
+     "COMMUNITY",
+     "Advertising, ritual and rumour are suggestion at the scale of a whole people."
+    ],
+    [
+     "COSMOS",
+     "The universe takes no suggestions. Only minds do. Know which one you are addressing."
+    ]
+   ],
+   "tale": "From Magic to Science",
+   "reversal": "Hypnosis is not for everyone at every moment. People with a history of psychosis, dissociation or severe trauma should explore it only with a qualified clinician. If any practice here leaves you disoriented, distressed or detached, stop and return to home base. This chapter offers practices of attention, not treatment, and it is never a tool for steering another person.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, a five-minute self-hypnosis: breathe in four and out six; fix your gaze on one point; count down slowly from ten; give yourself one clear suggestion in the present tense; count up from one to five and open your eyes."
+    ],
+    [
+     "WEEKLY",
+     "Each week, notice one suggestion the world gave you, from an advertisement, a headline or a voice, and decide whether you accept it."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I give myself a suggestion worth accepting?"
+    ],
+    [
+     "LOVE",
+     "Were my words to myself the words of a helper?"
+    ],
+    [
+     "UNITY",
+     "Did I use my influence only with consent?"
+    ],
+    [
+     "RESPECT",
+     "Did I notice, and choose, what others suggested to me?"
+    ]
+   ],
+   "song": [
+    "There’s a door in the mind that opens in,",
+    "And a voice that can walk inside;",
+    "And the voice may be kind and the voice may be cold,",
+    "And the voice may be bent on pride.",
+    "So keep your hand on the handle, child,",
+    "And your eye on the one who speaks,",
+    "And let in no word you would not let in",
+    "With the daylight on your cheeks."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/08-the-open-door.png",
+     "caption": "Arches receding to a lit doorway: a corridor of attention, narrowing toward one point of light."
+    }
+   ],
+   "words": 1122
   },
   {
-   "path": "5-the-proof/24-what-the-axiom-does-not-prove.md",
-   "title": "What the Axiom Does Not Prove",
+   "path": "book/2-the-light/09-the-dark-half-with-the-lights-on.md",
+   "title": "The Dark Half, with the Lights On",
    "kind": "chapter",
-   "level": 5,
-   "first": 194,
-   "last": 197,
-   "plates": [
-    "plates/p194-what-the-axiom-does-not-prove.png"
+   "part": 2,
+   "pages": [
+    74,
+    79
    ],
-   "epigraph": "Existence legitimizes. It does not calculate.",
-   "kicker": "Chapter Twenty Four",
-   "number": 24
+   "number": 9,
+   "plate": "art/plates/09-the-dark-half-with-the-lights-on.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER NINE",
+   "subtitle": "Mentalism, Manipulation and Defence",
+   "plate_caption": "A harmonograph: the trace two swinging pendulums leave on paper. Faraday showed that a hand can move a table without knowing it moves.",
+   "epigraph": {
+    "text": "Be ye therefore wise as serpents, and harmless as doves.",
+    "source": "Matthew 10:16 (KJV)"
+   },
+   "creed": {
+    "word": "Respect",
+    "question": "Am I being persuaded, or steered?"
+   },
+   "teachings": [
+    73,
+    81
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Viruses enter cells by imitating the keys the cell trusts. Manipulation works the same way: it imitates what you trust."
+    ],
+    [
+     "SELF",
+     "Your own biases are the doors a manipulator knocks on. Know your doors."
+    ],
+    [
+     "BOND",
+     "In a healthy bond, influence is visible and runs both ways."
+    ],
+    [
+     "COMMUNITY",
+     "Propaganda works on a people as cold reading works on a person: vague, flattering and endlessly repeated."
+    ],
+    [
+     "COSMOS",
+     "Nature does not deceive; only agents do. Learn to tell a pattern from a performance."
+    ]
+   ],
+   "tale": "Clever Hans",
+   "reversal": "Do not let this chapter make you paranoid. Most influence in ordinary life is honest, and most people are not running techniques on you. Suspecting everyone is its own trap; it isolates you as surely as a manipulator would. Keep your guard in proportion. And if you think you are inside a coercive relationship or group, reach out to someone outside it and to professional help.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, when someone asks you for a fast yes, take a pause before you answer."
+    ],
+    [
+     "WEEKLY",
+     "Each week, review one decision: which lever was pulled, and did you choose freely?"
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did pressure rush me today?"
+    ],
+    [
+     "LOVE",
+     "Did I keep my circle close when someone tried to separate me from it?"
+    ],
+    [
+     "UNITY",
+     "Did I influence anyone in a way I would be ashamed to show them?"
+    ],
+    [
+     "RESPECT",
+     "Did I persuade, or did I steer?"
+    ]
+   ],
+   "song": [
+    "The horse could count to the tap of a hoof,",
+    "Or so it was told in the town;",
+    "But he counted the breath of the man who asked,",
+    "And he stopped when the head went down.",
+    "Now nobody lied and nobody knew,",
+    "And that is the lesson to learn:",
+    "The hand on the rein may not know it is there,",
+    "So look to the hand, and discern."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/09-the-dark-half-with-the-lights-on.png",
+     "caption": "A harmonograph: the trace two swinging pendulums leave on paper. Faraday showed that a hand can move a table without knowing it moves."
+    }
+   ],
+   "words": 1136
   },
   {
-   "path": "5-the-proof/25-beyond-logic.md",
-   "title": "Beyond Logic",
+   "path": "book/2-the-light/10-the-lifelong-student.md",
+   "title": "The Lifelong Student",
    "kind": "chapter",
-   "level": 5,
-   "first": 198,
-   "last": 202,
-   "plates": [
-    "plates/p198-beyond-logic.png"
+   "part": 2,
+   "pages": [
+    80,
+    84
    ],
-   "epigraph": "What can be proved has been proved. What remains is what was always first.",
-   "kicker": "Chapter Twenty Five",
-   "number": 25
+   "number": 10,
+   "plate": "art/plates/10-the-lifelong-student.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER TEN",
+   "subtitle": "Learning and School",
+   "plate_caption": "The nautilus grows by building each new chamber a little larger, and carries every chamber it has outgrown.",
+   "epigraph": {
+    "text": "When you know a thing, to hold that you know it; and when you do not know a thing, to allow that you do not know it: this is knowledge.",
+    "source": "Confucius, Analects 2.17 (Legge)"
+   },
+   "creed": {
+    "word": "Unity",
+    "question": "Who is my teacher today, and will I let them teach me?"
+   },
+   "teachings": [
+    82,
+    90
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Certain factors in the cell act as pioneers: they open regions of the genome that were sealed shut, so new programs can be read."
+    ],
+    [
+     "SELF",
+     "A real lesson does the same: it opens a part of you that habit had closed."
+    ],
+    [
+     "BOND",
+     "The best bonds make both people students of each other."
+    ],
+    [
+     "COMMUNITY",
+     "A society that punishes honest questions stops learning, and a society that stops learning starts dying."
+    ],
+    [
+     "COSMOS",
+     "Science is humanity’s long apprenticeship to the universe, and the universe has never run out of lessons."
+    ]
+   ],
+   "tale": "A Hundred Flowers",
+   "reversal": "Endless study can become a way of hiding from life. There comes a point where you know enough to act, and more reading is only fear dressed as diligence. Learn, then do; the doing will teach you what no book can.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, learn one thing from someone you would not normally learn from."
+    ],
+    [
+     "WEEKLY",
+     "Each week, teach one thing you know to someone who needs it."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I admit what I did not know, without shame?"
+    ],
+    [
+     "LOVE",
+     "Did I help someone learn?"
+    ],
+    [
+     "UNITY",
+     "Did I let someone unexpected be my teacher?"
+    ],
+    [
+     "RESPECT",
+     "Did I keep my commitment to my own education today?"
+    ]
+   ],
+   "song": [
+    "The shell builds out in a widening turn,",
+    "And never a chamber is lost;",
+    "Each one is a little more room than the last,",
+    "And each one was paid at a cost.",
+    "So build, little scholar, and carry your rooms,",
+    "The small with the great, as you go;",
+    "For the sea is too deep for the ones who are full,",
+    "And wide for the ones who don’t know."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/10-the-lifelong-student.png",
+     "caption": "The nautilus grows by building each new chamber a little larger, and carries every chamber it has outgrown."
+    }
+   ],
+   "words": 966
   },
   {
-   "path": "6-back-matter/01-the-discipline-in-one-page.md",
-   "title": "The Discipline in One Page",
+   "path": "book/2-the-light/11-the-last-freedom.md",
+   "title": "The Last Freedom",
+   "kind": "chapter",
+   "part": 2,
+   "pages": [
+    85,
+    90
+   ],
+   "number": 11,
+   "plate": "art/plates/11-the-last-freedom.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER ELEVEN",
+   "subtitle": "Freedom and Choice",
+   "plate_caption": "Every node divides three ways: refuse, hold, assent. Five choices deep there are two hundred and forty-three ends, and one path taken.",
+   "epigraph": {
+    "text": "I have set before you life and death, blessing and cursing: therefore choose life.",
+    "source": "Deuteronomy 30:19 (KJV)"
+   },
+   "creed": {
+    "word": "Respect",
+    "question": "Am I choosing, or am I being chosen?"
+   },
+   "teachings": [
+    91,
+    99
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "A cell does not choose. It answers to signals. Here the metaphor of this book breaks, and you must mark where."
+    ],
+    [
+     "SELF",
+     "You can answer to the signals, or you can step back and choose which to obey. That gap is your freedom."
+    ],
+    [
+     "BOND",
+     "Love that is coerced is not love. Every real bond is renewed by two free choices."
+    ],
+    [
+     "COMMUNITY",
+     "A free people is one that can change its course by deliberate choice rather than by force."
+    ],
+    [
+     "COSMOS",
+     "Whatever the universe is, it has produced beings who can deliberate. That is worth wondering at."
+    ]
+   ],
+   "tale": "The Farewell",
+   "reversal": "Not every constraint is a failure of will. Poverty, illness, injustice and other people’s choices are real limits, and telling a suffering person that everything is a choice can be cruel. Freedom of attitude is real; it is no substitute for freedom from oppression. Fight for both.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, make one decision you have been putting off."
+    ],
+    [
+     "WEEKLY",
+     "Each week, name one place where you have let circumstance choose for you, and take back one small piece of it."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I make peace with a choice I had already made?"
+    ],
+    [
+     "LOVE",
+     "Did I let someone else choose freely, even when I wanted to decide for them?"
+    ],
+    [
+     "UNITY",
+     "Did I use my freedom in a way that left others freer?"
+    ],
+    [
+     "RESPECT",
+     "Did I own the consequences of my choices without blaming anyone?"
+    ]
+   ],
+   "song": [
+    "They may take the house and the horse and the field,",
+    "And the coat from the back of your frame;",
+    "They may take the light and the bread and the road,",
+    "And the honour that went with your name.",
+    "But there’s one thing left that was always your own,",
+    "And it stands at the end of the line:",
+    "The word that you say to the thing that befalls,",
+    "And the word is “I choose. It is mine.”"
+   ],
+   "figures": [
+    {
+     "path": "art/plates/11-the-last-freedom.png",
+     "caption": "Every node divides three ways: refuse, hold, assent. Five choices deep there are two hundred and forty-three ends, and one path taken."
+    }
+   ],
+   "words": 962
+  },
+  {
+   "path": "book/3-the-bond/README.md",
+   "title": "The Bond",
+   "kind": "opener",
+   "part": 3,
+   "pages": [
+    92,
+    92
+   ],
+   "figures": [],
+   "intro": "Connection is the responsibility you may choose. No one lives alone, and no one becomes a self alone. This Book concerns the bonds through which your reality is woven: peace with others, love and friendship, family, the living word, community, respect, and the repair of what breaks. Here the four words of the creed come fully alive.",
+   "words": 182
+  },
+  {
+   "path": "book/3-the-bond/12-peace-the-unsent-letter.md",
+   "title": "Peace: The Unsent Letter",
+   "kind": "chapter",
+   "part": 3,
+   "pages": [
+    93,
+    98
+   ],
+   "number": 12,
+   "plate": "art/plates/12-peace-the-unsent-letter.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER TWELVE",
+   "subtitle": "Peace and the Mastery of Anger",
+   "plate_caption": "A single drop on still water. The rings spread, weaken and are gone; the surface keeps its level.",
+   "epigraph": {
+    "text": "Hatred does not cease by hatred at any time: hatred ceases by love; this is an old rule.",
+    "source": "Dhammapada 5 (Müller)"
+   },
+   "creed": {
+    "word": "Peace",
+    "question": "Who can provoke me, and why have I given them that power?"
+   },
+   "teachings": [
+    100,
+    108
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Living cells hold their inner conditions steady against a changing world. Biologists call it homeostasis. Lose it, and the cell dies."
+    ],
+    [
+     "SELF",
+     "Inner peace is the homeostasis of the soul: a steadiness that holds while the weather changes."
+    ],
+    [
+     "BOND",
+     "Two people at peace can disagree without destroying each other."
+    ],
+    [
+     "COMMUNITY",
+     "A peaceful people has ways to settle disputes without blood."
+    ],
+    [
+     "COSMOS",
+     "Storms rage across the faces of planets; deep below, the core turns steadily on."
+    ]
+   ],
+   "tale": "Two Rooms, Two Rages",
+   "reversal": "Peace is not passivity before injustice. Some anger is righteous, and some situations demand a fierce answer: when someone is being harmed, when a line must be held. The aim is not to feel nothing. It is to act from judgment rather than from the surge. And peace is never bought by abandoning someone who needs defending.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, before any reply written in anger, let it sit until the first surge passes."
+    ],
+    [
+     "WEEKLY",
+     "Each week, sort the week into what was yours to govern and what was not, and notice where you spent your anger."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Who provoked me today, and did I let them steer me?"
+    ],
+    [
+     "LOVE",
+     "Did I answer hostility with something better than hostility?"
+    ],
+    [
+     "UNITY",
+     "Did I settle a disagreement without breaking the bond?"
+    ],
+    [
+     "RESPECT",
+     "Did I keep my dignity, and leave the other person theirs?"
+    ]
+   ],
+   "song": [
+    "Write it hot, and write it all,",
+    "And fold it, and lay it by;",
+    "The ink will cool in the drawer by dawn",
+    "Though the heart is running high.",
+    "For the word that is sent in the heat of the hour",
+    "Is a stone that you cannot recall;",
+    "And the letter that sleeps in the drawer for a night",
+    "Is the one that was best of all."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/12-peace-the-unsent-letter.png",
+     "caption": "A single drop on still water. The rings spread, weaken and are gone; the surface keeps its level."
+    }
+   ],
+   "words": 1040
+  },
+  {
+   "path": "book/3-the-bond/13-love-another-self.md",
+   "title": "Love: Another Self",
+   "kind": "chapter",
+   "part": 3,
+   "pages": [
+    99,
+    103
+   ],
+   "number": 13,
+   "plate": "art/plates/13-love-another-self.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER THIRTEEN",
+   "subtitle": "Love and Friendship",
+   "plate_caption": "Two circles, each passing through the other’s centre. The shared lens between them is the vesica: neither circle owns it.",
+   "epigraph": {
+    "text": "Charity suffereth long, and is kind.",
+    "source": "1 Corinthians 13:4 (KJV)"
+   },
+   "creed": {
+    "word": "Love",
+    "question": "Whom have I shown up for when it cost me something?"
+   },
+   "teachings": [
+    109,
+    117
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Many cells mature only in contact with the right neighbours. Grown alone, they never become what they could be."
+    ],
+    [
+     "SELF",
+     "You too become most fully yourself in the company of those who love you well."
+    ],
+    [
+     "BOND",
+     "Love is the bond in which two selves become more than either could be alone."
+    ],
+    [
+     "COMMUNITY",
+     "A community is the widest circle of friendship: people who choose one another’s good."
+    ],
+    [
+     "COSMOS",
+     "Gravity is the universe’s quiet tendency to draw things together. Love is the human version, and it is a choice."
+    ]
+   ],
+   "tale": "Whither Thou Goest",
+   "reversal": "Love does not mean tolerating harm. Loyalty to someone who keeps hurting you, or others, is not virtue; it is complicity. You may love from a distance. You may love and still leave. Love without respect becomes possession, and love without self-respect becomes self-erasure.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, keep three small promises and note each one."
+    ],
+    [
+     "WEEKLY",
+     "Each week, show up for someone in a way that costs you something: time, comfort or pride."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I love without trying to control?"
+    ],
+    [
+     "LOVE",
+     "Did I show up when it was inconvenient?"
+    ],
+    [
+     "UNITY",
+     "Did I make a friend, or deepen one?"
+    ],
+    [
+     "RESPECT",
+     "Did I keep my word in the small things?"
+    ]
+   ],
+   "song": [
+    "Fair-weather friends are a common coin,",
+    "And they spend as easy as found;",
+    "But the one who comes when the roof is down",
+    "And the creditors stand around,",
+    "Who asks no price and who keeps no score,",
+    "And who tells you the truth to your face,",
+    "Is worth the whole of the market-town,",
+    "And the town is a poorer place."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/13-love-another-self.png",
+     "caption": "Two circles, each passing through the other’s centre. The shared lens between them is the vesica: neither circle owns it."
+    }
+   ],
+   "words": 958
+  },
+  {
+   "path": "book/3-the-bond/14-the-root.md",
+   "title": "The Root",
+   "kind": "chapter",
+   "part": 3,
+   "pages": [
+    104,
+    108
+   ],
+   "number": 14,
+   "plate": "art/plates/14-the-root.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER FOURTEEN",
+   "subtitle": "Family",
+   "plate_caption": "A tree and its roots, grown from one seed by the same branching rule, above the ground and below it.",
+   "epigraph": {
+    "text": "Honour thy father and thy mother.",
+    "source": "Exodus 20:12 (KJV)"
+   },
+   "creed": {
+    "word": "Respect",
+    "question": "What did I inherit that I am grateful for, and what must I transform?"
+   },
+   "teachings": [
+    118,
+    126
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Every cell in you descends from a single fertilized egg. Your whole body is one family of cells."
+    ],
+    [
+     "SELF",
+     "You descend from an unbroken chain of ancestors reaching back to the beginning of life."
+    ],
+    [
+     "BOND",
+     "A family is the first bond, and it teaches the grammar of all the others."
+    ],
+    [
+     "COMMUNITY",
+     "Families are the cells of a society; their health is its health."
+    ],
+    [
+     "COSMOS",
+     "Every atom in you has a lineage that runs back to the first moments of the universe."
+    ]
+   ],
+   "tale": "The Book of What I Was Given",
+   "reversal": "“Honour your parents” has been used to silence people who were harmed by them. Honour never requires you to accept abuse, to stay in danger, or to keep secrets that shelter harm. Protecting yourself is not dishonour. Sometimes the most honourable thing is distance.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, thank one person, aloud or in your mind, for something they gave you."
+    ],
+    [
+     "WEEKLY",
+     "Each week, add a line to your own Book of What I Was Given."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I make peace with something I inherited?"
+    ],
+    [
+     "LOVE",
+     "Did I reach out to family, by blood or by choice?"
+    ],
+    [
+     "UNITY",
+     "Did I strengthen the circle that raised me, or the one I am building?"
+    ],
+    [
+     "RESPECT",
+     "Did I honour my roots while still choosing my own growth?"
+    ]
+   ],
+   "song": [
+    "The oak is as deep as the oak is high,",
+    "Though the half of it none may see;",
+    "And the root that holds in the winter gale",
+    "Was a gift to the growing tree.",
+    "So give your thanks to the hidden root,",
+    "And grow as the root would ask;",
+    "And leave in the earth for the ones to come",
+    "A root that is fit for the task."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/14-the-root.png",
+     "caption": "A tree and its roots, grown from one seed by the same branching rule, above the ground and below it."
+    }
+   ],
+   "words": 899
+  },
+  {
+   "path": "book/3-the-bond/15-the-living-word.md",
+   "title": "The Living Word",
+   "kind": "chapter",
+   "part": 3,
+   "pages": [
+    109,
+    113
+   ],
+   "number": 15,
+   "plate": "art/plates/15-the-living-word.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER FIFTEEN",
+   "subtitle": "Speech, Language and Energy",
+   "plate_caption": "A Chladni figure: sand on a sounding plate gathers along the lines that stay still. Sound gives the sand its form.",
+   "epigraph": {
+    "text": "Death and life are in the power of the tongue.",
+    "source": "Proverbs 18:21 (KJV)"
+   },
+   "creed": {
+    "word": "Love",
+    "question": "Did my words today build, or did they spend?"
+   },
+   "teachings": [
+    127,
+    135
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Cells speak in chemical words, signals telling their neighbours to grow, to wait or to die. Life is conversation all the way down."
+    ],
+    [
+     "SELF",
+     "Inner speech shapes what you notice and what you dare to attempt."
+    ],
+    [
+     "BOND",
+     "Bonds live or die in daily small words more than in grand speeches."
+    ],
+    [
+     "COMMUNITY",
+     "A people’s laws, promises and stories are made of words. Corrupt the words and you corrupt the people."
+    ],
+    [
+     "COSMOS",
+     "In many traditions the world begins with a word. Take it as poetry: speech is how minds bring new order into being."
+    ]
+   ],
+   "tale": "Two Speeches at Gettysburg",
+   "reversal": "Popular claims about language are full of myths. The famous claim that only seven percent of meaning lies in words misreads two small 1967 studies of single words and photographs expressing liking or dislike; their author says the figures do not apply unless a speaker is talking about feelings or attitudes. And words are not spells: saying a thing does not make it so in the world, only in minds. Speak with energy, but never confuse persuasion with truth.",
+   "practice": [
+    [
+     "DAILY",
+     "Before one important conversation each day, decide the one true thing you want to say, and say it plainly."
+    ],
+    [
+     "WEEKLY",
+     "Each week, hold one conversation in which you only listen and ask, then reflect back what you heard."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I name a feeling instead of acting it out?"
+    ],
+    [
+     "LOVE",
+     "Did my words build someone up?"
+    ],
+    [
+     "UNITY",
+     "Did I listen as if I might be changed?"
+    ],
+    [
+     "RESPECT",
+     "Did I keep every promise I made with words?"
+    ]
+   ],
+   "song": [
+    "The sand on the plate is a scattered thing",
+    "Till the bow is drawn on the rim;",
+    "Then it runs to the lines where the stillness is,",
+    "And the shape is a shape to the hymn.",
+    "So mind what you sound when you speak to a soul,",
+    "For the soul is a plate of sand,",
+    "And it gathers itself to the word that you give",
+    "In a form you never planned."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/15-the-living-word.png",
+     "caption": "A Chladni figure: sand on a sounding plate gathers along the lines that stay still. Sound gives the sand its form."
+    }
+   ],
+   "words": 973
+  },
+  {
+   "path": "book/3-the-bond/16-unity-through-other-persons.md",
+   "title": "Unity: Through Other Persons",
+   "kind": "chapter",
+   "part": 3,
+   "pages": [
+    114,
+    118
+   ],
+   "number": 16,
+   "plate": "art/plates/16-unity-through-other-persons.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER SIXTEEN",
+   "subtitle": "Community",
+   "plate_caption": "Twelve points on a ring, every one joined to every other: sixty-six bonds, and no member left at the edge.",
+   "epigraph": {
+    "text": "For the strength of the Pack is the Wolf, and the strength of the Wolf is the Pack.",
+    "source": "Rudyard Kipling, “The Law of the Jungle” (1895)"
+   },
+   "creed": {
+    "word": "Unity",
+    "question": "Will this room be better because I came?"
+   },
+   "teachings": [
+    136,
+    144
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "A single cell becomes an organ only together with others. Alone, it is a cell. Together, they are a heart."
+    ],
+    [
+     "SELF",
+     "Your talents become real only when they meet other people’s needs."
+    ],
+    [
+     "BOND",
+     "Every friendship is a community of two."
+    ],
+    [
+     "COMMUNITY",
+     "We are caught in an inescapable network of mutuality: what touches one directly touches all indirectly."
+    ],
+    [
+     "COSMOS",
+     "Galaxies cluster, stars form in nurseries, and nothing in the universe is truly alone."
+    ]
+   ],
+   "tale": "Three Councils",
+   "reversal": "Belonging can curdle into conformity. A circle that punishes every dissenting voice has stopped being a community and become a mob. And unity can be a mask for exclusion: “us” is always in danger of being defined by “them.” Keep the door open and the talk honest.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, do one small thing that makes a shared space better: hold a door, clear a table, learn a name."
+    ],
+    [
+     "WEEKLY",
+     "Each week, welcome one newcomer properly, or seek out one voice that disagrees with you."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I bring calm to a group, or noise?"
+    ],
+    [
+     "LOVE",
+     "Did I welcome someone who stood outside the circle?"
+    ],
+    [
+     "UNITY",
+     "Did I build a fellowship or a following?"
+    ],
+    [
+     "RESPECT",
+     "Did I let a dissenting voice be heard?"
+    ]
+   ],
+   "song": [
+    "Twelve round a fire on a winter night,",
+    "And never a back to the cold;",
+    "The young at the hearth and the strangers in,",
+    "And the tales of the old retold.",
+    "For the fire is fed by each one’s wood,",
+    "And it warms by each one’s share;",
+    "And the man who brings no stick to the blaze",
+    "Has no right to the warmth that’s there."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/16-unity-through-other-persons.png",
+     "caption": "Twelve points on a ring, every one joined to every other: sixty-six bonds, and no member left at the edge."
+    }
+   ],
+   "words": 1102
+  },
+  {
+   "path": "book/3-the-bond/17-respect-the-floor-and-the-ceiling.md",
+   "title": "Respect: The Floor and the Ceiling",
+   "kind": "chapter",
+   "part": 3,
+   "pages": [
+    119,
+    124
+   ],
+   "number": 17,
+   "plate": "art/plates/17-respect-the-floor-and-the-ceiling.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER SEVENTEEN",
+   "subtitle": "Respect, Dignity and Justice",
+   "plate_caption": "The balance: on one pan, what is owed to everyone; on the other, what must be earned. The beam is level only when both are kept.",
+   "epigraph": {
+    "text": "What is hateful to you, do not do to your fellow: this is the whole Torah; the rest is commentary.",
+    "source": "Hillel, Babylonian Talmud, Shabbat 31a"
+   },
+   "creed": {
+    "word": "Respect",
+    "question": "Did I give the floor to everyone today, even the ones I would rather not?"
+   },
+   "teachings": [
+    145,
+    153
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Healthy cells respect one another’s boundaries. When a cell ignores every signal to stop and takes from all around it, we call it cancer."
+    ],
+    [
+     "SELF",
+     "Self-respect has two halves: the dignity you are owed, and the standards you earn."
+    ],
+    [
+     "BOND",
+     "In a healthy bond, each gives the other the floor and earns from the other the ceiling."
+    ],
+    [
+     "COMMUNITY",
+     "Justice is a community’s way of keeping the floor level for everyone."
+    ],
+    [
+     "COSMOS",
+     "Nothing in the universe is beneath notice. Every particle obeys the same laws as every star."
+    ]
+   ],
+   "tale": "Tea in Orania",
+   "reversal": "Keeping the floor does not mean removing consequences. A person who has done harm can be stopped, held to account and kept from doing it again, all without being stripped of their humanity. Accountability is compatible with dignity. Cruelty is not. And earning respect does not mean chasing everyone’s approval: some will withhold it unjustly, and that is their ledger, not yours.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, extend dignity to one person you would rather not: the rude stranger, the rival, the one who wronged you."
+    ],
+    [
+     "WEEKLY",
+     "Each week, keep your Respect Ledger: what you gave, what you earned, what you spent."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I keep the floor even when I was provoked?"
+    ],
+    [
+     "LOVE",
+     "Did I treat someone as an end, not a means?"
+    ],
+    [
+     "UNITY",
+     "Did I give respect in every direction, up, down and across?"
+    ],
+    [
+     "RESPECT",
+     "Did I earn anything today, or only demand it?"
+    ]
+   ],
+   "song": [
+    "There’s a floor that was laid before you came,",
+    "And it runs beneath every door;",
+    "The beggar, the king and the enemy stand",
+    "On the very same planks of the floor.",
+    "But the roof you must raise with your own two hands,",
+    "And raise it by what you do;",
+    "And no man can lend you a single beam,",
+    "And no man can take it from you."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/17-respect-the-floor-and-the-ceiling.png",
+     "caption": "The balance: on one pan, what is owed to everyone; on the other, what must be earned. The beam is level only when both are kept."
+    }
+   ],
+   "words": 1171
+  },
+  {
+   "path": "book/3-the-bond/18-repair.md",
+   "title": "Repair",
+   "kind": "chapter",
+   "part": 3,
+   "pages": [
+    125,
+    130
+   ],
+   "number": 18,
+   "plate": "art/plates/18-repair.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER EIGHTEEN",
+   "subtitle": "Conflict, Repair and Forgiveness",
+   "plate_caption": "Kintsugi: the broken bowl mended with gold. The break is not hidden; it becomes the most visible line in the vessel.",
+   "epigraph": {
+    "text": "With malice toward none, with charity for all.",
+    "source": "Abraham Lincoln, Second Inaugural Address, March 4, 1865"
+   },
+   "creed": {
+    "word": "Love",
+    "question": "Who is reaching toward me, and will I take the hand?"
+   },
+   "teachings": [
+    154,
+    162
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Your cells repair damage to their DNA constantly, many thousands of times a day. Life is not the absence of damage; it is the habit of repair."
+    ],
+    [
+     "SELF",
+     "You will fail yourself. Self-repair is the practice of beginning again without self-contempt."
+    ],
+    [
+     "BOND",
+     "A bond that has been broken and well mended can be stronger than one never tested."
+    ],
+    [
+     "COMMUNITY",
+     "Societies that repair after conflict, through justice and reconciliation, escape the next war."
+    ],
+    [
+     "COSMOS",
+     "Even after catastrophe, the forests grow back. The world has a long habit of mending."
+    ]
+   ],
+   "tale": "Two Peaces",
+   "reversal": "Forgiveness is not the same as reconciliation, and neither is the same as trust. You can forgive someone and never let them near you again. A hand held out by someone who keeps harming you is not reconciliation; it is a tactic. And no one should be pressed to forgive on someone else’s timetable. Repair is a process, not a password.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, take any reaching hand quickly, and reach first when you were the one at fault."
+    ],
+    [
+     "WEEKLY",
+     "Each week, name one harm you have done, apologize without “but,” make it right, and check back in a month."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I let an old injury steer a new moment?"
+    ],
+    [
+     "LOVE",
+     "Did I move first toward repair?"
+    ],
+    [
+     "UNITY",
+     "Did I leave my opponent a road back to the circle?"
+    ],
+    [
+     "RESPECT",
+     "Did I own my part, exactly and without excuses?"
+    ]
+   ],
+   "song": [
+    "The bowl was dropped, and the bowl was split,",
+    "And the pieces lay on the stone;",
+    "And the fool said, “Throw it out with the ash,”",
+    "And the wise said, “Leave it alone.”",
+    "Then he gathered the shards and he filled every seam",
+    "With a river of honest gold;",
+    "And the bowl that was broken is dearer now",
+    "Than the bowl that was never old."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/18-repair.png",
+     "caption": "Kintsugi: the broken bowl mended with gold. The break is not hidden; it becomes the most visible line in the vessel."
+    }
+   ],
+   "words": 1100
+  },
+  {
+   "path": "book/4-the-work/README.md",
+   "title": "The Work",
+   "kind": "opener",
+   "part": 4,
+   "pages": [
+    132,
+    132
+   ],
+   "figures": [],
+   "intro": "Existence is given. Consciousness and connection are offered. Everything else is earned. This Book concerns the work by which a life is built: craft and mastery, money and desire, endurance through suffering, and the right use of power. It is where the creed meets Monday morning.",
+   "words": 140
+  },
+  {
+   "path": "book/4-the-work/19-the-blade-that-stays-sharp.md",
+   "title": "The Blade That Stays Sharp",
+   "kind": "chapter",
+   "part": 4,
+   "pages": [
+    133,
+    137
+   ],
+   "number": 19,
+   "plate": "art/plates/19-the-blade-that-stays-sharp.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER NINETEEN",
+   "subtitle": "Work, Craft and Mastery",
+   "plate_caption": "The grain of the wood parts along its natural seam, and the blade passes where there is no resistance.",
+   "epigraph": {
+    "text": "I am rising to the work of a human being.",
+    "source": "Marcus Aurelius, Meditations 5.1 (Long)"
+   },
+   "creed": {
+    "word": "Respect",
+    "question": "Would I sign my name to the work I did today?"
+   },
+   "teachings": [
+    163,
+    171
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "When a converted cell keeps receiving the right signals, its new identity in time sustains itself. Practice does the same for skill."
+    ],
+    [
+     "SELF",
+     "Habit is identity under construction. You become what you repeatedly do."
+    ],
+    [
+     "BOND",
+     "Good work is a gift to strangers you will never meet."
+    ],
+    [
+     "COMMUNITY",
+     "Every society stands on the quiet excellence of people whose names no one remembers."
+    ],
+    [
+     "COSMOS",
+     "The universe builds complexity slowly, through countless small repetitions. So does a master."
+    ]
+   ],
+   "tale": "Cook Ding",
+   "reversal": "Mastery is not perfectionism. Whoever cannot release a piece of work until it is flawless never releases anything. And work is not the whole of a life: a craft that devours your health, your family and your friendships has become a master instead of a servant.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, do one task with full attention, as if it were the only task in the world."
+    ],
+    [
+     "WEEKLY",
+     "Each week, deliberately practise one skill just beyond your present reach."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I work in flow, or in frenzy?"
+    ],
+    [
+     "LOVE",
+     "Did I do my work as a gift to the one who will receive it?"
+    ],
+    [
+     "UNITY",
+     "Did I make someone else’s work easier?"
+    ],
+    [
+     "RESPECT",
+     "Would I sign my name to what I did today?"
+    ]
+   ],
+   "song": [
+    "The fool will hack at the knuckle-bone,",
+    "And blunt his blade in a day;",
+    "The master feels for the place between,",
+    "And the joint gives up its way.",
+    "So learn the grain of the work you do,",
+    "And the grain of the ones you lead;",
+    "And the edge you keep for a score of years",
+    "Will cut where the hour has need."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/19-the-blade-that-stays-sharp.png",
+     "caption": "The grain of the wood parts along its natural seam, and the blade passes where there is no resistance."
+    }
+   ],
+   "words": 962
+  },
+  {
+   "path": "book/4-the-work/20-enough.md",
+   "title": "Enough",
+   "kind": "chapter",
+   "part": 4,
+   "pages": [
+    138,
+    143
+   ],
+   "number": 20,
+   "plate": "art/plates/20-enough.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER TWENTY",
+   "subtitle": "Money, Desire and Enough",
+   "plate_caption": "A vessel filled to the golden section and no higher. It can be carried without spilling.",
+   "epigraph": {
+    "text": "He who is satisfied with his lot is rich.",
+    "source": "Tao Te Ching 33 (Legge)"
+   },
+   "creed": {
+    "word": "Peace",
+    "question": "How much is enough, and do I already have it?"
+   },
+   "teachings": [
+    172,
+    180
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "A cell takes only the energy it can use; when growth ignores every limit, it is disease, not health."
+    ],
+    [
+     "SELF",
+     "Whoever knows “enough” is free. Whoever does not is never paid in full."
+    ],
+    [
+     "BOND",
+     "Money handled honestly between people builds trust; handled in secret, it poisons love."
+    ],
+    [
+     "COMMUNITY",
+     "An economy is a vast web of trust, and every fraud tears it."
+    ],
+    [
+     "COSMOS",
+     "Energy is never made from nothing. Wealth, too, is directed energy: received, transformed and passed on."
+    ]
+   ],
+   "tale": "Two Companies",
+   "reversal": "“Enough” is easy to preach from comfort. For someone who cannot pay the rent, struggling for more money is not greed; it is survival, and no philosophy should shame it. Contentment is a virtue for the satisfied, not a sermon for the poor. Earn what you need with dignity; then learn where enough lies.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, notice one thing you already have that you once wished for."
+    ],
+    [
+     "WEEKLY",
+     "Each week, review your money honestly: what came in, what went out, and whether it went where your values say it should."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did desire drive me today, or did I drive it?"
+    ],
+    [
+     "LOVE",
+     "Did I give something without needing anything back?"
+    ],
+    [
+     "UNITY",
+     "Did I deal honestly with money that touched others?"
+    ],
+    [
+     "RESPECT",
+     "Did I trade any integrity for any advantage?"
+    ]
+   ],
+   "song": [
+    "The bowl that is filled to the brim, my child,",
+    "Will spill on the road to the door;",
+    "And the one who must carry the most of all",
+    "Is the one who is begging for more.",
+    "So fill it to where you can walk with it straight,",
+    "And give from the top as you go;",
+    "For the rich are the ones who have learned what is “enough,”",
+    "And the poor are the ones who don’t know."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/20-enough.png",
+     "caption": "A vessel filled to the golden section and no higher. It can be carried without spilling."
+    }
+   ],
+   "words": 990
+  },
+  {
+   "path": "book/4-the-work/21-the-headland.md",
+   "title": "The Headland",
+   "kind": "chapter",
+   "part": 4,
+   "pages": [
+    144,
+    149
+   ],
+   "number": 21,
+   "plate": "art/plates/21-the-headland.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER TWENTY-ONE",
+   "subtitle": "Suffering, Failure, Grief and Resilience",
+   "plate_caption": "Ideal flow past a fixed stone: the streamlines part, close again behind it, and the stone remains.",
+   "epigraph": {
+    "text": "Be like the promontory against which the waves continually break, but it stands firm and tames the fury of the water around it.",
+    "source": "Marcus Aurelius, Meditations 4.49 (Long)"
+   },
+   "creed": {
+    "word": "Peace",
+    "question": "Can I stand like the headland while this wave breaks?"
+   },
+   "teachings": [
+    181,
+    189
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Under damage or starvation, the medusa Turritopsis can revert to an earlier stage and regrow. Not immortal, but remarkably resilient."
+    ],
+    [
+     "SELF",
+     "Resilience is not never breaking. It is the power to reorganize after breaking."
+    ],
+    [
+     "BOND",
+     "Shared suffering, faced together, can forge bonds nothing else can."
+    ],
+    [
+     "COMMUNITY",
+     "Peoples that have survived catastrophe carry hard-won wisdom about what matters."
+    ],
+    [
+     "COSMOS",
+     "Stars collapse, and from their wreckage new stars and planets form. Endings feed beginnings."
+    ]
+   ],
+   "tale": "Who Stays with the Ship",
+   "reversal": "Talk of resilience can become cruelty when it tells suffering people they should simply be stronger. Some pain is too heavy to carry alone, and needing help is not failure. If your suffering includes thoughts of harming yourself, or feels unbearable, reach out now to someone you trust and to professional help. The headland is strong because it is joined to the land.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, name one difficulty honestly, without swelling it or denying it."
+    ],
+    [
+     "WEEKLY",
+     "Each week, ask one person for help with something, or offer help to someone who is struggling."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I accept what could not be changed?"
+    ],
+    [
+     "LOVE",
+     "Did I stay with someone in their suffering?"
+    ],
+    [
+     "UNITY",
+     "Did I let others carry some of my weight?"
+    ],
+    [
+     "RESPECT",
+     "Did I meet my failure without contempt for myself?"
+    ]
+   ],
+   "song": [
+    "The sea comes in like a regiment,",
+    "And it breaks on the rock like glass;",
+    "And it comes again, and it breaks again,",
+    "And the rock lets the regiments pass.",
+    "But the rock is not a lonely thing,",
+    "Though it stands at the end of the land;",
+    "It is held by the whole of the continent,",
+    "And so, if you let it, is your hand."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/21-the-headland.png",
+     "caption": "Ideal flow past a fixed stone: the streamlines part, close again behind it, and the stone remains."
+    }
+   ],
+   "words": 959
+  },
+  {
+   "path": "book/4-the-work/22-the-book-of-earned-power.md",
+   "title": "The Book of Earned Power",
+   "kind": "chapter",
+   "part": 4,
+   "pages": [
+    150,
+    156
+   ],
+   "number": 22,
+   "plate": "art/plates/22-the-book-of-earned-power.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER TWENTY-TWO",
+   "subtitle": "Power and Responsibility",
+   "plate_caption": "Fifteen lines rising from the ground to hold up a single point. The star does not stand on its own; it is carried.",
+   "epigraph": {
+    "text": "Power is the capacity to change another person’s reality. Everyone holds some. Power does not only corrupt; it reveals, magnifying whatever was already in you. Here, condensed, are the fifteen laws of power that is earned rather than taken.",
+    "source": ""
+   },
+   "creed": {
+    "word": "Respect",
+    "question": "Would the people my power touches be glad I hold it?"
+   },
+   "teachings": [
+    190,
+    204
+   ],
+   "teaching_count": 15,
+   "scales": [
+    [
+     "CELL",
+     "A master regulatory factor holds power over thousands of genes. When it acts without the cell’s checks, the result is disease."
+    ],
+    [
+     "SELF",
+     "Your first kingdom is the gap between what happens and what you do. Lose that one and every other kingdom is borrowed."
+    ],
+    [
+     "BOND",
+     "In every bond someone holds more power at a given moment. Love is how that power is used."
+    ],
+    [
+     "COMMUNITY",
+     "Power that serves is renewed by those it serves. Power that rules must be defended against them."
+    ],
+    [
+     "COSMOS",
+     "The greatest forces in nature act through relation: gravity shapes galaxies without commanding anything."
+    ]
+   ],
+   "tale": "Two Crowns, and a Balcony",
+   "reversal": "Dominance is a real road to rank, and this book will not pretend otherwise. It wins where relationships do not repeat, where reputations do not travel, and where people cannot leave: in crises, one-time encounters and captive groups. In those places, do not play the martyr. Answer in proportion, find allies, use the law, and protect yourself. And when you must take power in an emergency, take only what the moment requires, explain yourself openly, and give it back when the danger passes. Love without power cannot protect anyone.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, notice one power you hold over someone, and use it in their favour."
+    ],
+    [
+     "WEEKLY",
+     "Each week, ask someone who can tell you no what you are getting wrong, and thank them."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I govern myself before trying to govern anyone else?"
+    ],
+    [
+     "LOVE",
+     "Did I use my power to raise someone up?"
+    ],
+    [
+     "UNITY",
+     "Did I keep near me people who can tell me no?"
+    ],
+    [
+     "RESPECT",
+     "Was any of my power demanded rather than given?"
+    ]
+   ],
+   "song": [
+    "The crown that you set on your own two brows",
+    "Must be guarded by night and by day,",
+    "And the hands that you broke to lift it there",
+    "Are the hands that will tear it away.",
+    "But the crown that is handed you, child, by the ones",
+    "Who have watched how you carried the load,",
+    "Is light on the head, and it needs no guard,",
+    "And it goes with you down the road."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/22-the-book-of-earned-power.png",
+     "caption": "Fifteen lines rising from the ground to hold up a single point. The star does not stand on its own; it is carried."
+    }
+   ],
+   "words": 1247
+  },
+  {
+   "path": "book/5-the-becoming/README.md",
+   "title": "The Becoming",
+   "kind": "opener",
+   "part": 5,
+   "pages": [
+    158,
+    158
+   ],
+   "figures": [],
+   "intro": "Nothing living stays as it is. This last Book concerns how a person changes: not by erasing himself back to nothing, but by crossing, deliberately, into a new form while carrying the old one honestly. And it gives you the daily rite by which every teaching in this book becomes your own.",
+   "words": 144
+  },
+  {
+   "path": "book/5-the-becoming/23-becoming-without-erasing.md",
+   "title": "Becoming Without Erasing",
+   "kind": "chapter",
+   "part": 5,
+   "pages": [
+    159,
+    164
+   ],
+   "number": 23,
+   "plate": "art/plates/23-becoming-without-erasing.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER TWENTY-THREE",
+   "subtitle": "Change, Transformation and Becoming",
+   "plate_caption": "The inverted chain. A hanging chain takes the one curve in which every link pulls true; turned over, it is the arch that stands by its own weight.",
+   "epigraph": {
+    "text": "Be ye transformed by the renewing of your mind.",
+    "source": "Romans 12:2 (KJV)"
+   },
+   "creed": {
+    "word": "Unity",
+    "question": "Can I hold who I was and who I am becoming in one self?"
+   },
+   "teachings": [
+    205,
+    213
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Transdifferentiation: one mature kind of cell converted directly into another, without going back to an embryonic state."
+    ],
+    [
+     "SELF",
+     "Real personal change is the same: a direct crossing into a new way of being, with memory intact."
+    ],
+    [
+     "BOND",
+     "Bonds transform too. The friend becomes the partner; the rival becomes the ally; the child becomes the equal."
+    ],
+    [
+     "COMMUNITY",
+     "Nations can change their character within a generation, for better or worse, by the commitments they keep."
+    ],
+    [
+     "COSMOS",
+     "Everything that exists is in transformation: stars into elements, elements into planets, planets into life."
+    ]
+   ],
+   "tale": "The Emperor of Kalinga",
+   "reversal": "Where the metaphor breaks: cells do not choose, and you do. Biology is morally neutral, so the direction of your change must be justified by your values, not by the image. Changing gene expression is not rewriting DNA, and no thought rewrites your genes. And not every change is growth: people transform for the worse as easily as for the better. Choose the valley you are crossing toward.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, do one act that belongs to the person you are becoming."
+    ],
+    [
+     "WEEKLY",
+     "Each week, write down one way you differ from who you were a year ago, and one way you mean to differ a year from now."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I accept the in-between without despair?"
+    ],
+    [
+     "LOVE",
+     "Did I honour the one I was while choosing who to become?"
+    ],
+    [
+     "UNITY",
+     "Did I let others see and support my change?"
+    ],
+    [
+     "RESPECT",
+     "Did the new self keep its promises today?"
+    ]
+   ],
+   "song": [
+    "Hang up the chain and it finds its line,",
+    "And every link pulls true;",
+    "Then turn it over and set it in stone,",
+    "And the arch will carry you.",
+    "So hang your life by the things you hold,",
+    "And let it find its curve;",
+    "Then stand it up, and cross upon it,",
+    "And it will bear, and serve."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/23-becoming-without-erasing.png",
+     "caption": "The inverted chain. A hanging chain takes the one curve in which every link pulls true; turned over, it is the arch that stands by its own weight."
+    }
+   ],
+   "words": 1163
+  },
+  {
+   "path": "book/5-the-becoming/24-the-wheel.md",
+   "title": "The Wheel",
+   "kind": "chapter",
+   "part": 5,
+   "pages": [
+    165,
+    170
+   ],
+   "number": 24,
+   "plate": "art/plates/24-the-wheel.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER TWENTY-FOUR",
+   "subtitle": "Ritual, Symbol and the Honest Magic",
+   "plate_caption": "Rose curves of three and nine petals, and their sum. The compound keeps the threefold symmetry they share: the Law of the Third.",
+   "epigraph": {
+    "text": "Generate the third. Do not select it.",
+    "source": "Lingua Rotarum, the Language of the Wheels"
+   },
+   "creed": {
+    "word": "Unity",
+    "question": "What rituals bind my days, and my people, together?"
+   },
+   "teachings": [
+    214,
+    222
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Cells keep time by circadian clocks: biological rituals renewed every day."
+    ],
+    [
+     "SELF",
+     "Ritual turns intention into habit by tying it to a fixed moment."
+    ],
+    [
+     "BOND",
+     "Shared rituals, a toast, a handshake, a bracelet traded hand to hand, make an invisible bond visible."
+    ],
+    [
+     "COMMUNITY",
+     "Every lasting people keeps a calendar of rites."
+    ],
+    [
+     "COSMOS",
+     "The heavens move in cycles. The oldest rituals were human beings keeping time with the sky."
+    ]
+   ],
+   "tale": "The Language of the Wheels",
+   "reversal": "Ritual can harden into superstition or compulsion. A widely reported finding that lucky charms improve performance failed to replicate when other scientists tested it carefully. If skipping a ritual fills you with dread, or you repeat it over and over to quiet anxiety, it is no longer serving you; talk to someone. And no symbol, figure or word in this book has power over the world, over other people or over chance. Its power is over your attention, which is power enough.",
+   "practice": [
+    [
+     "DAILY",
+     "Each morning, set a mark on one matter: refuse it, hold it or assent to it, and act accordingly."
+    ],
+    [
+     "WEEKLY",
+     "Each week, design or renew one personal ritual, and keep it every day of that week."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did a ritual steady me today?"
+    ],
+    [
+     "LOVE",
+     "Did I share a ritual with someone I love?"
+    ],
+    [
+     "UNITY",
+     "Did I keep the rites that bind my circle?"
+    ],
+    [
+     "RESPECT",
+     "Did I keep my practice honest about what it can and cannot do?"
+    ]
+   ],
+   "song": [
+    "Draw the wheel with a steady hand,",
+    "And mark it yes, or no,",
+    "Or hold the line in the middle place",
+    "Till the third way starts to show.",
+    "It will not stop the rain, my child,",
+    "Nor turn a single stone;",
+    "It turns the eye of the one who draws,",
+    "And the eye is yours alone."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/24-the-wheel.png",
+     "caption": "Rose curves of three and nine petals, and their sum. The compound keeps the threefold symmetry they share: the Law of the Third."
+    }
+   ],
+   "words": 1120
+  },
+  {
+   "path": "book/5-the-becoming/25-the-author.md",
+   "title": "The Author",
+   "kind": "chapter",
+   "part": 5,
+   "pages": [
+    171,
+    176
+   ],
+   "number": 25,
+   "plate": "art/plates/25-the-author.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER TWENTY-FIVE",
+   "subtitle": "Story, Identity and Integration",
+   "plate_caption": "A circle broken at one point, and from the break a spiral that keeps writing outward. Broken does not mean meaningless.",
+   "epigraph": {
+    "text": "I don’t have to be God to be myself.",
+    "source": "Shatter, in Vindicated"
+   },
+   "creed": {
+    "word": "Love",
+    "question": "Can I love the person I was in every chapter of my story?"
+   },
+   "teachings": [
+    223,
+    231
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "A cell carries the record of every division that made it. Its history is written into its form."
+    ],
+    [
+     "SELF",
+     "Your identity is in large part the story you tell about how you became who you are."
+    ],
+    [
+     "BOND",
+     "We become real to each other by telling our stories and hearing theirs."
+    ],
+    [
+     "COMMUNITY",
+     "A people is held together by the stories it agrees to remember."
+    ],
+    [
+     "COSMOS",
+     "The universe has a history too, written in light that is still arriving."
+    ]
+   ],
+   "tale": "The Man Who Wrote Himself Home",
+   "reversal": "Not every life must be read as a hero’s journey, and not every suffering resolves into redemption. Forcing a tidy story onto pain can be its own denial. And if writing about a hard memory floods you rather than settles you, stop and seek support. The research shows benefits on average, not for every person at every moment.",
+   "practice": [
+    [
+     "DAILY",
+     "Each day, write three lines in your Archive: what happened, what it meant, what you will do next."
+    ],
+    [
+     "WEEKLY",
+     "Each week, name which of the five stages you lived in most, and one step toward Integration."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I make peace with one page of my past?"
+    ],
+    [
+     "LOVE",
+     "Did I treat my younger self as someone worth forgiving?"
+    ],
+    [
+     "UNITY",
+     "Did I let someone hear my story, or hear theirs?"
+    ],
+    [
+     "RESPECT",
+     "Did I author my day, or only endure it?"
+    ]
+   ],
+   "song": [
+    "I held the world in a closing fist,",
+    "And the world went grey in my hand;",
+    "I built it a clock, and I built it a wall,",
+    "And I built it a place to stand.",
+    "Then I opened my fingers and took up a pen,",
+    "And I wrote what the fist had hid:",
+    "Not god, but a man; not the world, but a page;",
+    "And the page was the truest I did."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/25-the-author.png",
+     "caption": "A circle broken at one point, and from the break a spiral that keeps writing outward. Broken does not mean meaningless."
+    }
+   ],
+   "words": 1074
+  },
+  {
+   "path": "book/5-the-becoming/26-the-daily-rite.md",
+   "title": "The Daily Rite",
+   "kind": "chapter",
+   "part": 5,
+   "pages": [
+    177,
+    182
+   ],
+   "number": 26,
+   "plate": "art/plates/26-the-daily-rite.png",
+   "movements": [
+    {
+     "roman": "I",
+     "mark": "◆",
+     "name": "The Teaching"
+    },
+    {
+     "roman": "II",
+     "mark": "◇",
+     "name": "The Five Scales"
+    },
+    {
+     "roman": "III",
+     "mark": "",
+     "name": "The Witnesses"
+    },
+    {
+     "roman": "IV",
+     "mark": "●",
+     "name": "The Tale"
+    },
+    {
+     "roman": "V",
+     "mark": "●",
+     "name": "The Energy"
+    },
+    {
+     "roman": "VI",
+     "mark": "",
+     "name": "The Reversal"
+    },
+    {
+     "roman": "VII",
+     "mark": "◆",
+     "name": "The Practice"
+    },
+    {
+     "roman": "VIII",
+     "mark": "",
+     "name": "The Ledger"
+    },
+    {
+     "roman": "IX",
+     "mark": "",
+     "name": "The Song"
+    }
+   ],
+   "kicker": "CHAPTER TWENTY-SIX",
+   "subtitle": "Daily Practice and Ritual",
+   "plate_caption": "The analemma: the sun’s place at the same hour, marked once a week through one year. Fifty-two marks, and the figure closes.",
+   "epigraph": {
+    "text": "What good shall I do this day? ... What good have I done today?",
+    "source": "Benjamin Franklin, Autobiography"
+   },
+   "creed": {
+    "word": "All Four",
+    "question": "Did I bring peace, love and unity today, and did I prove respect?"
+   },
+   "teachings": [
+    232,
+    240
+   ],
+   "teaching_count": 9,
+   "scales": [
+    [
+     "CELL",
+     "Cells run on daily clocks; most cells and tissues in your body keep their own circadian rhythm."
+    ],
+    [
+     "SELF",
+     "A daily rite gives the self a rhythm, as a heartbeat gives life its tempo."
+    ],
+    [
+     "BOND",
+     "Small daily rituals, a shared meal, a goodnight, keep bonds alive between the great occasions."
+    ],
+    [
+     "COMMUNITY",
+     "Every lasting community has its calendar: its days of rest, of mourning and of celebration."
+    ],
+    [
+     "COSMOS",
+     "The earth turns; the day returns. The smallest cycle of time repeats the largest pattern of the cosmos: rising, working, setting, rest."
+    ]
+   ],
+   "tale": "The Little Book",
+   "reversal": "A rite can go hollow: performed by habit while the heart is elsewhere. If your practice has gone dead, change its form rather than abandoning its purpose. And never let your rite become a reason to judge others for not keeping it.",
+   "practice": [
+    [
+     "DAILY",
+     "Each morning ask: what good shall I do today? Each night ask: what good have I done?"
+    ],
+    [
+     "WEEKLY",
+     "Each week, keep the Respect Ledger and choose one teaching from this book to carry through the next seven days."
+    ]
+   ],
+   "ledger": [
+    [
+     "PEACE",
+     "Did I begin and end the day on purpose?"
+    ],
+    [
+     "LOVE",
+     "Did my rite make me kinder, or only more disciplined?"
+    ],
+    [
+     "UNITY",
+     "Did I share my practice with anyone?"
+    ],
+    [
+     "RESPECT",
+     "Did I keep faith with myself today?"
+    ]
+   ],
+   "song": [
+    "The sun comes up at the same small hour,",
+    "But never in quite the same place;",
+    "It wanders a figure of eight through the year,",
+    "And it keeps to that figure with grace.",
+    "So keep your hour, though the days may drift,",
+    "And mark them, one by one;",
+    "And the shape you will trace by the end of the year",
+    "Will be yours, as the eight is the sun’s."
+   ],
+   "figures": [
+    {
+     "path": "art/plates/26-the-daily-rite.png",
+     "caption": "The analemma: the sun’s place at the same hour, marked once a week through one year. Fifty-two marks, and the figure closes."
+    }
+   ],
+   "words": 996
+  },
+  {
+   "path": "book/6-the-summit/README.md",
+   "title": "The Geometry",
+   "kind": "opener",
+   "part": 6,
+   "pages": [
+    184,
+    184
+   ],
+   "figures": [],
+   "intro": "At the top of the mountain lies the mathematics beneath the book. Every figure here is computed, not sketched. And one rule governs all of it: mathematics can show structure; it cannot prove a moral truth. What it can do is keep us honest about which of our claims are pictures, which are models and which are proofs.",
+   "words": 118
+  },
+  {
+   "path": "book/6-the-summit/01-the-geometry-of-everything.md",
+   "title": "The Geometry of Everything",
    "kind": "section",
-   "level": 6,
-   "first": 203,
-   "last": 204,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
+   "part": 6,
+   "pages": [
+    185,
+    193
+   ],
+   "figures": [
+    {
+     "path": "art/figures/6-the-geometry-of-everything-1.png",
+     "caption": "Three rules for AND, and the average that is not one. Every true AND scores at most the weakest input."
+    },
+    {
+     "path": "art/figures/6-the-geometry-of-everything-2.png",
+     "caption": "Long-run payoffs against a reciprocator. The steady defector is held off above w = 1/2; the alternator above w = 2/3."
+    },
+    {
+     "path": "art/figures/6-the-geometry-of-everything-3.png",
+     "caption": "The logarithm carries multiplication to addition and loses nothing on the way."
+    },
+    {
+     "path": "art/figures/6-the-geometry-of-everything-4.png",
+     "caption": "Rose curves of order 3 and 5, and the compound of 3 with 9, which keeps the threefold symmetry the two share."
+    },
+    {
+     "path": "art/figures/6-the-geometry-of-everything-5.png",
+     "caption": "The 240 roots of E8, projected onto the Coxeter plane: eight rings of thirty. The ring in gold lies at 0.618 of the outermost."
+    },
+    {
+     "path": "art/figures/6-the-geometry-of-everything-6.png",
+     "caption": "An asymptotic habit curve fitted to the reported median. Individuals varied widely."
+    }
+   ],
+   "kicker": "The Geometry",
+   "words": 2115
   },
   {
-   "path": "6-back-matter/02-the-lineage.md",
-   "title": "The Lineage",
+   "path": "book/6-the-summit/02-how-this-book-could-be-wrong.md",
+   "title": "How This Book Could Be Wrong",
    "kind": "section",
-   "level": 6,
-   "first": 205,
-   "last": 207,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
+   "part": 6,
+   "pages": [
+    194,
+    201
+   ],
+   "figures": [],
+   "kicker": "The Geometry",
+   "words": 2252
   },
   {
-   "path": "6-back-matter/03-glossary-of-the-pure-terms.md",
-   "title": "Glossary of the Pure Terms",
+   "path": "book/6-the-summit/03-epilogue-the-sophont.md",
+   "title": "Epilogue: The Sophont",
    "kind": "section",
-   "level": 6,
-   "first": 208,
-   "last": 209,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
+   "part": 6,
+   "pages": [
+    202,
+    203
+   ],
+   "figures": [
+    {
+     "path": "art/figures/6-epilogue-the-sophont.png",
+     "caption": "The ground ring: two hundred and forty points, one for each teaching, closing on the golden ring."
+    }
+   ],
+   "kicker": "The Geometry",
+   "words": 471
   },
   {
-   "path": "6-back-matter/04-corrections-and-open-accounts.md",
-   "title": "Corrections and Open Accounts",
+   "path": "book/6-the-summit/04-the-law-of-the-sophont.md",
+   "title": "The Law of the Sophont",
    "kind": "section",
-   "level": 6,
-   "first": 210,
-   "last": 211,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
+   "part": 6,
+   "pages": [
+    204,
+    204
+   ],
+   "figures": [],
+   "kicker": "The Geometry",
+   "words": 326
   },
   {
-   "path": "6-back-matter/05-the-checks.md",
-   "title": "The Checks",
+   "path": "book/7-at-the-back/01-the-ninety-day-trial.md",
+   "title": "The Ninety-Day Trial",
    "kind": "section",
-   "level": 6,
-   "first": 212,
-   "last": 213,
-   "plates": [],
-   "epigraph": "",
-   "kicker": "",
-   "number": null
+   "part": 7,
+   "pages": [
+    205,
+    206
+   ],
+   "figures": [],
+   "kicker": "At the Back",
+   "words": 403
   },
   {
-   "path": "6-back-matter/06-colophon.md",
+   "path": "book/7-at-the-back/02-the-monthly-reading-cycle.md",
+   "title": "The Monthly Reading Cycle",
+   "kind": "section",
+   "part": 7,
+   "pages": [
+    207,
+    207
+   ],
+   "figures": [],
+   "kicker": "At the Back",
+   "words": 525
+  },
+  {
+   "path": "book/7-at-the-back/03-the-respect-ledger.md",
+   "title": "The Respect Ledger",
+   "kind": "section",
+   "part": 7,
+   "pages": [
+    208,
+    208
+   ],
+   "figures": [],
+   "kicker": "At the Back",
+   "words": 75
+  },
+  {
+   "path": "book/7-at-the-back/04-index-of-situations.md",
+   "title": "Index of Situations",
+   "kind": "section",
+   "part": 7,
+   "pages": [
+    211,
+    212
+   ],
+   "figures": [],
+   "kicker": "At the Back",
+   "words": 937
+  },
+  {
+   "path": "book/7-at-the-back/05-sources-and-translations.md",
+   "title": "Sources and Translations",
+   "kind": "section",
+   "part": 7,
+   "pages": [
+    213,
+    215
+   ],
+   "figures": [],
+   "kicker": "At the Back",
+   "words": 1018
+  },
+  {
+   "path": "book/7-at-the-back/06-colophon.md",
    "title": "Colophon",
    "kind": "section",
-   "level": 6,
-   "first": 214,
-   "last": 214,
-   "plates": [
-    "plates/p214-colophon.png"
+   "part": 7,
+   "pages": [
+    216,
+    217
    ],
-   "epigraph": "Twenty-five chapters. Five levels. One stance.",
-   "kicker": "The Geometry of Existence: a Manual for Life",
-   "number": null
-  }
- ],
- "plates": [
-  {
-   "page": 1,
-   "file": "plates/p001-cover.png",
-   "kicker": "Cover",
-   "title": "The Geometry of Existence",
-   "epigraph": "A Manual for Life · In five levels, the highest at the end",
-   "unit": "README.md"
-  },
-  {
-   "page": 8,
-   "file": "plates/p008-the-lines.png",
-   "kicker": "Level One",
-   "title": "The Lines",
-   "epigraph": "for anyone, in one sitting",
-   "unit": "1-the-lines/README.md"
-  },
-  {
-   "page": 12,
-   "file": "plates/p012-the-manual.png",
-   "kicker": "Level Two",
-   "title": "The Manual",
-   "epigraph": "for the one who will practise",
-   "unit": "2-the-manual/README.md"
-  },
-  {
-   "page": 14,
-   "file": "plates/p014-the-ground.png",
-   "kicker": "Part I",
-   "title": "The Ground",
-   "epigraph": "what is",
-   "unit": "2-the-manual/part-1-the-ground.md"
-  },
-  {
-   "page": 15,
-   "file": "plates/p015-the-three-and-the-zero.png",
-   "kicker": "Chapter One",
-   "title": "The Three and the Zero",
-   "epigraph": "A binary with a waiting room is still a binary.",
-   "unit": "2-the-manual/01-the-three-and-the-zero.md"
-  },
-  {
-   "page": 19,
-   "file": "plates/p019-the-given.png",
-   "kicker": "Chapter Two",
-   "title": "The Given",
-   "epigraph": "The ground does not negotiate. That is not its cruelty. That is its honesty.",
-   "unit": "2-the-manual/02-the-given.md"
-  },
-  {
-   "page": 24,
-   "file": "plates/p024-attention.png",
-   "kicker": "Chapter Three",
-   "title": "Attention",
-   "epigraph": "You have exactly as much life as you have attention.",
-   "unit": "2-the-manual/03-attention.md"
-  },
-  {
-   "page": 30,
-   "file": "plates/p030-witness.png",
-   "kicker": "Chapter Four",
-   "title": "Witness",
-   "epigraph": "To be seen is not vanity. It is ontology.",
-   "unit": "2-the-manual/04-witness.md"
-  },
-  {
-   "page": 35,
-   "file": "plates/p035-the-practice.png",
-   "kicker": "Part II",
-   "title": "The Practice",
-   "epigraph": "how to stand",
-   "unit": "2-the-manual/part-2-the-practice.md"
-  },
-  {
-   "page": 36,
-   "file": "plates/p036-name-the-binary.png",
-   "kicker": "Chapter Five",
-   "title": "Name the Binary",
-   "epigraph": "A binary you can see is no longer doing its job.",
-   "unit": "2-the-manual/05-name-the-binary.md"
-  },
-  {
-   "page": 41,
-   "file": "plates/p041-construct-the-third.png",
-   "kicker": "Chapter Six",
-   "title": "Construct the Third",
-   "epigraph": "The third is built, never selected.",
-   "unit": "2-the-manual/06-construct-the-third.md"
-  },
-  {
-   "page": 47,
-   "file": "plates/p047-own-the-ground.png",
-   "kicker": "Chapter Seven",
-   "title": "Own the Ground",
-   "epigraph": "Insight without position is a discovery made on someone else’s behalf.",
-   "unit": "2-the-manual/07-own-the-ground.md"
-  },
-  {
-   "page": 53,
-   "file": "plates/p053-keep-the-middle.png",
-   "kicker": "Chapter Eight",
-   "title": "Keep the Middle",
-   "epigraph": "The zero is not the place you escape to. It is the place you return from.",
-   "unit": "2-the-manual/08-keep-the-middle.md"
-  },
-  {
-   "page": 58,
-   "file": "plates/p058-refuse-the-waiting-room.png",
-   "kicker": "Chapter Nine",
-   "title": "Refuse the Waiting Room",
-   "epigraph": "A decision deferred so long it became the architecture was never deferred. It was made — by default, in secret, against you.",
-   "unit": "2-the-manual/09-refuse-the-waiting-room.md"
-  },
-  {
-   "page": 64,
-   "file": "plates/p064-the-weight.png",
-   "kicker": "Part III",
-   "title": "The Weight",
-   "epigraph": "what it costs",
-   "unit": "2-the-manual/part-3-the-weight.md"
-  },
-  {
-   "page": 65,
-   "file": "plates/p065-the-asymmetry.png",
-   "kicker": "Chapter Ten",
-   "title": "The Asymmetry",
-   "epigraph": "Seeing the third is cheap and feels like enormous progress. Holding it costs years. Budget for the expensive half or do not begin.",
-   "unit": "2-the-manual/10-the-asymmetry.md"
-  },
-  {
-   "page": 71,
-   "file": "plates/p071-continuity.png",
-   "kicker": "Chapter Eleven",
-   "title": "Continuity",
-   "epigraph": "You are not the same person you were. You are also not a different one. Both facts are load-bearing, and confusing them is how lives break.",
-   "unit": "2-the-manual/11-continuity.md"
-  },
-  {
-   "page": 77,
-   "file": "plates/p077-the-losable-claim.png",
-   "kicker": "Chapter Twelve",
-   "title": "The Losable Claim",
-   "epigraph": "A claim that cannot lose cannot win. This applies to physics. It applies to you.",
-   "unit": "2-the-manual/12-the-losable-claim.md"
-  },
-  {
-   "page": 83,
-   "file": "plates/p083-the-care.png",
-   "kicker": "Part IV",
-   "title": "The Care",
-   "epigraph": "what it is for",
-   "unit": "2-the-manual/part-4-the-care.md"
-  },
-  {
-   "page": 84,
-   "file": "plates/p084-empathy-as-catalyst.png",
-   "kicker": "Chapter Thirteen",
-   "title": "Empathy as Catalyst",
-   "epigraph": "Empathy opens a door. It is not a force. What walks through the door is a different thing entirely, and it must be judged on its own.",
-   "unit": "2-the-manual/13-empathy-as-catalyst.md"
-  },
-  {
-   "page": 90,
-   "file": "plates/p090-the-inviolate.png",
-   "kicker": "Chapter Fourteen",
-   "title": "The Inviolate",
-   "epigraph": "Another person’s middle is not yours. Not even to help. Not even to love. Especially not to love.",
-   "unit": "2-the-manual/14-the-inviolate.md"
-  },
-  {
-   "page": 97,
-   "file": "plates/p097-the-long-reclamation.png",
-   "kicker": "Chapter Fifteen",
-   "title": "The Long Reclamation",
-   "epigraph": "The spark has never been destroyed. It has been buried. And the desire to find the spark is the spark itself, flickering.",
-   "unit": "2-the-manual/15-the-long-reclamation.md"
-  },
-  {
-   "page": 105,
-   "file": "plates/p105-the-degree.png",
-   "kicker": "Level Three",
-   "title": "The Degree",
-   "epigraph": "for the one who has stopped rounding",
-   "unit": "3-the-degree/README.md"
-  },
-  {
-   "page": 106,
-   "file": "plates/p106-the-degree.png",
-   "kicker": "Chapter Sixteen",
-   "title": "The Degree",
-   "epigraph": "Most of what is true of you is true to a degree. The either/or rounds it off.",
-   "unit": "3-the-degree/16-the-degree.md"
-  },
-  {
-   "page": 111,
-   "file": "plates/p111-the-weakest-link.png",
-   "kicker": "Chapter Seventeen",
-   "title": "The Weakest Link",
-   "epigraph": "When two things must both be true, the lower one is your answer.",
-   "unit": "3-the-degree/17-the-weakest-link.md"
-  },
-  {
-   "page": 115,
-   "file": "plates/p115-act-crisp.png",
-   "kicker": "Chapter Eighteen",
-   "title": "Act Crisp",
-   "epigraph": "Weigh in degrees. Move in one piece.",
-   "unit": "3-the-degree/18-act-crisp.md"
-  },
-  {
-   "page": 121,
-   "file": "plates/p121-the-principle.png",
-   "kicker": "Level Four",
-   "title": "The Principle",
-   "epigraph": "for the one who asks why",
-   "unit": "4-the-principle/README.md"
-  },
-  {
-   "page": 122,
-   "file": "plates/p122-existence-is-sufficient.png",
-   "kicker": "Chapter Nineteen",
-   "title": "Existence Is Sufficient",
-   "epigraph": "Nothing gives legitimacy to existence except existence itself.",
-   "unit": "4-the-principle/19-existence-is-sufficient.md"
-  },
-  {
-   "page": 126,
-   "file": "plates/p126-three-relationships-not-three-requirements.png",
-   "kicker": "Chapter Twenty",
-   "title": "Three Relationships, Not Three Requirements",
-   "epigraph": "Existence is unconditional. Consciousness is an opportunity. Connection is a choice.",
-   "unit": "4-the-principle/20-three-relationships.md"
-  },
-  {
-   "page": 130,
-   "file": "plates/p130-change-without-erasure.png",
-   "kicker": "Chapter Twenty One",
-   "title": "Change Without Erasure",
-   "epigraph": "Change without erasure. Understanding without possession.",
-   "unit": "4-the-principle/21-change-without-erasure.md"
-  },
-  {
-   "page": 134,
-   "file": "plates/p134-dignity-is-owed-respect-is-earned.png",
-   "kicker": "Chapter Twenty Two",
-   "title": "Dignity Is Owed, Respect Is Earned",
-   "epigraph": "Dignity is the floor. Respect is the ceiling.",
-   "unit": "4-the-principle/22-dignity-is-owed.md"
-  },
-  {
-   "page": 138,
-   "file": "plates/p138-the-proof-and-its-limits.png",
-   "kicker": "Level Five",
-   "title": "The Proof and Its Limits",
-   "epigraph": "for the one who checks",
-   "unit": "5-the-proof/README.md"
-  },
-  {
-   "page": 188,
-   "file": "plates/p188-the-program-preregistered.png",
-   "kicker": "Chapter Twenty Three",
-   "title": "The Program, Preregistered",
-   "epigraph": "Small enough to calculate and precise enough to lose.",
-   "unit": "5-the-proof/23-the-program-preregistered.md"
-  },
-  {
-   "page": 194,
-   "file": "plates/p194-what-the-axiom-does-not-prove.png",
-   "kicker": "Chapter Twenty Four",
-   "title": "What the Axiom Does Not Prove",
-   "epigraph": "Existence legitimizes. It does not calculate.",
-   "unit": "5-the-proof/24-what-the-axiom-does-not-prove.md"
-  },
-  {
-   "page": 198,
-   "file": "plates/p198-beyond-logic.png",
-   "kicker": "Chapter Twenty Five",
-   "title": "Beyond Logic",
-   "epigraph": "What can be proved has been proved. What remains is what was always first.",
-   "unit": "5-the-proof/25-beyond-logic.md"
-  },
-  {
-   "page": 214,
-   "file": "plates/p214-colophon.png",
-   "kicker": "The Geometry of Existence: a Manual for Life",
-   "title": "",
-   "epigraph": "Twenty-five chapters. Five levels. One stance.",
-   "unit": "6-back-matter/06-colophon.md"
-  }
- ],
- "figures": [
-  {
-   "page": 3,
-   "file": "figures/p003-1.png",
-   "caption": ""
-  },
-  {
-   "page": 16,
-   "file": "figures/p016-1.png",
-   "caption": ""
-  },
-  {
-   "page": 20,
-   "file": "figures/p020-1.png",
-   "caption": ""
-  },
-  {
-   "page": 25,
-   "file": "figures/p025-1.png",
-   "caption": ""
-  },
-  {
-   "page": 31,
-   "file": "figures/p031-1.png",
-   "caption": ""
-  },
-  {
-   "page": 37,
-   "file": "figures/p037-1.png",
-   "caption": ""
-  },
-  {
-   "page": 42,
-   "file": "figures/p042-1.png",
-   "caption": ""
-  },
-  {
-   "page": 48,
-   "file": "figures/p048-1.png",
-   "caption": ""
-  },
-  {
-   "page": 54,
-   "file": "figures/p054-1.png",
-   "caption": ""
-  },
-  {
-   "page": 59,
-   "file": "figures/p059-1.png",
-   "caption": ""
-  },
-  {
-   "page": 66,
-   "file": "figures/p066-1.png",
-   "caption": ""
-  },
-  {
-   "page": 72,
-   "file": "figures/p072-1.png",
-   "caption": ""
-  },
-  {
-   "page": 78,
-   "file": "figures/p078-1.png",
-   "caption": ""
-  },
-  {
-   "page": 85,
-   "file": "figures/p085-1.png",
-   "caption": ""
-  },
-  {
-   "page": 91,
-   "file": "figures/p091-1.png",
-   "caption": ""
-  },
-  {
-   "page": 98,
-   "file": "figures/p098-1.png",
-   "caption": ""
-  },
-  {
-   "page": 107,
-   "file": "figures/p107-1.png",
-   "caption": ""
-  },
-  {
-   "page": 107,
-   "file": "figures/p107-2.png",
-   "caption": ""
-  },
-  {
-   "page": 109,
-   "file": "figures/p109-1.png",
-   "caption": "Four middles. The unknown waits to become one of two. The degree sits on the line. The zero is where you stand to see the line. The third is off the line."
-  },
-  {
-   "page": 112,
-   "file": "figures/p112-1.png",
-   "caption": ""
-  },
-  {
-   "page": 112,
-   "file": "figures/p112-2.png",
-   "caption": "Nine-tenths and two-tenths, combined four ways. Three are forms of “and.” The fourth is an average, which lets the strong score pay for the weak one."
-  },
-  {
-   "page": 116,
-   "file": "figures/p116-1.png",
-   "caption": ""
-  },
-  {
-   "page": 116,
-   "file": "figures/p116-2.png",
-   "caption": "Several partial truths, each held to its own degree, resolve into a single setting. The weighing is graded. The output is not."
-  },
-  {
-   "page": 123,
-   "file": "figures/p123-1.png",
-   "caption": ""
-  },
-  {
-   "page": 127,
-   "file": "figures/p127-1.png",
-   "caption": ""
-  },
-  {
-   "page": 131,
-   "file": "figures/p131-1.png",
-   "caption": ""
-  },
-  {
-   "page": 135,
-   "file": "figures/p135-1.png",
-   "caption": ""
-  },
-  {
-   "page": 136,
-   "file": "figures/p136-1.png",
-   "caption": "The floor is level and holds everyone. The ceiling is raised by conduct, one course at a time."
-  },
-  {
-   "page": 146,
-   "file": "figures/p146-1.png",
-   "caption": "The simplex of three-state distributions. A third state adds a coordinate to the space of probabilities, not a dimension to physical space."
-  },
-  {
-   "page": 155,
-   "file": "figures/p155-1.png",
-   "caption": ""
-  },
-  {
-   "page": 161,
-   "file": "figures/p161-1.png",
-   "caption": "Zero-state probability for the centre spin at βJ = βD = ln 2. Past the threshold, aligned neighbours favour the zero state more than opposed ones do. Model values, not measurements."
-  },
-  {
-   "page": 164,
-   "file": "figures/p164-1.png",
-   "caption": "The number the consequence model must get right, at βχ = ln 2 with all other couplings off. Model values, not measurements."
-  },
-  {
-   "page": 166,
-   "file": "figures/p166-1.png",
-   "caption": ""
-  },
-  {
-   "page": 169,
-   "file": "figures/p169-1.png",
-   "caption": "Two graphs with six sites, nine edges and degree three throughout. Exhaustive enumeration of all 729 states of each, at Δ/J = 3/4 and βJ = 3."
-  },
-  {
-   "page": 171,
-   "file": "figures/p171-1.png",
-   "caption": "The 240 roots of E₈ projected to the Coxeter plane: eight rings of thirty. Computed from the root system for this edition. A fact of geometry, not of spacetime."
-  },
-  {
-   "page": 189,
-   "file": "figures/p189-1.png",
-   "caption": ""
-  },
-  {
-   "page": 190,
-   "file": "figures/p190-1.png",
-   "caption": "Zero-site occupancy on the two graphs: exact prediction beside the simulated dry run. A dry run tests the procedure. It is not a measurement."
-  },
-  {
-   "page": 192,
-   "file": "figures/p192-1.png",
-   "caption": "The record under the frozen retention ρ = 0.9. However long the zero state is held, the record cannot exceed 1/(1 − ρ) = 10."
-  },
-  {
-   "page": 195,
-   "file": "figures/p195-1.png",
-   "caption": ""
-  },
-  {
-   "page": 199,
-   "file": "figures/p199-1.png",
-   "caption": ""
+   "figures": [],
+   "kicker": "At the Back",
+   "words": 250
   }
  ]
 }

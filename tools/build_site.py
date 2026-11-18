@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Build the reading edition: a static website made from the Markdown book.
+"""Build the reading edition: a website made from the Markdown book.
 
     pip install markdown
-    python3 tools/build_site.py            # writes _site/
-    python3 -m http.server -d _site 8000   # read it at http://localhost:8000
+    python3 tools/build_site.py            writes _site/
+    python3 -m http.server -d _site 8000   read it at http://localhost:8000
 
-The site is laid out like the book: navy plates with gold line-work open
-every level, part and chapter; text pages are cream; the five marks are set in
-small capitals; each Practice and Audit is a ruled box. It follows the reader's
-light or dark setting. GitHub Pages publishes it through
+Every page of book/, workbook/ and the gallery becomes a web page dressed like
+the printed edition: cream pages, night plates, the Garamonds, and each Book
+in its own colour. The site follows the reader's light or dark setting, and
+the ← and → keys turn the page. GitHub publishes it from
 .github/workflows/pages.yml.
 """
 from __future__ import annotations
@@ -18,541 +18,364 @@ import json
 import os
 import re
 import shutil
+import subprocess
+import sys
 
 import markdown
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BOOK = os.path.join(ROOT, "book")
 OUT = os.path.join(ROOT, "_site")
 SITE_URL = "https://mavioni.github.io/THE-GEOMETRY-OF-EXISTENCE/"
-PDF_REL = "edition/The_Geometry_of_Existence_A_Manual_for_Life.pdf"
-PDF_SAVE_AS = "The-Geometry-of-Existence.pdf"
+MARK_NAMES = {"◆": "Commitment: a stance you choose and defend by argument",
+              "●": "Evidence: a claim about how the world works, open to being proved wrong",
+              "◇": "Analogy: a picture to think with; it shows a pattern, never proves one"}
 
 
-def pdf_label():
-    size = os.path.getsize(os.path.join(ROOT, PDF_REL)) / 1e6
-    return f"PDF, 214 pages, {size:.1f} MB"
-
-MARK_HELP = {
-    "lived": "Lived — a stance or a practice. Tested only by doing it.",
-    "argued": "Argued — reasons are given. No one is compelled.",
-    "demonstrated": "Demonstrated — follows from stated definitions, or is established science within a stated domain.",
-    "measured": "Measured — an observation, with its source.",
-    "on-record": "On record — a matter of published history.",
-}
-NUM_WORDS = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
-             "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen",
-             "Eighteen", "Nineteen", "Twenty", "Twenty-One", "Twenty-Two", "Twenty-Three",
-             "Twenty-Four", "Twenty-Five"]
+def load():
+    with open(os.path.join(ROOT, "book", "manifest.json"), encoding="utf-8") as f:
+        return json.load(f)
 
 
-def load_manifest():
-    with open(os.path.join(BOOK, "manifest.json"), encoding="utf-8") as fh:
-        return json.load(fh)
-
-
-def out_path_for(md_rel: str) -> str:
-    """book/2-the-manual/README.md -> book/2-the-manual/index.html"""
-    base, _ = os.path.splitext(md_rel)
+def html_path(md_rel: str) -> str:
+    base = md_rel[:-3]
     if os.path.basename(base) == "README":
         base = os.path.join(os.path.dirname(base), "index")
     return base + ".html"
 
 
-def rel(from_out: str, to_out: str) -> str:
-    return os.path.relpath(os.path.join(OUT, to_out), os.path.dirname(os.path.join(OUT, from_out))).replace(os.sep, "/")
+def rel(src_out: str, dst_out: str) -> str:
+    return os.path.relpath(os.path.join(OUT, dst_out), os.path.dirname(os.path.join(OUT, src_out))).replace(os.sep, "/")
+
+
+def pdf_label(m) -> str:
+    size = os.path.getsize(os.path.join(ROOT, m["pdf"])) / 1e6
+    return f"PDF · {m['pages']} pages · {size:.1f} MB"
 
 
 # ---------------------------------------------------------------------------
-# Markdown -> HTML, in the book's dress
+# Markdown -> HTML
 # ---------------------------------------------------------------------------
 
-FIG_RE = re.compile(
-    r'<p align="center">\n  <img src="([^"]+/figures/[^"]+)" alt="([^"]*)" width="(\d+)">\n</p>'
-    r'(?:\n\n<p align="center"><sub><i>(.*?)</i></sub></p>(?:\n\n<p align="center"><sub><i>(.*?)</i></sub></p>)?)?')
-
-
-def prepare_markdown(md: str, strip_plate: bool) -> str:
-    lines = md.split("\n", 1)
-    if lines[0].startswith('<p align="center"><sub>THE GEOMETRY OF EXISTENCE'):
-        md = lines[1]
+def strip_footer(md: str) -> str:
     cut = md.rfind("\n---\n")
-    if cut != -1 and "[Contents]" in md[cut:]:
-        md = md[:cut]
-    md = re.sub(r"<!-- level-strip -->.*?<!-- /level-strip -->", "", md, flags=re.S)
-    if strip_plate:
-        md = re.sub(r'^\s*<p align="center">\n  <img src="[^"]*plates/[^"]*"[^>]*>\n</p>\n\n'
-                    r'(?:<p align="center"><sub>[^<]*</sub></p>\n\n)?# [^\n]*\n\n(?:> \*[^\n]*\*\n\n)?',
-                    "", md, count=1)
-
-    def fig(m):
-        cap = " ".join(x for x in (m.group(4), m.group(5)) if x)
-        alt = html.escape(m.group(2), quote=True)
-        w = int(m.group(3))
-        cap_html = f"<figcaption>{cap}</figcaption>" if cap else ""
-        return (f'<figure class="figure"><img src="{m.group(1)}" alt="{alt}" width="{w}" loading="lazy">'
-                f"{cap_html}</figure>")
-    md = re.sub(r"\n\n(> \*\*[▲◆])", "\n\n<!-- callout -->\n\n\\1", md)
-    md = FIG_RE.sub(fig, md)
-    md = re.sub(r'<p align="center"><img src="([^"]*ornaments/[^"]*)" alt="" width="\d+"></p>',
-                r'<div class="ornament"><img src="\1" alt=""></div>', md)
-    md = re.sub(r'<p align="center"><sub><i>(.*?)</i></sub></p>', r'<p class="small-center"><i>\1</i></p>', md)
-    md = re.sub(r'<p align="center"><sub>(.*?)</sub></p>', r'<p class="kicker">\1</p>', md)
-    md = re.sub(r'<p align="center"><i>(.*?)</i></p>', r'<p class="subtitle">\1</p>', md)
-    return md
+    return md[:cut] if cut != -1 and "<p align=\"center\">" in md[cut:] else md
 
 
-def dress_html(h: str) -> str:
-    def mark(m):
-        label = m.group(1)
-        key = label.split("—")[0].split(",")[0].strip().lower().replace(" ", "-")
-        tip = MARK_HELP.get(key, label.title())
-        return f'<span class="mark mark-{key}" title="{html.escape(tip)}">{label}</span>'
-    h = re.sub(r"<code>([A-Z][A-Z ,—\-₀-₉S]+)</code>", mark, h)
+def marks_in_text(h: str) -> str:
+    """Wrap the three mark glyphs in text (not inside tags) with an explanation."""
+    parts = re.split(r"(<[^>]+>)", h)
+    for i, p in enumerate(parts):
+        if p.startswith("<"):
+            continue
+        parts[i] = re.sub("[◆●◇]", lambda g: f'<span class="mark" title="{MARK_NAMES[g.group(0)]}">{g.group(0)}</span>', p)
+    return "".join(parts)
 
-    def callout(m):
-        kind = "practice" if "Practice" in m.group(1) else "audit"
-        return (f'<aside class="callout {kind}"><p class="callout-label">{m.group(1)}</p>'
-                f"{m.group(2)}</aside>")
-    h = re.sub(r"<blockquote>\s*<p><strong>(▲ Practice|◆ Audit)</strong></p>(.*?)</blockquote>",
-               callout, h, flags=re.S)
-    h = re.sub(r"<blockquote>\s*<p><em>([^<]*(?:<(?!/em>)[^<]*)*)</em></p>\s*</blockquote>",
-               r'<blockquote class="epigraph"><p>\1</p></blockquote>', h)
-    h = re.sub(r"<ul>\s*<li>\[x\]", '<ul class="checks">\n<li>', h)
-    h = h.replace("<li>[x] ", "<li>")
-    h = h.replace("<li>[ ] ", '<li><input type="checkbox" disabled> ')
-    h = re.sub(r'href="([^"#:]*?)README\.md(#[^"]*)?"', lambda m: f'href="{m.group(1)}index.html{m.group(2) or ""}"', h)
-    h = re.sub(r'href="([^"#:]+?)\.md(#[^"]*)?"', lambda m: f'href="{m.group(1)}.html{m.group(2) or ""}"', h)
+
+def dress(h: str) -> str:
     h = h.replace(' align="center"', ' class="center"')
+    # kicker, subtitle
+    h = re.sub(r"<p><sub>([^<]*)</sub></p>", r'<p class="kicker">\1</p>', h)
+    h = re.sub(r"(</h1>\s*)<p><em>([^<]*)</em></p>", r'\1<p class="subtitle">\2</p>', h, count=1)
+    # chapter movements
+    def movement(mm):
+        roman, mark, name = mm.group(1), mm.group(2) or "", mm.group(3)
+        mk = f'<span class="mark" title="{MARK_NAMES[mark]}">&#{ord(mark)};</span>' if mark else ""
+        return f'<h2 class="movement" id="{slug(name)}"><span class="roman">{roman}</span>{mk}<span>{name}</span></h2>'
+    h = re.sub(r"<h2>(I|II|III|IV|V|VI|VII|VIII|IX) · (?:([◆●◇]) )?([^<]+)</h2>", movement, h)
+    # the creed question on a chapter's first page
+    h = re.sub(r"<blockquote>\s*<p><strong>(PEACE|LOVE|UNITY|RESPECT|ALL FOUR)</strong>",
+               r'<blockquote class="creed"><p><strong>\1</strong>', h)
+    # epigraphs: a quotation followed by its source
+    h = re.sub(r"<blockquote>(\s*<p><em>.*?</em></p>\s*<p>— .*?</p>\s*)</blockquote>",
+               r'<blockquote class="epigraph">\1</blockquote>', h, flags=re.S)
+    # the Reversal
+    h = re.sub(r'(id="the-reversal".*?</h2>\s*)<blockquote>', r'\1<blockquote class="reversal">', h, flags=re.S)
+    # the Witnesses
+    h = re.sub(r'(id="the-witnesses".*?</h2>\s*)<ul>', r'\1<ul class="witnesses">', h, flags=re.S)
+    # numbered lists keep the book's own numbers
+    def ol(mm):
+        start = int(mm.group(1) or 1)
+        body = mm.group(2)
+        n = [start - 1]
 
-    def eq(m):
-        inner = m.group(1)
-        plain = html.unescape(re.sub(r"<[^>]+>", "", inner)).strip()
-        words = re.findall(r"[A-Za-z]{5,}", plain)
-        if len(plain) < 120 and re.search(r"[=<>≤≥≈∝]", plain) and not words \
-                and not inner.startswith("<span class=\"mark"):
-            return f'<p class="eq">{inner}</p>'
-        return m.group(0)
-    h = re.sub(r"<p>(.*?)</p>", eq, h)
-    return h
+        def li(x):
+            n[0] += 1
+            return f'<li data-n="{n[0]}">'
+        return f'<ol class="teachings" start="{start}">' + re.sub(r"<li>", li, body) + "</ol>"
+    h = re.sub(r'<ol(?: start="(\d+)")?>(.*?)</ol>', ol, h, flags=re.S)
+    # verse: paragraphs of italic lines broken with <br>
+    h = re.sub(r"<p>(<em>[^\n]*?<br>\s*.*?)</p>", r'<p class="verse">\1</p>', h, flags=re.S)
+    # tables scroll on small screens; grids of numbers are centred
+    def table(mm):
+        t = mm.group(0)
+        cells = re.findall(r"<td[^>]*>(.*?)</td>", t, flags=re.S)
+        numeric = cells and all(re.fullmatch(r"[\s☐\dT−=*<>/a-z·]*", c) for c in cells) and \
+            sum(bool(re.search(r"\d", c)) for c in cells) > len(cells) / 2
+        if numeric:
+            t = t.replace("<table>", '<table class="grid">', 1)
+        return f'<div class="table-wrap">{t}</div>'
+    h = re.sub(r"<table>.*?</table>", table, h, flags=re.S)
+    # links between Markdown files become links between pages
+    h = re.sub(r'href="([^"#:]*?)README\.md(#[^"]*)?"', lambda mm: f'href="{mm.group(1)}index.html{mm.group(2) or ""}"', h)
+    h = re.sub(r'href="([^"#:]+?)\.md(#[^"]*)?"', lambda mm: f'href="{mm.group(1)}.html{mm.group(2) or ""}"', h)
+    h = re.sub(r'(<img [^>]*?)(/?>)', lambda mm: mm.group(1) + (' loading="lazy"' if "loading=" not in mm.group(1) else "") + mm.group(2), h)
+    return marks_in_text(h)
 
 
-def render_md(md: str) -> str:
-    return dress_html(markdown.markdown(md, extensions=["tables", "sane_lists"],
-                                        output_format="html5"))
+def slug(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+
+
+def render(md: str) -> str:
+    # python-markdown does not read Markdown inside an HTML block, so the
+    # centred paragraphs the book uses are converted here
+    # keep neighbouring quotations apart (python-markdown would join them)
+    md = re.sub(r"(^>[^\n]*\n)\n(?=>)", r"\1\n<!-- -->\n\n", md, flags=re.M)
+    md = re.sub(r'<p align="center">(\[.*?)</p>', lambda mm: "<p class=\"center\">" +
+                markdown.markdown(mm.group(1))[3:-4] + "</p>", md)
+    return dress(markdown.markdown(md, extensions=["tables", "sane_lists"], output_format="html"))
 
 
 # ---------------------------------------------------------------------------
-# page shell
+# The page shell
 # ---------------------------------------------------------------------------
 
+ICON = ('<svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="12" cy="12" r="8.5" '
+        'fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" '
+        'fill="currentColor"/></svg>')
 
-THEME_ICON = ('<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">'
-              '<circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.4"/>'
-              '<path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>')
 
-
-def shell(out_rel, title, body, *, description="", accent="#c9a14a", prev=None, nxt=None,
-          current="", image="art/plates/p001-cover.png", base=None):
-    r = (lambda p: p) if base else (lambda p: rel(out_rel, p))  # noqa: E731
-    nav_items = [("Contents", "book/index.html"), ("Lines", "book/1-the-lines/index.html"),
-                 ("Manual", "book/2-the-manual/index.html"), ("Degree", "book/3-the-degree/index.html"),
-                 ("Principle", "book/4-the-principle/index.html"), ("Proof", "book/5-the-proof/index.html"),
-                 ("Workbook", "workbook/index.html"), ("Gallery", "art/index.html"),
-                 ("Checks", "checks/index.html")]
-    nav = "".join(
-        f'<a href="{r(p)}"{" aria-current=page" if current == label else ""}>{label}</a>'
-        for label, p in nav_items)
-    links = ""
-    if prev:
-        links += f'<link rel="prev" href="{r(prev[0])}">'
-    if nxt:
-        links += f'<link rel="next" href="{r(nxt[0])}">'
+def shell(m, out_rel, title, body, *, part=0, description="", prev=None, nxt=None, current="",
+          wide=False, before_main=""):
+    r = lambda p: rel(out_rel, p)  # noqa: E731
+    nav = [("Contents", "book/index.html"),
+           ("Situations", "book/7-at-the-back/04-index-of-situations.html"),
+           ("Workbook", "workbook/index.html"), ("Gallery", "art/index.html"),
+           ("Checks", "checks/index.html"), ("PDF", m["pdf"])]
+    nav_html = "".join(f'<a href="{r(p)}"{" aria-current=\"page\"" if current == label else ""}>{label}</a>'
+                       for label, p in nav)
+    head_links = ""
     pager = ""
     if prev or nxt:
         pager = '<nav class="pager" aria-label="Turn the page">'
         if prev:
-            thumb = f'<img src="{r(prev[2])}" alt="">' if prev[2] else ""
-            pager += f'<a class="prev" href="{r(prev[0])}">{thumb}<div><small>← previous</small><span>{prev[1]}</span></div></a>'
+            head_links += f'<link rel="prev" href="{r(prev[0])}">'
+            pager += f'<a class="prev" href="{r(prev[0])}"><small>← previous</small>{html.escape(prev[1])}</a>'
         if nxt:
-            thumb = f'<img src="{r(nxt[2])}" alt="">' if nxt[2] else ""
-            pager += f'<a class="next" href="{r(nxt[0])}"><div><small>next →</small><span>{nxt[1]}</span></div>{thumb}</a>'
+            head_links += f'<link rel="next" href="{r(nxt[0])}">'
+            pager += f'<a class="next" href="{r(nxt[0])}"><small>next →</small>{html.escape(nxt[1])}</a>'
         pager += "</nav>"
     t = html.escape(title)
+    full_title = m["title"] if title == m["title"] else f"{t} · {m['title']}"
+    desc = html.escape(description or f"{m['title']}: {m['subtitle']}, by {m['author']}.")
     return f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{t} · The Geometry of Existence</title>
-<meta name="description" content="{html.escape(description or 'The Geometry of Existence: A Manual for Life, in five levels, the highest at the end.')}">
+<title>{full_title}</title>
+<meta name="description" content="{desc}">
 <meta property="og:title" content="{t}">
-<meta property="og:url" content="{SITE_URL}{out_rel}">
-<meta property="og:image" content="{SITE_URL}{image}">
+<meta property="og:description" content="{desc}">
 <meta property="og:type" content="book">
-<meta property="og:site_name" content="The Geometry of Existence">
+<meta property="og:url" content="{SITE_URL}{'' if out_rel == 'index.html' else out_rel}">
+<meta property="og:image" content="{SITE_URL}art/paintings/cover.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="{SITE_URL}{'' if out_rel == 'index.html' else out_rel}">
-{f'<base href="{base}">' if base else ''}
-<meta name="theme-color" content="#14112e">
+<meta name="theme-color" content="#100e19">
 <link rel="icon" href="{r('assets/favicon.svg')}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <link rel="stylesheet" href="{r('assets/style.css')}">
-{links}
-<style>:root{{--accent:{accent}}}</style>
-<script src="{r('assets/script.js')}" defer></script>
+{head_links}
+<script src="{r('assets/script.js')}"></script>
 </head>
-<body>
-<a class="skip" href="#main">Skip to the text</a>
+<body class="part-{part}">
+<a class="skip" href="#text">Skip to the text</a>
 <div class="progress" aria-hidden="true"></div>
-<header class="masthead">
-  <a class="brand" href="{r('index.html')}">The Geometry <span class="dot">·</span> of Existence</a>
-  <nav aria-label="Book">{nav}</nav>
-  <a class="dl-link" href="{r(PDF_REL)}" download="{PDF_SAVE_AS}" aria-label="Download the book ({pdf_label()})">PDF ↓</a>
-  <button class="theme-toggle" type="button" aria-label="Switch between light and dark">{THEME_ICON}</button>
+<header class="top">
+<a class="brand" href="{r('index.html')}">The Geometry of Everything</a>
+<nav aria-label="The book">{nav_html}</nav>
+<button class="theme-toggle" type="button" aria-label="Switch between light and dark">{ICON}</button>
 </header>
-<main id="main">
+{before_main}
+<main id="text"{' class="wide"' if wide else ''}>
 {body}
-{pager}
 </main>
-<footer class="colophon">
-  <p>The Geometry of Existence: A Manual for Life · Massimo Vincent Panella · complete edition, 15 November 2026</p>
-  <p><a href="{r(PDF_REL)}" download="{PDF_SAVE_AS}">Download the book ({pdf_label()})</a> ·
-     <a href="{r('download.html')}">About the edition</a> ·
-     <a href="{r('book/6-back-matter/04-corrections-and-open-accounts.html')}">Corrections and open accounts</a> ·
-     <a href="{r('checks/index.html')}">The checks</a></p>
-  <p>Nothing here is medical, psychological, or legal advice. The practices are yours to try and yours to stop.</p>
-  <p>© Massimo Vincent Panella · licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+{pager}
+<footer>
+<p><i>{m['title']}</i> · {m['subtitle']} · {m['author']} · {m['edition']}</p>
+<p><a href="{r(m['pdf'])}">Download the PDF</a> · <a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE">The book on GitHub</a> ·
+Licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
 </footer>
 </body>
 </html>
 """
 
 
-# ---------------------------------------------------------------------------
-# pages
-# ---------------------------------------------------------------------------
-
-
-def plate_hero(out_rel, u, meta="", extra="", begin=True):
-    if not u["plates"]:
-        return ""
-    img = rel(out_rel, "art/" + u["plates"][0])
-    kicker = u["kicker"]
-    title = u["title"].split(" · ")[-1] if u["kind"] in ("level", "part") else u["title"]
-    epi = f'<blockquote class="epigraph"><p>{html.escape(u["epigraph"])}</p></blockquote>' if u["epigraph"] else ""
-    meta_html = f'<p class="meta">{meta}</p>' if meta else ""
-    begin_html = '<a class="begin" href="#text">Begin reading <span aria-hidden="true">↓</span></a>' if begin else ""
-    return (f'<section class="plate-hero"><div class="plate-hero-inner">'
-            f'<figure class="plate"><img src="{img}" alt="The plate for {html.escape(kicker)}: {html.escape(title)}" width="396" height="612"></figure>'
-            f'<div class="plate-text"><p class="kicker">{html.escape(kicker)}</p><h1>{html.escape(title)}</h1>'
-            f'{epi}{meta_html}{extra}{begin_html}</div></div></section>')
-
-
-def reading_time(md: str) -> str:
-    text = re.sub(r"<[^>]+>|[#>*`_|\\-]", " ", md)
-    words = len(re.findall(r"[A-Za-z\u00C0-\u024F]+", text))
-    if words < 120:
-        return ""
-    return f"{max(1, round(words / 230))} min read"
-
-
-def add_section_nav(body: str) -> str:
-    """Give h3 headings ids; on long pages, list them at the top."""
-    heads = []
-
-    def anchor(m):
-        inner = m.group(1)
-        plain = re.sub(r"<[^>]+>", "", inner)
-        slug = re.sub(r"[^a-z0-9]+", "-", html.unescape(plain).lower()).strip("-")[:60] or "s"
-        heads.append((slug, plain))
-        return f'<h3 id="{slug}">{inner}</h3>'
-    body = re.sub(r"<h3>(.*?)</h3>", anchor, body)
-    if len(heads) < 3:
-        return body
-    items = "".join(f'<li><a href="#{s}">{t}</a></li>' for s, t in heads)
-    return f'<nav class="on-this-page" aria-label="On this page"><p>On this page</p><ol>{items}</ol></nav>' + body
-
-
-def build_units(m):
-    units = m["units"]
-    levels = {lv["n"]: lv for lv in m["levels"]}
-    for i, u in enumerate(units):
-        md_rel = os.path.join("book", u["path"])
-        out_rel = out_path_for(md_rel)
-        md = open(os.path.join(ROOT, md_rel), encoding="utf-8").read()
-        has_plate = bool(u["plates"])
-        body_md = prepare_markdown(md, strip_plate=has_plate)
-        # images in the Markdown point at ../../art; the site keeps the same tree
-        body = render_md(body_md)
-        lv = levels[u["level"]]
-        crumb_bits = [lv["kicker"]] + ([lv["name"]] if u["level"] not in (0, 6) else [])
-        pages = f"page {u['first']}" if u["first"] == u["last"] else f"pages {u['first']}–{u['last']}"
-        rt = reading_time(body_md)
-        bits = crumb_bits + [pages] + ([rt] if rt else [])
-        crumb = '<p class="crumb">' + " · ".join(f"<span>{html.escape(b)}</span>" for b in bits) + "</p>"
-        body = add_section_nav(body)
-        part_list = ""
-        if u["kind"] == "part":
-            j = i + 1
-            items = []
-            while j < len(units) and units[j]["kind"] == "chapter":
-                x = units[j]
-                href = rel(out_rel, out_path_for(os.path.join("book", x["path"])))
-                items.append(f'<li><a href="{href}"><span class="num">{x["number"]}</span>{html.escape(x["title"])}</a></li>')
-                j += 1
-            part_list = f'<ol class="part-chapters">{"".join(items)}</ol>' if items else ""
-        meta = " · ".join(x for x in (lv["kicker"] if u["kind"] != "level" else "", pages.capitalize(), rt) if x)
-        has_text = len(re.sub(r"<[^>]+>|\s", "", body)) > 0
-        hero = plate_hero(out_rel, u, meta=meta, extra=part_list, begin=has_text)
-        extra = ""
-        if u["kind"] == "level":
-            members = [x for x in units if x["level"] == u["level"] and x is not u]
-            cards = []
-            for x in members:
-                href = rel(out_rel, out_path_for(os.path.join("book", x["path"])))
-                if x["plates"]:
-                    im = f'<img src="{rel(out_rel, "art/" + x["plates"][0].replace("plates/", "plates/thumbs/"))}" alt="">'
-                else:
-                    im = f'<span class="tile"><span>{html.escape(x["title"])}</span></span>'
-                lab = f"{x['number']} · {x['title']}" if x["number"] else x["title"]
-                cards.append(f'<a href="{href}">{im}{html.escape(lab)}</a>')
-            extra = '<h2>In this level</h2><div class="gallery">' + "".join(cards) + "</div>"
-        content = (hero + '<article class="text" id="text">' + (crumb if not hero else "") + body + "</article>"
-                   + (f'<div class="wide">{extra}</div>' if extra else ""))
-
-        def link(x):
-            if x is None:
-                return None
-            th = "art/" + x["plates"][0].replace("plates/", "plates/thumbs/") if x["plates"] else ""
-            return (out_path_for(os.path.join("book", x["path"])), html.escape(x["title"]), th)
-        prev = link(units[i - 1]) if i else None
-        nxt = link(units[i + 1]) if i + 1 < len(units) else None
-        current = {1: "Lines", 2: "Manual", 3: "Degree", 4: "Principle", 5: "Proof"}.get(u["level"], "")
-        page = shell(out_rel, u["title"], content, description=u["epigraph"], accent=lv["accent"],
-                     prev=prev, nxt=nxt, current=current,
-                     image="art/" + u["plates"][0] if u["plates"] else "art/plates/p001-cover.png")
-        write(out_rel, page)
-
-
-def build_contents(m):
-    out_rel = "book/index.html"
-    parts = ['<article class="text contents"><p class="crumb">Contents</p><h1>Contents</h1>'
-             '<p class="subtitle">One book in five levels, the highest at the end.</p>']
-    levels = {lv["n"]: lv for lv in m["levels"]}
-    for n in sorted(levels):
-        lv = levels[n]
-        units = [u for u in m["units"] if u["level"] == n]
-        if not units:
-            continue
-        opener = units[0]
-        img = ""
-        if opener["kind"] == "level" and opener["plates"]:
-            img = (f'<a href="{rel(out_rel, out_path_for(os.path.join("book", opener["path"])))}">'
-                   f'<img src="{rel(out_rel, "art/" + opener["plates"][0].replace("plates/", "plates/thumbs/"))}" alt=""></a>')
-        items = []
-        for u in units:
-            if u["kind"] == "level":
-                continue
-            href = rel(out_rel, out_path_for(os.path.join("book", u["path"])))
-            if u["kind"] == "part":
-                items.append(f'<li class="part"><a href="{href}">{html.escape(u["title"])}</a></li>')
-                continue
-            num = f'<span class="num">{u["number"]}</span>' if u["number"] else ""
-            sub = " sub" if "sophonticism/" in u["path"] and not u["path"].endswith("README.md") else ""
-            items.append(f'<li class="{u["kind"]}{sub}"><a href="{href}">{num}{html.escape(u["title"])}</a>'
-                         f'<span class="pg">{u["first"]}</span></li>')
-        parts.append(f'<section class="level"><div>{img}</div><div><p class="kicker" style="text-align:left">{lv["kicker"]}</p>'
-                     f'<h3>{html.escape(lv["name"])}</h3><p class="subtitle" style="text-align:left">{html.escape(lv["sub"])}</p>'
-                     f'<ul>{"".join(items)}</ul></div></section>')
-    parts.append("</article>")
-    write(out_rel, shell(out_rel, "Contents", "".join(parts), current="Contents"))
-
-
-def build_home(m):
-    out_rel = "index.html"
-    levels = [u for u in m["units"] if u["kind"] == "level"]
-    names = {lv["n"]: lv for lv in m["levels"]}
-    cards = []
-    for u in levels:
-        lv = names[u["level"]]
-        cards.append(
-            f'<a class="level-card" href="{out_path_for(os.path.join("book", u["path"]))}">'
-            f'<img src="art/{u["plates"][0].replace("plates/", "plates/thumbs/")}" alt="{lv["kicker"]} — {lv["name"]}">'
-            f'<p class="kicker">{lv["kicker"]}</p><span class="name">{html.escape(lv["name"])}</span>'
-            f'<span class="sub">{html.escape(lv["sub"])}</span></a>')
-    marks = "".join(
-        f'<dt><span class="mark mark-{k}">{k.replace("-", " ").upper()}</span></dt><dd>{html.escape(v.split("— ", 1)[1])}</dd>'
-        for k, v in MARK_HELP.items())
-    body = f"""
-<section class="home-hero">
-  <img class="cover" src="art/plates/p001-cover.png" alt="The Geometry of Existence — A Manual for Life — cover">
-  <p class="first-principle">Nothing gives legitimacy to existence except existence itself.</p>
-  <p class="attr">The First Principle</p>
-  <div class="actions">
-    <a class="btn primary" href="book/1-the-lines/index.html">Begin with the Lines</a>
-    <a class="btn" href="book/index.html">Contents</a>
-    <a class="btn" href="{PDF_REL}" download="{PDF_SAVE_AS}" aria-label="Download the book ({pdf_label()})">Download the PDF ↓</a>
-  </div>
-</section>
-<div class="three">
-  <div><span class="n">1</span>Existence itself is sufficient.</div>
-  <div><span class="n">2</span>Consciousness gives us the opportunity to understand it.</div>
-  <div><span class="n">3</span>Connection gives us the opportunity to honor it.</div>
-</div>
-<h2>Five levels</h2>
-<p class="subtitle">Each level says the same thing at a greater depth, and each is complete in itself.</p>
-<div class="levels">{"".join(cards)}</div>
-<section class="marks-legend">
-  <h2>Five marks</h2>
-  <p class="subtitle">Every claim in this book is one of five kinds, and the book tries never to let one kind pass for another.</p>
-  <dl>{marks}</dl>
-</section>
-<section class="text" style="margin-top:3rem">
-  <h2>One promise</h2>
-  <p class="center">Every claim says what kind of claim it is. No claim is larger than its evidence. And every computation was run again — <a href="checks/index.html">run them yourself</a>.</p>
-  <p class="center"><i>A book built that way is not ruined by an error. It is improved by one.</i></p>
-</section>
-"""
-    write(out_rel, shell(out_rel, "A Manual for Life", body))
-
-
-def build_gallery(m):
-    out_rel = "art/index.html"
-    page_unit = {}
-    for u in m["units"]:
-        for p in range(u["first"], u["last"] + 1):
-            page_unit[p] = u
-    plates = []
-    for p in m["plates"]:
-        u = page_unit.get(p["page"])
-        href = rel(out_rel, out_path_for(os.path.join("book", u["path"]))) if u else "../index.html"
-        cap = " · ".join(x for x in (p["kicker"], p["title"]) if x)
-        plates.append(f'<a href="{href}"><img src="{p["file"].replace("plates/", "plates/thumbs/")}" alt="{html.escape(cap)}" loading="lazy">'
-                      f'{html.escape(cap)}<br><small>page {p["page"]}</small></a>')
-    figs = []
-    for f in m["figures"]:
-        u = page_unit.get(f["page"])
-        href = rel(out_rel, out_path_for(os.path.join("book", u["path"]))) if u else "#"
-        cap = f["caption"] or (u["title"] if u else "")
-        figs.append(f'<a href="{href}"><img src="{f["file"]}" alt="{html.escape(cap)}" loading="lazy">'
-                    f'<i>{html.escape(cap[:160])}</i><br><small>page {f["page"]}</small></a>')
-    body = (f'<article class="text"><p class="crumb">The gallery</p><h1>The Gallery</h1>'
-            f'<p class="subtitle">Every plate and figure in the complete edition. Every figure is computed from the book’s own mathematics.</p></article>'
-            f'<h2>Plates</h2><div class="gallery">{"".join(plates)}</div>'
-            f'<h2>Figures</h2><div class="gallery figs">{"".join(figs)}</div>')
-    write(out_rel, shell(out_rel, "The Gallery", body, current="Gallery"))
-
-
-def build_download(m):
-    out_rel = "download.html"
-    import hashlib
-    data = open(os.path.join(ROOT, PDF_REL), "rb").read()
-    sha = hashlib.sha256(data).hexdigest()
-    body = f"""
-<section class="plate-hero">
-  <a href="{PDF_REL}" download="{PDF_SAVE_AS}"><img src="art/plates/p001-cover.png" alt="The Geometry of Existence — cover. Select to download the PDF."></a>
-  <p class="kicker">The complete edition · 15 November 2026</p>
-  <h1>Download the Book</h1>
-  <p><a class="btn primary" href="{PDF_REL}" download="{PDF_SAVE_AS}">Download the PDF ↓</a></p>
-  <p class="small-center" style="color:#d6cdb6">{pdf_label()} · 5.5 × 8.5 in · fonts embedded</p>
-</section>
-<article class="text">
-  <h2>Other ways to read it</h2>
-  <p>The PDF is the edition of record, laid out for print. It is not a tagged PDF, so screen readers and
-  reflowing readers handle it poorly. The same text, with every plate and figure described, is here:</p>
-  <ul>
-    <li><a href="book/index.html"><b>Read online</b></a> — this website: it reflows to any screen, follows light or dark mode,
-    works with screen readers and browser zoom, and prints page by page.</li>
-    <li><a href="https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/tree/main/book"><b>The book in Markdown</b></a> — one file per chapter, on GitHub.</li>
-  </ul>
-  <h2>Check your copy</h2>
-  <p>SHA-256 of the file:</p>
-  <p><code style="word-break:break-all">{sha}</code></p>
-  <p class="small-center">Run <code>sha256sum {os.path.basename(PDF_REL)}</code> (on macOS <code>shasum -a 256</code>) and compare.</p>
-</article>
-"""
-    write(out_rel, shell(out_rel, "Download the Book", body,
-                         description="Download The Geometry of Existence: A Manual for Life as a PDF."))
-
-
-def build_404():
-    body = """
-<section class="home-hero" style="padding-bottom:3rem">
-  <p class="first-principle">This page is not in the book.</p>
-  <p class="attr">404</p>
-  <div class="actions">
-    <a class="btn primary" href="book/index.html">Contents</a>
-    <a class="btn" href="index.html">Home</a>
-  </div>
-</section>"""
-    path = "/" + SITE_URL.split("/", 3)[3]
-    write("404.html", shell("404.html", "Not in the book", body, base=path))
-
-
-def build_markdown_folder(folder, title, current):
-    src = os.path.join(ROOT, folder)
-    files = sorted(f for f in os.listdir(src) if f.endswith(".md"))
-    order = [f for f in files if f != "README.md"]
-    for f in files:
-        md_rel = os.path.join(folder, f)
-        out_rel = out_path_for(md_rel)
-        md = open(os.path.join(src, f), encoding="utf-8").read()
-        body = render_md(prepare_markdown(md, strip_plate=False))
-        prev = nxt = None
-        if f in order:
-            i = order.index(f)
-            if i:
-                prev = (out_path_for(os.path.join(folder, order[i - 1])), order[i - 1][3:-3].replace("-", " ").title(), "")
-            if i + 1 < len(order):
-                nxt = (out_path_for(os.path.join(folder, order[i + 1])), order[i + 1][3:-3].replace("-", " ").title(), "")
-        page_title = title if f == "README.md" else re.search(r"^# (.+)$", md, flags=re.M).group(1)
-        write(out_rel, shell(out_rel, page_title, f'<article class="text">{body}</article>',
-                             prev=prev, nxt=nxt, current=current))
-
-
-def write(out_rel, text):
+def write(out_rel: str, text: str):
     path = os.path.join(OUT, out_rel)
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as fh:
-        fh.write(text)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(text)
 
 
-FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<rect width="64" height="64" rx="10" fill="#14112e"/>
-<g fill="none" stroke="#c9a14a" stroke-width="1.6"><circle cx="32" cy="32" r="24"/><circle cx="32" cy="32" r="16" stroke-opacity=".7"/><circle cx="32" cy="32" r="8" stroke-opacity=".5"/></g>
-<circle cx="32" cy="32" r="3" fill="none" stroke="#efe6d0" stroke-width="1.6"/></svg>
+def read(rel_path: str) -> str:
+    with open(os.path.join(ROOT, rel_path), encoding="utf-8") as f:
+        return f.read()
+
+
+# ---------------------------------------------------------------------------
+# Pages
+# ---------------------------------------------------------------------------
+
+def book_pages(m):
+    units = m["units"]
+    outs = [html_path(u["path"]) for u in units]
+    for i, u in enumerate(units):
+        out_rel = outs[i]
+        md = strip_footer(read(u["path"]))
+        prev = (outs[i - 1], units[i - 1]["title"]) if i else ("book/index.html", "Contents")
+        nxt = (outs[i + 1], units[i + 1]["title"]) if i + 1 < len(units) else None
+        before = ""
+        if u["kind"] == "opener":
+            part = m["parts"][u["part"]]
+            painting = m["paintings"][str(part["plate"])]
+            words = painting["words"]
+            sub = words.replace(part["kicker"].upper(), "", 1).replace(part["name"], "", 1).strip()
+            before = (f'<section class="night"><img class="painting" src="{rel(out_rel, painting["path"])}" '
+                      f'alt="{html.escape(words)}" width="420">'
+                      f'<h1 class="visually-hidden">{part["kicker"]}: {part["name"]}, {html.escape(sub)}</h1>'
+                      f'<p class="lede">{html.escape(u.get("intro", ""))}</p></section>')
+            # the Markdown repeats the painting, the kicker, the title and the intro
+            md = re.sub(r"\A.*?^# [^\n]*\n\n(?:\*[^\n]*\*\n\n)?", "", md, flags=re.S | re.M)
+            if not re.search(r"^\d+\. ", md, re.M):
+                mine = [x for x in units if x["part"] == u["part"] and x is not u]
+                md += "\n\n" + "\n".join(f"- [{x['title']}]({os.path.basename(x['path'])})" for x in mine)
+        body = render(md)
+        write(out_rel, shell(m, out_rel, u["title"], body, part=u["part"], prev=prev, nxt=nxt,
+                             description=u.get("subtitle", ""), before_main=before,
+                             current="Situations" if "index-of-situations" in out_rel else ""))
+    return outs
+
+
+def contents_page(m):
+    out_rel = "book/index.html"
+    md = strip_footer(read("book/README.md"))
+    md = re.sub(r"\A<p align=\"center\"><img[^\n]*\n", "", md)
+    body = render(md)
+    write(out_rel, shell(m, out_rel, "Contents", body, current="Contents",
+                         nxt=(html_path(m["units"][0]["path"]), m["units"][0]["title"])))
+
+
+def home(m):
+    out_rel = "index.html"
+    r = lambda p: rel(out_rel, p)  # noqa: E731
+    first = next(u for u in m["units"] if u["title"] == "How to Carry This Book")
+    books = []
+    for part in m["parts"]:
+        if not part["plate"]:
+            continue
+        opener = next(u for u in m["units"] if u["part"] == part["n"] and u["kind"] == "opener")
+        p = m["paintings"][str(part["plate"])]
+        sub = p["words"].replace(part["kicker"].upper(), "", 1).replace(part["name"], "", 1).strip()
+        books.append(f'<a href="{r(html_path(opener["path"]))}" class="part-{part["n"]}"><img src="{r(p["path"])}" '
+                     f'alt="" loading="lazy"><small>{part["kicker"]}</small><span>{part["name"]}</span>'
+                     f'<em>{html.escape(sub)}</em></a>')
+    hero = f"""<section class="night">
+<div class="hero">
+<img class="painting" src="{r('art/paintings/cover.jpg')}" alt="The cover of The Geometry of Everything">
+<div>
+<p class="kicker" style="text-align:inherit">Existence · Consciousness · Relation</p>
+<h1>The Geometry of Everything</h1>
+<p class="sub">Earn Your Reality · A Manual for Life</p>
+<p style="letter-spacing:.2em;font-family:'Cormorant Garamond',serif">MASSIMO VINCENT PANELLA</p>
+<p class="lines">Existence needs no permission.<br>Understanding is an opportunity.<br>Connection is a responsibility you may choose.</p>
+<p class="creed">Peace, love and unity are what you bring. Respect is what you prove.</p>
+<div class="buttons">
+<a class="button" href="{r(html_path(first['path']))}">Start reading</a>
+<a class="button ghost" href="{r('book/index.html')}">Contents</a>
+<a class="button ghost" href="{r(m['pdf'])}" download="The-Geometry-of-Everything.pdf">Download the PDF</a>
+</div>
+<p style="font-size:.85rem;color:#b9ad93;margin-top:.8rem">{pdf_label(m)} · free to share under CC BY-SA 4.0</p>
+</div>
+</div>
+</section>"""
+    body = f"""
+<h2>Five Books and a Summit</h2>
+<p>Two hundred and forty teachings in twenty-six chapters, rising like the shoulders of a mountain:
+first the Ground of existence; then the Light of consciousness; then the Bond of relation; then the
+Work by which you earn; then the Becoming by which you change. Above them stands the Summit: the
+geometry beneath it all, and the test that tries it.</p>
+<div class="books">{''.join(books)}</div>
+
+<h2>Three marks</h2>
+<p>Every claim in this book is one of three kinds, and the book tells you which.</p>
+<div class="marks">
+<div><b><span class="g">◆</span>Commitment.</b> A stance you choose and defend by argument, such as the floor of dignity. No experiment can prove a commitment, and this book never pretends one can.</div>
+<div><b><span class="g">●</span>Evidence.</b> A claim about how the world works, backed by history or research, and open to being proved wrong.</div>
+<div><b><span class="g">◇</span>Analogy.</b> A picture to think with, such as the cell that changes its kind, or the five scales of nature. An analogy shows a pattern. It never proves one.</div>
+</div>
+
+<h2>Ways to read it</h2>
+<ul>
+<li><a href="{r(html_path(first['path']))}">From the beginning</a>, one chapter a week: the book becomes a half-year's schooling.</li>
+<li>On <a href="{r('book/7-at-the-back/02-the-monthly-reading-cycle.html')}">the monthly cycle</a>, one day's reading for each day of the month.</li>
+<li>By <a href="{r('book/7-at-the-back/04-index-of-situations.html')}">what is happening in your life</a>: the Index of Situations.</li>
+<li>As a test: run <a href="{r('book/7-at-the-back/01-the-ninety-day-trial.html')}">the Ninety-Day Trial</a> and judge the book by your own life. The <a href="{r('workbook/index.html')}">workbook</a> has a sheet for every chapter.</li>
+<li>As an argument: <a href="{r('book/6-the-summit/02-how-this-book-could-be-wrong.html')}">How This Book Could Be Wrong</a> shows exactly where each claim could fail, and <a href="{r('checks/index.html')}">the checks</a> recompute its mathematics.</li>
+</ul>
 """
+    write(out_rel, shell(m, out_rel, m["title"], body, before_main=hero, wide=True))
+
+
+def simple_page(m, md_rel, out_rel, title, current="", wide=False, keep_footer=False):
+    md = read(md_rel)
+    if not keep_footer:
+        md = strip_footer(md)
+    write(out_rel, shell(m, out_rel, title, render(md), current=current, wide=wide))
+
+
+def checks_page(m):
+    out_rel = "checks/index.html"
+    run = subprocess.run([sys.executable, os.path.join(ROOT, "checks", "verify_all.py"), "-v"],
+                         capture_output=True, text=True, cwd=ROOT)
+    intro = render(strip_footer(read("checks/README.md")))
+    body = (intro + "<h2>The checks, run when this site was built</h2>"
+            f'<pre class="checks">{html.escape(run.stdout)}</pre>')
+    write(out_rel, shell(m, out_rel, "The Checks", body, current="Checks"))
+    if run.returncode != 0:
+        raise SystemExit("verify_all.py failed; the site was not built")
 
 
 def main():
-    m = load_manifest()
-    if os.path.exists(OUT):
+    m = load()
+    if os.path.isdir(OUT):
         shutil.rmtree(OUT)
     os.makedirs(OUT)
     shutil.copytree(os.path.join(ROOT, "art"), os.path.join(OUT, "art"),
-                    ignore=shutil.ignore_patterns("README.md"))
-    shutil.copytree(os.path.join(ROOT, "edition"), os.path.join(OUT, "edition"),
-                    ignore=shutil.ignore_patterns("README.md"))
-    os.makedirs(os.path.join(OUT, "assets"))
-    for f in ("style.css", "script.js"):
-        shutil.copy(os.path.join(ROOT, "site", f), os.path.join(OUT, "assets", f))
-    with open(os.path.join(OUT, "assets", "favicon.svg"), "w") as fh:
-        fh.write(FAVICON)
-    open(os.path.join(OUT, ".nojekyll"), "w").close()
+                    ignore=shutil.ignore_patterns("*.md"))
+    os.makedirs(os.path.join(OUT, "edition"))
+    shutil.copy(os.path.join(ROOT, m["pdf"]), os.path.join(OUT, m["pdf"]))
+    assets = os.path.join(OUT, "assets")
+    shutil.copytree(os.path.join(ROOT, "tools", "site"), assets)
+    shutil.copy(os.path.join(ROOT, "art", "favicon.svg"), os.path.join(assets, "favicon.svg"))
 
-    build_home(m)
-    build_contents(m)
-    build_units(m)
-    build_gallery(m)
-    build_download(m)
-    build_404()
-    build_markdown_folder("workbook", "The Workbook", "Workbook")
-    build_markdown_folder("checks", "The Checks", "Checks")
-    n = sum(len(fs) for _, _, fs in os.walk(OUT))
-    print(f"site written to {os.path.relpath(OUT, ROOT)}/ ({n} files)")
+    home(m)
+    contents_page(m)
+    book_pages(m)
+    simple_page(m, "art/README.md", "art/index.html", "The Gallery", current="Gallery", wide=True)
+    for f in sorted(os.listdir(os.path.join(ROOT, "workbook"))):
+        if f.endswith(".md"):
+            title = "The Workbook" if f == "README.md" else \
+                re.sub(r"^# ", "", next(line for line in read(f"workbook/{f}").splitlines() if line.startswith("# ")))
+            simple_page(m, f"workbook/{f}", html_path(f"workbook/{f}"), title, current="Workbook", keep_footer=True)
+    checks_page(m)
+    with open(os.path.join(OUT, ".nojekyll"), "w") as f:
+        f.write("")
+    n = sum(len(files) for _, _, files in os.walk(OUT))
+    print(f"built _site/ ({n} files)")
 
 
 if __name__ == "__main__":

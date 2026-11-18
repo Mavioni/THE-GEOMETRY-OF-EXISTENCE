@@ -1,0 +1,45 @@
+name: A prediction tested
+description: Evidence for or against one of the twelve predictions in How This Book Could Be Wrong.
+title: "[prediction] "
+labels: ["prediction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The book makes [twelve predictions that could fail](https://github.com/Mavioni/THE-GEOMETRY-OF-EXISTENCE/blob/main/book/6-the-summit/02-how-this-book-could-be-wrong.md#twelve-predictions). Evidence counts whichever way it falls.
+  - type: dropdown
+    id: which
+    attributes:
+      label: Which prediction
+      options:
+        - "1. Rank by intimidation holds no more power a decade later"
+        - "2. Under fear, support for dominant leaders rises"
+        - "3. Delay and reappraisal reduce aggression more than venting"
+        - "4. Forgiveness and repeat harm depend on the offender"
+        - "5. Restorative conferences satisfy victims more"
+        - "6. Loosening materialist values brings small gains in well-being"
+        - "7. No single income above which money stops mattering"
+        - "8. Better close relationships, better health"
+        - "9. New practices take two to three months to become automatic"
+        - "10. Authentic dissenters beat appointed devil's advocates"
+        - "11. Nonviolent campaigns at least as effective as violent ones"
+        - "12. The Ninety-Day Trial improves a chosen behaviour"
+    validations:
+      required: true
+  - type: dropdown
+    id: direction
+    attributes:
+      label: The evidence
+      options:
+        - supports the prediction
+        - goes against the prediction
+        - is mixed or unclear
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: The evidence and its source
+      description: A study, a dataset or a replication, with a link or full reference.
+    validations:
+      required: true

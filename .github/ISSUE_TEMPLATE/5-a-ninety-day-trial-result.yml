@@ -1,0 +1,35 @@
+name: A Ninety-Day Trial result
+description: You ran the book's own test on your life. Report what happened, whichever way it fell.
+title: "[trial] "
+labels: ["trial"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        *"Run it honestly and the result will be yours, whichever way it falls."* (The Ninety-Day Trial, p. 205) A failure is a result, and it counts. Share only what you are comfortable making public.
+  - type: textarea
+    id: prediction
+    attributes:
+      label: Your sealed prediction (Day 0)
+    validations:
+      required: true
+  - type: textarea
+    id: behaviours
+    attributes:
+      label: The behaviours you counted, at baseline and at Day 90
+    validations:
+      required: true
+  - type: dropdown
+    id: rater
+    attributes:
+      label: Did someone who sees you often rate you each week?
+      options:
+        - "Yes"
+        - "No"
+  - type: textarea
+    id: verdict
+    attributes:
+      label: The verdict
+      description: Compared with your own starting trend. What worked, what did not, what you will keep.
+    validations:
+      required: true

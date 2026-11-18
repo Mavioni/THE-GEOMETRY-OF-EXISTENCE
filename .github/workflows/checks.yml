@@ -1,4 +1,4 @@
-name: The Checks
+name: Checks
 
 on:
   push:
@@ -9,19 +9,19 @@ permissions:
   contents: read
 
 jobs:
-  verify:
-    name: Re-run every computation the book relies on
+  mathematics:
+    name: Recompute the book's mathematics
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: verify_all.py (standard library only)
+      - name: checks/verify_all.py (Python standard library only)
         run: python3 checks/verify_all.py -v
 
   book:
-    name: The Markdown book matches the edition
+    name: The Markdown book matches the PDF
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,12 +31,12 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Every printed word reaches the Markdown
         run: python3 tools/check_coverage.py
-      - name: Re-cut the book from the PDF and compare the text
+      - name: A fresh cut of the PDF gives the same text
         run: |
-          python3 tools/extract_book.py
-          python3 tools/build_indexes.py
-          git diff --stat -- '*.md'
-          git diff --exit-code -- '*.md' || {
-            echo "::warning::The Markdown differs from a fresh cut of the PDF. If the PDF changed, run 'make book' and commit."
+          python3 tools/extract.py
+          python3 tools/build_pages.py
+          git diff --stat -- '*.md' '*.json'
+          git diff --exit-code -- '*.md' '*.json' || {
+            echo "::error::The Markdown differs from a fresh cut of the PDF. Run 'make book' and commit the result."
             exit 1
           }
